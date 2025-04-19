@@ -1,0 +1,21 @@
+@import 'src/assets/css/variable';
+
+.customerName {
+  color: $grey;
+  word-break: break-all;
+  width: 400px;
+  @include media-breakpoint-up(sm) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  @include media-breakpoint-down(lg) {
+    width: 250px;
+  }
+  @include media-breakpoint-down(md) {
+    width: 135px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}

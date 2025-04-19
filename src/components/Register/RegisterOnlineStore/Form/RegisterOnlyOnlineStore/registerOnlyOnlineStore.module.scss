@@ -1,0 +1,71 @@
+@import 'src/assets/css/variable';
+
+.formItem {
+  &:nth-of-type(1) {
+    margin-top: 36px;
+  }
+  margin-top: 18px;
+
+  .required:after {
+    content: ' *';
+    color: #c8cacd;
+    margin-left: 2px;
+  }
+}
+.contentTitle {
+  &:nth-of-type(1) {
+    margin-top: 40px;
+  }
+  margin-top: 44px;
+}
+
+.label_col {
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 12px;
+    // padding-left: 0;
+  }
+}
+
+.input_col {
+  align-items: right;
+  @include media-breakpoint-up(lg) {
+    padding-left: 15px;
+  }
+}
+.input {
+  max-width: 485px;
+  width: 100%;
+}
+
+.checkBox {
+  display: flex;
+
+  input {
+    margin-top: 10px;
+  }
+}
+
+.checkboxText {
+  color: $grey;
+}
+
+.contentTitle {
+  margin-top: 44px;
+}
+
+.btn {
+  float: left;
+  margin-top: 48px;
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    right: 0;
+  }
+}
+
+._errorText {
+  color: $danger;
+  margin-bottom: 0;
+  font-size: px-to-rem(16);
+}

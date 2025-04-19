@@ -1,0 +1,10 @@
+@import 'src/assets/css/variable';
+
+.title {
+  font-weight: bold;
+  font-size: $h1_font_size;
+  line-height: 120%;
+  color: $black;
+  margin-top: 60px;
+  margin-bottom: 15px;
+}

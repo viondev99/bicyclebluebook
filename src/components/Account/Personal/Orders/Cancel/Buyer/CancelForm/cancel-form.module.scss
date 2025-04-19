@@ -1,0 +1,22 @@
+@import 'src/assets/css/variable';
+
+.title {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: $p_font_size;
+}
+.price {
+  margin-bottom: 42px;
+  font-size: $p_font_size;
+  color: $primary;
+}
+.titleForm {
+  margin-bottom: 26px;
+  font-weight: bold;
+  font-size: $h3_font_size;
+}
+.wrapBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 36px;
+}

@@ -1,0 +1,47 @@
+@import 'src/assets/css/variable';
+
+.fs20 {
+  font-size: px-to-rem(20);
+}
+
+.smallBanner {
+  margin-top: 75px !important;
+  margin-bottom: -60px;
+  background-color: rgba($primary, 0.15);
+  text-align: center;
+  font-weight: 700;
+  @extend .fs20;
+  line-height: 180%;
+  border-radius: 6px;
+  padding: 10.25px 0;
+
+  @media (max-width: 1199px) {
+    padding: 10.25px 0;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: -70px;
+  }
+
+  .promoCode {
+    @extend .fs20;
+    line-height: 180%;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 400;
+  }
+
+  .linkShopName {
+    font-weight: 500;
+    @extend .fs20;
+    line-height: 180%;
+
+    @media (max-width: 767px) {
+      display: block;
+      text-align: center;
+    }
+
+    img {
+      vertical-align: baseline;
+    }
+  }
+}

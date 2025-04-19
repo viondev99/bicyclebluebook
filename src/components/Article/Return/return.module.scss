@@ -1,0 +1,99 @@
+@import '../../../assets/css/variable';
+
+.cover {
+  @include media-breakpoint-between(sm, lg) {
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 100px;
+    padding-bottom: 510+120px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 0px;
+    background-size: calc(100% - 30px);
+  }
+
+  .sectionContainer {
+    padding-top: 138px;
+    z-index: 100;
+    position: static;
+    .title {
+      font-weight: bold;
+    }
+    li {
+      color: $grey;
+    }
+    p {
+      color: $grey;
+    }
+    h2 {
+      margin-bottom: 40px;
+    }
+    h3 {
+      margin: 20px 0px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+      padding-bottom: 0;
+      h2 {
+        font-size: $h3_font_size;
+      }
+      p {
+        font-size: px-to-rem(20);
+      }
+    }
+  }
+  .container {
+    @include media-breakpoint-down(sm) {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+  .sectionCover {
+    margin-bottom: 175px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0px;
+    }
+  }
+  .wrapperTitle {
+    width: 70%;
+    p {
+      font-size: $p_font_size;
+    }
+  }
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background: $lighter-grey;
+  margin: 80px 0px 40px;
+}
+.footerAction {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  .buttonLeft {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: $p_font_size;
+    img {
+      margin: 0px 20px 0px 0px;
+    }
+  }
+
+  .buttonRight {
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    font-weight: 500;
+    font-size: $p_font_size;
+    img {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import 'src/assets/css/variable';
+
+.text {
+  margin-left: 14px;
+  color: $grey;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(21);
+  @include media-breakpoint-up(md) {
+    font-size: px-to-rem(18);
+    line-height: px-to-rem(23);
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: $p_font_size;
+    line-height: px-to-rem(29);
+  }
+}
+
+.container {
+  @include media-breakpoint-down(md) {
+    padding: 0 10px;
+    margin: 0;
+  }
+}

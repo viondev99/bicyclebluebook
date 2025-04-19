@@ -1,0 +1,13 @@
+@import 'src/assets/css/variable';
+
+.text {
+  margin-left: 14px;
+  color: $grey;
+}
+
+.container {
+  @include media-breakpoint-down(md) {
+    padding: 0 10px;
+    margin: 0;
+  }
+}

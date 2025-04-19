@@ -1,0 +1,139 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.customModalSize {
+  width: 850px;
+  @include media-breakpoint-down(lg) {
+    width: 600px;
+  }
+}
+
+.paddingContentClassName {
+  padding: 61px !important;
+
+  @include media-breakpoint-down(lg) {
+    padding: 42px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 28px !important;
+  }
+}
+
+.titleClassName {
+  font-weight: 700;
+  font-size: px-to-rem(46);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 0 !important;
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.customModalBody {
+  padding-top: 22px !important;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 12px !important;
+  }
+}
+
+.wrapFormItem {
+  @include media-breakpoint-down(sm) {
+    min-height: calc(100vh - 23rem);
+  }
+}
+
+.titleForm {
+  margin-bottom: 14px;
+  @extend .fs22;
+  line-height: 120%;
+  color: $light-black;
+}
+
+.title {
+  font-weight: 700;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 37px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.wrapperInput {
+  margin-bottom: 16px;
+  .label {
+    color: $black;
+    font-weight: 500;
+    font-size: $p_font_size;
+    padding-top: 12px;
+  }
+
+  .title {
+    color: $grey;
+    font-weight: 500;
+    font-size: $p_font_size;
+    padding-top: 16px;
+  }
+
+  .radioGroup {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+    .radio {
+      display: flex;
+      flex-direction: row;
+      color: $black;
+      font-weight: 500;
+      font-size: $p_font_size;
+      padding-top: 16px;
+
+      &:first-of-type {
+        margin-right: 35px;
+      }
+    }
+  }
+}
+
+.wrapFooter {
+  @include media-breakpoint-down(xs) {
+    justify-content: space-between;
+  }
+}
+.buttonInfo {
+  color: $primary;
+  width: auto;
+  margin-left: 20px;
+  height: auto;
+}
+.icArrowLeftClassName {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    margin-bottom: 28px;
+  }
+}
+.textNote {
+  color: $red;
+}

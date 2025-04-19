@@ -1,0 +1,56 @@
+@import 'src/assets/css/variable';
+
+.wrapSection {
+  margin-bottom: 36px;
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 0px;
+  }
+}
+
+.customCard {
+  height: 100%;
+  padding: 40px !important;
+  @include media-breakpoint-down(xs) {
+    padding: 28px 22px !important;
+    margin-bottom: 16px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+    .title {
+      font-weight: bold;
+      font-size: px-to-rem(30);
+      line-height: 120%;
+      color: $black;
+    }
+  }
+}
+
+.lineInfo {
+  display: flex;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .label {
+    font-weight: 500;
+    font-size: $p_font_size;
+    line-height: 120%;
+    color: $black;
+    margin-right: 10px;
+  }
+  .content {
+    text-align: right;
+    font-weight: 500;
+    font-size: $p_font_size;
+    line-height: 120%;
+    color: $grey;
+  }
+}
+
+.customLink {
+  font-size: px-to-rem(18px);
+  color: $black;
+  font-weight: 500;
+}

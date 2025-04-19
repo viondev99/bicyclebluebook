@@ -1,0 +1,155 @@
+@import '../../../assets/css/variable';
+
+.cover {
+  @include media-breakpoint-between(sm, lg) {
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 100px;
+    padding-bottom: 510+120px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 0px;
+    background-size: calc(100% - 30px);
+  }
+
+  .sectionContainer {
+    padding-top: 138px;
+    //width: 893px;
+    z-index: 100;
+    position: static;
+    .title {
+      font-weight: bold;
+    }
+    ul {
+      padding-left: 10px;
+    }
+    li {
+      color: $grey;
+      p {
+        margin: 10px;
+      }
+    }
+    p {
+      color: $grey;
+      font-size: px-to-rem(20);
+      font-weight: normal;
+      margin: 30px 0px;
+      //line-height: 180%;
+    }
+    h2 {
+      margin-bottom: 40px;
+    }
+    h3 {
+      margin: 20px 0px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+      padding-bottom: 0;
+      h2 {
+        font-size: $h3_font_size;
+      }
+      p {
+        font-size: $p_font_size;
+      }
+    }
+    .listSale {
+      margin-top: 30px;
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .container {
+    @include media-breakpoint-down(sm) {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+  .sectionCover {
+    margin-bottom: 175px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0px;
+    }
+  }
+  .wrapperTitle {
+    width: 70%;
+  }
+}
+.wrapperListChoose {
+  padding: 20px 30px 30px 40px;
+  border: 1.5px solid $lighter-grey;
+  box-sizing: border-box;
+  list-style: none;
+  border-radius: 10px;
+  li {
+    padding-bottom: 16px;
+    a {
+      font-size: px-to-rem(20);
+      color: $black;
+    }
+    .active {
+      color: $primary;
+    }
+  }
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background: $lighter-grey;
+  margin: 80px 0px 40px;
+
+  @include media-breakpoint-down(sm) {
+    margin: 40px 0px;
+  }
+}
+.footerAction {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
+  }
+  .buttonLeft {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: $p_font_size;
+    img {
+      margin: 0px 20px 0px 0px;
+    }
+  }
+
+  .buttonRight {
+    @include media-breakpoint-down(sm) {
+      text-indent: -9999px;
+    }
+
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    font-weight: 500;
+    font-size: $p_font_size;
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+.headDrop {
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: flex;
+  }
+}
+
+.desktopView {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}

@@ -1,0 +1,39 @@
+@import 'src/assets/css/variable';
+
+.app-tooltip-container {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.app-caret {
+  position: absolute;
+  z-index: 1000;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0px;
+    margin-left: -10px;
+    height: 0px;
+    clear: both;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+  }
+}
+
+.app-tooltip {
+  position: absolute;
+  z-index: 999;
+
+  .app-tooltip-wrapper {
+    padding-top: 10px;
+    .app-tooltip-content {
+      background: $white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+    }
+  }
+}

@@ -1,0 +1,248 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(36);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.container {
+  margin-bottom: 48px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 7px;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 918px;
+    margin-bottom: 48px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 1591px;
+  }
+}
+
+.text46 {
+  @extend .fs46;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 120%;
+  color: $white;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 32.65px;
+  }
+}
+
+.text30 {
+  @extend .fs30;
+  font-weight: 700;
+  line-height: 120%;
+  color: $white;
+}
+
+.text22 {
+  @extend .fs22;
+  font-weight: 500;
+  line-height: 120%;
+  color: $white;
+}
+
+.mb24 {
+  margin-bottom: 24px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 18px;
+  }
+}
+
+.wrapLink {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px !important;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $white;
+    padding-bottom: 3px;
+
+    @include media-breakpoint-down(sm) {
+      border: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 5px;
+  }
+
+  img {
+    margin-left: 17px;
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 9px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 15px;
+    }
+  }
+}
+
+.wrapRight {
+  display: flex;
+}
+
+.wrapAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 179px;
+  min-width: 179px;
+  max-height: 179px;
+  min-height: 179px;
+  background: $primary;
+  border-radius: 50%;
+  border: 4px solid $white;
+  box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+
+  @media (max-width: 1199px) and (min-width: 768px) {
+    max-width: 109px;
+    min-width: 109px;
+    max-height: 109px;
+    min-height: 109px;
+    border: 2.43575px solid $white;
+    box-shadow: 0px 20.7039px 57.2402px rgba(110, 119, 133, 0.25);
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 68px;
+    min-width: 68px;
+    max-height: 68px;
+    min-height: 68px;
+    border: 1.51955px solid $white;
+    box-shadow: 0px 12.9162px 35.7095px rgba(110, 119, 133, 0.25);
+  }
+
+  .text24 {
+    font-weight: 700;
+    font-size: px-to-rem(60);
+    line-height: 120%;
+    text-align: center;
+    color: $white;
+    transform: rotate(-15deg);
+
+    @media (max-width: 1199px) and (min-width: 768px) {
+      font-size: px-to-rem(37);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(23);
+    }
+  }
+}
+
+.wrapContentRight {
+  margin-left: 56px;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(md) {
+    margin-left: 32px;
+  }
+
+  .customTextContent {
+    align-items: center;
+    max-width: 1039px;
+    font-weight: 400;
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    color: $grey;
+
+    @media (max-width: 1199px) and (min-width: 768px) {
+      font-size: px-to-rem(18);
+    }
+  }
+}
+
+.wrapBannerMobile1 {
+  .wrapTextContent {
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .coverAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .customTextContentMobile {
+    max-width: 319px;
+
+    .text {
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(16);
+        font-weight: 400;
+        line-height: 180%;
+        text-align: center;
+      }
+    }
+
+    .rotate {
+      transform: rotate(180deg);
+      margin-left: 9px;
+    }
+
+    .rotate180 {
+      transform: rotate(360deg);
+      margin-left: 9px;
+    }
+  }
+
+  .wrapbtnReadMore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btnReadMore {
+      cursor: pointer;
+      font-size: px-to-rem(16);
+      font-weight: 500;
+      line-height: 180%;
+    }
+  }
+}

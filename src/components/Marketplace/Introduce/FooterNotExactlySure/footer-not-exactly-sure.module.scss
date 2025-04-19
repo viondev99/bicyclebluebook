@@ -1,0 +1,92 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.section {
+  background: $light-grey;
+
+  .description {
+    color: $grey;
+  }
+}
+
+.wrapFooterNotExactlySure {
+  display: flex;
+  align-items: center;
+  padding: 135px;
+  background: $lighter-grey;
+  flex-direction: column;
+
+  @include media-breakpoint-down(lg) {
+    padding: 92px 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 65px 40px;
+  }
+
+  h4 {
+    margin-bottom: 41px;
+    font-weight: 700;
+    @extend .fs46;
+    line-height: 120%;
+    text-align: center;
+    color: $light-black;
+  }
+  .description {
+    margin-bottom: 41px;
+    max-width: 600px;
+    @extend .fs22;
+    color: $lightest-grey;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 480px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      max-width: 230px;
+    }
+  }
+}
+
+.customButtonSize {
+  @extend .fs22;
+  width: 259px;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  a {
+    color: $white;
+  }
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}

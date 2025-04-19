@@ -1,0 +1,226 @@
+@import 'src/assets/css/variable';
+
+.header {
+  margin-bottom: 27px;
+  display: flex;
+  align-items: center;
+
+  h4 {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .date {
+    font-size: px-to-rem(18);
+    line-height: px-to-rem(24);
+    color: $grey;
+    font-weight: 500;
+  }
+
+  .viewMore {
+    font-size: px-to-rem(18);
+    line-height: px-to-rem(24);
+    color: $black;
+  }
+}
+
+.card {
+  padding: 30px 40px;
+  font-weight: 500;
+  @include media-breakpoint-down(md) {
+    padding: 28px 22px;
+  }
+}
+
+.status {
+  font-size: px-to-rem(18);
+  font-weight: 500;
+  color: #72d299;
+}
+
+.text {
+  color: $grey;
+  font-size: $p_font_size;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0 0 20px;
+
+  .link {
+    margin-bottom: 0;
+    color: $primary !important;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+
+  .imageContainer {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+    }
+  }
+
+  .image {
+    width: 100%;
+
+    max-width: 269px;
+    max-height: 269px;
+    margin-left: 20px;
+    @include media-breakpoint-down(lg) {
+      max-width: 215px;
+      max-height: 215px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      max-width: 100%;
+      max-height: 100%;
+      border-top-left-radius: $card-border-radius;
+      border-top-right-radius: $card-border-radius;
+    }
+  }
+
+  .returnButton {
+    img {
+      width: 16px;
+      height: 18px;
+    }
+
+    h4 {
+      font-size: px-to-rem(18);
+    }
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    padding: 46px 40px 46px 0;
+    @include media-breakpoint-down(lg) {
+      padding: 40px 52px 40px 0;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 22px;
+    }
+
+    justify-content: center;
+    .bikeName {
+      display: inline-block;
+    }
+    p {
+      color: $grey;
+      font-weight: 500;
+      font-size: px-to-rem(18);
+    }
+
+    .price {
+      font-family: 'Rubik', sans-serif;
+      font-size: $p_font_size;
+      line-height: px-to-rem(26);
+      color: $primary;
+      margin-bottom: 0;
+      font-weight: normal;
+    }
+
+    .shipping {
+      color: black;
+      font-size: px-to-rem(18);
+      font-weight: normal;
+    }
+
+    .status {
+      color: $green;
+      font-size: px-to-rem(16);
+      line-height: px-to-rem(21);
+      margin-left: 22px;
+      text-transform: capitalize;
+    }
+    .address {
+      margin: 16px 0px 9px 0px;
+    }
+    .bikeInfo {
+      margin: 14px 0px;
+    }
+  }
+}
+.wrapMenu {
+  position: relative;
+  right: 20px;
+  top: 20px;
+}
+
+.customMenu {
+  text-align: left;
+
+  ul {
+    padding: 0px 26px !important;
+
+    li {
+      white-space: nowrap;
+      &:first-of-type {
+        margin-top: 20px;
+      }
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.title {
+  color: $green;
+}
+
+.label {
+  font-size: px-to-rem(18);
+  line-height: px-to-rem(23);
+  color: $grey;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.value {
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(19);
+  margin-top: 10px;
+}
+
+.statusAction {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  justify-content: flex-end;
+
+  @include media-breakpoint-down(sm) {
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .statusContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    .status {
+      margin-top: 0.5rem;
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 0.25rem;
+        margin-left: 2rem;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+}

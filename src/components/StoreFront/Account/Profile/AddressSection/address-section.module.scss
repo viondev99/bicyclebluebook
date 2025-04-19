@@ -1,0 +1,43 @@
+@import 'src/assets/css/variable';
+
+.subTitle {
+  color: $black;
+  font-size: $h3_font_size;
+  font-weight: bold;
+  padding: 24px 0;
+}
+.storefrontInfo {
+  padding: 32px 32px 15px 32px;
+  .headerForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btnSave {
+    margin-top: 24px;
+  }
+}
+.editForm {
+  font-size: $p_font_size;
+  padding: 0;
+  cursor: pointer;
+}
+.editForm:hover {
+  color: $primary;
+}
+.activeEdit {
+  color: $primary !important;
+  &:disabled {
+    cursor: not-allowed;
+    color: rgba($grey, 0.4) !important;
+  }
+}
+.wrapperInput {
+  margin-bottom: 16px;
+  .label {
+    color: $black;
+    font-weight: 500;
+    font-size: $p_font_size;
+    padding-top: 16px;
+  }
+}

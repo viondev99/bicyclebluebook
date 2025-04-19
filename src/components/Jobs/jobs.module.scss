@@ -1,0 +1,86 @@
+@import 'src/assets/css/variable';
+
+.container {
+  padding: 190px 0 85px 0;
+  @include media-breakpoint-down(xl) {
+    padding: 135px 58px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 108px 0 92px 0;
+  }
+}
+.title {
+  font-weight: bold;
+  font-size: $h2_font_size;
+  color: $black;
+  margin: 0 auto 36px auto;
+  text-align: center;
+  max-width: 521px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 26px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0 28px;
+    margin-bottom: 18px;
+  }
+}
+.subTitle {
+  font-weight: bold;
+  font-size: $h3_font_size;
+  text-align: left;
+  @include media-breakpoint-down(sm) {
+    padding: 0 28px;
+    margin-bottom: 38px;
+  }
+}
+.label {
+  display: flex;
+  color: $black;
+  font-weight: 500;
+  font-size: $p_font_size;
+  text-align: left;
+  .subLabel {
+    color: $grey;
+    font-weight: 500;
+    font-size: $p_font_size;
+    text-align: left;
+    margin-left: 28px;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+}
+
+.description {
+  margin-top: 10px;
+  font-size: $p_font_size;
+  font-weight: normal;
+  line-height: 180%;
+  color: $grey;
+  text-align: left;
+}
+.ButtonAnimation {
+  height: 55px;
+  background: $primary;
+  border: none;
+  border-radius: 6px;
+  color: $white;
+  padding: 15px 30px;
+  margin-top: 10px;
+
+  &:hover,
+  &:focus {
+    background: lighten($primary, 10%);
+    color: $white;
+  }
+
+  &:active {
+    background: darken($primary, 10%);
+    color: $white;
+  }
+
+  &:disabled {
+    background: $disabled;
+    color: $white;
+  }
+}

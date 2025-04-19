@@ -1,0 +1,21 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+  margin-bottom: 50px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+    margin-bottom: 32px;
+  }
+}
+
+.headerStep {
+  font-weight: 700;
+  @extend .fs46;
+  line-height: 120%;
+  color: $light-black;
+}

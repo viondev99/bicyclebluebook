@@ -1,0 +1,51 @@
+@import 'src/assets/css/variable';
+
+.radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(23);
+  color: $grey;
+  user-select: none;
+
+  .radioTick {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    height: 26px;
+    min-width: 26px;
+    transition: all 0.2s ease-in-out;
+    background-color: $white;
+    border: 1px solid rgba($grey, 0.2);
+    border-radius: 50%;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+  input {
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .radioTick {
+      background-color: $primary;
+      border: 1px solid $primary;
+    }
+    &:checked ~ .radioTick:after {
+      content: '';
+      opacity: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: white;
+    }
+  }
+}

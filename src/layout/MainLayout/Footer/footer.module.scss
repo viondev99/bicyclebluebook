@@ -1,0 +1,212 @@
+@import '../../../assets/css/variable';
+
+.footerContainer {
+  background: $pacific-blue;
+  width: 100%;
+  .footerRow {
+    padding-top: 51px;
+    padding-bottom: 44px;
+    a {
+      cursor: pointer;
+      color: $white;
+      font-size: px-to-rem(18);
+      &:hover {
+        color: $primary;
+      }
+    }
+    span {
+      color: $white;
+      font-size: px-to-rem(18);
+    }
+    p {
+      color: $primary;
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 30px 10px;
+      li {
+        width: 50%;
+      }
+      a {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 30px 10px;
+      li {
+        width: 100%;
+      }
+      a {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.footerOtherContainer {
+  background: $pacific-blue;
+  width: 100%;
+
+  .footerRow {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    border-top: 1px solid $grey;
+    @include media-breakpoint-down(sm) {
+      padding: 20px 10px;
+
+      li {
+        width: 30%;
+        white-space: nowrap;
+      }
+    }
+
+    a {
+      color: $white;
+      font-size: px-to-rem(12);
+    }
+
+    .copyright {
+      color: $white;
+      font-size: px-to-rem(12);
+      display: flex;
+      align-items: center;
+      margin: 5px -3.5px;
+      line-height: 2rem;
+
+      @include media-breakpoint-down(sm) {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+.listMenu {
+  list-style: none;
+  display: grid;
+  margin: 5px -61.5px;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 13px;
+  @include media-breakpoint-down(md) {
+    margin: -10px -33.5px;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 6px;
+    padding: 10px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin: -10px -31.5px;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    padding: 10px;
+  }
+  li {
+    padding: 0 22.5px;
+    line-height: 2rem;
+    @include media-breakpoint-only(md) {
+      padding: 0 8.5px;
+    }
+    a {
+      color: $grey;
+      &.subIngredients {
+        font-weight: 400;
+        font-size: px-to-rem(18);
+        @include media-breakpoint-down(md) {
+          font-size: px-to-rem(16);
+        }
+      }
+      &.notSubIngredients {
+        font-size: px-to-rem(22);
+        font-weight: 500;
+        @include media-breakpoint-down(md) {
+          font-size: px-to-rem(18);
+        }
+      }
+      &:hover {
+        color: $primary;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 0.9375rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.listMenuOtherContainer {
+  list-style: none;
+  margin: 5px -22.5px;
+  @include media-breakpoint-only(md) {
+    margin: 5px -34.5px;
+  }
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    padding: 0 22.5px;
+    line-height: 2rem;
+    a {
+      color: $grey;
+      font-size: px-to-rem(12);
+      &:hover {
+        color: $primary;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 0.9375rem;
+      }
+    }
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  //margin: 0 65px;
+  justify-content: flex-end;
+
+  @include media-breakpoint-down(sm) {
+    justify-content: center;
+  }
+}
+
+.createAccountCol {
+  text-align: right;
+  p {
+    font-size: px-to-rem(16) !important;
+  }
+  a {
+    font-size: px-to-rem(18) !important;
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-top: 15px;
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}

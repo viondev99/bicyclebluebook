@@ -1,0 +1,43 @@
+@import 'src/assets/css/variable';
+
+.linkTradeIn {
+  font-weight: 500;
+  display: block;
+  font-size: px-to-rem(16);
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: $light-black;
+  text-decoration: none;
+}
+.address {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: px_to_rem(16);
+  line-height: 150%;
+}
+.state {
+  display: block;
+  margin: 0 0 5px 10px;
+}
+.phone {
+  display: block;
+  margin: 0 0 5px 10px;
+}
+.link {
+  font-size: px-to-rem(16);
+  color: $primary;
+}
+.btnTrade {
+  color: $primary;
+  font-size: px-to-rem(16);
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.wrapItem {
+  display: flex;
+  align-items: flex-start;
+}

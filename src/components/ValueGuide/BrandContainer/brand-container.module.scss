@@ -1,0 +1,21 @@
+@import 'src/assets/css/variable';
+
+.customSeoH1 {
+  letter-spacing: 0.5px;
+  font-size: px-to-rem(24);
+  color: $light-black;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 30px;
+  line-height: 180%;
+  max-height: 0.1px;
+  opacity: 0;
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(18);
+  }
+}

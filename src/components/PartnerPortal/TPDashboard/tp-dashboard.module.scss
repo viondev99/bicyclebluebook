@@ -1,0 +1,441 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.wrapContainerSelect {
+  padding: 16px 48px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 12px 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 8px 22px;
+  }
+
+  .wrapFilter {
+    display: flex;
+    justify-content: space-between;
+  }
+  margin-bottom: 22px;
+}
+
+.dateRange {
+  position: absolute;
+  right: 3rem;
+  top: 4rem;
+  z-index: 98;
+}
+
+.wrapContainer {
+  padding: 48px;
+  margin-bottom: 22px;
+
+  &.wrapContainerTour {
+    z-index: 99999999;
+  }
+}
+
+.header {
+  font-weight: 700;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  color: $light-black;
+}
+
+.wrapHeader {
+  margin-bottom: 37px;
+}
+
+.wrapTitle {
+  font-weight: 500;
+  font-size: px-to-rem(22);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 12px;
+}
+
+.textNumber {
+  font-weight: 700;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+
+  &.textPrimary {
+    color: $primary;
+  }
+
+  &.textWarning {
+    color: $warning;
+  }
+}
+
+.wrapContent {
+  margin-bottom: 24px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 12px;
+  }
+}
+
+.wrapChart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .chart {
+    transform: rotate(90deg);
+    width: 80%;
+  }
+  .leftPercent {
+    position: relative;
+    left: 2vw;
+    bottom: 5px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 18px;
+    letter-spacing: 0.24em;
+
+    @include media-breakpoint-down(sm) {
+      left: 6vw;
+    }
+  }
+  .rightPercent {
+    position: relative;
+    right: 2vw;
+    bottom: 5px;
+    font-weight: 700;
+    font-size: px-to-rem(14);
+    line-height: 18px;
+    letter-spacing: 0.24em;
+
+    @include media-breakpoint-down(sm) {
+      right: 6vw;
+    }
+  }
+}
+
+.description {
+  font-weight: 500;
+  font-size: px-to-rem(22);
+  line-height: 120%;
+  color: $lightest-grey;
+}
+
+.textCenter {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.customSelectAll {
+  display: flex;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: 40px !important;
+  }
+}
+
+.customSelectCalender {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.setCalenderIcon {
+  width: 21.27px;
+  height: 21.27px;
+}
+
+.customSelect {
+  min-width: 230px;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    min-width: 150px;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: 40px !important;
+    min-width: 100px;
+  }
+}
+
+.wrapLink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.setLinkToNewScoreCard {
+  align-items: center;
+
+  a {
+    @extend .fs22;
+  }
+}
+
+.spaceMobile {
+  @media (max-width: 767px) {
+    margin-bottom: 16px;
+  }
+}
+
+.wrapTableStoreRank {
+  max-width: 100%;
+  min-width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  table {
+    max-width: 100%;
+    min-width: 500px;
+    width: 100%;
+
+    td {
+      border: none;
+    }
+  }
+}
+
+.wrapModal {
+  max-width: 345px;
+  max-height: 165px;
+  position: absolute;
+  font-size: px_to_rem(18);
+  z-index: 999999;
+  padding: 30px;
+  border-radius: 10px;
+  font-weight: 500 !important;
+  background-color: $white;
+
+  .arrowLeft {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -12px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+  }
+
+  @media (max-width: 1199px) and (min-width: 760px) {
+    max-width: 345px;
+  }
+
+  @media (max-width: 760px) {
+    // display: none;
+    top: 5%;
+    max-width: 90%;
+  }
+
+  .buttonBack {
+    border: none;
+    background-color: unset;
+    color: $light-grey;
+    cursor: pointer;
+  }
+
+  .buttonNext {
+    border: none;
+    background-color: unset;
+    color: $primary;
+    cursor: pointer;
+  }
+
+  .wrapHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .title {
+    font-weight: 700;
+    line-height: 120%;
+  }
+  .content {
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+      padding: 100px 20px;
+      position: relative;
+      min-height: 100vh;
+      border: none;
+    }
+    @include media-breakpoint-up(md) {
+      max-height: 88vh;
+      overflow-y: auto;
+    }
+    .body {
+      @media (max-width: 1199px) and (min-width: 768px) {
+        margin-top: 24px;
+      }
+
+      .btn {
+        margin-top: 46px;
+        @include media-breakpoint-down(md) {
+          float: right;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .modalCloseBtn {
+    padding: 0;
+  }
+}
+
+.wrapContainerNoti {
+  border: 2px solid $primary;
+  padding: 29px 48px 28px 48px;
+  background: rgba(76, 179, 228, 0.15);
+  margin-bottom: 22px;
+  @media (max-width: 1199px) and (min-width: 768px) {
+    padding: 30px 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px;
+  }
+}
+
+.wrapContentNoti {
+  display: flex;
+}
+
+.contentNotiPopup {
+  font-weight: 400;
+  @extend .fs22;
+  line-height: 180%;
+  margin: 0 0 36px 0;
+  color: $lightest-grey;
+}
+
+.wrapAction {
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 120%;
+
+  .actionRead {
+    color: $primary;
+    cursor: pointer;
+  }
+
+  .actionDismiss {
+    margin-left: 28px;
+    color: $lightest-grey;
+    cursor: pointer;
+  }
+}
+
+.wrapModel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  max-width: 898px;
+  @media (max-width: 1199px) and (min-width: 768px) {
+    max-width: 804px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  @extend .fs46;
+  line-height: 120%;
+  color: $light-black;
+}
+
+.titleNoti {
+  font-weight: 700;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  margin: 8px 0 36px 0;
+  @media (max-width: 1199px) and (min-width: 768px) {
+    font-size: px-to-rem(24);
+  }
+  @media (max-width: 767px) {
+    font-size: px-to-rem(18);
+  }
+}
+
+.contentNoti {
+  color: $light-black;
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 120%;
+  margin: 0 0 18px 0;
+  @media (max-width: 1199px) {
+    margin: 0 0 16px 0;
+    font-weight: 500;
+  }
+}
+
+.footerNoti {
+  font-weight: 400;
+  @extend .fs22;
+  line-height: 180%;
+  color: $lightest-grey;
+}
+
+.content {
+  padding: 75px;
+  @media (max-width: 1199px) and (min-width: 768px) {
+    padding: 56px;
+  }
+  @media (max-width: 767px) {
+    padding: 37px;
+  }
+}
+
+.imgBell {
+  width: 30px;
+  height: 30px;
+  @media (max-width: 1199px) and (min-width: 768px) {
+    margin-top: 2px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 24.55px;
+    height: 24.55px;
+  }
+}
+
+.cover {
+  display: flex;
+}
+
+.coverNoti {
+  margin-left: 19px;
+}
+
+.fixPreTag {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  font-family: 'DM Sans', sans-serif !important;
+}

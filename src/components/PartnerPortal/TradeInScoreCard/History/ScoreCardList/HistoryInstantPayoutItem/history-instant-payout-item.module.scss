@@ -1,0 +1,146 @@
+@import 'src/assets/css/variable';
+
+.timeHeader {
+  margin: 25px 0 25px;
+}
+
+.card.card {
+  padding: 40px 45px;
+  margin-top: 1rem;
+
+  @include media-breakpoint-down(sm) {
+    padding: 25px 20px;
+  }
+}
+
+.cardRow {
+  display: flex;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  .cardLeft {
+    flex: 1;
+  }
+
+  .cardRight {
+    flex: 0;
+    display: flex;
+    flex-shrink: 1;
+    text-align: right;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 10px;
+      text-align: left;
+
+      .priceContainer {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.title {
+  color: $black;
+  font-weight: 500;
+  font-size: px-to-rem(22);
+  line-height: 120%;
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.location {
+  margin: 8px 0 0;
+  color: $grey;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(21);
+}
+
+.infoParagraph {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 130%;
+
+  .infoWrapper:not(:first-child) {
+    margin-left: 25px;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0px;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  .infoLabel {
+    color: $black;
+  }
+
+  .infoValue {
+    margin-left: 10px;
+    color: $grey;
+  }
+}
+
+.price {
+  margin: 0;
+  font-family: Rubik, sans-serif;
+  font-size: px-to-rem(18);
+  line-height: 120%;
+  color: $black;
+  min-width: 120px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(16);
+    margin-right: 10px;
+    min-width: unset;
+  }
+}
+
+.status {
+  margin: 9px 0 0;
+  white-space: nowrap;
+  color: $warning;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(21);
+
+  @include media-breakpoint-down(sm) {
+    margin: unset;
+  }
+
+  &.complete {
+    color: $green;
+  }
+
+  &.expire {
+    color: $danger;
+  }
+}
+
+.menuButton {
+  width: 100%;
+  white-space: nowrap;
+  justify-content: flex-start;
+  color: $black;
+  align-items: center;
+}
+
+.dropdown {
+  box-shadow: $box-shadow;
+
+  .actionItem {
+    text-align: left;
+  }
+}
+
+.textRed {
+  color: $red !important;
+}

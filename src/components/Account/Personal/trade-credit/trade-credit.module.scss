@@ -1,0 +1,132 @@
+@import 'src/assets/css/variable';
+
+.header {
+  width: 100%;
+}
+.headerItem {
+  width: 50%;
+  margin-bottom: 18px;
+  .titleHeader {
+    margin-bottom: 36px;
+  }
+}
+
+.subTitle {
+  font-size: $h3_font_size;
+  font-weight: bold;
+  padding: 24px 0;
+}
+.tradeInForm {
+  .headerForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btnSave {
+    margin-top: 24px;
+  }
+  .tradeInItem {
+    display: flex;
+    margin-bottom: 13px;
+  }
+}
+
+.title {
+  font-weight: normal;
+  font-size: $h4_font_size;
+}
+.valueText {
+  font-weight: normal;
+  font-size: $h4_font_size;
+  color: $lightest-grey;
+}
+
+.detail {
+  margin-bottom: 30px;
+  color: $primary;
+  font-size: px-to-rem(18);
+  cursor: pointer;
+}
+
+.iconMenu {
+  margin-left: 14px;
+}
+
+.wrapperInput {
+  margin-bottom: 10px;
+  display: flex;
+  .label {
+    font-weight: 500;
+    font-size: $p_font_size;
+  }
+  .value {
+    font-weight: 500;
+    font-size: $p_font_size;
+    color: $primary;
+  }
+}
+.groupBtnFooter {
+  display: flex;
+  .btnDeactivate {
+    margin-right: 16px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 32px;
+      margin-right: 0;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+}
+
+.headerTitle {
+  position: relative;
+  width: 140px;
+  left: 113px;
+  top: 50px;
+  font-size: $h3_font_size;
+}
+.profileContainer {
+  padding: 32px !important;
+  border-radius: 0;
+}
+.activeEdit {
+  color: $primary !important;
+  &:disabled {
+    cursor: not-allowed;
+    color: rgba($grey, 0.4) !important;
+  }
+}
+.lineSeparate {
+  background: $grey;
+  opacity: 0.1;
+  border-bottom: solid 1.5px $grey;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.formReason {
+  margin-top: 32px;
+}
+.titleReasonModal {
+  justify-content: center;
+}
+
+.resizeModal {
+  width: 867px;
+}
+.notfound {
+  font-size: px-to-rem(22);
+  line-height: 180%;
+  color: $lightest-grey;
+  text-align: center;
+  font-style: italic;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}

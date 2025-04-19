@@ -1,0 +1,42 @@
+@import '../../../../assets/css/variable';
+
+.zoom {
+  z-index: 9999;
+  position: fixed;
+  top: 120px;
+  left: calc(100% + 30px);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $medium-grey;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.zoomModal {
+  align-items: flex-start;
+  min-width: 100%;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  margin: 0px;
+}
+
+.contentZoomModal {
+  display: flex;
+  min-height: 100%;
+  border-radius: 0px;
+  padding: 0px;
+  background-color: $black;
+}
+
+.bodyZoomModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  object-fit: contain;
+  width: 100%;
+}

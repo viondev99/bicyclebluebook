@@ -1,0 +1,231 @@
+@import 'src/assets/css/variable';
+
+.button {
+  font-size: $p_font_size;
+  padding: 0 30px;
+  border: none;
+  height: 55px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out;
+
+  &.button_loading {
+    padding: 0 10px !important;
+  }
+
+  &.medium {
+    height: $medium;
+  }
+
+  &.large {
+    height: $large;
+  }
+
+  &.small {
+    height: $small;
+  }
+
+  &.success {
+    background: $light-green;
+    border-radius: 6px;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background: lighten($light-green, 10%);
+    }
+
+    &:active {
+      background: darken($light-green, 10%);
+    }
+
+    &:disabled {
+      background: $disabled;
+    }
+  }
+
+  &.primary {
+    background: $primary;
+    border-radius: 6px;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background: lighten($primary, 10%);
+    }
+
+    &:active {
+      background: darken($primary, 10%);
+    }
+
+    &:disabled {
+      background: $disabled;
+    }
+  }
+
+  &.secondary {
+    background: $primary;
+    border-radius: 6px;
+
+    &:hover,
+    &:focus {
+      background: $primary;
+    }
+
+    &:active {
+      background: darken($primary, 10%);
+    }
+
+    &:disabled {
+      background: $disabled;
+    }
+  }
+
+  &.warning {
+    background: $warning;
+    border-radius: 6px;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background: lighten($warning, 10%);
+    }
+
+    &:active {
+      background: darken($warning, 10%);
+    }
+
+    &:disabled {
+      background: $disabled;
+    }
+  }
+
+  &.danger {
+    background: $danger;
+    border-radius: 6px;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background: lighten($danger, 10%);
+    }
+
+    &:active {
+      background: darken($danger, 10%);
+    }
+
+    &:disabled {
+      background: $disabled;
+    }
+  }
+
+  &.outline {
+    color: $grey;
+    background: transparent;
+    border-radius: 6px;
+    border: solid 1.5px $lighter-grey;
+    box-sizing: border-box;
+  }
+
+  &.transparent {
+    color: $grey;
+    background: transparent;
+    border-radius: 6px;
+    padding: 0 5px;
+    margin: 0 -5px;
+    &:hover,
+    &:focus {
+      background: rgba($light-grey, 0.5);
+    }
+
+    &:active {
+      background: darken(rgba($light-grey, 0.5), 10%);
+    }
+
+    &:disabled {
+      background: $disabled;
+    }
+  }
+
+  &.recent {
+    color: $grey;
+    background: transparent;
+    border-radius: 6px;
+    // padding: 0 5px;
+    margin: 0 -5px;
+    &:hover,
+    &:focus {
+      background: rgba($light-grey, 0.5);
+    }
+
+    &:active {
+      background: darken(rgba($light-grey, 0.5), 10%);
+    }
+
+    &:disabled {
+      background: $disabled;
+    }
+  }
+
+  &.clear {
+    color: $grey;
+    background: transparent;
+    border-radius: 6px;
+    padding: 0 5px;
+    margin: 0 -5px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.loading {
+  border: 3px solid $primary;
+  border-radius: 50% !important;
+  margin: 0 10px 0 10px !important;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  min-width: 22px;
+  min-height: 22px;
+  -webkit-animation: rotate 2s linear infinite; /* Safari */
+  animation: rotate 2s linear infinite;
+
+  &.disabled_loading {
+    border: 3px solid $lighter-grey;
+    border-top: 3px solid $primary;
+    border-left: 3px solid $primary;
+    border-right: 3px solid $primary;
+  }
+
+  &.medium {
+    min-width: 22px;
+    min-height: 22px;
+  }
+
+  &.large {
+    min-width: 22px;
+    min-height: 22px;
+  }
+
+  &.small {
+    min-width: 20px;
+    min-height: 20px;
+  }
+}

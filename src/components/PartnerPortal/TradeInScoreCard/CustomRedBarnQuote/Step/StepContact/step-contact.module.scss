@@ -1,0 +1,170 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.headerStep {
+  font-weight: 700;
+  @extend .fs46;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 50px;
+}
+
+.wrapSubStepTwo {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 64px 91px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 47px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 22px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px;
+  }
+
+  .formHeader {
+    font-weight: 700;
+    @extend .fs30;
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 34px;
+  }
+
+  .customRow {
+    .customCol {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.formTitle {
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 14px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 6px;
+  }
+}
+
+.colTitle {
+  display: flex;
+  padding-top: 20px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 14px;
+    padding-top: unset;
+  }
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.bottomDescription {
+  @extend .fs22;
+  line-height: 180%;
+  color: $lightest-grey;
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: unset;
+  }
+}
+
+.my18 {
+  margin-top: 18px;
+  margin-bottom: 24px;
+
+  span {
+    color: $primary;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.customHr {
+  border: 1px solid rgba(110, 119, 133, 0.1);
+  margin: 43px 0 65px 0;
+
+  @include media-breakpoint-down(lg) {
+    margin: 28px 0 50px 0;
+  }
+  @media (max-width: 767px) {
+    margin: 14px 0 36px 0;
+  }
+}
+
+.wrapBottomPadding {
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 28px;
+  }
+}

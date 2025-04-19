@@ -1,0 +1,38 @@
+@import 'src/assets/css/variable';
+
+.bicycleDetailSection {
+  width: 65%;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+
+  .title {
+    margin-bottom: 52px;
+  }
+
+  .label {
+    margin-top: 30px;
+  }
+}
+.formEbike {
+  border: 1.5px solid #f3f3f5;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 45px;
+  padding: 45px;
+  @include media-breakpoint-down(xs) {
+    margin: 44px 0px 10px 0px;
+    padding: 22px;
+  }
+  .labelRadio {
+    margin-top: 23px;
+  }
+  .wrapRadio {
+    display: flex;
+    .radio {
+      &:first-child {
+        margin-right: 59px;
+      }
+    }
+  }
+}

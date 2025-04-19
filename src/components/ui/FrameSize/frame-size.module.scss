@@ -1,0 +1,20 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.frameSizeModal {
+  width: 1090px;
+
+  .title {
+    font-size: $p_font_size;
+    font-weight: 500;
+    color: $black;
+    line-height: 180%;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: $p_font_size;
+    color: $grey;
+    line-height: 180%;
+  }
+}

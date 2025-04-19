@@ -1,0 +1,157 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(38);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.fs18 {
+  font-size: px-to-rem(18);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.wrapContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: unset;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.headerStep {
+  font-weight: 700;
+  @extend .fs46;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 26px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include media-breakpoint-down(sm) {
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+  }
+}
+
+.tradeInValue {
+  font-size: px-to-rem(60);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 48px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(52);
+    margin-bottom: 44px;
+  }
+}
+
+.wrapButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 31px;
+  }
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.mr28 {
+  margin-right: 28px;
+
+  @include media-breakpoint-down(sm) {
+    margin-right: 22px;
+  }
+}
+
+.viewCost {
+  margin-top: 30px;
+  font-weight: 500;
+  line-height: 23px;
+  @extend .fs18;
+  color: $primary;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.customWidthButtonDecline {
+  width: 150px;
+
+  @include media-breakpoint-down(sm) {
+    width: 120px;
+  }
+}
+
+.mr30 {
+  margin-left: 30px;
+}

@@ -1,0 +1,8 @@
+@import 'src/assets/css/variable';
+
+.featureSection {
+  margin-bottom: 164px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 95px;
+  }
+}

@@ -1,0 +1,15 @@
+@import 'src/assets/css/variable';
+
+.card {
+  padding: 40px;
+  height: 180px;
+  justify-content: space-between;
+}
+
+.button {
+  width: 158px;
+  display: table-cell;
+  vertical-align: middle;
+  color: $grey;
+  border: 1px solid rgba(110, 119, 133, 0.2);
+}

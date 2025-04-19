@@ -1,0 +1,258 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs36 {
+  font-size: px-to-rem(36);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(28);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(26);
+  }
+}
+
+.fs28 {
+  font-size: px-to-rem(28);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.container {
+  @include media-breakpoint-up(lg) {
+    max-width: 918px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 1591px;
+  }
+}
+
+.wrapper {
+  padding-top: 100px;
+}
+
+.left {
+  @include media-breakpoint-up(lg) {
+    padding: 0 3px 0 15px;
+  }
+}
+
+.leftLayout {
+  width: 250px;
+  @include media-breakpoint-down(xs) {
+    width: auto;
+    flex: 1;
+  }
+}
+
+.titleFilterModal {
+  font-size: $p_font_size;
+  color: $black;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.filterWrapper {
+  margin-top: 25px;
+  color: $grey;
+  @include media-breakpoint-down(md) {
+    justify-content: space-between;
+  }
+  .itemFound {
+    font-size: px-to-rem(17);
+    line-height: 180%;
+    color: $grey;
+    font-weight: bold;
+  }
+
+  .sortButton {
+    font-size: px-to-rem(17);
+    font-weight: bold;
+  }
+}
+
+.viewButtonGroup {
+  margin: 0 -13px;
+
+  .viewTypeIcon {
+    width: 22px;
+    height: 22px;
+
+    &.activeGrid > path {
+      stroke: $primary;
+    }
+
+    &.activeList > path {
+      fill: $primary;
+    }
+  }
+}
+
+.filterButtonMobile {
+  @include reset-button;
+  display: flex;
+  color: $primary;
+  font-size: px-to-rem(18);
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  img {
+    margin-right: 10px;
+    width: 16px;
+  }
+}
+
+.clearAllButton {
+  @include reset-button;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: px-to-rem(17);
+  color: $black;
+
+  &:hover {
+    color: $black !important;
+  }
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.customSeoH1 {
+  letter-spacing: 0.5px;
+  font-size: px-to-rem(24);
+  color: $light-black;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 30px;
+  line-height: 180%;
+  max-height: 0.1px;
+  opacity: 0;
+
+  &:last-child {
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(18);
+  }
+}
+
+.viewSales {
+  // font-family: 'DM Sans';
+  // font-style: normal;
+  font-weight: 700;
+  font-size: px_to_rem(17);
+  line-height: 180%;
+  color: $primary;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.h55 {
+  height: 55px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mr10 {
+  margin-right: -10px;
+}
+
+.h55 {
+  height: 55px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mr10 {
+  margin-right: -10px;
+}
+
+.modalBody {
+  padding: unset !important;
+}
+
+.arrowDropdown {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.customArrowDropdown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  @include media-breakpoint-up(md) {
+    justify-content: start;
+  }
+}
+
+.rotage {
+  transform: rotate(180deg);
+  opacity: 0.6;
+  cursor: pointer;
+  @media (max-width: 767px) {
+    margin-top: 0;
+  }
+}
+
+.SEOContainer {
+  @include media-breakpoint-up(xl) {
+    padding-right: 400px;
+  }
+
+  .h1ClassName {
+    @extend .fs46;
+    line-height: 120%;
+  }
+  .h2ClassName {
+    @extend .fs36;
+    line-height: 120%;
+  }
+  .h3ClassName {
+    @extend .fs28;
+    line-height: 120%;
+  }
+  div {
+    @extend .fs22;
+    line-height: 180%;
+    color: $lightest-grey;
+  }
+}

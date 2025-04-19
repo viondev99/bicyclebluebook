@@ -1,0 +1,188 @@
+@import 'src/assets/css/variable';
+
+.containerSwiper {
+  min-height: 214px;
+  overflow-x: hidden;
+}
+.swiperWrapper {
+  position: relative;
+
+  .swiperSlideHint {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, #f3f3f5 0%, rgba(243, 243, 245, 0) 100%);
+    width: 185px;
+    z-index: 9;
+    pointer-events: none;
+  }
+}
+
+.btnNext {
+  position: absolute;
+  right: -140px;
+  top: 33%;
+  @include media-breakpoint-down(lg) {
+    right: -95px;
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.btnPrev {
+  position: absolute;
+  left: -140px;
+  top: 33%;
+  @include media-breakpoint-down(lg) {
+    left: -95px;
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  height: 162.51px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba($grey, 0.2);
+  justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    height: 135px;
+  }
+
+  img {
+    max-height: 100%;
+    width: 100%;
+    min-height: 100%;
+  }
+  .customMenu {
+    width: 100% !important;
+  }
+
+  .btnEditImage {
+    position: absolute;
+    top: 13px;
+    right: 9px;
+    background: $white;
+    border: 1px solid $grey;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      background-color: $primary;
+    }
+
+    .customBtnMenu {
+      position: relative;
+      right: 18px;
+      height: 24px;
+      margin: auto;
+      padding: 0;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
+
+.resizeBtn {
+  width: 100%;
+  font-size: px-to-rem(18) !important;
+  justify-content: flex-start !important;
+
+  color: $black !important;
+}
+
+.removeImage {
+  color: $red !important;
+}
+.customContentMenu {
+  left: 71px;
+  top: 78px;
+  ul {
+    width: 134px;
+    height: 144px;
+  }
+}
+.resizeModal {
+  max-width: 1064px;
+  .resizeContentModal {
+    padding: 69px;
+    @include media-breakpoint-down(md) {
+      padding: 15vh 0px 0px 0px;
+      .modal-body {
+        padding: 0px !important;
+      }
+    }
+    .btnCancel {
+      margin-right: 26px;
+    }
+  }
+}
+.footerModelCropImage {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+  @include media-breakpoint-down(md) {
+    margin-top: 80px;
+  }
+  img {
+    opacity: 1;
+  }
+}
+.containerCrop {
+  @include media-breakpoint-down(sm) {
+    margin: -15px;
+  }
+}
+.wrapAction {
+  .actionBtn {
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    width: 24px !important;
+    height: 24px !important;
+    border: 1.5px solid $medium-grey !important;
+    border-radius: 50% !important;
+    background: $white;
+  }
+  .active {
+    background: $primary !important;
+  }
+  .listAction {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 10;
+    padding: 28px 34px;
+    background: $white;
+    box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+    border-radius: 6px;
+    width: 134px;
+  }
+}
+
+.description {
+  margin-top: 13.85px;
+  font-size: px-to-rem(16);
+  line-height: 180%;
+  color: $lightest-grey;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(14);
+  }
+}
+
+.subDescription {
+  @extend .description;
+  margin-top: 0;
+}

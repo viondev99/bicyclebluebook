@@ -1,0 +1,21 @@
+@import 'src/assets/css/variable';
+
+.register {
+  align-items: center;
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+.wrapper {
+  margin-top: 75px;
+  @include media-breakpoint-down(lg) {
+    padding: 0 10px;
+    margin-top: 40px;
+  }
+}
+.card {
+  @include media-breakpoint-down(md) {
+    &:not(:first-of-type) {
+      margin-top: 15px;
+    }
+  }
+}

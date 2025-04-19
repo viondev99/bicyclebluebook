@@ -1,0 +1,55 @@
+@import 'src/assets/css/variable';
+
+.modal {
+  @include media-breakpoint-up(md) {
+    width: 564px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 843px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 1090px;
+  }
+}
+
+.contentZipCodeModal {
+  padding: 75px !important;
+  @include media-breakpoint-down(lg) {
+    padding: 56px !important;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 28px !important;
+  }
+  .title {
+    font-weight: bold;
+    font-size: $h2_font_size;
+    margin-bottom: 36px;
+  }
+  .content {
+    font-weight: normal;
+    font-size: $p_font_size;
+    color: $grey;
+    margin-bottom: 46px;
+  }
+}
+.footerModal {
+  display: flex;
+  justify-content: space-between;
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+  .btnSell {
+    margin-right: 32px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 22px;
+    }
+  }
+  .btnCancel {
+    @include media-breakpoint-down(xs) {
+      max-width: 100px;
+      margin-top: 100px;
+    }
+  }
+}

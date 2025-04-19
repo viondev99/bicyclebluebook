@@ -1,0 +1,40 @@
+@import 'src/assets/css/variable';
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 10px;
+  padding: 50px;
+  background-color: $white;
+
+  .title {
+    @include media-breakpoint-down(lg) {
+      max-width: 90%;
+      margin-top: 0;
+    }
+  }
+
+  .description {
+    margin-top: 28px;
+    font-size: $p_font_size;
+    line-height: 180%;
+    color: $grey;
+  }
+
+  .link {
+    font-size: $p_font_size;
+    margin-top: 28px;
+    color: $primary;
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 50px;
+    height: auto;
+    padding: 40px 30px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-top: 26px;
+  }
+}

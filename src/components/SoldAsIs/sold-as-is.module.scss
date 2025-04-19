@@ -1,0 +1,43 @@
+@import 'src/assets/css/variable';
+
+._imgSoldAsIs {
+  position: absolute;
+  background-image: url(../../assets/img/marketplace/img_sold_as_is.png);
+  font-weight: bold;
+  font-size: px-to-rem(18);
+  line-height: 23px;
+  text-align: right;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-down(lg) {
+    width: 119px;
+    height: 34px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgSoldAsIsCardView {
+  @extend ._imgSoldAsIs;
+  top: 5.5%;
+  right: 0%;
+  width: 125px;
+  height: 30px;
+
+  @include media-breakpoint-down(lg) {
+    width: 105px;
+    height: 29px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 95px;
+    height: 25px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}

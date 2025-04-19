@@ -1,0 +1,48 @@
+@import 'src/assets/css/variable';
+
+.headerOfferDetail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  .titleDetail {
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    color: $black;
+  }
+  .backToOffer {
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    color: $black;
+  }
+}
+.bikeName {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 30px;
+  display: block;
+  line-height: 120%;
+  color: $black;
+}
+
+.containChips {
+  margin-bottom: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  .chip {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 14px;
+    }
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+    .labelChip {
+      margin-right: 8px;
+    }
+    .contentChip {
+      color: $grey;
+    }
+  }
+}

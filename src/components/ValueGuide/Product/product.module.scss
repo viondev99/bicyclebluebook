@@ -1,0 +1,25 @@
+@import 'src/assets/css/variable';
+
+.container {
+  align-items: center;
+  padding: 84px 0px;
+  @include media-breakpoint-down(lg) {
+    padding: 84px 20px;
+  }
+}
+
+.noBike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 500px;
+  height: 100%;
+  font-size: $h3_font_size;
+  font-weight: 500;
+  color: $grey;
+
+  &.noBikeNoOpacity {
+    opacity: 0;
+  }
+}

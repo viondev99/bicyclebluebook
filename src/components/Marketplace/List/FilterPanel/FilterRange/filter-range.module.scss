@@ -1,0 +1,36 @@
+@import 'src/assets/css/variable';
+
+.filterWrapper {
+  padding: 5px 6px;
+  overflow: visible;
+
+  :global(.rc-slider-rail) {
+    background: rgba($grey, 0.2);
+    height: 2px;
+    margin: 0 -6px;
+  }
+
+  :global(.rc-slider-track) {
+    background: $primary;
+    height: 2px;
+    outline: none !important;
+  }
+
+  :global(.rc-slider-handle) {
+    background: $primary;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-top: -5px;
+    box-shadow: none !important;
+  }
+
+  .value {
+    font-size: px-to-rem(17);
+    line-height: $p_font_size;
+    font-weight: 500;
+    margin: 10px -5px 0;
+    color: $grey;
+  }
+}

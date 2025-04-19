@@ -1,0 +1,19 @@
+@import 'src/assets/css/variable';
+
+.searchButton {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.searchInput {
+  flex-grow: 1;
+}
+
+.searchContainer {
+  padding: 18px;
+  display: flex;
+  @include media-breakpoint-down(md) {
+    padding: 5px 17px;
+  }
+}

@@ -1,0 +1,94 @@
+@import 'src/assets/css/variable';
+
+.priceSection {
+  padding: 60px 62px 60px 62px;
+  height: 100%;
+  // justify-content: space-between;
+  flex-direction: column;
+  .item {
+    margin-bottom: 30px;
+    display: flex;
+    img {
+      width: 30px;
+    }
+    .tag {
+      margin-left: 20px;
+    }
+    .title {
+      font-size: px-to-rem(14);
+      line-height: px-to-rem(18);
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: $primary;
+      font-weight: bold;
+    }
+    .price {
+      font-weight: bold;
+      font-size: $h3_font_size;
+      line-height: px-to-rem(36);
+      color: $black;
+      margin-top: 5px;
+    }
+  }
+  .footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 18px;
+      height: 18px;
+    }
+    span {
+      font-size: px-to-rem(18);
+      line-height: px-to-rem(23);
+    }
+  }
+}
+.hideWhenMobile.hideWhenMobile {
+  display: block;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.showWhenMobile.showWhenMobile {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.saveLinkSuccess {
+  position: fixed;
+  width: 259px;
+  height: 62px;
+  background: $white;
+  box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: px-to-rem(15);
+  color: $black;
+  font-weight: 500;
+  animation: animationSavePopup 0.3s ease;
+  border-radius: 6.8px;
+  top: 50%;
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .iconTick {
+    width: 22px;
+    margin-right: 14px;
+  }
+}
+
+.link {
+  color: $primary;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

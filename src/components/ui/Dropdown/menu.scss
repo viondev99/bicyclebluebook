@@ -1,0 +1,50 @@
+@import 'src/assets/css/variable';
+
+.menuWrapper {
+  &.shadowMenu .menu {
+    box-shadow: $box-shadow;
+  }
+  border-radius: 6px;
+  .menu {
+    margin: 0;
+    padding: 20px 26px;
+    list-style: none;
+    background-color: $white;
+    border-radius: 6px;
+    z-index: $zindex-dropdown;
+    box-shadow: $box-shadow;
+
+    li {
+      margin-top: 15px;
+      margin-bottom: unset;
+
+      &:first-child {
+        margin-top: unset;
+        margin-bottom: unset;
+      }
+    }
+  }
+
+  .menuItem {
+    display: block;
+    width: auto;
+    overflow: hidden;
+    font-size: 1rem;
+    box-sizing: border-box;
+    min-height: 27px;
+    font-weight: 400;
+    line-height: 27px;
+    padding-top: 6px;
+    white-space: nowrap;
+    cursor: pointer;
+    letter-spacing: 0.00938em;
+    padding-bottom: 6px;
+    color: $black;
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+}

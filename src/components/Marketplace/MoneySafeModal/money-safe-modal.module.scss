@@ -1,0 +1,53 @@
+@import 'src/assets/css/variable';
+
+.moneySafeModal {
+  width: 850px;
+  @include media-breakpoint-down(lg) {
+    align-items: flex-start;
+    min-width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0px;
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .icon {
+      width: 100px;
+      min-width: 100px;
+      height: 100px;
+      min-height: 100px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .description {
+    font-size: $p_font_size;
+    color: $grey;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .buttonGroup {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .note {
+    width: 100%;
+    color: $medium-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,221 @@
+@import 'src/assets/css/variable';
+
+.headerSection {
+  margin-top: 100px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 90px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 92px;
+  }
+
+  .wrapTitleArticles {
+    @include media-breakpoint-down(sm) {
+      padding: 0 28px 0 28px;
+    }
+
+    .titleArticles {
+      font-size: px-to-rem(48);
+      font-weight: 700;
+      line-height: 120%;
+
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(34);
+      }
+    }
+  }
+}
+
+.sectionBody1 {
+  margin-top: 56px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+    transition: transform 0.5s;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  .coverSection1 {
+    position: relative;
+    height: 633px;
+    width: 100%;
+    // background-image: url('');
+    border-radius: 31px;
+
+    .imageBgr {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 479px;
+      border-radius: 23.6px;
+    }
+  }
+}
+
+.wrapTitle {
+  position: absolute;
+  bottom: 42.79px;
+  left: 56px;
+  max-width: 50%;
+
+  .title1 {
+    font-weight: 700;
+    font-size: px-to-rem(46);
+    line-height: 120%;
+    color: $white;
+
+    @include media-breakpoint-down(md) {
+      font-size: px-to-rem(37);
+    }
+  }
+
+  .title2 {
+    font-weight: 400;
+    font-size: px-to-rem(22);
+    line-height: 180%;
+
+    @include media-breakpoint-down(md) {
+      font-size: px-to-rem(18);
+    }
+  }
+}
+
+.wrapPagination {
+  position: relative;
+  margin-top: 46px;
+  margin-bottom: 140px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 32px;
+    margin-bottom: 105px;
+    padding: 0 28px 0 28px;
+  }
+
+  .customPagination {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.sectionBody2 {
+  margin: 71px -37.5px 0;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 56.43px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 28px 0 28px;
+    margin-top: 33px;
+  }
+}
+
+.wrapPostItem {
+  margin: 71px -37.5px 0;
+  padding: 0 22.5px !important;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 56.43px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 50.5px 0 50.5px !important;
+    margin-top: 33px;
+  }
+  .wrapImage {
+    height: 351px;
+    background-color: $lighter-grey;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.02);
+      transition: transform 0.5s;
+    }
+    .imageBgr {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 268px;
+    }
+  }
+  .wrapDescriptions {
+    margin-top: 24px;
+
+    .customDate {
+      font-weight: 700;
+      font-size: px-to-rem(16);
+      line-height: 180%;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 24.6px;
+      }
+    }
+
+    .customTitle {
+      margin-top: 12px;
+      font-weight: 700;
+      font-size: px-to-rem(30);
+      line-height: 120%;
+      margin-bottom: 31px;
+      cursor: pointer;
+
+      @include media-breakpoint-down(md) {
+        font-size: px-to-rem(24);
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 12.3px;
+        font-size: px-to-rem(22);
+      }
+    }
+  }
+
+  .wrapUrl {
+    margin-top: 33px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 23px;
+    }
+
+    .customUrlPost {
+      font-weight: 500;
+      font-size: px-to-rem(22);
+      line-height: 29px;
+
+      @include media-breakpoint-down(md) {
+        font-size: px-to-rem(18);
+        line-height: 23px;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: px-to-rem(16);
+        line-height: 21px;
+      }
+    }
+
+    .customImage {
+      @include media-breakpoint-down(md) {
+        margin-left: 12.25px;
+        width: 19px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-left: 12.25px;
+        width: 16px;
+      }
+    }
+  }
+}

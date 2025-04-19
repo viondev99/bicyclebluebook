@@ -1,0 +1,22 @@
+@import 'src/assets/css/variable';
+
+.card {
+  padding: 62px 75px;
+  @include media-breakpoint-down(lg) {
+    padding: 22px 60px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 28px 22px;
+  }
+}
+
+.divider {
+  margin: 64px -74px;
+  @include media-breakpoint-down(lg) {
+    margin-right: -22px;
+    margin-left: -22px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin: 42px -22px;
+  }
+}

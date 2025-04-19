@@ -1,0 +1,62 @@
+@import 'src/assets/css/variable';
+
+.stepper {
+  width: 100%;
+  padding: 20px 0px;
+
+  .bar {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    margin-bottom: 20px;
+    background-color: rgba($grey, 0.15);
+    border-radius: 30px;
+    overflow: hidden;
+
+    .process {
+      max-width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 6px;
+      background-color: $primary;
+      border-radius: 30px;
+      transition: width 0.5s ease-in-out;
+    }
+  }
+
+  .steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-weight: 500;
+      font-size: px-to-rem(19);
+      transition: color 0.5s ease-in-out;
+      color: $grey;
+    }
+
+    .title.active {
+      color: $primary;
+    }
+    .title.notActivated {
+      color: $lighter-grey;
+    }
+
+    .icon {
+      width: 25px;
+      height: 25px;
+      border-radius: 25px;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($grey, 0.15);
+      color: $white;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    .icon.active {
+      background-color: $primary;
+    }
+  }
+}

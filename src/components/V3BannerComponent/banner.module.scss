@@ -1,0 +1,201 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(36);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.container {
+  margin-bottom: 41px;
+  @include media-breakpoint-up(lg) {
+    max-width: 918px;
+    margin-bottom: 46px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 1591px;
+  }
+
+  .wrapBanner {
+    padding: 50px 110px;
+    background: linear-gradient(85.25deg, #4cb3e4 0.15%, #0098d1 99.72%);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      padding: 38px 54px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 23px 28px;
+    }
+
+    .wrapRight {
+      display: flex;
+      align-items: center;
+      .wrapAvatar {
+        min-width: 170px;
+        max-width: 170px;
+        min-height: 170px;
+        max-height: 170px;
+        background: $white;
+        box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 79px;
+
+        @include media-breakpoint-down(lg) {
+          margin: 0 35px;
+          min-width: 140px;
+          max-width: 140px;
+          min-height: 140px;
+          max-height: 140px;
+        }
+      }
+    }
+  }
+
+  .wrapBannerMobile {
+    padding: 40px 28px;
+    margin: 0 -28px;
+    background: linear-gradient(85.25deg, #4cb3e4 0.15%, #0098d1 99.72%);
+    display: flex;
+    justify-content: space-between;
+
+    .wrapMobileLeft {
+      margin-right: 18px;
+    }
+    .wrapAvatar {
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+        min-width: 82px;
+        max-width: 82px;
+        min-height: 82px;
+        max-height: 82px;
+        background: $white;
+        box-shadow: 0px 16.4px 45.3412px rgba(110, 119, 133, 0.25);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.text46 {
+  @extend .fs46;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 120%;
+  color: $white;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 32.65px;
+  }
+}
+
+.text30 {
+  @extend .fs30;
+  font-weight: 700;
+  line-height: 120%;
+  color: $white;
+}
+
+.text24 {
+  font-weight: 700;
+  font-size: px-to-rem(24);
+  line-height: 120%;
+  text-align: center;
+  color: $primary;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(19.7647);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(12.5);
+  }
+}
+
+.text22 {
+  @extend .fs22;
+  font-weight: 500;
+  line-height: 120%;
+  color: $white;
+}
+
+.mb24 {
+  margin-bottom: 24px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 18px;
+  }
+}
+
+.wrapLink {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px !important;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $white;
+    padding-bottom: 3px;
+
+    @include media-breakpoint-down(sm) {
+      border: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 5px;
+  }
+
+  img {
+    margin-left: 17px;
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 9px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 15px;
+    }
+  }
+}

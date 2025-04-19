@@ -1,0 +1,40 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.textContent {
+  font-weight: 400;
+  @extend .fs22;
+  line-height: 180%;
+  margin: 0;
+}
+
+.btnBottom {
+  margin-top: 40px;
+  @extend .fs22;
+  font-weight: 500;
+  line-height: 21px;
+  .btnRight {
+    background-color: white;
+    border: solid 2px $lighter-grey;
+    color: $grey;
+    margin-left: 16px;
+    @include media-breakpoint-down(sm) {
+      display: block;
+      margin: 16px 0 0 0;
+    }
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}

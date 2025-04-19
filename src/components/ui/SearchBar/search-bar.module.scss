@@ -1,0 +1,71 @@
+@import '../../../assets/css/variable';
+@import '../../../assets/css/utilities';
+
+.searchGroup {
+  margin-top: 26px;
+  display: flex;
+}
+
+.searchInput {
+  width: 500px;
+  @include media-breakpoint-down(lg) {
+    width: 500px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.searchMobile {
+  @include reset-button;
+}
+
+.searchButton {
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+}
+
+.autoCompleteWrapper {
+  position: absolute;
+  width: 500px;
+  top: 80px;
+  left: 0px;
+  right: 0;
+  background-color: $white;
+  box-shadow: $box-shadow;
+  border-radius: 10px;
+  z-index: 600;
+  padding: 10px 0px;
+
+  @include media-breakpoint-down(lg) {
+    width: 500px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
+  .notMatched {
+    color: $grey;
+    font-size: px-to-rem(18);
+    padding: 10px 25px;
+  }
+
+  .listContainer {
+    max-height: 300px;
+    overflow-y: auto;
+
+    .autocompleteItem {
+      cursor: pointer;
+      background-color: $white;
+      color: $black;
+      font-size: px-to-rem(18);
+      padding: 10px 25px;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}

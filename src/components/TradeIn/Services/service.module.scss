@@ -1,0 +1,42 @@
+@import 'src/assets/css/variable';
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  .title {
+    margin-top: 28px;
+    @include media-breakpoint-down(lg) {
+      max-width: 90%;
+      margin-top: 0;
+    }
+  }
+
+  .content {
+    display: block;
+    @include media-breakpoint-down(lg) {
+      display: flex;
+    }
+  }
+
+  .icon {
+    min-width: 100px;
+    @include media-breakpoint-down(lg) {
+      height: 80px;
+    }
+  }
+
+  .description {
+    margin-top: 22px;
+    font-size: $p_font_size;
+    line-height: 180%;
+    color: $grey;
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 50px;
+    height: auto;
+  }
+}

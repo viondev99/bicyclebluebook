@@ -1,0 +1,67 @@
+@import 'src/assets/css/variable';
+
+.detail {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  font-size: $p_font_size;
+  @include media-breakpoint-down(lg) {
+    padding: 10px 10px 20px;
+  }
+
+  .label {
+    color: $black;
+    font-weight: 500;
+    width: 50%;
+    padding-right: 10px;
+    display: flex;
+  }
+
+  .buttonInfo {
+    color: $primary;
+    width: auto;
+    margin-left: 5px;
+    height: auto;
+
+    .iconInfo {
+      width: 20px;
+      height: 20px;
+      align-self: center;
+      margin-left: 10px;
+    }
+  }
+
+  .value {
+    color: $grey;
+    width: 50%;
+    padding-left: 10px;
+    display: flex;
+  }
+}
+
+.detail.transparent {
+  background-color: transparent;
+}
+
+.detail.white {
+  background-color: $white;
+  @include media-breakpoint-down(lg) {
+    background-color: transparent;
+  }
+}
+
+.description {
+  font-size: $p_font_size;
+  color: $grey;
+  line-height: 180%;
+}
+
+.customDescription {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: px-to-rem(18) !important;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}

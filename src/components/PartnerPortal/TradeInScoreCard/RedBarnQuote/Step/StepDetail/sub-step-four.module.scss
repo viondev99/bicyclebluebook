@@ -1,0 +1,127 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.fs18 {
+  font-size: px-to-rem(18);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.headerStep {
+  font-weight: 700;
+  @extend .fs46;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 50px;
+}
+
+.wrapStepDetailsSubStepFour {
+  padding: 60px;
+  background: $white;
+  border-radius: 10px;
+  margin-bottom: 18px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 46px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 18px 22px;
+  }
+}
+
+.notFoundText {
+  @extend .fs30;
+  line-height: 36px;
+  color: $light-black;
+  font-weight: 700;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 0;
+  @include media-breakpoint-down(lg) {
+    line-height: 29px;
+  }
+  @include media-breakpoint-down(sm) {
+    list-style: 26px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  @extend .fs30;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 16px;
+}
+
+.customCol {
+  margin-bottom: 14px;
+}
+
+.customWrapCol {
+  margin-bottom: 26px;
+}
+
+.text {
+  @extend .fs18;
+  line-height: 120%;
+  color: $light-black;
+}
+
+.description {
+  @extend .fs18;
+  line-height: 120%;
+  color: $lightest-grey;
+}
+
+.wrapBottom {
+  padding-bottom: 1px;
+}
+.titleBicycle {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  color: $lightest-grey;
+  @include media-breakpoint-down(sm) {
+    font-size: 24px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 22px;
+  }
+}

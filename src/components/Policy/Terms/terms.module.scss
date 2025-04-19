@@ -1,0 +1,99 @@
+@import 'src/assets/css/variable';
+
+.container {
+  padding: 138px 0px 85px 0px;
+  @include media-breakpoint-down(xl) {
+    padding: 135px 58px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 108px 0px 92px 0px;
+  }
+}
+.title {
+  font-weight: bold;
+  font-size: $h2_font_size;
+  color: $black;
+  margin-bottom: 40px;
+  text-align: left;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0px 28px;
+    margin-bottom: 26px;
+  }
+}
+.intro {
+  margin-bottom: 56px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 44px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0px 28px;
+    margin-bottom: 38px;
+  }
+}
+.subTitle {
+  font-weight: bold;
+  font-size: $h3_font_size;
+  text-align: left;
+  @include media-breakpoint-down(sm) {
+    padding: 0px 28px;
+    margin-bottom: 38px;
+  }
+}
+.label {
+  color: $black;
+  font-weight: 500;
+  font-size: $p_font_size;
+  text-align: left;
+}
+.subLabel {
+  color: $black;
+  font-weight: 500;
+  font-size: $p_font_size;
+  text-align: left;
+  margin: 36px 0px;
+}
+.description {
+  margin-top: 10px;
+  font-size: $p_font_size;
+  font-weight: normal;
+  line-height: 180%;
+  color: $grey;
+  text-align: left;
+}
+.btnCollapse {
+  display: block !important;
+  margin-bottom: 18px !important;
+  margin-right: 0px !important;
+  height: auto !important;
+  background: $white !important;
+  border-radius: 6px !important;
+  padding: 24px 34px !important;
+  width: 100% !important;
+  @include media-breakpoint-down(sm) {
+    padding: 27px 22px !important;
+  }
+}
+
+.wrapLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+  .iconDropdown {
+    transition: all 0.5s ease;
+    margin-top: 10px;
+    padding-left: 23px;
+  }
+  .isOpen {
+    transform: rotateX(180deg);
+  }
+}
+
+.customLink {
+  font-size: $p_font_size;
+  color: $primary;
+  word-break: break-word;
+}

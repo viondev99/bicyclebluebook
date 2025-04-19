@@ -1,0 +1,70 @@
+@import 'src/assets/css/variable';
+
+.formItem {
+  margin-top: 18px;
+  @include media-breakpoint-down(sm) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .required:after {
+    content: ' *';
+    color: #c8cacd;
+    margin-left: 2px;
+  }
+}
+.contentTitle {
+  margin-top: 44px;
+}
+
+.label_col {
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 12px;
+    padding-left: 0;
+  }
+}
+.input_col {
+  padding: 0;
+  align-items: right;
+  @include media-breakpoint-up(lg) {
+    padding-left: 15px;
+  }
+}
+.input {
+  max-width: 485px;
+  width: 100%;
+}
+
+.checkBox {
+  display: flex;
+  input {
+    margin-top: 10px;
+  }
+}
+.checkboxText {
+  color: $grey;
+}
+.contentTitle {
+  margin-top: 44px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: $h3_font_size;
+}
+
+._errorText {
+  color: $danger;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.apartmentLabel {
+  color: $light-black;
+  margin: 0 0 0 15px;
+  text-align: left;
+  @include media-breakpoint-down(sm) {
+    margin-left: 10px;
+  }
+}

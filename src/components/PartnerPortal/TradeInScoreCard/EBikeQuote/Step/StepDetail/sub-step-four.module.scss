@@ -1,0 +1,204 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.headerStep {
+  font-weight: 700;
+  @extend .fs46;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 50px;
+}
+
+.wrapStepThrees {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 64px 91px;
+
+  @include media-breakpoint-down(md) {
+    padding: 46px 32px 32px 32px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px;
+  }
+
+  .customRow {
+    margin-bottom: 53px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 35px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.textBottomLeft {
+  @extend .fs22;
+  line-height: 180%;
+  color: $light-black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    cursor: pointer;
+    color: $primary;
+    margin-left: 5px;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.bottomDescription {
+  @extend .fs22;
+  line-height: 180%;
+  color: $lightest-grey;
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: unset;
+  }
+}
+
+.my18 {
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+
+.titleForm {
+  @extend .fs22;
+  font-weight: 500;
+  line-height: 120%;
+  color: $light-black;
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}
+
+.customInputNumber::-webkit-outer-spin-button,
+.customInputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.customInputNumber[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.wrapRadio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 46px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 41px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px;
+  }
+
+  div {
+    margin-right: 45px;
+
+    &:last-child {
+      margin-right: unset;
+    }
+  }
+
+  .radioTitle {
+    margin-bottom: 7px;
+    font-weight: 500;
+    @extend .fs22;
+    line-height: 120%;
+    color: $light-black;
+  }
+}
+
+.titleMiddle {
+  display: flex;
+  align-items: center;
+}
+
+.customCol {
+  margin-bottom: 22px;
+}
+
+.mobileNoPaddingBottom {
+  @include media-breakpoint-down(md) {
+    margin-bottom: unset;
+    margin-top: 32px;
+  }
+}
+
+.wrapBottom {
+  padding-bottom: 28px;
+}

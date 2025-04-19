@@ -1,0 +1,120 @@
+@import 'src/assets/css/variable';
+
+.notFoundText {
+  margin-top: 16px;
+  background: white;
+  font-size: px-to-rem(22);
+  line-height: 180%;
+  color: $lightest-grey;
+  font-style: italic;
+  text-align: center;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}
+.wrapModal {
+  max-width: 367px;
+  position: absolute;
+  font-size: px_to_rem(18);
+  font-weight: 500 !important;
+  z-index: 999999;
+  padding: 30px;
+  border-radius: 10px;
+  top: 3%;
+  margin-left: 250px;
+  background-color: $white;
+
+  .arrowLeft {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -12px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+  }
+
+  &.step4 {
+    top: 9%;
+    max-width: 340px !important;
+    @media (max-width: 760px) {
+      // display: none;
+      margin-left: unset;
+      max-width: 90% !important;
+      top: 5%;
+      left: 5%;
+    }
+  }
+
+  @media (max-width: 1199px) and (min-width: 760px) {
+    max-width: 345px;
+  }
+
+  @media (max-width: 760px) {
+    // display: none;
+    margin-left: unset;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .buttonBack {
+    border: none;
+    background-color: unset;
+    color: $medium-grey;
+    cursor: pointer;
+  }
+
+  .buttonNext {
+    border: none;
+    background-color: unset;
+    color: $primary;
+    cursor: pointer;
+  }
+
+  .wrapHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .title {
+    font-weight: 700;
+    line-height: 120%;
+  }
+  .content {
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+      padding: 100px 20px;
+      position: relative;
+      min-height: 100vh;
+      border: none;
+    }
+    @include media-breakpoint-up(md) {
+      max-height: 88vh;
+      overflow-y: auto;
+    }
+    .body {
+      @media (max-width: 1199px) and (min-width: 768px) {
+        margin-top: 24px;
+      }
+
+      .btn {
+        margin-top: 46px;
+        @include media-breakpoint-down(md) {
+          float: right;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .modalCloseBtn {
+    padding: 0;
+  }
+}

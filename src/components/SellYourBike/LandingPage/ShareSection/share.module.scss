@@ -1,0 +1,109 @@
+@import 'src/assets/css/variable';
+.wrapShare {
+  margin-top: 55px;
+  margin-bottom: 164px;
+}
+
+.wrapImages {
+  display: flex;
+  justify-content: flex-start;
+  .iphoneSmall {
+    margin-right: 16px;
+    margin-top: 40px;
+    width: 207px;
+    height: 420px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 32px;
+      height: 332px;
+      width: 161px;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-top: 28px;
+      width: 139.45px;
+      height: 287.71px;
+    }
+  }
+  .iphoneBig {
+    width: 247px;
+    height: 503px;
+    @include media-breakpoint-down(lg) {
+      width: 194.62px;
+      height: 396.48px;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 166.12px;
+      height: 342.76px;
+    }
+  }
+}
+
+.title {
+  font-size: px-to-rem(46);
+  font-weight: bold;
+  color: $black;
+  margin-bottom: 26px;
+  margin-top: 80px;
+}
+.description {
+  font-size: $p_font_size;
+  line-height: 180%;
+  margin-bottom: 36px;
+}
+.label {
+  font-size: px-to-rem(14);
+  line-height: 18px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 40px;
+  color: $grey;
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+}
+.wrapIcons {
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+}
+.wrapShareIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  @include media-breakpoint-down(xs) {
+    border: 1px solid #d3dae6;
+    padding: 20px 22px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  .icon {
+    margin-right: 30px;
+    @include media-breakpoint-down(xs) {
+      display: flex;
+      align-items: center;
+    }
+    .name {
+      display: none;
+      @include media-breakpoint-down(xs) {
+        color: $black;
+        display: block;
+        margin-left: 16px;
+        font-weight: 500;
+        font-size: px-to-rem(16);
+        line-height: 21px;
+      }
+    }
+  }
+  .arrowRight {
+    display: none;
+    width: 24px;
+    height: 16px;
+    @include media-breakpoint-down(xs) {
+      display: block;
+    }
+  }
+}

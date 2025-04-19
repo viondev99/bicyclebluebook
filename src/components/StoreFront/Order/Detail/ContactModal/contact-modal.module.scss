@@ -1,0 +1,30 @@
+@import 'src/assets/css/variable';
+
+.avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.name {
+  font-size: $p_font_size;
+  font-weight: 500;
+  line-height: 120%;
+  color: $black;
+  word-break: break-all;
+}
+
+.successMessage {
+  color: $grey;
+}
+
+.modal {
+  @include media-breakpoint-up(md) {
+    width: 564px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 674px;
+  }
+}

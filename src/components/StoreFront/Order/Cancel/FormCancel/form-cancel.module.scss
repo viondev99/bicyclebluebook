@@ -1,0 +1,42 @@
+@import 'src/assets/css/variable';
+
+.containFormCancel {
+  padding: 58px !important;
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px !important;
+  }
+  .title {
+    font-weight: bold;
+    font-size: $h3_font_size;
+    color: $black;
+    margin-bottom: 36px;
+  }
+  .containRadio {
+    margin-bottom: 25px;
+    .radio {
+      margin-bottom: 35px;
+    }
+    .titleRadio {
+      font-weight: 500;
+      font-size: $p_font_size;
+      color: $black;
+    }
+  }
+  .customBtn {
+    max-width: 200px;
+  }
+}
+.lineInfo {
+  margin-top: 20px;
+  display: flex;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+  .label {
+    color: $black;
+    margin-right: 22px;
+  }
+  .content {
+    color: $grey;
+  }
+}

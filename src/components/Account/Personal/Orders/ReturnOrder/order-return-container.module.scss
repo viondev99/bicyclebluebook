@@ -1,0 +1,17 @@
+@import 'src/assets/css/variable';
+
+.card {
+  padding: 58px;
+  @include media-breakpoint-down(lg) {
+    padding: 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 33px 22px;
+  }
+}
+
+.backButton {
+  span {
+    color: $black;
+  }
+}

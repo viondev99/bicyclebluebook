@@ -1,0 +1,458 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.listingsContainer {
+  padding-left: 32px;
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+}
+
+.listingItem {
+  flex-direction: row !important;
+  margin: 0 0 18px 0 !important;
+  padding: 0 !important;
+  .imageItemListing {
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 0;
+    @include media-breakpoint-down(xs) {
+      border-radius: 10px 10px 0px 0px;
+      height: 250px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+.contentItemListing {
+  font-weight: 500;
+  line-height: 120%;
+  padding: 15px 0px 15px 30px;
+  display: flex;
+  flex-direction: column;
+  .nameListing,
+  .noLink {
+    font-weight: 500;
+    font-size: $p_font_size;
+    color: $black;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    &:hover {
+      color: $primary;
+    }
+  }
+  .noLink {
+    &:hover {
+      color: $black;
+    }
+  }
+  .priceItem {
+    font-size: $p_font_size;
+    color: $primary;
+  }
+  .availableAssembled {
+    font-size: px-to-rem(16);
+    color: $green;
+    margin-top: 20px;
+
+    @include media-breakpoint-down(xs) {
+      margin-top: 10px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    width: 75%;
+  }
+}
+.groupChips {
+  margin-bottom: 15px;
+  .chip {
+    margin-right: 20px;
+    .titleChip {
+      margin-right: 10px;
+      font-weight: bold;
+      color: $black;
+      font-size: px-to-rem(16);
+    }
+    .contentChip {
+      color: $grey;
+      font-size: px-to-rem(16);
+      a {
+        color: $grey;
+        font-size: px-to-rem(16);
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    line-height: 2;
+  }
+}
+.isActive {
+  color: $green;
+}
+.actionItemListing {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px 30px 30px 0px;
+  align-items: flex-end;
+  @include media-breakpoint-down(md) {
+    width: 25%;
+    padding: 15px 30px 15px 0px;
+  }
+}
+.draft {
+  color: $warning;
+}
+.expired {
+  color: $danger;
+}
+.hideMenu {
+  display: none;
+}
+
+.notFoundListing {
+  padding: 32px;
+  .titleNotFound {
+    font-weight: bold;
+    padding-bottom: 32px;
+    font-size: $h3_font_size;
+  }
+  .btnCreate {
+    font-weight: 500;
+    width: 273px;
+    a {
+      color: $white;
+    }
+  }
+}
+
+.contentModal {
+  color: $grey;
+  font-size: $p_font_size;
+}
+
+.defaultStatus {
+  text-align: right;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  @include media-breakpoint-down(xs) {
+    padding-right: 0px;
+    width: 150px;
+  }
+}
+.year {
+  color: $grey;
+  white-space: nowrap;
+  padding-right: 20px;
+  line-height: 1.4;
+}
+.boughtBy {
+  color: $grey;
+  padding-right: 20px;
+  white-space: nowrap;
+  line-height: 1.4;
+  a {
+    color: $grey;
+    font-size: px-to-rem(16);
+  }
+}
+.idListing {
+  font-size: px-to-rem(16);
+  padding-right: 20px;
+  color: $grey;
+  white-space: nowrap;
+  line-height: 1.4;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.inventoryName {
+  line-height: 1.4;
+  font-size: px-to-rem(16);
+  color: $grey;
+  white-space: nowrap;
+
+  .link {
+    color: $primary;
+    line-height: 1.4;
+    font-size: px-to-rem(16);
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.customMenu {
+  ul {
+    width: 200px !important;
+    padding: 15px 26px 0px 26px !important;
+  }
+}
+.resizeBtn {
+  width: 100%;
+  font-size: px-to-rem(18) !important;
+  justify-content: flex-start !important;
+  font-weight: 500;
+  text-align: left;
+  color: $black !important;
+  a {
+    font-size: px-to-rem(18);
+    color: $black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.customLink {
+  font-size: px-to-rem(18);
+  color: $black;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 45px;
+  line-height: 1;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.listingAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px !important;
+  height: 121px;
+  flex-direction: row !important;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 32px;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column !important;
+    padding: 0 22px 0 0 !important;
+  }
+}
+.wrapAction {
+  display: flex;
+  padding-left: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    justify-content: flex-start;
+  }
+  .title {
+    margin-right: 10px;
+    font-size: px_to_rem(22);
+    font-weight: 500;
+    color: #828d9b;
+
+    @include media-breakpoint-down(md) {
+      margin-right: unset;
+      font-size: px_to_rem(18);
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 12px;
+      font-size: px_to_rem(16);
+    }
+  }
+  .sortContainer {
+    width: 220px;
+    @include media-breakpoint-down(sm) {
+      width: 180px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 180px;
+    }
+  }
+  .wrapCalendar {
+    margin: 0px 28px 0px 46px;
+    @include media-breakpoint-down(sm) {
+      margin: 0px 16px 0px 18px;
+    }
+    @include media-breakpoint-down(md) {
+      margin: 0px 16px 0px 0;
+    }
+  }
+  .groupAssembled {
+    padding-top: 10px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    width: 125px;
+    justify-content: space-between;
+    font-size: px-to-rem(16);
+  }
+  .icListingAction {
+    cursor: pointer;
+  }
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes searchWrapAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapSearch {
+  margin-top: 32px;
+  animation: searchWrapAnimation 0.5s ease-in-out;
+  .inputSearch {
+    width: 100%;
+    margin-right: 16px;
+    @include media-breakpoint-down(sm) {
+      background: transparent;
+    }
+  }
+  .wrapInput {
+    width: 100%;
+    position: relative;
+    .iconSearch {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      display: none;
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+  }
+  .btnSearch {
+    margin-left: 32px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 32px;
+    padding: 0px !important;
+    height: auto;
+  }
+}
+
+.selectContainer {
+  width: 225px;
+  @include media-breakpoint-down(sm) {
+    width: 185px;
+    margin-left: unset !important;
+  }
+  @include media-breakpoint-down(md) {
+    width: 185px;
+    margin-left: -20px;
+  }
+}
+.selectStatusSold {
+  width: 200px;
+  @include media-breakpoint-down(sm) {
+    width: 130px;
+  }
+}
+
+.groupStatusListing {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .statusListing {
+    margin-right: 16px;
+    font-weight: 500;
+    font-size: $p_font_size;
+  }
+}
+
+.dateRange {
+  position: relative;
+}
+
+.dateRangePicker {
+  position: absolute;
+  top: 0;
+  right: 252px;
+  z-index: 5;
+  width: 318px;
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 34px 94px rgba(110, 119, 133, 0.25);
+  border-radius: 6px;
+  @include media-breakpoint-down(md) {
+    width: 500px;
+    right: 155px;
+  }
+  @media (max-width: 769px) {
+    right: -10px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 300px;
+    left: -90px;
+  }
+  @include media-breakpoint-down(xs) {
+    z-index: 100;
+  }
+
+  .rdr-PredefinedRanges {
+    display: none !important;
+  }
+
+  span.rdr-Day.is-selected.is-passive {
+    background: #fff !important;
+    color: rgb(42, 88, 117) !important;
+  }
+
+  .btn {
+    font-size: px-to-rem(17);
+    font-weight: 500;
+  }
+
+  .applyDate {
+    color: $primary;
+  }
+}
+
+.filterMobile {
+  display: none !important;
+  @include media-breakpoint-down(sm) {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+}
+.filterDesktop {
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+
+.breakWhenMobile {
+  @media (max-width: 385px) {
+    display: block;
+  }
+}
+.cancelledStatus {
+  color: $danger;
+}
+.cancelRequest {
+  font-weight: 500;
+  color: $warning;
+  @include media-breakpoint-down(sm) {
+    margin-top: 10px;
+  }
+}

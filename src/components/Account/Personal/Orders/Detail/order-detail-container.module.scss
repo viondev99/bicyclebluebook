@@ -1,0 +1,29 @@
+@import 'src/assets/css/variable';
+
+.header {
+  color: $black;
+  font-size: px-to-rem(18);
+  line-height: px-to-rem(23);
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 36px 42px;
+
+  @include media-breakpoint-down(md) {
+    padding: 33px 22px;
+  }
+
+  img {
+    margin-right: 4px;
+    width: 21px;
+    height: 21px;
+  }
+
+  button {
+    span {
+      color: $black;
+      font-size: px-to-rem(18);
+      line-height: px-to-rem(23);
+      font-weight: 500;
+    }
+  }
+}

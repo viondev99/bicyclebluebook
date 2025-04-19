@@ -1,0 +1,170 @@
+@import 'src/assets/css/variable';
+
+.fs60 {
+  font-size: px-to-rem(60);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(48);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.wrapStepImage {
+  .wrapTradeInValue {
+    .header {
+      @extend .fs46;
+      font-weight: 700;
+      line-height: 120%;
+      color: $light-black;
+      margin-bottom: 29px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 26px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .customCard {
+      padding: 60px;
+
+      @include media-breakpoint-down(lg) {
+        padding: 40px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 22px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 28px 22px;
+      }
+    }
+  }
+
+  .wrapBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .wrapRight {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 46px;
+        font-weight: 500;
+        @extend .fs22;
+        line-height: 29px;
+        color: $lightest-grey;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.textGrey {
+  @extend .fs22;
+  line-height: 180%;
+  color: $lightest-grey;
+}
+
+.textBlack {
+  @extend .fs22;
+  line-height: 180%;
+  color: $light-black;
+}
+
+.mb46 {
+  margin-bottom: 46px;
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.miniDescription {
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 21px;
+  color: $lightest-grey;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(14);
+  }
+}
+
+.wrapBottomPadding {
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 5px;
+  }
+}
+.titleBicycle {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  color: $lightest-grey;
+  @include media-breakpoint-down(sm) {
+    font-size: 24px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 22px;
+  }
+}

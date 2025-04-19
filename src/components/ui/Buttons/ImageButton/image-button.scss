@@ -1,0 +1,34 @@
+@import 'src/assets/css/variable';
+
+.img-button {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  &:hover,
+  &:focus {
+    background: $light-grey;
+  }
+  &:active {
+    background: darken($light-grey, 10%);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    background-color: transparent;
+  }
+
+  &.clear {
+    transition: none;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
+  }
+}

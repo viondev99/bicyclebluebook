@@ -1,0 +1,173 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(30);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.section {
+  padding: 60px 0;
+  background: $light-grey;
+  @include media-breakpoint-down(md) {
+    padding: 45px 0;
+  }
+
+  .description {
+    color: $grey;
+  }
+}
+
+.wrapShopBuyCategorySection {
+  .wraplabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    label {
+      font-weight: 700;
+      @extend .fs46;
+
+      line-height: 120%;
+      color: $light-black;
+    }
+    a {
+      font-weight: 700;
+      @extend .fs30;
+      line-height: 120%;
+      text-align: right;
+      color: $primary;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.itemSlider {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65.62%, rgba(0, 0, 0, 0.6) 91.67%);
+  border-radius: 10px;
+  cursor: pointer;
+
+  img {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 471/484;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.02);
+      transition: transform 0.5s;
+    }
+  }
+
+  span {
+    position: absolute;
+    bottom: 30px;
+    left: 26px;
+    font-weight: 700;
+    font-size: px-to-rem(38);
+    line-height: 120%;
+    color: $white;
+  }
+}
+
+.wrapArrowSwiper {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  max-width: 120px;
+  min-width: 120px;
+
+  .progressBar {
+    min-width: calc(1140px - 148px);
+    max-width: calc(1140px - 148px);
+    padding-right: 68px;
+
+    @include media-breakpoint-down(lg) {
+      padding-right: 40px;
+      min-width: calc(960px - 148px);
+      max-width: calc(960px - 148px);
+    }
+    @include media-breakpoint-down(md) {
+      min-width: calc(720px - 148px);
+      max-width: calc(720px - 148px);
+    }
+    @include media-breakpoint-down(sm) {
+      padding-right: 26px;
+      min-width: calc(540px - 109px);
+      max-width: calc(540px - 109px);
+    }
+    @include media-breakpoint-down(xs) {
+      padding-right: 26px;
+      min-width: calc(100vw - 109px);
+      max-width: calc(100vw - 109px);
+    }
+  }
+
+  .wrapArrow {
+    display: flex;
+
+    .arrow {
+      border: 2px solid $light-black;
+      border-radius: 50%;
+      width: 51px;
+      height: 51px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      @include media-breakpoint-down(sm) {
+        width: 30.77px;
+        height: 30.77px;
+      }
+
+      &:hover,
+      &:focus {
+        background: $white;
+      }
+
+      img {
+        width: 30px;
+        height: 20px;
+      }
+    }
+
+    .wrapArrowLeft {
+      margin-right: 16px;
+    }
+  }
+}

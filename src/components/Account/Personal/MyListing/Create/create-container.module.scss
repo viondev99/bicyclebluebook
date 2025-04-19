@@ -1,0 +1,89 @@
+@import 'src/assets/css/variable';
+
+.container {
+  overflow: hidden;
+  align-items: center;
+  padding: 84px 50px;
+  @include media-breakpoint-down(xs) {
+    padding: 84px 28px;
+  }
+  .header {
+    p {
+      font-size: $p_font_size;
+      color: $grey;
+      margin: 31px 0px 68px;
+      @include media-breakpoint-down(xs) {
+        margin: 26px 0px 38px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.listingCreateCtn {
+  .tabMenus {
+    display: flex;
+    align-items: center;
+
+    .buttonTabs {
+      background: $lighter-grey;
+      height: 94px;
+      color: $lightest-grey;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      @include media-breakpoint-down(sm) {
+        height: 81px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        height: 63px;
+      }
+
+      &:first-child {
+        margin-right: 11px;
+        width: 286px;
+
+        @include media-breakpoint-down(sm) {
+          margin-right: 10px;
+          width: 205px;
+        }
+        @include media-breakpoint-down(xs) {
+          margin-right: 8px;
+          width: 105px;
+        }
+      }
+      &:nth-child(2) {
+        width: 470px;
+
+        @include media-breakpoint-down(sm) {
+          width: 352px;
+        }
+        @include media-breakpoint-down(xs) {
+          width: 206px;
+        }
+      }
+      &.active {
+        background: $white;
+        color: $primary;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 120%;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 24px;
+        }
+        @include media-breakpoint-down(xs) {
+          font-weight: 500;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

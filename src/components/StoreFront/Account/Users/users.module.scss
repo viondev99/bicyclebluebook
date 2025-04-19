@@ -1,0 +1,189 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .selectContainer {
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    p {
+      margin: 0px;
+      font-size: $p_font_size;
+      color: $grey;
+      font-weight: 500;
+    }
+
+    .select {
+      min-width: 160px;
+      color: $black;
+    }
+  }
+
+  .buttonLink {
+    color: $primary !important;
+  }
+}
+
+.user {
+  margin: 16px 0px !important;
+  padding: 25px 40px !important;
+  display: flex !important;
+  flex-direction: row !important;
+
+  @include media-breakpoint-down(sm) {
+    padding: 22px !important;
+  }
+
+  .userDetail {
+    flex: 1;
+    min-width: 0px;
+    display: flex;
+    flex-direction: row;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+
+    .userName {
+      flex: 1;
+      max-width: calc(50% - 20px);
+      display: block;
+      color: $black;
+      font-size: $p_font_size;
+      font-weight: 500;
+      margin-right: 20px;
+      height: 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    .userInfo {
+      max-width: 50%;
+
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+      }
+
+      .info {
+        color: $grey;
+        font-size: $p_font_size;
+        font-weight: 500;
+        flex: 1;
+        max-width: 100%;
+        height: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:first-of-type {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.buttonMoreAction {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    align-items: flex-start;
+  }
+}
+
+.actionsContainer {
+  width: 0px;
+  position: relative;
+
+  .actionsContent {
+    box-shadow: 0px 34px 94px rgba($grey, 0.25);
+    background-color: $white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0px;
+    left: -130px;
+    overflow: hidden;
+    z-index: 5;
+
+    .buttonAction {
+      width: 150px;
+      margin: 0px;
+      padding: 20px 30px;
+      border-radius: 0px;
+      justify-content: flex-start;
+      font-size: px-to-rem(18);
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+
+      &:last-of-type {
+        color: $red;
+      }
+
+      &:last-of-type:hover {
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+}
+
+.createUserModal,
+.updateUserModal {
+  width: 662px;
+
+  .inputContainer {
+    display: flex;
+    margin-bottom: 25px;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+
+    .inputLabel {
+      width: 180px;
+      font-size: $p_font_size;
+      font-weight: 500;
+      padding-top: 15px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .buttonLink {
+      display: none;
+    }
+  }
+}
+
+.removeUserModal {
+  width: 500px;
+  .description {
+    font-size: $p_font_size;
+    color: $grey;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,47 @@
+@import 'src/assets/css/variable';
+
+.mainLayout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.mainContent {
+  width: 100%;
+  flex: 1;
+  background-color: $light-grey;
+}
+
+.mainTour {
+  display: block;
+  position: relative;
+  z-index: 1050;
+  .wrapTour {
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    .btnClose {
+      background: none !important;
+      border: none;
+      position: absolute;
+      z-index: 99999999;
+      right: 0;
+      top: 10px;
+      @include media-breakpoint-down(md) {
+        margin-top: 30px;
+        margin-right: 4px;
+      }
+      .iconCloseTour {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+}

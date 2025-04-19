@@ -1,0 +1,94 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.summaryCard.summaryCard {
+  padding: 38px 0;
+
+  .summarySection {
+    padding: 38px 50px;
+    border-bottom: 1px solid rgba($grey, 0.1);
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+
+  .summarySection:first-child {
+    padding-top: 0;
+  }
+
+  .summarySection:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.itemsButton {
+  @include reset-button;
+  color: $grey;
+  font-size: $p_font_size;
+  line-height: 180%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.totalSummaryTitle {
+  color: $grey;
+  font-weight: 500;
+  font-size: px-to-rem(18);
+  line-height: px-to-rem(23);
+}
+
+.totalSummaryValue {
+  color: $black;
+  font-family: Rubik, sans-serif;
+  font-size: px-to-rem(18);
+  line-height: px-to-rem(23);
+  &.totalOrder {
+    color: $primary;
+  }
+  &.discount {
+    color: $warning;
+  }
+}
+
+.removeCouponButton {
+  height: 30px !important;
+  font-size: px-to-rem(15);
+  opacity: 0.3;
+}
+
+.tradeInContainer {
+  margin-top: 24px;
+  padding: 38px 50px;
+}
+
+.titleTradeIn {
+  font-weight: 500;
+  font-size: px_to_rem(22);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 23px;
+}
+
+.valueTradeIn {
+  font-weight: 500;
+  font-size: px_to_rem(22);
+  line-height: 120%;
+  color: $primary !important;
+}
+.selectTradeIn {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.subText {
+  font-weight: 400;
+  font-size: px_to_rem(16);
+  line-height: 140%;
+  color: $light-black;
+}

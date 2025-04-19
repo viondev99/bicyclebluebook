@@ -1,0 +1,341 @@
+@import 'src/assets/css/variable';
+
+.tradeInLayout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.tradeInContent {
+  width: 100%;
+  flex: 1;
+  background-color: $light-grey;
+}
+
+.cover {
+  background-color: $light-grey;
+  position: relative;
+  background-image: url('https://d1eye5spyas0l1.cloudfront.net/_assets/bg_hero_xl_new-c125a92a01d82c589cf71474d422a738.webp');
+  background-position: right -100px top 0px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  @include media-breakpoint-between(sm, lg) {
+    background-position: right 60px top 157px;
+    background-size: auto;
+    background-image: url('../../../../../assets/img/trade-in/bg_hero_l.png');
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 100px;
+    background-position: center bottom 0;
+    padding-bottom: 510+120px;
+    background-size: 510px;
+    background-image: url('../../../../../assets/img/trade-in/bg_hero_l.png');
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 115%;
+    background-size: calc(100% - 30px);
+  }
+
+  .sectionContainer {
+    padding-top: 240px;
+    padding-bottom: 105px;
+    z-index: 100;
+    position: static;
+    @include media-breakpoint-down(lg) {
+      padding-top: 160px;
+      padding-bottom: 25px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .siteTitle {
+      max-width: 560px;
+      @include media-breakpoint-between(sm, lg) {
+        max-width: 470px;
+      }
+    }
+
+    .siteDescription {
+      max-width: 540px;
+      margin-top: 34px;
+      font-size: $p_font_size;
+      line-height: 180%;
+      color: $grey;
+      @include media-breakpoint-down(lg) {
+        margin-top: 26px;
+      }
+      @include media-breakpoint-between(sm, lg) {
+        max-width: 470px;
+      }
+    }
+
+    .tradeInButton {
+      margin-top: 54px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 35px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-top: 26px;
+      }
+    }
+  }
+
+  .heroCover {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+}
+
+.section {
+  padding: 95px 0;
+  background: $light-grey;
+  @include media-breakpoint-down(md) {
+    padding: 45px 0;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 88px;
+  padding: 0 50px;
+  background-color: $light-grey;
+  @include media-breakpoint-down(xl) {
+    height: 84px;
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 28px;
+  }
+
+  .logo {
+    align-self: center;
+    width: 183.34px;
+    height: 34px;
+    flex: 1;
+  }
+
+  .title {
+    display: flex;
+    font-weight: 500;
+    font-size: px-to-rem(20);
+    white-space: nowrap;
+    cursor: pointer;
+    flex: 1;
+    justify-content: flex-start;
+    @include media-breakpoint-up(sm) {
+      justify-content: center;
+    }
+  }
+}
+
+.formRequestSection {
+  padding: 50px 0px;
+  background: $light-grey;
+  @include media-breakpoint-down(md) {
+    padding: 25px 0;
+  }
+}
+
+.button {
+  &:disabled {
+    background: transparent !important;
+    color: $lightest-grey;
+    opacity: 0.3;
+  }
+}
+
+.wrapMenuRight {
+  flex: 1;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .logoMenuRight {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: px-to-rem(20);
+    line-height: 26px;
+    text-align: right;
+    color: $light-black;
+  }
+}
+
+.wrapListMenuRight {
+  padding: 28px;
+  background: $white;
+  top: 70px;
+  position: absolute;
+  right: 50px;
+  z-index: 5;
+
+  @include media-breakpoint-down(lg) {
+    right: 28px;
+  }
+
+  .item {
+    font-size: px-to-rem(18);
+    cursor: pointer;
+    line-height: 180%;
+    color: $light-black;
+    margin-bottom: 24px;
+
+    &.danger {
+      color: $danger;
+    }
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &.disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.isRotate180 {
+  transform: rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.wrapListNumberScorecard {
+  position: absolute;
+  width: 264px;
+  background: $white;
+  box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+  border-radius: 6px;
+  padding: 16px 12px;
+  z-index: 10;
+  position: absolute;
+  top: 5rem;
+  left: 46%;
+
+  @include media-breakpoint-down(sm) {
+    top: 6rem;
+    left: 40%;
+  }
+  @include media-breakpoint-down(xs) {
+    left: 2.3rem;
+  }
+
+  .wrapItem {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 0 12px;
+    max-height: 240px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $grey;
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba($grey, 0.15);
+      border-radius: 2px;
+    }
+
+    .item {
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &.hovered {
+        background: darken($white, 5%);
+      }
+      &.activeHover {
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          background: darken($white, 10%);
+        }
+      }
+
+      .wrapLeft {
+        display: flex;
+        align-items: center;
+        min-width: 190px;
+        img {
+          height: 12px;
+          margin-right: 11.5px;
+        }
+        span {
+          font-size: px-to-rem(18);
+          line-height: 180%;
+          color: $light-black;
+        }
+      }
+
+      img {
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .wrapItemLast {
+    border-top: 1px solid $lighter-grey;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 12px 12px 0;
+    margin-top: 12px;
+    .itemLast {
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background: darken($white, 10%);
+      }
+
+      &.disabled {
+        background: rgba($medium-grey, 0.3);
+        cursor: not-allowed;
+      }
+
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 11px;
+      }
+
+      span {
+        font-size: px-to-rem(18);
+        line-height: 180%;
+        color: $light-black;
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.timeHeader {
+  margin: 25px 0 25px;
+}
+
+.header {
+  display: flex;
+  justify-items: center;
+  margin-bottom: 19px;
+  font-weight: 500;
+  font-size: px_to_rem(22);
+  line-height: 120%;
+  color: $grey;
+
+  @include media-breakpoint-down(xs) {
+    font-size: px_to_rem(16);
+    margin-bottom: 16px;
+  }
+}
+
+.textHeader {
+  cursor: pointer;
+}
+
+.rowItem {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 18px;
+
+  &.rowNotes {
+    justify-items: unset !important;
+    align-items: unset !important;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-bottom: unset;
+  }
+}
+
+.card.card {
+  padding: 40px 45px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 25px 20px;
+  }
+}
+
+.title {
+  color: $black;
+  font-weight: 500;
+  font-size: px-to-rem(22);
+  line-height: 120%;
+  margin-bottom: 42px;
+  @include media-breakpoint-down(xs) {
+    font-size: px_to_rem(22);
+    margin-bottom: 32px;
+  }
+}
+
+.label {
+  font-weight: 500;
+  font-size: px_to_rem(22);
+  line-height: 120%;
+
+  &.lableNote {
+    margin-top: 10px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: px_to_rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px_to_rem(16);
+    margin-top: 16px;
+  }
+}
+
+.location {
+  margin-bottom: 30px;
+}
+
+.btnSave {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    justify-content: flex-end;
+  }
+}
+
+.btnSaveMobile {
+  margin-top: 28px;
+  text-align: end;
+}
+
+.wrapBicycleInfo {
+  display: flex;
+  margin-bottom: 65px;
+
+  @include media-breakpoint-down(md) {
+    display: unset;
+    margin-bottom: 32px;
+  }
+
+  .wrapBicycleInfoItem {
+    margin-right: 86px;
+
+    @include media-breakpoint-down(md) {
+      margin-right: unset;
+      width: 100%;
+      display: flex;
+    }
+
+    &:last-child {
+      margin-right: unset;
+    }
+
+    .mobileItemTitle {
+      @include media-breakpoint-down(md) {
+        min-width: 49%;
+        max-width: 49%;
+        padding-right: 10px;
+
+        &:las {
+          margin-bottom: unset;
+        }
+      }
+    }
+
+    .mobileItemValue {
+      @include media-breakpoint-down(md) {
+        min-width: 49%;
+        max-width: 49%;
+        margin-bottom: 9px;
+      }
+    }
+  }
+}
+
+.tradeInValue {
+  display: flex;
+  margin-bottom: 68px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 32px;
+    font-size: 22px;
+  }
+
+  .labelTradeIn {
+    color: $light-black;
+    padding-right: 65px;
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 25px;
+    }
+  }
+  .valueTradeIn {
+    color: $primary;
+  }
+}
+
+.textGrey {
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 120%;
+  color: $lightest-grey;
+}
+
+.mb9 {
+  margin-bottom: 9px;
+}
+
+.textBlack {
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 120%;
+  color: $light-black;
+}
+
+.onlyBtnSave {
+  margin-top: 28px;
+  display: flex;
+  justify-content: flex-end;
+}

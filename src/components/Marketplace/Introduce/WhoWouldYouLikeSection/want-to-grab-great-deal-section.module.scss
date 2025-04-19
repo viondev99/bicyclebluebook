@@ -1,0 +1,156 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30) !important;
+  line-height: 120%;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(30) !important;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22) !important;
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.section {
+  padding: 60px 0;
+  background: $light-grey;
+  @include media-breakpoint-down(md) {
+    padding: 45px 0;
+  }
+
+  .description {
+    color: $grey;
+  }
+}
+
+.wrapWantToGrabGreatDeal {
+  label {
+    font-weight: 700;
+    @extend .fs46;
+    margin-bottom: 45px;
+    line-height: 120%;
+    color: $light-black;
+  }
+
+  .description {
+    @extend .fs22;
+    line-height: 180%;
+    color: $lightest-grey;
+    margin-bottom: 45px;
+  }
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}
+
+.titleCard {
+  @extend .fs30;
+  font-weight: 700;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 20px !important;
+}
+
+.logoCard {
+  margin-bottom: 30px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 21px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 14px;
+  }
+  .iconlogo {
+    height: 67px;
+    width: 67px;
+
+    @include media-breakpoint-down(md) {
+      height: 45px;
+      width: 45px;
+    }
+  }
+}
+
+.customCol {
+  margin-bottom: unset;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 38px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 26px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+  }
+}
+
+.desCard {
+  @extend .fs22;
+  color: $lightest-grey;
+  line-height: 180%;
+  margin-bottom: 32px;
+  min-height: unset;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 192px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 22px;
+    min-height: 170px;
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: unset;
+    margin-bottom: 10px;
+  }
+}
+
+.linkCard {
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 29px;
+  color: $primary;
+}

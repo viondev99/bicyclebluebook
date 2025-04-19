@@ -1,0 +1,65 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.container {
+  padding: 60px 15px 35px 15px;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 918px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 1591px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 46px 15px 21px 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 36px 15px 11px 15px;
+  }
+
+  .headerTitle {
+    font-weight: 700;
+    @extend .fs46;
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 22px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 18px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .description {
+    @extend .fs22;
+    line-height: 180%;
+    color: $lightest-grey;
+    @media (min-width: 1025px) {
+      width: 60%;
+    }
+  }
+}

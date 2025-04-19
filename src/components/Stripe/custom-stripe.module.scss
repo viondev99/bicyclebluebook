@@ -1,0 +1,77 @@
+@import '../../assets/css/variable';
+
+.wrapper {
+  :global(.StripeElement) {
+    display: flex;
+    align-items: center;
+    outline: 0;
+    width: 100%;
+    color: $grey;
+    margin-bottom: 0;
+    background: $input-bg;
+    border: solid 1px $white;
+    border-radius: $input-border-radius;
+    height: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: $p_font_size;
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  :global(.StripeElement--invalid) {
+    border: 1px solid red;
+  }
+}
+
+.wrapperCVV {
+  :global(.StripeElement) {
+    display: flex;
+    align-items: center;
+    outline: 0;
+    max-width: 80px;
+    margin-bottom: 0;
+    background: $input-bg;
+    border: solid 1px $white;
+    border-radius: $input-border-radius;
+    height: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: $p_font_size;
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  :global(.StripeElement--invalid) {
+    border: 1px solid red;
+  }
+}
+
+.wrapperExpiry {
+  :global(.StripeElement) {
+    display: flex;
+    align-items: center;
+    outline: 0;
+    max-width: 120px;
+    margin-bottom: 0;
+    background: $input-bg;
+    border: solid 1px $white;
+    border-radius: $input-border-radius;
+    height: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: $p_font_size;
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  :global(.StripeElement--invalid) {
+    border: 1px solid red;
+  }
+}

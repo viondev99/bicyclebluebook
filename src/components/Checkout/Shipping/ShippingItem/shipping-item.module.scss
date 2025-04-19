@@ -1,0 +1,47 @@
+@import 'src/assets/css/variable';
+
+.shippingAddressCard {
+  margin-bottom: 1.5rem;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  label {
+    align-items: stretch;
+  }
+}
+
+.name {
+  color: $black;
+  font-size: $p_font_size;
+  line-height: px-to-rem(29);
+}
+
+.address {
+  color: $grey;
+  font-size: $p_font_size;
+  line-height: px-to-rem(29);
+}
+
+.dropdownContainer {
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+
+// Delete modal
+
+.deleteModal.deleteModal {
+  width: 503px;
+  .contentDeleteModal {
+    padding: 40px;
+  }
+}
+
+// Edit modal
+
+.editModal.editModal {
+  max-width: 866px;
+  .contentEditModal {
+    padding: 20px 40px 40px 40px;
+  }
+}

@@ -1,0 +1,133 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.wrapPostItem {
+  margin-bottom: 56.29px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 34.4px;
+  }
+}
+
+.wrapImage {
+  height: 351px;
+  background-color: $lighter-grey;
+  border-radius: 15px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+    transition: transform 0.5s;
+  }
+  .imageBgr {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 268px;
+  }
+}
+
+.wrapDescriptions {
+  margin-top: 24px;
+}
+
+.customDate {
+  font-weight: 700;
+  font-size: px-to-rem(16);
+  line-height: 180%;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 24.6px;
+  }
+}
+
+.customTitle {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  margin-bottom: 31px;
+  cursor: pointer;
+
+  @include media-breakpoint-down(md) {
+    font-size: px-to-rem(24);
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 12.3px;
+    font-size: px-to-rem(22);
+  }
+}
+
+.customContent {
+  @extend .fs22;
+  margin-top: 18px;
+  font-weight: 400;
+  line-height: 180%;
+  margin-bottom: 33px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 15px;
+    font-size: px-to-rem(18);
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 18px;
+    font-size: px-to-rem(16);
+    margin-bottom: 18px;
+  }
+}
+
+.wrapUrl {
+  margin-top: 33px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 23px;
+  }
+
+  .customUrlPost {
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 29px;
+
+    @include media-breakpoint-down(md) {
+      font-size: px-to-rem(18);
+      line-height: 23px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: px-to-rem(16);
+      line-height: 21px;
+    }
+  }
+
+  .customImage {
+    @include media-breakpoint-down(md) {
+      margin-left: 12.25px;
+      width: 19px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 12.25px;
+      width: 16px;
+    }
+  }
+}
+
+.wrapPostItem {
+  padding: 0 22.5px !important;
+}

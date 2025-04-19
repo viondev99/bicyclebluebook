@@ -1,0 +1,56 @@
+@import 'src/assets/css/variable';
+
+.section {
+  .left_card {
+    padding: 52px 58px;
+    height: 236px;
+  }
+
+  .leftCard {
+    padding: 20px;
+    @include media-breakpoint-up(md) {
+      padding: 52px;
+    }
+  }
+  &__form {
+    align-items: center;
+    padding-top: 138px;
+    padding-bottom: 84px;
+
+    &_card {
+      padding: 52px 58px;
+    }
+  }
+}
+
+.stepper {
+  margin-top: 20px;
+}
+
+.selectPartner {
+  margin-top: 34px;
+}
+.wrapper {
+  margin-top: 75px;
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 0 10px;
+  }
+  .content {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.divider {
+  margin-top: 50px;
+  margin-left: -53px;
+  margin-right: -53px;
+  @include media-breakpoint-down(sm) {
+    display: none;
+    margin-top: 0;
+  }
+}

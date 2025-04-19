@@ -1,0 +1,298 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.tradeInLayout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.tradeInContent {
+  width: 100%;
+  flex: 1;
+  background-color: $light-grey;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 58px 58px 58px;
+
+    @include media-breakpoint-down(sm) {
+      max-width: unset;
+      padding: 0 28px 28px 28px;
+    }
+  }
+}
+
+.cover {
+  background-color: $light-grey;
+  position: relative;
+  background-image: url('https://d1eye5spyas0l1.cloudfront.net/_assets/bg_hero_xl_new-c125a92a01d82c589cf71474d422a738.webp');
+  background-position: right -100px top 0px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  @include media-breakpoint-between(sm, lg) {
+    background-position: right 60px top 157px;
+    background-size: auto;
+    background-image: url('../../../../assets/img/trade-in/bg_hero_l.png');
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 100px;
+    background-position: center bottom 0;
+    padding-bottom: 510+120px;
+    background-size: 510px;
+    background-image: url('../../../../assets/img/trade-in/bg_hero_l.png');
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 115%;
+    background-size: calc(100% - 30px);
+  }
+
+  .sectionContainer {
+    padding-top: 240px;
+    padding-bottom: 105px;
+    z-index: 100;
+    position: static;
+    @include media-breakpoint-down(lg) {
+      padding-top: 160px;
+      padding-bottom: 25px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .siteTitle {
+      max-width: 560px;
+      @include media-breakpoint-between(sm, lg) {
+        max-width: 470px;
+      }
+    }
+
+    .siteDescription {
+      max-width: 540px;
+      margin-top: 34px;
+      font-size: $p_font_size;
+      line-height: 180%;
+      color: $grey;
+      @include media-breakpoint-down(lg) {
+        margin-top: 26px;
+      }
+      @include media-breakpoint-between(sm, lg) {
+        max-width: 470px;
+      }
+    }
+
+    .tradeInButton {
+      margin-top: 54px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 35px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-top: 26px;
+      }
+    }
+  }
+
+  .heroCover {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+}
+
+.section {
+  padding: 95px 0;
+  background: $light-grey;
+  @include media-breakpoint-down(md) {
+    padding: 45px 0;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 88px;
+  padding: 0 50px;
+  background-color: $light-grey;
+  @include media-breakpoint-down(xl) {
+    height: 84px;
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 0 22px;
+  }
+
+  .logo {
+    align-self: center;
+    height: 35px;
+    @include media-breakpoint-between(sm, lg) {
+      margin-left: 15px;
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: px-to-rem(20);
+    white-space: nowrap;
+  }
+
+  .button {
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.formRequestSection {
+  padding: 34px 0px;
+  background: $light-grey;
+
+  @include media-breakpoint-down(md) {
+    padding: 25px 0 0 0;
+    min-height: calc(100vh - 22rem);
+    margin-bottom: 22px;
+  }
+}
+
+.wrapButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btnBack {
+  margin-right: 20px;
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}
+
+.wrapBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.btnWidth100 {
+  width: 100%;
+}
+
+.textBottomLeft {
+  @extend .fs22;
+  line-height: 180%;
+  color: $light-black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    cursor: pointer;
+    color: $primary;
+    margin-left: 5px;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.wrapButtonfixed {
+  position: fixed;
+  width: 100%;
+  padding-right: 58px;
+  background: white;
+  bottom: 0;
+  height: 113px;
+  right: 0;
+  z-index: 3;
+
+  @include media-breakpoint-down(lg) {
+    height: 103px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 95px;
+    padding-right: 28px;
+  }
+}
+
+.wrapButtonSupportFixed {
+  padding-top: 56.5px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 56.5px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 47.5px;
+  }
+}

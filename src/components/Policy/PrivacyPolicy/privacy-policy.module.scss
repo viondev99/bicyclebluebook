@@ -1,0 +1,83 @@
+@import 'src/assets/css/variable';
+
+.container {
+  padding: 138px 0px 85px 0px;
+  @include media-breakpoint-down(xl) {
+    padding: 135px 58px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 108px 28px 92px 28px;
+  }
+}
+.title {
+  font-weight: bold;
+  font-size: $h2_font_size;
+  color: $black;
+  margin-bottom: 40px;
+  text-align: left;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 26px;
+  }
+}
+.intro {
+  font-size: $p_font_size;
+  color: $grey;
+}
+
+.label {
+  font-weight: bold;
+  font-size: $h4_font_size;
+  color: $black;
+  margin: 45px 0px 26px 0px;
+  text-align: left;
+  @include media-breakpoint-down(sm) {
+    margin: 24px 0px 23px 0px;
+  }
+}
+.description {
+  font-size: $p_font_size;
+  color: $grey;
+  line-height: 180%;
+  text-align: left;
+}
+.subTitle {
+  font-weight: 500;
+  color: $black;
+  margin: 32px 0px;
+}
+
+.btnCollapse {
+  padding: 0px !important;
+  margin: 0px !important;
+  display: block !important;
+  height: auto !important;
+  width: 100% !important;
+}
+
+.wrapLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+  .iconDropdown {
+    transition: all 0.5s ease;
+    display: none;
+    @include media-breakpoint-down(sm) {
+      margin-top: 35px;
+      padding-left: 23px;
+      display: block;
+    }
+  }
+  .isOpen {
+    transform: rotateX(180deg);
+  }
+}
+
+.customLink {
+  font-size: $p_font_size;
+  color: $primary;
+  word-break: break-word;
+}

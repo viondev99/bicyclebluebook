@@ -1,0 +1,116 @@
+@import 'src/assets/css/variable';
+
+.modal {
+  max-width: 1090px;
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    min-height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #f3f3f5;
+  }
+  .title {
+    @include media-breakpoint-down(md) {
+      font-size: px-to-rem(34);
+      line-height: px-to-rem(41);
+    }
+  }
+  .buttonInfo {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    margin-left: 5px;
+
+    .iconInfo {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .content {
+    padding: 70px 85px;
+
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+      padding: 5px 10px;
+      position: relative;
+      background-color: #f3f3f5;
+      border: none;
+    }
+
+    .body {
+      @include media-breakpoint-up(md) {
+        margin-top: 30px;
+      }
+      .condition {
+        display: flex;
+        align-items: flex-start;
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+        .radio {
+          width: 140px;
+          .label {
+            font-size: px-to-rem(18);
+            line-height: $p_font_size;
+            color: $black;
+          }
+        }
+        .message {
+          font-size: $p_font_size;
+          line-height: px-to-rem(40);
+          color: $grey;
+          flex-grow: 0;
+          max-width: 520px;
+          @include media-breakpoint-up(lg) {
+            margin-left: 51px;
+          }
+        }
+        .percentage {
+          text-align: right;
+          width: 185px;
+          margin-left: auto;
+        }
+      }
+
+      .btn {
+        margin-top: 46px;
+        @include media-breakpoint-down(md) {
+          float: right;
+        }
+      }
+
+      .conditionMobile {
+        &__item {
+          margin-top: 10px;
+          padding: 18px 22px;
+        }
+        &__message {
+          margin-left: 0;
+          max-width: none;
+          font-size: px-to-rem(16);
+          line-height: px-to-rem(29);
+          color: $grey;
+        }
+        &__percentage {
+          font-size: px-to-rem(16);
+          line-height: px-to-rem(29);
+        }
+      }
+    }
+  }
+}
+
+.modalCloseBtn {
+  padding: 0;
+  height: none;
+}
+
+.active {
+  border: 2px solid $primary;
+}
+.btnClose {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}

@@ -1,0 +1,42 @@
+@import 'src/assets/css/variable';
+
+.title {
+  margin-left: -5px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  @include media-breakpoint-down(md) {
+    font-size: px-to-rem(34);
+    line-height: px-to-rem(41);
+  }
+}
+.form {
+  @include media-breakpoint-down(sm) {
+    min-height: calc(100vh - 15rem);
+    display: flex;
+    flex-direction: column;
+  }
+}
+.formGroup {
+  margin-top: 46px;
+  .input {
+    margin-top: 28px;
+  }
+}
+.rating {
+  margin-left: auto;
+  @include media-breakpoint-up(md) {
+    margin-left: 78px;
+  }
+}
+.textAreaWrapper {
+  @include media-breakpoint-down(md) {
+    flex-grow: 1;
+    height: 100%;
+    .textArea {
+      height: 80%;
+    }
+  }
+}
+.btn {
+  margin-top: 36px;
+}

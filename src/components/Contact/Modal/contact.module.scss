@@ -1,0 +1,102 @@
+@import 'src/assets/css/variable';
+.modal.modal {
+  width: 716px;
+}
+.titleMess {
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 16px;
+  }
+}
+.content {
+  padding: 70px 85px;
+  @include media-breakpoint-down(lg) {
+    padding: 50px 10px 30px 10px;
+    position: relative;
+  }
+}
+
+.divider {
+  margin: 45px -100px;
+}
+
+.link {
+  font-size: px-to-rem(16);
+  color: $primary;
+}
+.wrapperButton {
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.wrapperInput {
+  margin-bottom: 1rem;
+  img {
+    margin-left: 16px;
+  }
+  &:nth-of-type(1) {
+    margin-bottom: 22px;
+  }
+
+  .label {
+    margin-bottom: 1rem;
+  }
+  .renderImg {
+    img {
+      margin-left: unset !important;
+    }
+    .imageUpload {
+      width: 100%;
+      object-fit: cover;
+    }
+    .rowClose {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: -25px;
+      .btnCloseUpload {
+        background: none !important;
+      }
+    }
+  }
+}
+.textarea {
+  height: 151px;
+  padding-left: 20px;
+}
+
+.avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.name {
+  font-size: $p_font_size;
+  font-weight: 500;
+  line-height: 120%;
+  color: $black;
+  word-break: break-all;
+}
+
+.successMessage {
+  color: $grey;
+}
+
+.modalContactBuyer {
+  @include media-breakpoint-up(md) {
+    width: 564px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 674px;
+  }
+}
+.btnClose {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}

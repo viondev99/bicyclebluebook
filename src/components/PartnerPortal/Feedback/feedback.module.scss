@@ -1,0 +1,375 @@
+@import 'src/assets/css/variable';
+
+.customCard {
+  padding: 58px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px;
+  }
+
+  .cardTitle {
+    font-weight: 700;
+    font-size: px-to-rem(30);
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 19px;
+    display: block;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 26px;
+      display: block;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .description {
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    color: $lightest-grey;
+    margin-bottom: 48px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 36px;
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+    }
+  }
+}
+
+.wrapItem {
+  margin: 0 0 18px 0;
+
+  &:last-child {
+    margin-bottom: 48px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 36px;
+    }
+    @include media-breakpoint-down(sm) {
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 120%;
+    color: $light-black;
+    padding: 20px 0 0 0;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+      padding: 0 0 14px 0;
+    }
+  }
+
+  .customForm {
+    padding: 0;
+  }
+}
+
+.btnSize {
+  height: 65px !important;
+  margin-top: 30px;
+
+  @include media-breakpoint-down(lg) {
+    height: 55px !important;
+    margin-top: 18px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 52px !important;
+    margin-top: 6px;
+  }
+}
+
+.customInput {
+  min-height: 65px !important;
+  height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    height: 55px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    height: 52px !important;
+  }
+}
+.wrapModal {
+  max-width: 345px;
+  position: absolute;
+  font-size: px_to_rem(18);
+  z-index: 999999;
+  padding: 30px;
+  border-radius: 10px;
+  font-weight: 500 !important;
+  top: 26%;
+  background-color: $white;
+
+  .arrowLeft {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+  }
+
+  &.step7 {
+    @media (max-width: 1199px) and (min-width: 768px) {
+      width: 66%;
+      top: 30%;
+    }
+
+    @media (max-width: 760px) {
+      margin-top: 15%;
+      margin-left: unset;
+      max-width: 90%;
+    }
+  }
+
+  &.step8 {
+    top: 50%;
+    margin-left: 150px;
+
+    @media (max-width: 1024px) and (min-width: 768px) {
+      top: 52% !important;
+      width: 66%;
+    }
+
+    @media (max-width: 760px) {
+      top: 35%;
+      margin-left: unset;
+      max-width: 90%;
+    }
+
+    .arrowUp {
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: -12px;
+      left: 45%;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid white;
+    }
+  }
+
+  @media (max-width: 760px) {
+    // display: none;
+    top: 5%;
+  }
+
+  .buttonBack {
+    border: none;
+    color: $medium-grey;
+    background-color: unset;
+    cursor: pointer;
+  }
+
+  .buttonNext {
+    border: none;
+    background-color: unset;
+    color: $primary;
+    cursor: pointer;
+  }
+
+  .wrapHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .title {
+    font-weight: 700;
+    line-height: 120%;
+  }
+  .content {
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+      padding: 100px 20px;
+      position: relative;
+      min-height: 100vh;
+      border: none;
+    }
+    @include media-breakpoint-up(md) {
+      max-height: 88vh;
+      overflow-y: auto;
+    }
+    .body {
+      @media (max-width: 1199px) and (min-width: 768px) {
+        margin-top: 24px;
+      }
+
+      .btn {
+        margin-top: 46px;
+        @include media-breakpoint-down(md) {
+          float: right;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .modalCloseBtn {
+    padding: 0;
+  }
+}
+.wrapModalContact {
+  width: 625px;
+  position: absolute;
+  font-size: px_to_rem(18);
+  z-index: 999999;
+  padding: 61px;
+  border-radius: 10px;
+  top: 26%;
+  background-color: $white;
+
+  &.wrapModalContactMobile {
+    max-width: 90%;
+  }
+
+  @media (max-width: 1024px) and (min-width: 760px) {
+    width: 66% !important;
+  }
+
+  .mainTitle {
+    font-weight: 700;
+    line-height: 120%;
+    color: #2f3642;
+    margin-bottom: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      display: unset;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    top: 10%;
+    max-width: 90%;
+    padding: 21px;
+  }
+
+  .customModalSize {
+    width: 625px;
+    @include media-breakpoint-down(lg) {
+      width: 522px;
+    }
+  }
+
+  .paddingContentClassName {
+    padding: 61px !important;
+
+    @include media-breakpoint-down(lg) {
+      padding: 42px !important;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 28px !important;
+    }
+  }
+
+  .titleClassName {
+    font-weight: 700;
+    font-size: px-to-rem(46);
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 0 !important;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(37);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(34);
+    }
+  }
+
+  .customModalBody {
+    padding-top: 22px !important;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 12px !important;
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: px-to-rem(30);
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 37px;
+    margin-top: 22px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(24);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(22);
+    }
+  }
+
+  .wrapItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    .wrapImage {
+      width: 30px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      margin-left: 22px;
+      font-weight: 500;
+      font-size: px-to-rem(22);
+      line-height: 120%;
+      color: $primary;
+      cursor: pointer;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(18);
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(16);
+      }
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+        color: $primary;
+      }
+    }
+  }
+
+  .icArrowLeftClassName {
+    display: none;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      margin-bottom: 28px;
+    }
+  }
+}

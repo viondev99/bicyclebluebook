@@ -1,0 +1,44 @@
+@import 'src/assets/css/variable';
+
+.customWrapBanner {
+  max-width: 100% !important;
+  background-color: $light-grey;
+  position: relative;
+  background-position: center bottom 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: none;
+  max-width: calc(100% - 50px) !important;
+  margin: 73px auto -60px auto;
+
+  @include media-breakpoint-down(lg) {
+    max-width: calc(100% - 38px) !important;
+    margin-bottom: -60px;
+    margin-top: 15px;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: calc(100% - 38px) !important;
+    margin-bottom: -75px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: -70px;
+    padding-top: 0 !important;
+    background-position: center bottom 0;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 0;
+    max-width: calc(100% - 56px) !important;
+  }
+}

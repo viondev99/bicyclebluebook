@@ -1,0 +1,156 @@
+@import 'src/assets/css/variable';
+
+$space-between-section: 26px;
+
+.cartItemContainer {
+  margin-top: 50px;
+}
+
+.title {
+  color: $black;
+  font-size: $h3_font_size;
+  line-height: 120%;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.address {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: $p_font_size;
+  line-height: 120%;
+  color: $grey;
+}
+
+.itemManagement {
+  display: flex;
+  align-items: center;
+  margin-top: $space-between-section;
+
+  .counter {
+    button {
+      min-width: 40px;
+      height: 40px;
+      border-radius: 4px;
+    }
+
+    input {
+      min-width: 30px;
+    }
+
+    min-width: 120px;
+    flex: 0 1 120px;
+  }
+
+  .removeButton.removeButton {
+    margin-left: 20px;
+    font-size: px-to-rem(16);
+    font-weight: 500;
+    color: rgba($grey, 0.6);
+  }
+}
+
+.frameSize {
+  margin-top: $space-between-section;
+
+  .title {
+    font-weight: 500;
+    font-size: px-to-rem(18);
+    line-height: 120%;
+    color: $grey;
+  }
+
+  .name {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: px-to-rem(18);
+    line-height: 120%;
+    color: $black;
+  }
+}
+
+.standardTitle {
+  color: $black;
+  font-size: px-to-rem(16);
+  font-weight: 500;
+}
+
+.price {
+  font-family: Rubik, sans-serif;
+  font-size: px-to-rem(26);
+  line-height: px-to-rem(31);
+  color: $black;
+  margin-top: $space-between-section;
+}
+
+.shippingType {
+  display: flex;
+  margin-top: $space-between-section;
+}
+
+.shippingTypeError {
+  font-size: px-to-rem(16);
+  font-weight: 500;
+  color: $red;
+  padding-top: 15px;
+}
+
+.shippingText {
+  font-size: px-to-rem(14);
+  line-height: 180%;
+  font-weight: 500;
+}
+
+// Delete modal
+
+.deleteModal.deleteModal {
+  width: 503px;
+  .contentDeleteModal {
+    padding: 40px;
+  }
+}
+
+.customAddress {
+  padding-left: 38px;
+  color: gray;
+}
+
+.wrapStandard {
+  margin-bottom: 20px;
+}
+
+.mainTour {
+  display: block;
+  position: relative;
+  z-index: 1050;
+  .wrapTour {
+    opacity: 0.1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+  }
+}
+.wrapModal {
+  width: 100%;
+  position: fixed;
+  font-size: px_to_rem(18);
+  z-index: 999999;
+  padding: 26px;
+  bottom: 0;
+  left: 0;
+  font-weight: 500 !important;
+  background-color: $white;
+  box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+
+  .headerModal {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 26px;
+  }
+}

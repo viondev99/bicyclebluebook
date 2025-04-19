@@ -1,0 +1,13 @@
+@import 'src/assets/css/variable';
+
+.btn {
+  font-size: px-to-rem(17);
+  font-weight: 500;
+}
+
+.applyDate {
+  color: $primary !important;
+}
+.containerRangeDate {
+  z-index: 100;
+}

@@ -1,0 +1,81 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.paging-previous,
+.paging-next {
+  button {
+    @include reset-button;
+    padding: 15px;
+  }
+}
+
+.pagination {
+  @include reset-list;
+  display: flex;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.paging-center {
+  .pagination {
+    justify-content: center;
+  }
+}
+
+.paging-item {
+  margin: 0 2px;
+  outline: none !important;
+
+  button {
+    @include reset-button;
+    text-align: center;
+    padding: 5px 15px;
+    min-height: 45px;
+    min-width: 45px;
+    font-size: $p_font_size;
+    line-height: 180%;
+    color: $black;
+    border: 2px solid transparent !important;
+    border-radius: 6px !important;
+
+    &:hover {
+      background: rgba($primary, 0.2);
+      color: $primary;
+    }
+
+    &:disabled {
+      background: transparent !important;
+      color: $grey !important;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 5px;
+      min-height: 30px;
+      min-width: 30px;
+    }
+  }
+
+  &.active {
+    button {
+      border-radius: 6px !important;
+      border-color: $primary !important;
+      background: transparent !important;
+      color: $primary !important;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+
+    button {
+      background: transparent !important;
+      color: $grey !important;
+    }
+  }
+}
+
+//{
+//  font-size: $p_font_size;
+//  line-height: 180%;;
+//  color: $black;
+//}

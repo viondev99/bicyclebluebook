@@ -1,0 +1,55 @@
+@import 'src/assets/css/variable';
+
+.instant {
+  font-weight: bold;
+  font-size: px-to-rem(14);
+  color: $primary;
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.titleInstant {
+  font-weight: bold;
+  font-size: $h2_font_size;
+  line-height: 120%;
+  color: $black;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 136px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 60px;
+  }
+}
+
+.cardBenefit {
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    align-items: flex-start;
+  }
+  .cardIcon {
+    margin-bottom: 20px;
+    @include media-breakpoint-down(sm) {
+      margin-right: 25px;
+      margin-bottom: 0px;
+    }
+  }
+  .cardTitle {
+    font-weight: 500;
+    font-size: $p_font_size;
+    color: $black;
+    margin-bottom: 18px;
+    text-align: left;
+  }
+  .cardContent {
+    font-size: $p_font_size;
+    line-height: 180%;
+    color: $grey;
+    padding-bottom: 48px;
+    text-align: left;
+  }
+}
+.feature {
+  margin: 0px -15px;
+}

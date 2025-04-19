@@ -1,0 +1,9 @@
+@import 'src/assets/css/variable';
+
+.helper {
+  color: $grey;
+  margin-top: 32px;
+  .title {
+    margin: 26px 0;
+  }
+}

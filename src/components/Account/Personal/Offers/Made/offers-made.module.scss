@@ -1,0 +1,9 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.dateUpdated {
+  font-size: $p_font_size;
+  font-weight: 500;
+  color: $black;
+  margin: 32px 0px;
+}

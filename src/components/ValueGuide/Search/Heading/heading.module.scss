@@ -1,0 +1,57 @@
+@import 'src/assets/css/variable';
+
+.title {
+  color: $grey;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.titleBrand {
+  font-weight: 700;
+  font-size: px_to_rem(60);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 0.5rem;
+
+  @include media-breakpoint-down(md) {
+    font-size: px_to_rem(48);
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: px_to_rem(42);
+  }
+}
+
+.heading {
+  @include media-breakpoint-down(md) {
+    padding: 0 10px;
+  }
+}
+
+.totalItem {
+  color: $grey;
+}
+
+.wrapHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(sm) {
+    display: unset;
+  }
+
+  img {
+    width: 285px;
+    height: 87px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: unset;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin-bottom: 18px;
+      height: 130px;
+    }
+  }
+}

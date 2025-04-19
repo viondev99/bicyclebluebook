@@ -1,0 +1,241 @@
+@import 'src/assets/css/variable';
+
+.customModalSize {
+  width: 752px;
+  @include media-breakpoint-down(lg) {
+    width: 641px;
+  }
+}
+
+.paddingContentClassName {
+  padding: 61px !important;
+  overflow: auto;
+
+  @include media-breakpoint-down(lg) {
+    padding: 42px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 28px !important;
+  }
+}
+
+.titleClassName {
+  font-weight: 700;
+  font-size: px-to-rem(46);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 0 !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.customModalBody {
+  padding-top: 22px !important;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 12px !important;
+  }
+}
+
+.icArrowLeftClassName {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    margin-bottom: 28px;
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.titleForm {
+  margin-bottom: 14px;
+  @extend .fs22;
+  font-weight: 500;
+  line-height: 120%;
+  color: $light-black;
+}
+
+.wrapItem {
+  margin-bottom: 22px;
+}
+
+.wrapBottom {
+  margin-top: 12px;
+
+  .customButtonSize {
+    @extend .fs22;
+    font-weight: 500;
+    min-height: 65px !important;
+    max-height: 65px !important;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      min-height: 55px !important;
+      max-height: 55px !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      min-height: 52px !important;
+      max-height: 52px !important;
+    }
+  }
+}
+
+.customTextSize {
+  @extend .fs22;
+}
+
+.customInputNumber::-webkit-outer-spin-button,
+.customInputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.customInputNumber[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.wrapFormItem {
+  @include media-breakpoint-down(sm) {
+    min-height: calc(100vh - 23rem);
+  }
+}
+
+.wrapCard {
+  padding: 40px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px;
+  }
+
+  .header {
+    font-weight: 700;
+    font-size: px-to-rem(30);
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 36px;
+    display: block;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(24);
+      display: block;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+      margin-bottom: 26px;
+      display: none;
+    }
+  }
+
+  .description {
+    font-weight: 500;
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 36px;
+  }
+
+  .wrapButton {
+    display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+
+    @include media-breakpoint-down(md) {
+      align-items: unset;
+      flex-direction: column;
+    }
+
+    .wrapInput {
+      width: 100%;
+
+      @include media-breakpoint-down(md) {
+        align-items: unset;
+        flex-direction: column;
+        margin-bottom: 18px;
+      }
+    }
+
+    .button {
+      .btnCalculate {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .wrapItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    div {
+      color: $lightest-grey;
+      line-height: 180%;
+    }
+
+    span {
+      line-height: 26px;
+      text-align: right;
+      color: #2f3642;
+    }
+  }
+}
+
+.customTextSize {
+  @extend .fs22;
+}
+
+.textBlue {
+  color: $primary !important;
+}
+
+.customHr {
+  border: 1px solid rgba(110, 119, 133, 0.1);
+  margin: 40px 0;
+}
+
+.customUl {
+  padding-left: 15px;
+  li {
+    font-size: px-to-rem(16);
+    line-height: 180%;
+    color: $lightest-grey;
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(14);
+    }
+  }
+}
+
+.customInputNumber::-webkit-outer-spin-button,
+.customInputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.customInputNumber[type='number'] {
+  -moz-appearance: textfield;
+}

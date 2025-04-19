@@ -1,0 +1,72 @@
+@import 'src/assets/css/variable';
+
+$textarea-placeholder-opacity: 0.4;
+
+.textarea {
+  background-color: $input-bg;
+  border: solid 1px $white;
+  border-radius: $input-border-radius;
+  display: flex;
+  padding: 15px;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  font-size: $p_font_size;
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(16);
+  }
+
+  &::placeholder {
+    color: $input-placeholder;
+    opacity: $textarea-placeholder-opacity;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+  }
+
+  textarea {
+    resize: none;
+    display: inline-flex;
+    border: none;
+    background: transparent;
+    width: 100%;
+    color: $grey;
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $input-placeholder;
+      opacity: $input-placeholder-opacity;
+      font-family: DM Sans;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 29px;
+    }
+  }
+
+  .renderPrefix {
+    margin-right: 10px;
+    display: inline-flex;
+  }
+  .renderSuffix {
+    margin-left: 10px;
+    display: inline-flex;
+  }
+
+  &.normal {
+    background: $white;
+  }
+
+  &.standard {
+    background-color: $input-bg;
+  }
+
+  &.error {
+    border: 1px solid red;
+  }
+}

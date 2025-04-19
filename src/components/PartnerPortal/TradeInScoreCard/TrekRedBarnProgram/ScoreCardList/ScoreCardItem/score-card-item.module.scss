@@ -1,0 +1,180 @@
+@import 'src/assets/css/variable';
+
+.timeHeader {
+  margin: 33px 0 33px;
+
+  @include media-breakpoint-down(sm) {
+    margin: 26px 0 18px;
+  }
+}
+
+.card {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: $white;
+  border-radius: $card-border-radius;
+  padding: 22px 46px 23px 46px;
+  margin-top: 18px;
+  @include media-breakpoint-down(sm) {
+    padding: 22px 0 22px 28px;
+    flex-direction: unset;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 20px 20px 20px 25px;
+  }
+}
+
+.cardRow {
+  display: flex;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  color: $black;
+  font-weight: 500;
+  font-size: px_to_rem(16);
+  line-height: 21px;
+
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    justify-content: space-between;
+    max-width: unset;
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+  }
+}
+.description {
+  color: $black;
+  font-weight: 400;
+  font-size: px_to_rem(16);
+  line-height: 21px;
+
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    justify-content: space-between;
+    max-width: unset;
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+  }
+}
+
+.location {
+  margin: 8px 0 0;
+  color: $grey;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(21);
+}
+
+.infoParagraph {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 130%;
+
+  .infoWrapper:not(:first-child) {
+    margin-left: 25px;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0px;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  .infoLabel {
+    color: $black;
+  }
+
+  .infoValue {
+    margin-left: 10px;
+    color: $grey;
+  }
+}
+
+.price {
+  margin: 0;
+  font-family: Rubik, sans-serif;
+  font-size: $p_font_size;
+  line-height: 120%;
+  color: $black;
+}
+
+.status {
+  margin: 9px 0 0;
+  white-space: nowrap;
+  color: $warning;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(21);
+
+  &.complete {
+    color: $green;
+  }
+
+  &.expire {
+    color: $danger;
+  }
+}
+
+.menuButton {
+  width: 100%;
+  white-space: nowrap;
+  justify-content: flex-start;
+  color: $black;
+  align-items: center;
+}
+
+.dropdown {
+  box-shadow: $box-shadow;
+
+  .actionItem {
+    text-align: left;
+  }
+}
+
+.icArrow {
+  padding: 0 0 5px 10px;
+}
+
+.isRotate180 {
+  padding-left: 0.5rem;
+  transform: rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.labelDetail {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 180%;
+  color: $primary;
+  margin-right: 14px;
+}
+
+.rowSecond {
+  @include media-breakpoint-up(md) {
+    margin-top: 15px;
+  }
+}

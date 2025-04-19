@@ -1,0 +1,16 @@
+@import '../form.module';
+@import 'src/assets/css/variable';
+
+.guideBtn {
+  color: $primary !important;
+  height: 30px !important;
+}
+
+.removeBtn {
+  color: $red !important;
+}
+
+.description {
+  line-height: 2;
+  color: $grey;
+}

@@ -1,0 +1,78 @@
+@import 'src/assets/css/variable';
+
+.heading {
+  font-size: $p_font_size;
+  color: $black;
+  line-height: px-to-rem(29);
+  font-weight: 500;
+  margin-bottom: 27px;
+  display: block;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 22px;
+  }
+}
+
+.label {
+  font-size: px-to-rem(18);
+  line-height: px-to-rem(23);
+  color: $grey;
+  font-weight: 500;
+}
+
+.total {
+  font-family: 'Rubik', sans-serif;
+  color: $primary;
+  line-height: px-to-rem(23);
+  font-size: px-to-rem(18);
+}
+
+.promoCode {
+  opacity: 0.3;
+  color: $grey;
+  font-size: px-to-rem(15);
+}
+
+.promoAmount {
+  color: $warning;
+  font-family: 'Rubik', sans-serif;
+  font-size: px-to-rem(18);
+  line-height: px-to-rem(21);
+}
+
+.customerInfo {
+  p {
+    font-size: px-to-rem(18);
+    line-height: px-to-rem(23);
+    color: $grey;
+    font-weight: 500;
+  }
+}
+
+.card {
+  font-size: px-to-rem(18);
+  padding: 45px;
+
+  @include media-breakpoint-down(md) {
+    padding: 22px;
+  }
+}
+
+.table {
+  td {
+    padding: 0.5rem 0;
+  }
+}
+
+.payment {
+  p {
+    color: $grey;
+    font-size: px-to-rem(16);
+    line-height: px-to-rem(21);
+  }
+}
+
+.price {
+  font-family: 'Rubik', sans-serif;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(19);
+}

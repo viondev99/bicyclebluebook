@@ -1,0 +1,29 @@
+@import 'src/assets/css/variable';
+
+.onlineStore {
+  align-items: center;
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  &__wrapper {
+    margin-top: 38px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 75px;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 0 10px;
+    }
+    &_content {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}
+
+.left_card {
+  padding: 20px;
+  @include media-breakpoint-up(md) {
+    padding: 52px;
+  }
+}

@@ -1,0 +1,50 @@
+@import 'src/assets/css/variable';
+
+.customCheckbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(110, 119, 133, 0.2);
+  border-radius: 6px;
+  width: 100%;
+  .titleCheckbox {
+    font-size: $p_font_size;
+    line-height: 180%;
+    color: $black;
+  }
+  padding: 12px 26px;
+  height: 65px;
+  max-width: 418px;
+  &:not(:last-child) {
+    margin-right: 28px;
+    @include media-breakpoint-down(xs) {
+      margin-right: 0px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+    margin-bottom: 28px;
+    padding: 12px 22px;
+    height: 55px;
+    .titleCheckbox {
+      font-size: px-to-rem(18);
+    }
+    margin-right: 0px;
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+  .checkboxContent {
+    span {
+      background-color: transparent;
+    }
+
+    margin: 0px;
+  }
+}
+.isActive {
+  border: 2px solid $primary !important;
+}

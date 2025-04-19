@@ -1,0 +1,53 @@
+@import 'src/assets/css/utilities';
+@import 'src/assets/css/variable';
+
+.filterWrapper {
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-bottom: 1px solid rgba($grey, 0.15);
+  }
+}
+
+.title {
+  font-weight: 500;
+}
+
+.toggleButton {
+  @include reset-button;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: $black;
+
+  img {
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.panelContent {
+  margin-top: 10px;
+  padding-top: 10px;
+  max-height: 350px;
+  display: flex;
+  flex-direction: column;
+  .headerCollapse {
+    flex: 1 0 auto;
+  }
+
+  .panelChild {
+    flex: 1 1 auto;
+
+    &.overflow {
+      overflow: auto;
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

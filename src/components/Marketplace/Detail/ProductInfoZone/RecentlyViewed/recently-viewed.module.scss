@@ -1,0 +1,44 @@
+@import 'src/assets/css/variable';
+
+.section {
+  background: $light-grey;
+  @include media-breakpoint-down(xs) {
+    :global(.swiper-container) {
+      margin-right: -15px;
+      margin-left: -15px;
+      padding: 0 15px;
+    }
+  }
+
+  .dragRecent {
+    cursor: pointer;
+    color: $medium-grey;
+    font-size: $p_font_size;
+    line-height: 180%;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  .swiperWrapper {
+    position: relative;
+    .swiperSlideHint {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(270deg, #f3f3f5 0%, rgba(243, 243, 245, 0) 100%);
+      width: 185px;
+      transition: all 0.3s ease-in-out;
+      z-index: 9;
+      pointer-events: none;
+    }
+    .hide {
+      opacity: 0;
+    }
+  }
+}

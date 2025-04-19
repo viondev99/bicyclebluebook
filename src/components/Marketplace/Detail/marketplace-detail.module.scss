@@ -1,0 +1,21 @@
+@import 'src/assets/css/variable';
+
+.noBike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 500px;
+  height: 100%;
+  font-size: $h3_font_size;
+  font-weight: 500;
+  color: $grey;
+}
+
+.btnHere {
+  font-size: $h3_font_size;
+  font-weight: 500;
+  color: $primary;
+  border: none;
+  background: none;
+}

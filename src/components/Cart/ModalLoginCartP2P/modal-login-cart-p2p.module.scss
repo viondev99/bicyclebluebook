@@ -1,0 +1,74 @@
+@import 'src/assets/css/variable';
+
+.content.content {
+  padding: 60px;
+  @include media-breakpoint-down(sm) {
+    padding: 20px;
+  }
+}
+
+.form {
+  margin-top: 30px;
+}
+.rememberCheckBox {
+  margin: 40px 0;
+}
+.passwordInput {
+}
+.forgotPasswordText {
+  white-space: nowrap;
+  justify-content: flex-end;
+  a {
+    font-size: 1.125rem;
+    color: $grey;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.checkoutGuestDescription {
+  font-weight: 500;
+  font-size: px-to-rem(17);
+  line-height: $p_font_size;
+  color: $grey;
+  margin-left: 20px;
+}
+
+.wrapRegister {
+  margin-left: 30px;
+
+  .text {
+    font-weight: 500;
+    font-size: px-to-rem(17);
+    line-height: 22px;
+    color: $lightest-grey;
+  }
+  .link {
+    font-weight: 500;
+    font-size: px-to-rem(17);
+    line-height: 22px;
+    color: $primary;
+  }
+}
+
+.customLink {
+  font-weight: 500;
+}
+
+.wrapFormBottom {
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(xs) {
+    display: unset;
+    align-items: unset;
+
+    button {
+      margin-bottom: 26px;
+    }
+    .wrapRegister {
+      margin-left: unset;
+    }
+  }
+}

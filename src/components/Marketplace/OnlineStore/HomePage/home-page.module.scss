@@ -1,0 +1,13 @@
+@import 'src/assets/css/variable';
+
+.container {
+  margin-top: 110px;
+  padding: 0px 20px;
+  margin: 110px auto 0px auto;
+  @include media-breakpoint-up(lg) {
+    max-width: 918px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 1463px;
+  }
+}

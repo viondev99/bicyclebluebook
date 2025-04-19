@@ -1,0 +1,18 @@
+@import 'src/assets/css/variable';
+.card {
+  align-items: center;
+  background: transparent;
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: flex;
+  }
+
+  h4 {
+    color: $grey;
+    margin: 0;
+  }
+  a {
+    color: $primary;
+    margin-left: 2px;
+  }
+}

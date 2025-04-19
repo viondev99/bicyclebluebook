@@ -1,0 +1,55 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.markAsPickedUpModal {
+  width: 850px;
+  @include media-breakpoint-down(lg) {
+    align-items: flex-start;
+    min-width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    &:last-of-type {
+      margin-top: 40px;
+    }
+
+    .info {
+      h3 {
+        font-size: $h3_font_size;
+        font-weight: bold;
+        color: $black;
+        margin-bottom: 10px;
+      }
+
+      .subInfo {
+        display: flex;
+        flex-direction: row;
+        @include media-breakpoint-down(md) {
+          flex-direction: column;
+        }
+        .label {
+          font-size: $p_font_size;
+          font-weight: 500;
+          color: $black;
+          width: 120px;
+        }
+
+        .value {
+          font-size: $p_font_size;
+          font-weight: 500;
+          color: $grey;
+          width: 100px;
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}

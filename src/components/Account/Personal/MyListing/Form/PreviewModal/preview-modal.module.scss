@@ -1,0 +1,19 @@
+@import 'src/assets/css/variable';
+
+.modal {
+  margin: 0;
+  background-color: $light-grey;
+}
+
+.content {
+  background-color: $light-grey;
+}
+
+.publish {
+  color: $primary !important;
+  margin-right: auto;
+}
+
+.back {
+  color: $black !important;
+}

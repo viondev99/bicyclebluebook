@@ -1,0 +1,97 @@
+@import 'src/assets/css/variable';
+
+.wrapMap {
+  position: relative;
+  display: flex;
+  height: 655px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 18px;
+  margin-bottom: 131px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.partnerNearYou {
+  background: $white;
+  height: 100%;
+  width: 244px;
+  @include media-breakpoint-down(sm) {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    z-index: 8;
+  }
+  .partnerInfoItem {
+    display: block;
+    height: auto !important;
+    width: auto;
+    text-align: left;
+    width: 100%;
+    margin: 0px !important;
+    border-radius: none;
+    padding: 25px 31px !important;
+    &:hover {
+      background: $light-grey;
+      cursor: pointer;
+    }
+    .name {
+      font-weight: 500;
+      font-size: px-to-rem(16);
+      color: $black;
+    }
+    .location {
+      font-weight: 500;
+      font-size: px-to-rem(14);
+      color: $grey;
+      line-height: 140%;
+      margin: 9px 0px;
+    }
+    .position {
+      font-weight: 500;
+      font-size: px-to-rem(14);
+      color: $primary;
+    }
+  }
+}
+
+.ggMap {
+  height: 100%;
+  width: 100%;
+}
+
+.noPartner {
+  padding: 10px;
+  text-align: center;
+  font-size: px-to-rem(18);
+  font-weight: bold;
+}
+
+.disableMap {
+  opacity: 1 !important;
+  pointer-events: initial !important;
+}
+
+.hideListPartner {
+  @include media-breakpoint-down(sm) {
+    width: 0px !important;
+    overflow: hidden;
+  }
+}
+.btnMenu {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    transition: all 0.5s ease;
+    background: $white !important;
+    z-index: 8;
+    display: block;
+    position: absolute;
+    width: 44px !important;
+    height: 44px !important;
+    left: 262px;
+    top: 60px;
+  }
+}
+.menuClose {
+  left: 46px;
+  top: 60px;
+}

@@ -1,0 +1,61 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+$spacing: 10px;
+
+.filterRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px (-$spacing);
+
+  @include media-breakpoint-down(sm) {
+    margin: 30px (-$spacing / 2);
+  }
+}
+
+.filterWrapper {
+  @include reset-button;
+  padding: 0 25px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid$lighter-grey;
+  border-radius: $border-radius;
+  color: $grey;
+  font-weight: 500;
+  font-size: px-to-rem(17);
+  margin: $spacing;
+
+  @include media-breakpoint-down(sm) {
+    margin: $spacing / 2;
+  }
+  &.selected {
+    border: 1px solid $primary;
+    color: $white;
+    background: $primary;
+  }
+  transition: all 0.3s ease-in-out;
+}
+
+.filterColumn {
+  margin-top: -20px;
+
+  h4 {
+    font-size: $p_font_size;
+    color: $black;
+    font-weight: 500;
+  }
+
+  .checkbox {
+    margin: 25px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .label {
+      font-size: 16px;
+      color: $grey;
+      font-weight: 500;
+    }
+  }
+}

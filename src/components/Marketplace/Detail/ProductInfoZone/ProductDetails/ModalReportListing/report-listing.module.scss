@@ -1,0 +1,31 @@
+@import 'src/assets/css/variable';
+
+.modalReportListing {
+  width: 559px;
+  height: 457px;
+}
+.contentClassName {
+  padding: 62px;
+  @include media-breakpoint-down(sm) {
+    padding: 23px 17px;
+  }
+}
+.btnSubmit {
+  margin-right: 18px;
+}
+.title {
+  font-weight: bold;
+  font-size: $h2_font_size;
+}
+
+.formSelect {
+  margin-bottom: 36px;
+  .label {
+    font-weight: 500;
+    font-size: $p_font_size;
+    margin-bottom: 21px;
+  }
+}
+.otherReason {
+  margin-top: 36px;
+}

@@ -1,0 +1,110 @@
+@import 'src/assets/css/variable';
+
+.container {
+  padding: 42px 50px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 14px 12px;
+  }
+
+  .header {
+    font-weight: bold;
+    font-size: px-to-rem(30);
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 36px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(24);
+      margin-bottom: 24px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(22);
+      margin-bottom: 20px;
+    }
+  }
+
+  .wrapPagination {
+    margin-top: 50px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.wrapItem {
+  font-size: px-to-rem(16);
+  line-height: 180%;
+  padding-bottom: 32px;
+  margin-bottom: 30px;
+  border-bottom: 1.5px solid rgba(130, 141, 155, 0.1);
+
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 24px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+  }
+
+  &:last-child {
+    padding-bottom: unset;
+    margin-bottom: unset;
+    border-bottom: unset;
+  }
+
+  .title {
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    color: $light-black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+    }
+  }
+
+  .description {
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    color: $lightest-grey;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+    }
+
+    &.link {
+      color: $primary;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.notfound {
+  font-size: px-to-rem(22);
+  line-height: 180%;
+  color: $lightest-grey;
+  text-align: center;
+  font-style: italic;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}

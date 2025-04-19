@@ -1,0 +1,67 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.contentModal {
+  width: 100%;
+  margin: 0px 0px 50px 0px;
+  .controlGroup {
+    padding: 0;
+    .customInput {
+      height: 65px;
+    }
+    .customSelect {
+      margin-right: 20px;
+      @include media-breakpoint-down(sm) {
+        margin-right: 0;
+      }
+    }
+    .titleInput {
+      font-size: $p_font_size;
+      color: $black;
+      font-weight: 500;
+    }
+  }
+}
+
+.modal {
+  @include media-breakpoint-up(md) {
+    width: 564px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 658px;
+  }
+}
+
+.deleteModal {
+  width: 696px;
+  .contentDeleteModal {
+    padding: 40px;
+  }
+}
+.footerModal {
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    .btnCancel {
+      width: 103px;
+      margin: 16px 0 0 0 !important;
+    }
+    .btnSend {
+      max-width: 240px;
+    }
+  }
+}
+.showWhenMobile {
+  display: none;
+  @include media-breakpoint-down(xs) {
+    display: block;
+    margin: 0px 0px 15px -20px;
+  }
+}
+
+.contentRenewModal {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: $p_font_size;
+  color: $grey;
+}

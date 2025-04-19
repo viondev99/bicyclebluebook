@@ -1,0 +1,89 @@
+@import 'src/assets/css/variable';
+
+.container {
+  font-weight: 500;
+  padding: 30px 40px;
+  @include media-breakpoint-down(md) {
+    padding: 28px 22px;
+  }
+  .title {
+    font-size: $p_font_size;
+    color: $black;
+    line-height: px-to-rem(29);
+    margin-bottom: 27px;
+    display: block;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 22px;
+    }
+  }
+
+  .complaint {
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+
+    .content {
+      color: $black;
+      font-weight: 500;
+      font-size: p_font_size;
+      margin-bottom: 5px;
+    }
+
+    .date {
+      color: $grey;
+      font-weight: 500;
+      font-size: px-to-rem(16);
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.headerComplaints {
+  margin-bottom: 20px;
+  span {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+  }
+}
+
+.bodyComplaints {
+  margin-bottom: 20px;
+}
+
+.nameDetailCases {
+  .text {
+    color: $lightest-grey;
+    font-weight: 500;
+    font-size: px-to-rem(18);
+    line-height: 120%;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+      margin-bottom: 3px;
+    }
+  }
+  .des {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    line-height: 19px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+
+  img {
+    width: 250px;
+    height: 166px;
+    object-fit: cover;
+
+    @include media-breakpoint-down(sm) {
+      width: 102px;
+      height: 68px;
+    }
+  }
+}

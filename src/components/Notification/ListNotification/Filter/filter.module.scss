@@ -1,0 +1,47 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.container {
+  padding: 30px 40px;
+  border: solid 1px $lighter-grey;
+  border-radius: 10px;
+  margin-top: 60px;
+
+  h4 {
+    font-size: $p_font_size;
+    color: $black;
+    font-weight: 500;
+  }
+
+  .checkbox {
+    margin: 25px 0px;
+
+    .label {
+      font-size: $p_font_size;
+    }
+  }
+}
+
+.mobileContainer {
+  margin-top: -20px;
+
+  h4 {
+    font-size: $p_font_size;
+    color: $black;
+    font-weight: 500;
+  }
+
+  .checkbox {
+    margin: 25px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .label {
+      font-size: 16px;
+      color: $grey;
+      font-weight: 500;
+    }
+  }
+}

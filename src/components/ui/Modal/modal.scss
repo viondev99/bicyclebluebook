@@ -1,0 +1,47 @@
+@import 'src/assets/css/variable';
+
+.modal-dialog {
+  @include media-breakpoint-down(sm) {
+    margin: 0;
+  }
+}
+
+.modal_container {
+  &__header {
+    border-bottom: none;
+
+    h5 {
+      font-size: $h2_font_size;
+    }
+  }
+
+  &__footer {
+    border-top: none;
+  }
+
+  &__content {
+    border-radius: 10px;
+    @include media-breakpoint-down(sm) {
+      border-radius: 0;
+    }
+  }
+
+  .close_btn {
+    margin-top: 3px;
+    background: transparent;
+    border: none;
+  }
+
+  .close_icon {
+    width: 14px;
+    height: 14px;
+  }
+  .modal-title {
+    width: 100%;
+  }
+
+  .modal-header {
+    padding: 0 10px;
+    border-bottom: none;
+  }
+}

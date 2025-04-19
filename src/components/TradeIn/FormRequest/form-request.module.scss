@@ -1,0 +1,573 @@
+@import 'src/assets/css/variable';
+
+.fs60 {
+  font-size: px-to-rem(60);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(48);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  .buttonBack {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-right: 30px;
+
+    .imageButton {
+      width: 65px;
+      height: 65px;
+      border-radius: 65px;
+      background-color: $grey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    p {
+      color: $grey;
+      font-size: px-to-rem(14);
+      font-weight: 500;
+      margin: 15px 0px 0px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    &:disabled {
+      .imageButton {
+        background-color: $medium-grey;
+      }
+
+      p {
+        color: $medium-grey;
+      }
+    }
+  }
+
+  .buttonNext {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: 30px;
+
+    .imageButton {
+      width: 65px;
+      height: 65px;
+      border-radius: 65px;
+      background-color: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    p {
+      color: $primary;
+      font-size: px-to-rem(14);
+      font-weight: 500;
+      margin: 15px 0px 0px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    &:disabled {
+      .imageButton {
+        background-color: $medium-grey;
+      }
+
+      p {
+        color: $medium-grey;
+      }
+    }
+  }
+
+  .buttonGroup {
+    margin-top: 90px;
+    align-self: flex-end;
+
+    .buttonBack {
+      margin-right: 15px;
+
+      .imageButton {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+
+        img {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+
+    .buttonNext {
+      margin-left: 15px;
+
+      .imageButton {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+
+        img {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-down(md) {
+      width: 400px;
+    }
+
+    .formTitle {
+      @extend .fs60;
+      margin-bottom: 16px;
+      font-weight: 700;
+      line-height: 120%;
+      text-align: center;
+      color: $light-black;
+    }
+
+    .formDescription {
+      @extend .fs46;
+      margin-bottom: 44px;
+      font-weight: 700;
+      line-height: 120%;
+      text-align: center;
+      color: $lightest-grey;
+    }
+
+    .title {
+      color: $black;
+      font-size: px-to-rem(37);
+      line-height: 120%;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .description {
+      color: $grey;
+      font-size: $p_font_size;
+      line-height: px-to-rem(40);
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    .subDescription {
+      color: $grey;
+      font-size: $p_font_size;
+      line-height: px-to-rem(40);
+      text-align: center;
+    }
+
+    .valueCondition {
+      font-weight: 400;
+      font-size: px_to_rem(60);
+      line-height: 120%;
+      color: $light-black;
+      margin-bottom: 48px;
+    }
+
+    .inputContainer {
+      width: 500px;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .inputRow {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        margin-bottom: 0px;
+      }
+
+      .input {
+        width: 48%;
+
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .message {
+      width: 60%;
+      font-size: $p_font_size;
+      font-weight: 400;
+      color: $grey;
+      margin-bottom: 50px;
+
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+      }
+    }
+
+    .skipContent {
+      font-size: $p_font_size;
+      margin-top: 20px;
+      align-items: center;
+      justify-content: flex-end;
+
+      .skipButton {
+        margin: 0px;
+        color: $primary;
+      }
+    }
+  }
+
+  .conditionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // width: 700px;
+    max-width: 100%;
+    margin: 0px -10px;
+    margin-bottom: 36px;
+
+    .colCustom {
+      flex: 1;
+      margin-bottom: 10px;
+
+      @include media-breakpoint-down(xs) {
+        margin: unset;
+        margin-bottom: 12px;
+        padding-left: unset !important;
+      }
+
+      .label {
+        font-size: $p_font_size;
+        font-weight: 500;
+        color: $black;
+        text-align: center;
+      }
+
+      .condition {
+        font-weight: 500;
+        font-size: px_to_rem(22);
+        line-height: 120%;
+        color: $light-black;
+        border: 1.5px solid $medium-grey;
+        border-radius: 6px;
+        width: 171px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &.conditionSelected {
+          border: 1.5px solid $primary;
+        }
+      }
+
+      .value {
+        font-size: px-to-rem(30);
+        font-weight: 400;
+        color: $primary;
+        text-align: center;
+        margin-top: 10px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .learnAbout {
+    .textLink {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 180%;
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+}
+
+.downloadModal {
+  width: 750px;
+
+  @include media-breakpoint-down(lg) {
+    width: 575px;
+  }
+
+  .description {
+    margin-top: -10px;
+    font-size: $p_font_size;
+    color: $grey;
+    font-weight: 400;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .available {
+      display: flex;
+      align-items: center;
+      letter-spacing: 2px;
+      font-size: px-to-rem(14);
+      font-weight: 400;
+      color: $grey;
+      text-transform: uppercase;
+
+      a {
+        margin-left: 30px;
+
+        img {
+          min-height: 30px;
+          width: 30px;
+          min-width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    .closeDownloadModal {
+      font-size: $p_font_size;
+      color: $grey;
+      font-weight: 400;
+    }
+  }
+}
+
+.proceedModal {
+  width: 1090px;
+
+  .description {
+    margin-top: -10px;
+    font-size: $p_font_size;
+    color: $grey;
+    font-weight: 400;
+  }
+
+  .buttonGroup {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+
+    &.bottomRight {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.swiperWrapper {
+  margin-bottom: 44px;
+  width: 100%;
+}
+
+.itemYear {
+  padding: 15px;
+  border: 1px solid $lightest-grey;
+  font-weight: 500;
+  font-size: px-to-rem(17);
+  line-height: 22px;
+  text-align: center;
+  color: $grey;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 55px;
+
+  &.active {
+    color: white;
+    background: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+.dragText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    color: #c8cacd;
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    margin-left: 10px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: px-to-rem(16);
+      margin-left: 5px;
+    }
+  }
+}
+
+.wrapDrag {
+  display: flex;
+  align-items: center;
+}
+
+.cardPartnerPortalTradeInProduct {
+  &.active {
+    border: 2px solid $primary;
+  }
+}
+
+.stepTwoRow {
+  width: 100%;
+  margin-bottom: 120px;
+  // max-height: calc(100vh - 44.5rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include media-breakpoint-down(lg) {
+    // max-height: calc(100vh - 42.8rem);
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-height: unset;
+    overflow: unset;
+  }
+
+  .stepTwoCol {
+    padding: 0 20px 0 0;
+    &:last-child {
+      .cardPartnerPortalTradeInProduct {
+        margin-bottom: unset !important;
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba($grey, 0.15);
+    border-radius: 2px;
+  }
+}
+
+.wrapButtonfixed {
+  position: fixed;
+  width: 100%;
+  padding-right: 58px;
+  background: white;
+  bottom: 0;
+  height: 113px;
+  right: 0;
+  z-index: 3;
+
+  @include media-breakpoint-down(lg) {
+    height: 103px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 95px;
+    padding-right: 28px;
+  }
+}
+
+.wrapButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  // position: fixed;
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+
+  img {
+    width: 22px;
+    height: 14px;
+  }
+
+  &.disableBtn {
+    opacity: 0.4;
+  }
+}
+
+.customWidthButtonDecline {
+  margin-left: 34px;
+}
+
+.btnBack {
+  margin-right: 20px;
+}

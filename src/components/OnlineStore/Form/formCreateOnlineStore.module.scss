@@ -1,0 +1,91 @@
+@import 'src/assets/css/variable';
+
+.contentTitleStoreFront {
+  color: $black;
+  font-size: $h3_font_size;
+  font-weight: bold;
+  padding: 24px 0;
+}
+
+.wrapperInput {
+  margin-bottom: 16px;
+  .label {
+    color: $black;
+    font-weight: 500;
+    font-size: $p_font_size;
+    padding-top: 16px;
+  }
+
+  .title {
+    color: $grey;
+    font-weight: 500;
+    font-size: $p_font_size;
+    padding-top: 16px;
+  }
+
+  .radioGroup {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+    .radio {
+      display: flex;
+      flex-direction: row;
+      color: $black;
+      font-weight: 500;
+      font-size: $p_font_size;
+      padding-top: 16px;
+
+      &:first-of-type {
+        margin-right: 35px;
+      }
+    }
+  }
+}
+
+.input {
+  //max-width: 485px;
+  width: 100%;
+}
+
+.radio {
+  display: flex;
+}
+
+.checkBox {
+  display: flex;
+
+  input {
+    margin-top: 10px;
+  }
+}
+
+.checkboxText {
+  color: $grey;
+}
+
+.contentTitle {
+  margin-top: 44px;
+}
+
+.btn {
+  float: left;
+  margin-top: 48px;
+  //@include media-breakpoint-down(sm) {
+  //  position: absolute;
+  //  right: 0;
+  //}
+}
+
+.listButton {
+  display: flex;
+  @include media-breakpoint-down(sm) {
+    justify-content: space-between;
+  }
+}
+
+._errorText {
+  color: $danger;
+  margin-bottom: 0;
+  font-size: px-to-rem(16);
+}

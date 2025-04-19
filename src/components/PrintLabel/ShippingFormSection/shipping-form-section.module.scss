@@ -1,0 +1,109 @@
+@import 'src/assets/css/variable';
+
+.shippingFormContainer {
+  padding: 40px;
+
+  @include media-breakpoint-down(md) {
+    padding: 25px 20px;
+  }
+
+  .shippingFormRow {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+
+    .label {
+      width: 220px;
+      font-weight: 500;
+      font-size: $p_font_size;
+      margin: 0px;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+
+    .inputLabel {
+      padding-top: 15px;
+      width: 120px;
+      font-weight: 500;
+      font-size: $p_font_size;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        padding-top: 0px;
+      }
+    }
+
+    .value {
+      font-weight: 500;
+      font-size: $p_font_size;
+      color: $grey;
+      margin: 0px;
+    }
+
+    .input {
+      width: 100%;
+    }
+  }
+
+  .shippingFormTitle {
+    font-weight: 700;
+    font-size: $h3_font_size;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    line-height: px-to-rem(36);
+  }
+
+  h4 {
+    font-weight: 500;
+    font-size: $p_font_size;
+    margin: 0px;
+  }
+
+  .shippingCalculate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+
+    @include media-breakpoint-down(md) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .buttonCalculate {
+      color: $primary;
+    }
+
+    .resultCalculate {
+      display: flex;
+      flex-direction: row;
+
+      .label {
+        color: $grey;
+        font-size: $p_font_size;
+        font-weight: 500;
+        margin: 0px 20px 0px 0px;
+      }
+
+      .value {
+        font-size: $p_font_size;
+        font-weight: 500;
+        margin: 0px;
+      }
+    }
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 20px;
+}

@@ -1,0 +1,73 @@
+@import '../../../../assets/css/variable';
+@import '../../../../assets/css/utilities';
+
+.linkButton {
+  @include reset-button;
+  color: $primary;
+}
+
+.card {
+  box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+  padding: 20px;
+  text-align: left;
+  width: 218px;
+  max-width: 100%;
+  color: $black;
+  font-size: px-to-rem(16);
+}
+
+.contentModal {
+  padding: 60px;
+}
+
+.headerModal {
+  :global(.modal-title) {
+    font-size: $h2_font_size;
+  }
+}
+
+.bodyModal {
+  padding-bottom: 0;
+}
+.modalBadge {
+  max-width: 750px;
+
+  .modalBadgeContainer {
+    color: $grey;
+  }
+
+  .modalContent {
+    margin: 20px 0;
+    font-size: $p_font_size;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+}
+
+.modalBBBDirect {
+  max-width: 750px;
+
+  .modalBadgeContainer {
+    color: $grey;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+
+  .title {
+    margin: 0;
+    color: $black;
+    font-size: $p_font_size;
+    line-height: 180%;
+  }
+
+  .content {
+    margin: 2px 0 0;
+    font-size: $p_font_size;
+    color: $grey;
+    line-height: 180%;
+  }
+}

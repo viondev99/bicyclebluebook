@@ -1,0 +1,397 @@
+@import 'src/assets/css/variable';
+
+.respondModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    height: unset !important;
+  }
+
+  .respondModalContent {
+    padding: 61px !important;
+    width: unset;
+    width: 848px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 56px !important;
+      width: 80%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 16px !important;
+      width: 100%;
+    }
+
+    .headerRespondModal {
+      font-weight: bold;
+      font-size: px-to-rem(46);
+      line-height: 120%;
+      color: $light-black;
+      padding: 0 !important;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(37);
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(34);
+      }
+    }
+
+    .respondModalBody {
+      padding-top: 18px;
+
+      @include media-breakpoint-down(lg) {
+        padding-top: 22.5px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-top: 16px;
+      }
+    }
+  }
+}
+
+.arrowBackButtonModalRespond {
+  margin-bottom: 29.48px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.contentRespondModal {
+  margin-bottom: 46px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 36px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(34);
+    min-height: calc(100vh - 25rem);
+  }
+}
+
+.footerRespondModal {
+  display: flex;
+  justify-content: space-between;
+
+  .btnBoxShadow {
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  }
+
+  .btnResponseSize {
+    height: 65px;
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 28.64px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+      line-height: 23px;
+      height: 55px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(22);
+    }
+
+    @media only screen and (max-width: 369px) {
+      padding-left: 15px;
+      font-size: px-to-rem(18);
+      padding-right: 15px;
+    }
+  }
+
+  .btnBack {
+    color: $grey;
+  }
+}
+
+.mr17 {
+  margin-right: 16.68px;
+}
+
+.ml17 {
+  margin-left: 17px;
+}
+
+.mr18 {
+  margin-right: 18px;
+}
+
+.modalRespondFormTitle {
+  margin-bottom: 32px;
+  font-size: px-to-rem(22);
+  font-weight: 500;
+  line-height: 120%;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+    margin-bottom: 22px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+    margin-bottom: 22px;
+  }
+}
+
+.modalRespondFormTitleChoiceTwo {
+  @extend .modalRespondFormTitle;
+  margin-bottom: 26px;
+}
+
+.modalRespondFormTitleChoiceThree {
+  @extend .modalRespondFormTitle;
+  margin-top: 4px;
+  margin-bottom: 26px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 22px;
+  }
+}
+
+.titleChoiceThree {
+  font-weight: bold;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  color: $light-black;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+}
+
+.fieldContainer {
+  margin-bottom: 30px;
+}
+
+.fieldContainer42 {
+  margin-bottom: 42px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 39px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 36px;
+  }
+}
+
+.fieldContainer36 {
+  margin-bottom: 36px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 32px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 23px;
+  }
+}
+
+.listCasesImageContainer {
+  .titleUploadResponse {
+    margin-bottom: 18px;
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 29px;
+    color: $primary;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+      margin-bottom: unset;
+    }
+  }
+
+  .imgText {
+    margin-right: 12px;
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    color: $lightest-grey;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+    }
+  }
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.listCasesAreaUpload {
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 2rem;
+  border: 1px dotted gray;
+  padding: 4rem 0rem;
+  color: $primary;
+  margin-right: 16px;
+  font-size: px-to-rem(18);
+  font-weight: 700;
+}
+
+.mobileMb16 {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.fieldTitleChoiceThree {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: px-to-rem(22);
+  line-height: 120%;
+  color: $light-black;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.refundedView {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+  margin-top: 4px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 26px;
+    margin-top: unset;
+  }
+
+  .text {
+    font-size: px-to-rem(22);
+    font-weight: 500;
+    line-height: 120%;
+    color: $light-black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+    }
+  }
+
+  .priceDetail {
+    margin-top: 12px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 20px;
+    }
+
+    .price {
+      font-weight: 500;
+      font-size: px-to-rem(22);
+      line-height: 120%;
+      color: $lightest-grey;
+      margin-right: 28px;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(18);
+        margin-right: 44px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(16);
+        margin-right: 52px;
+      }
+    }
+
+    .link {
+      font-weight: 500;
+      font-size: px-to-rem(22);
+      line-height: 120%;
+      color: $primary;
+      cursor: pointer;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(18);
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(18);
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.responseRadioContainer {
+  margin-bottom: 16px !important;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 24px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 16px !important;
+  }
+
+  &:last-child {
+    margin-bottom: unset;
+  }
+
+  label {
+    margin-bottom: 0 !important;
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    color: $lightest-grey;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+      font-weight: normal;
+    }
+  }
+}
+
+.icArrowLeftGreySpace {
+  margin-right: 16.86px;
+
+  @include media-breakpoint-down(lg) {
+    margin-right: 16.25px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+    font-weight: normal;
+  }
+}
+
+.responsiveInput {
+  height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 50px !important;
+  }
+}

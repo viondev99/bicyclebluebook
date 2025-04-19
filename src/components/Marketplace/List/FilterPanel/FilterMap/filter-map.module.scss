@@ -1,0 +1,43 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.input {
+  font-size: px-to-rem(17);
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.select {
+  :global(.select__single-value) {
+    font-size: px-to-rem(17);
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+    }
+  }
+}
+
+.title {
+  color: $grey;
+  margin: 10px 0;
+}
+
+.searchButton {
+  @include reset-button;
+  color: $primary;
+  margin-top: 10px;
+  padding: 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: px-to-rem(17);
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+
+  img {
+    height: 16px;
+    margin-left: 6px;
+  }
+}

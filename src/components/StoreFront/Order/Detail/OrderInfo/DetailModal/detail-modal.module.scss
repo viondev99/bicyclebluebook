@@ -1,0 +1,52 @@
+@import 'src/assets/css/variable';
+
+.label {
+  font-size: $p_font_size;
+  color: black;
+  font-weight: 500;
+  width: 130px;
+  display: block;
+  @include media-breakpoint-up(lg) {
+    width: 160px;
+  }
+}
+
+.table {
+  td {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.value {
+  font-size: $p_font_size;
+  font-weight: 500;
+  color: $grey;
+}
+
+.name {
+  width: 75%;
+
+  a {
+    word-break: break-all;
+  }
+}
+
+.modal {
+  @include media-breakpoint-up(md) {
+    width: 459px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 588px;
+  }
+
+  .contentModal {
+    @include media-breakpoint-up(md) {
+      padding: 56px 50px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 70px 75px;
+    }
+  }
+}

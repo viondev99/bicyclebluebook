@@ -1,0 +1,284 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.headerOfferDetail {
+  display: flex;
+  justify-content: flex-end;
+  color: $black;
+  font-size: $p_font_size;
+  position: absolute;
+  right: 0;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.titleOfferDetail {
+  font-weight: bold;
+  font-size: px-to-rem(30);
+  margin-bottom: 16px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  @include media-breakpoint-down(md) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(22);
+  }
+}
+.chip {
+  font-size: px-to-rem(18);
+  @media (max-width: 795px) and (min-width: 768px) {
+    font-size: px-to-rem(16);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(14);
+    line-height: 120%;
+  }
+  .titleChip {
+    color: $black;
+    font-weight: 500;
+    @media (max-width: 767px) {
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+  }
+  .contentChip {
+    color: $grey;
+    @media (max-width: 767px) {
+      margin-bottom: 4px;
+    }
+  }
+  margin-right: 32px;
+}
+
+.containerActivity {
+  padding: 28px 0 28px 0;
+  position: relative;
+  .resetMargin {
+    margin: 0;
+  }
+  margin-bottom: 16px;
+}
+
+.groupAction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.wrapChip {
+  margin-bottom: 36px;
+
+  @media (max-width: 767.998px) {
+    display: none;
+  }
+}
+
+.wrapChipPersonal {
+  margin-bottom: 36px;
+  display: flex;
+}
+
+.titleActivity {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $black;
+  @media (max-width: 500px) and (min-width: 370px) {
+    max-width: 320px;
+  }
+  @media (max-width: 369px) {
+    max-width: 250px;
+  }
+  a {
+    color: $black;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.wrapInfo {
+  display: flex;
+  overflow: hidden;
+  font-size: px-to-rem(16);
+  margin-top: 13px;
+  .subTitle {
+    width: 120px;
+    min-width: 120px;
+    font-weight: 500;
+  }
+  .info {
+    overflow: hidden;
+    color: $black;
+  }
+}
+.dateCreate {
+  font-weight: 500;
+  font-size: px-to-rem(16);
+}
+.isExpired {
+  color: $grey;
+}
+.statusActivity {
+  color: $primary;
+}
+.btnAction {
+  font-size: px-to-rem(16);
+  width: 40px;
+  height: 30px !important;
+  margin: 0 5px;
+}
+.btnCounter {
+  font-size: px-to-rem(16);
+  width: 120px;
+  font-size: 16px;
+  padding: 0 !important;
+  height: 30px !important;
+}
+.groupBtn {
+  display: flex;
+  align-items: center;
+}
+
+.showWhenMobile {
+  display: none;
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
+}
+
+.backToOffer {
+  color: $black;
+  cursor: pointer;
+  &:hover {
+    color: $primary;
+  }
+  @media (max-width: 767px) {
+    font-size: px-to-rem(16);
+  }
+}
+.titleDetail {
+  font-weight: bold;
+}
+.btnCancelOffer {
+  color: $primary !important;
+  width: 60px !important;
+  font-size: px-to-rem(16) !important;
+}
+.resizeLink {
+  color: $grey;
+  font-size: px-to-rem(16);
+  &:hover {
+    color: $primary;
+  }
+}
+.expiredText {
+  margin-top: 13px;
+}
+
+.wrapActions {
+  margin-top: 36px;
+
+  .wrapBtn {
+    @media (max-width: 376px) {
+      display: flex;
+    }
+    @media (max-width: 345px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .Btn {
+    max-width: 126px;
+    @media (max-width: 1199px) and (min-width: 991px) {
+      max-width: 90px;
+      font-size: px-to-rem(18);
+    }
+
+    @media (max-width: 991px) and (min-width: 768px) {
+      max-width: 70px;
+      font-size: px-to-rem(18);
+    }
+
+    @media (max-width: 768px) {
+      max-width: 60px;
+      font-size: px-to-rem(16);
+    }
+  }
+}
+
+.btnAccept {
+  background: $light-green !important;
+}
+
+.btnReject {
+  background: $red !important;
+  margin-left: 16px;
+}
+
+.btnCounterBrown {
+  background: $warning !important;
+  margin-left: 16px;
+
+  @media (max-width: 345px) {
+    margin: 16px 0 0 0;
+  }
+}
+
+.groupActionMobile {
+  margin-top: 13px;
+  padding: 0;
+  @media (max-width: 767px) {
+    margin-bottom: 13px;
+  }
+}
+
+.wrapMobile {
+  margin-bottom: 19px;
+
+  @media (min-width: 767.998px) {
+    display: none;
+  }
+}
+
+.headerOfferDetailMobile {
+  margin-bottom: 14px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.headerOfferDetailMobilePersonal {
+  margin-bottom: 19px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.showActionMobile {
+  position: absolute;
+  right: 0;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.titleByActionMobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.titleByActionNotMobile {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

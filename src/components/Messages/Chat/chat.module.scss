@@ -1,0 +1,555 @@
+@import 'src/assets/css/variable';
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  border-bottom: solid 1px rgba($grey, 0.1);
+  @include media-breakpoint-down(sm) {
+    padding: 25px 10px 25px 25px;
+  }
+
+  .infoContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0px;
+
+    .backButton {
+      width: 220px;
+      color: $black;
+      @include media-breakpoint-down(sm) {
+        width: 180px;
+        height: 45px;
+        font-size: px-to-rem(16);
+      }
+
+      .iconBack {
+        width: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .buttonMoreAction {
+    margin-left: 20px;
+  }
+}
+
+.linkContainer {
+  float: left;
+  padding-left: 10px;
+  @include media-breakpoint-down(sm) {
+    padding-left: 5px;
+  }
+}
+
+.titleLink {
+  display: block;
+  overflow: hidden;
+  color: $grey;
+  font-size: $p_font_size;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  @include media-breakpoint-down(sm) {
+    max-width: 220px;
+    font-size: px-to-rem(16);
+  }
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.imageProductLink {
+  width: 110px;
+  height: 80px;
+  object-fit: contain;
+  margin-left: 20px;
+}
+
+.imageAvatarLink {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.imageAvatarDefaultLink {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: $primary;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: px-to-rem(32);
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.actionsContainer {
+  width: 0px;
+  position: relative;
+
+  .actionsContent {
+    box-shadow: 0px 34px 94px rgba($grey, 0.25);
+    background-color: $white;
+    border-radius: 6px;
+    position: absolute;
+    top: -20px;
+    left: -130px;
+    overflow: hidden;
+    z-index: 1;
+
+    .buttonAction {
+      width: 150px;
+      margin: 0px;
+      padding: 20px 30px;
+      border-radius: 0px;
+      justify-content: flex-start;
+      font-size: px-to-rem(18);
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}
+.resizeModal {
+  width: 696px;
+}
+.contentModal {
+  color: $grey;
+  font-size: $p_font_size;
+}
+.modalReportUserText {
+  font-size: $p_font_size;
+  color: $light-black;
+}
+.modalReportUserErrorText {
+  text-align: left;
+  color: $danger;
+  font-size: px-to-rem(13);
+  margin-bottom: 4px;
+}
+.footerModelDeactivate {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 20px;
+  .btnSubmit {
+    background: $primary;
+    margin-right: 16px;
+  }
+
+  .btnCancel {
+    background: $white;
+    color: $grey;
+    border-radius: 6px;
+    border: solid 1px $grey;
+    margin-right: 10px;
+  }
+}
+
+.chatBoxContainer {
+  margin: 25px 25px 0px;
+  padding: 0px 25px;
+  flex: 1;
+  min-height: 500px;
+  max-height: 500px;
+  height: 500px;
+  overflow-y: auto;
+  @include media-breakpoint-down(sm) {
+    margin: 25px 10px 0px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $input-bg;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $grey;
+    border-radius: 10px;
+  }
+
+  .loadingContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    .loadingIcon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .groupSplitContainer {
+    clear: both;
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: rgba($grey, 0.4);
+    font-size: px-to-rem(16);
+    font-weight: 500;
+    white-space: nowrap;
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(14);
+    }
+
+    .dividerSplit {
+      width: 80px;
+      height: 2px;
+      background-color: rgba($grey, 0.4);
+      margin: 0px 20px;
+    }
+  }
+}
+
+.leftBubbleContainer {
+  clear: both;
+  float: left;
+  max-width: calc(50% + 70px);
+  @include media-breakpoint-down(sm) {
+    max-width: calc(80% + 50px);
+  }
+
+  .senderName {
+    display: block;
+    overflow: hidden;
+    font-size: px-to-rem(16);
+    color: $grey;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(14);
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+    .avatarContainer {
+      width: 50px;
+      min-width: 50px;
+      margin-right: 10px;
+      @include media-breakpoint-down(sm) {
+        width: 40px;
+        min-width: 40px;
+      }
+
+      .bubblyAvatar,
+      .bubblyAvatarDefault {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        @include media-breakpoint-down(sm) {
+          width: 40px;
+          height: 40px;
+          border-radius: 40px;
+        }
+      }
+
+      .bubblyAvatarDefault {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: px-to-rem(32);
+        background: $primary;
+        color: $white;
+        @include media-breakpoint-down(sm) {
+          font-size: px-to-rem(26);
+        }
+      }
+    }
+
+    .contentMessage {
+      position: relative;
+      float: left;
+      display: block;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: $input-bg;
+      color: $grey;
+      font-size: px-to-rem(18);
+      border-radius: 10px;
+      word-break: break-word;
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(14);
+      }
+
+      .fileMessage {
+        text-align: left;
+        font-size: px-to-rem(18);
+        color: $grey;
+        text-decoration: underline;
+
+        .fileImage {
+          width: 200px;
+          margin-left: -10px;
+          margin-right: -10px;
+        }
+      }
+
+      .timeTooltip {
+        position: absolute;
+        display: none;
+        width: 50px;
+        height: 30px;
+        border-radius: 10px;
+        right: -55px;
+        top: 5px;
+        background-color: $grey;
+        color: $white;
+        font-size: px-to-rem(16);
+      }
+
+      &:hover {
+        .timeTooltip {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.rightBubbleContainer {
+  clear: both;
+  float: right;
+  max-width: 50%;
+  @include media-breakpoint-down(sm) {
+    max-width: 80%;
+  }
+
+  .senderName {
+    display: block;
+    overflow: hidden;
+    text-align: right;
+    font-size: px-to-rem(16);
+    color: $grey;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+  }
+
+  .contentMessage {
+    position: relative;
+    flex: 1;
+    float: right;
+    display: block;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: $primary;
+    border-radius: 10px;
+    text-align: left;
+    color: $white;
+    font-size: px-to-rem(18);
+    word-break: break-word;
+
+    .fileMessage {
+      text-align: left;
+      font-size: px-to-rem(18);
+      color: $white;
+      text-decoration: underline;
+
+      .fileImage {
+        width: 200px;
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+
+    .timeTooltip {
+      position: absolute;
+      display: none;
+      width: 50px;
+      height: 30px;
+      border-radius: 10px;
+      left: -55px;
+      top: 5px;
+      background-color: $grey;
+      color: $white;
+      font-size: px-to-rem(16);
+    }
+
+    &:hover {
+      .timeTooltip {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .greyBackground {
+    background-color: $input-bg;
+    color: $grey;
+
+    .fileMessage {
+      color: $grey;
+    }
+  }
+}
+
+.inputContainer {
+  flex: 1;
+  margin: 10px 50px;
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    margin: 10px 25px;
+  }
+
+  .previewImage {
+    position: absolute;
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+    background-color: transparent;
+    top: -170px;
+    display: flex;
+
+    .imagePreview {
+      width: 100px;
+      object-fit: contain;
+      box-shadow: $box-shadow;
+      padding: 5px;
+      background-color: $white;
+      border-radius: 10px;
+    }
+
+    button {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+
+      .iconButtonDelete {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: $white;
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+
+  .inputChat {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 65px;
+    padding: 20px 115px 20px 30px;
+    background-color: $input-bg;
+    border-radius: 6px;
+
+    .input {
+      flex: 1;
+      max-height: 115px;
+      overflow-y: auto;
+      color: $grey;
+      font-size: px-to-rem(18);
+      word-break: break-word;
+      outline: none;
+      padding-right: 15px;
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(14);
+      }
+    }
+
+    [data-placeholder]:empty:before {
+      content: attr(data-placeholder);
+      color: rgba($grey, 0.4);
+      font-size: px-to-rem(18);
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(14);
+      }
+    }
+
+    .attachmentButton {
+      position: absolute;
+      bottom: 10px;
+      right: 75px;
+
+      .labelButton {
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        border: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+    }
+
+    .directButton {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      background-color: $primary;
+
+      &:focus {
+        background: $primary;
+      }
+
+      &:active {
+        background: darken($primary, 10%);
+      }
+    }
+
+    .iconButton {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .inputFile {
+    min-height: 55px;
+
+    .nameFile {
+      color: $red;
+      font-size: px-to-rem(18);
+      font-weight: 500;
+      text-decoration: underline;
+      text-align: left;
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(14);
+      }
+
+      .iconButtonDelete {
+        width: 18px;
+        height: 18px;
+        margin-left: 5px;
+      }
+    }
+  }
+}

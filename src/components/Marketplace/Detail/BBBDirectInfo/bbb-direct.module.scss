@@ -1,0 +1,62 @@
+@import 'src/assets/css/variable';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin: 65px 0px;
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    margin: 75px 0px;
+  }
+  .title {
+    padding-left: 47px;
+    border-left: solid 8px $primary;
+    font-size: $h3_font_size;
+    font-weight: bold;
+    color: $black;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    margin-right: 47px;
+    max-width: 300px;
+    @include media-breakpoint-down(sm) {
+      height: 84px;
+      max-width: 300px;
+      margin-bottom: 29px;
+    }
+  }
+  .groupInfo {
+    font-size: $p_font_size;
+    display: flex;
+    align-items: flex-start;
+    line-height: 160%;
+    color: $black;
+    max-width: 250px;
+    &:not(:last-child) {
+      padding-right: 47px;
+    }
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 19px;
+    }
+    @include media-breakpoint-down(xs) {
+      &:not(:last-child) {
+        padding-right: 20px;
+      }
+      max-width: 154px;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+      min-height: 30px;
+      margin-right: 21px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

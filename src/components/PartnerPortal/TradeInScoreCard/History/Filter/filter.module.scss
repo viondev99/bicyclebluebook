@@ -1,0 +1,276 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.fs18 {
+  font-size: px-to-rem(18);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.wrapCardFilter {
+  padding: 28px 32px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 22px 24px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 16px;
+  }
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  &.filterContainerSpace {
+    justify-content: space-between;
+  }
+}
+
+.wrapfilterContainerQuote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.filterDropdown {
+  background: transparent;
+  border: none;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: unset !important;
+    margin-bottom: 5px;
+  }
+}
+
+.wrapFilterLeft {
+  display: flex;
+  flex-direction: unset;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+}
+
+.wrapLinkGotoTradeInNew {
+  display: flex;
+  margin-left: 10px;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: unset;
+  }
+}
+
+.wrapLink {
+  min-width: 145px;
+  display: flex;
+  justify-content: flex-end;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  a {
+    @extend .fs22;
+  }
+}
+
+.searchInput {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.customButtonSize {
+  @extend .fs22;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}
+
+.searchButton {
+  margin-left: 4px;
+}
+
+.btnExport {
+  cursor: pointer;
+  min-width: 22px;
+  max-width: 22px;
+  min-height: 30px;
+  max-height: 30px;
+
+  @include media-breakpoint-down(sm) {
+    margin: 0;
+  }
+}
+
+.searchIconButton {
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  margin: 0px 10px;
+
+  .searchIcon {
+    width: 18px;
+  }
+}
+
+.cardSearch {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 28px 32px;
+  border-radius: 10px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 22px 24px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 16px;
+  }
+
+  .formSearch {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+  }
+
+  .inputSearch {
+    flex: 1;
+    background-color: $white !important;
+    margin: 0;
+    padding-left: 0 !important;
+    height: 25px;
+  }
+
+  .searchIconButton {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.dropdownListExport {
+  padding: 28px 34px;
+  box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+  border-radius: 6px;
+  background: $white;
+  position: absolute;
+  right: 0;
+  top: 6rem;
+  z-index: 999;
+
+  &.dropdownListExportQuote {
+    right: 2.5rem;
+
+    @include media-breakpoint-down(md) {
+      right: 2rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 9.8rem;
+      right: 0;
+    }
+  }
+
+  .textExport {
+    @extend .fs18;
+    line-height: 180%;
+    color: $light-black;
+    margin-bottom: 24px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      text-decoration: underline;
+    }
+
+    &.disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      color: $light-black;
+      text-decoration: unset;
+    }
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+  }
+}
+
+.searchIconPadding {
+  padding: 0;
+  margin: 0;
+}
+
+.customCardInputSearch {
+  padding: 28px 32px;
+  border-radius: 10px;
+  margin-top: 18px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 22px 24px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 16px;
+  }
+}
+
+.btnSearch {
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 120%;
+  color: $primary;
+  cursor: pointer;
+}
+
+.dateRange {
+  position: absolute;
+  right: 3rem;
+  top: 7rem;
+  z-index: 98;
+
+  @include media-breakpoint-down(sm) {
+    right: 0;
+  }
+}
+
+.wrapItemRight {
+  display: flex;
+  align-items: center;
+}
+
+.wrapRight {
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    display: unset;
+  }
+}

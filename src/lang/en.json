@@ -1,0 +1,395 @@
+{
+  "seoTitle": {
+    "tooManyPhotos": "Too Many Photos",
+    "invalid": "Invalid",
+    "uhOh": "Uh-oh",
+    "fillRequiredFields": "Fill Required Fields",
+    "loginRequired": "Login Required",
+    "success": "Success",
+    "paymentNotCompleted": "Payment not Completed"
+  },
+  "common": {
+    "validateImage": "File only image",
+    "maximumSize": "Maximum size of cover is 20Mb.",
+    "maximumSizeLogo": "Maximum size of logo is 20Mb.",
+    "maximumSizeAvatar": "Maximum size of avatar is 20Mb.",
+    "maximumCount": "Maximum photos is 12",
+    "lowResImage": "Dimensions must be at least 600px x 600px",
+    "showPopUp": "Please allow pop ups from BicycleBlueBook.com",
+    "noImage": "Please select an image",
+    "validateRequired": "This field is required.",
+    "moreThanZero": "This field must be more than 0.",
+    "sendResetLink": "Reset password link sent.",
+    "validate": {
+      "nameRequired": "Name is required",
+      "userNameRequired": "User Name is required",
+      "firstNameRequired": "First Name is required",
+      "lastNameRequired": "Last Name is required",
+      "addressRequired": "Address is required",
+      "cityRequired": "City is required",
+      "stateRequired": "State is required",
+      "zipCodeRequired": "Zip Code is required",
+      "zipCodeInvalid": "Zip Code invalid.",
+      "phoneNumberRequired": "Phone number is required",
+      "phoneInvalid": "Please use the format ###-###-####",
+      "nameLength": "Name cannot exceed 250 characters.",
+      "firstNameLength": "First Name cannot exceed 250 characters",
+      "lastNameLength": "Last Name cannot exceed 250 characters",
+      "emailRequired": "Email Address is required",
+      "emailInvalid": "Email address invalid",
+      "passwordRequired": "Password is required",
+      "passwordLength": "Password must be at least 8 characters",
+      "currentPasswordRequired": "Current Password is required",
+      "currentPasswordLength": "Current Password must be at least 8 characters",
+      "newPasswordSameOldPassword": "New Password should not be the same Current Password.",
+      "newPasswordRequired": "New Password is required",
+      "newPasswordLength": "New Password must be at least 8 characters",
+      "confirmPasswordMatch": "Confirm New Password values did not match New Password.",
+      "confirmPasswordRequired": "Confirm New Password is required",
+      "brand": "Bicycle brand is required",
+      "model": "Bicycle model is required",
+      "year": "Bicycle year is required",
+      "fileSize": "Your file is too large to upload. Please upload files smaller then 20MB",
+      "make": "Make is required",
+      "modelRequired": "Model is required",
+      "valueRequired": "Value is required",
+      "frameMaterial": "Frame Material is required.",
+      "type": "Type is required",
+      "suspension": "Suspension is required",
+      "gender": "Gender is required.",
+      "wheel": "Wheel Size is required.",
+      "brake": "Brake Type is required",
+      "serialNumber": "Serial Number is required",
+      "frameSize": "Frame Size is required.",
+      "description": "Description is required.",
+      "condition": "Condition is required",
+      "salePrice": "Sale price is required.",
+      "salePriceMaxLength": "Sale price cannot exceed 10 characters.",
+      "shipping": "You need to choose shipping or use local pick or both of them.",
+      "paypalEmail": "Paypal email is required.",
+      "paypalEmailNotValid": "Paypal email is required.",
+      "returnDaysRequired": "Return within days is required.",
+      "returnShippingRequired": "Return shipping payer is required.",
+      "websiteInvalid": "Website invalid",
+      "listingTitle": "Listing Title is required",
+      "listtingTitleMaxLength": "Listing cannot exceed 255 characters.",
+      "messageInvalid": "Please enter 30 or more characters"
+    }
+  },
+  "authenticate": {
+    "sessionTimeout": "Your session has expired. Please Login again",
+    "requireLogin": "Login to access this function",
+    "logoutSuccessfully": "You have signed out",
+    "logInSuccessfully": "You have signed in",
+    "registerSuccessfully": "Welcome to BicycleBlueBook.com! We are excited to see you.",
+    "roleNotAccept": "You do not have access to this feature",
+    "userBlocked": "You have been blocked",
+    "validate": {
+      "emailInvalid": "Email address invalid",
+      "emailRequired": "Email Address is required",
+      "emailRequiredRegister": "Email Address is required",
+      "passwordRequired": "Password is required",
+      "passwordLength": "Password must be at least 8 characters",
+      "confirmPasswordMatch": "The passwords you entered do not match. Please re-enter your password",
+      "confirmPasswordRequired": "Confirmation password is required",
+      "legalBusinessPhoneRequired": "Legal Business Phone is required",
+      "legalBusinessNameRequired": "Legal Business Name is required",
+      "businessNameRequired": "Business Name is required",
+      "businessNameLength": "Business Name cannot exceed 250 characters",
+      "addressRequired": "Physical Address is required",
+      "mailingAddressRequired": "Mailing Address is required",
+      "brandCarried": "Brands carried is a required field",
+      "storeNameRequired": "Online Storefront is a required field",
+      "storeNameLength": "Online Storefront cannot exceed 250 characters",
+      "storeContactNameRequired": "Contact Name is required",
+      "storeContactNameLength": "Contact Name cannot exceed 250 characters.",
+      "storeWebsiteUrlLength": "Website Url cannot exceed 250 characters.",
+      "storeWebsiteUrlInvalid": "Website Url is invalid.",
+      "storeResellerNumberRequired": "Reseller Number is required.",
+      "storeResellerNumberLength": "Reseller Number cannot exceed 250 characters.",
+      "pdfFileRequired": "PDF File is required."
+    }
+  },
+  "compare": {
+    "added": "Item added to compare list",
+    "removed": "Item removed from compare list"
+  },
+  "cart": {
+    "itemRemoved": "Item removed",
+    "itemAdded": "Added to cart.",
+    "cartRemoved": "You are signed in with a ${role} account. All your carts have been removed",
+    "syncCartWithMessage": "Sync cart successfully, but: ",
+    "syncCart": "Sync cart successfully",
+    "payWithStripeError": "Stripe is not able to complete your payment at this time",
+    "paymentSuccessful": "Payment completed",
+    "paymentCancelled": "Payment cancelled",
+    "itemAlreadyInCart": "This item is already in your cart",
+    "validate": {
+      "nameOnCard": "Billing name required",
+      "postalCode": "Postal code is required",
+      "customerEmail": "Email is required",
+      "customerEmailInvalid": "Email is invalid"
+    }
+  },
+  "myAccount": {
+    "myListing": {
+      "markAsShipped": "Mark as Shipped successfully.",
+      "renew": "You have renewed your listing successfully!",
+      "deleted": "Your listing has been deleted",
+      "created": "Congratulations, your listing has been created",
+      "reListed": "Your item has been re-listed",
+      "markAsPickedUp": "Mark as Shipped successfully.",
+      "saveDraft": "Your draft has been saved",
+      "draftInvalid": "This draft cannot be saved",
+      "submitSuccess": "Submit successfully",
+      "saveListingSuccess": "Save listing successfully"
+    },
+    "profile": {
+      "reasonDeleteAccount": "Reason is required",
+      "changePassword": "Your password has been changed",
+      "updateProfile": "Your profile has been updated",
+      "deactiveAccount": "Your account has been deactivated. We're sorry to see you go",
+      "deleteAccount": "Your account has been deleted. We're sorry to see you go",
+      "validate": {
+        "shopName": "Shop Name is required",
+        "shopEmail": "Shop Email is required",
+        "shopAddress": "Shop Address is required",
+        "shippingAddress": "Shipping Address is required",
+        "phoneNumber": "Phone Number is required",
+        "websiteUrl": "Website UR is required",
+        "contactName": "Contact name is required",
+        "resellerNumber": "Reseller number is required",
+        "pdfUpload": "Pdf Upload is required",
+        "country": "Country is required",
+        "emailInvalid": "Email address invalid",
+        "storeNameLength": "Shop name cannot exceed 250 characters.",
+        "storeContactNameLength": "Contact Name cannot exceed 250 characters.",
+        "storeResellerNumberLength": "Reseller Number cannot exceed 250 characters."
+      }
+    },
+    "wishlist": {
+      "removed": "We have removed this from your wishlist",
+      "added": "We have added this to your wishlist. We'll notify you once the item is in stock"
+    },
+    "order": {
+      "refundSubmitted": "Your request has been submitted"
+    },
+    "return": {
+      "validate": {
+        "reasonRequired": "Please select your reason",
+        "otherReasonRequired": "Please enter your reason",
+        "maxLengthOtherReason": "Max length of reason is 500 characters",
+        "maxLengthNote": "Max length of note is 500 characters",
+        "carrierRequired": "Please select your carrier",
+        "otherCarrierRequired": "Please select your carrier",
+        "maxLengthOtherCarrier": "Max length of carrier is 250 characters",
+        "trackingNumberRequired": "Please enter your tracking number",
+        "maxLengthTrackingNumber": "Max length of tracking number is 50 characters",
+        "amountRequired": "Please enter your amount to return",
+        "maxLengthAmount": "Max length of amount is 10 characters",
+        "amountInvalid": "Amount must be more than 0"
+      }
+    },
+    "notify": {
+      "updated": "Your notification settings have been updated",
+      "updateFailed": "We are not able to update your notification settings at this time"
+    },
+    "message": {
+      "archived": "You have archived this conversation",
+      "newMessage": "Your message has been sent to ${params}",
+      "uploadedFile": "Your file has been uploaded ",
+      "checkUsersBlockedAccess": "You can't do this action on this account because you are blocked or blocked."
+    },
+    "offer": {
+      "counterSuccess": "Counter offer successfully.",
+      "rejectSuccess": "Reject offer successfully.",
+      "acceptSuccess": "Accept offer successfully.",
+      "cancelSuccess": "Cancel offer successfully."
+    }
+  },
+  "storeFront": {
+    "account": {
+      "updateAccount": "Account updated",
+      "createUser": "Create user successfully!",
+      "updateUser": "Update user successfully!",
+      "removeUser": "Remove user successfully!"
+    },
+    "myListing": {
+      "markAsShipped": "Mark as Shipped successfully.",
+      "markAsPickedUp": "Mark as Shipped successfully.",
+      "sendTrackingEmail": "Tracking email has been sent",
+      "re-listing": "Re-list listing successfully.",
+      "renew-listing": "Re-new listing successfully."
+    },
+    "purchaseHistory": {
+      "printError": "Listing not found"
+    },
+    "setting": {
+      "changePassword": "Your password has been changed successfully.",
+      "updateStoreFront": "Update success.",
+      "updateSetting": "Update success."
+    }
+  },
+  "marketplace": {
+    "noBike": "We're sorry, we don't currently have this bike in our marketplace",
+    "rate": "Thanks for your review!",
+    "bikeSold": "This bike is no longer for sale",
+    "sendOffer": "Your offer has been sent",
+    "sendBid": "Your bid has been sent ",
+    "removedFavorite": "This item has been removed from your favorites",
+    "addedFavorite": "You have added an item to your favorites",
+    "validate": {
+      "offerPrices": "Offer price is required",
+      "reviewsMessage": "Review cannot exceed 2000 characters",
+      "reviewTitleRequired": "Title is required",
+      "reviewTitleLength": "Title cannot exceed 100 characters",
+      "messageRequired": "Message cannot be blank",
+      "frameSizeRequired": "Please select a frame size",
+      "bidPriceRequired": "Bid price is required",
+      "bidPriceInvalid": "Bid price is invalid",
+      "bidPriceMax": "Bid price must be less than 1000000000",
+      "rangeFilter": "Minimum must be less than the maximum"
+    }
+  },
+  "onlineStore": {
+    "rate": "Thanks for your review!",
+    "validate": {
+      "messageRequired": "Message cannot be blank",
+      "reviewsMessage": "Review cannot exceed 2000 characters",
+      "reviewTitleLength": "Title cannot exceed 100 characters"
+    }
+  },
+  "partnerPortal": {
+    "scorecard": {
+      "savedScorecard": "Scorecard saved",
+      "savedCustomQuote": "Custom quote saved",
+      "declineCustomQuote": "Custom quote declined",
+      "declineScorecard": "Scorecard declined",
+      "acceptCustomQuote": "Custom quote accepted",
+      "feedbackSuccess": "Feedback submited",
+      "print": "Print Scorecard",
+      "validate": {
+        "image": "Minimum of 4 images required",
+        "noImage": "Please select an image",
+        "partyValue": "You must enter party value",
+        "frameSize": "Frame size is required",
+        "frameMaterial": "Frame Material is required",
+        "shifter": "Shifter is required",
+        "frontDerailleur": "Front Derailleur is required",
+        "RearDerailleur": "Rear Derailleur is required",
+        "handlebar": "Handlebar is required",
+        "stem": "Stem is required",
+        "cassette": "Cassette is required",
+        "brakeType": "Brake Type is required",
+        "frontBrake": "Front Brake is required",
+        "rearBreak": "Rear Brake is required",
+        "crankset": "Crankset is required",
+        "wheels": "Wheels is required",
+        "suspension": "Suspension is required",
+        "type": "Type is required",
+        "cleanBike": "Please select yes or no",
+        "condition": "Condition is required",
+        "employeeName": "Employee Name is required",
+        "employeeEmailRequired": "Employee Email is required",
+        "employeeEmailInvalid": "Invalid Email",
+        "ownerEmailRequired": "Owner's Email is required",
+        "ownerEmailInvalid": "Owner's Email invalid",
+        "ownerPhoneRequired": "Owner's phone number is required",
+        "shopLocation": "Shop location is required",
+        "ownerName": "Owner's name is required",
+        "height": "Height is required",
+        "length": "Length is required",
+        "weight": "Weight is required",
+        "width": "Width is required",
+        "tracking": "Tracking is required",
+        "carrier": "Carrier is required",
+        "serial": "Serial number is required",
+        "driverLicense": "Driver's License or Passport is required",
+        "shopEmployee": "Shop Employee is required"
+      },
+      "createTradeInCredit": "Trade-in credit applied to customer account"
+    },
+    "account": {
+      "addedNewLocation": "New location added",
+      "editLocation": "Location updated",
+      "updateAccount": "Account updated",
+      "createUser": "Create user successfully!",
+      "updateUser": "Update user successfully!",
+      "deleteUser": "Delete user successfully!",
+      "validate": {
+        "addressRequired": "Physical Address is required",
+        "webSite": "Website invalid",
+        "brandRequired": "Brand is required",
+        "duplicateBrand": "Duplicate brand!"
+      }
+    },
+    "location": {
+      "brandRequired": "Brand is required"
+    },
+    "bikeDonation": {
+      "validate": {
+        "makeRequired": "Make is required",
+        "modelRequired": "Model is required",
+        "valueRequired": "Value is required"
+      }
+    },
+    "notification": {
+      "updateSuccessfully": "Notifications settings have been updated"
+    },
+    "profile": {
+      "validate": {
+        "shopNameRequired": "Shop Name is required",
+        "shopNameLength": "Shop Name cannot exceed 250 characters",
+        "shopEmailRequired": "Shop Email Address is required",
+        "shopEmailInvalid": "Please use a valid shop email address",
+        "paypalEmailRequired": "Paypal Email Address is required",
+        "paypalEmailInvalid": "Please use a valid PayPal email address",
+        "location": "Location is required",
+        "website": "Website invalid",
+        "widgetUrl": "Widget Url invalid",
+        "mailingAddressRequired": "Mailing Address is required"
+      }
+    }
+  },
+  "tradeIn": {
+    "requireFields": "City, State, or Zipcode required",
+    "zipCodeInvalid": "Invalid zipcode"
+  },
+  "contactUs": {
+    "sent": "Message sent. You'll here back from us soon",
+    "validate": {
+      "topic": "The topic is required",
+      "name": "The name is required",
+      "emailRequired": "Email Address is required",
+      "emailInvalid": "Email address invalid",
+      "phone": "Invalid phone number",
+      "reason": "Please enter a reason",
+      "shopName": "The shop name is required"
+    }
+  },
+  "becomeAPartner": {
+    "isPartnerAlready": "This account already exists"
+  },
+  "valueGuide": {
+    "validate": {
+      "searchKey": "Please enter key search."
+    },
+    "noResult": "This bike is not currently in our database",
+    "review": "Review successfully.",
+    "noBike": "We're sorry, we don't currently have this bike in our database",
+    "submitSuccess": "Submit successfully.",
+    "selectError": "Please select a trade-in partner to proceed."
+  },
+  "cases": {
+    "assign": {
+      "empty": "Assign must be not empty.",
+      "updated": "Update Cases Successfully.",
+      "selectOne": "You need to select one.",
+      "success": "Response Successfully.",
+      "updated_status": "Update Status Cases Successfully."
+    }
+  },
+  "capcha": {
+    "empty": "Capcha is required."
+  }
+}

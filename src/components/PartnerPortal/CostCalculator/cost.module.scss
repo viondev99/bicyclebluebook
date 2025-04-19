@@ -1,0 +1,152 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.wrapCard {
+  padding: 40px;
+
+  &.wrapCardTour {
+    z-index: 9999999;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px;
+  }
+
+  .header {
+    font-weight: 700;
+    font-size: px-to-rem(30);
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 36px;
+    display: block;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(24);
+      display: block;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+      margin-bottom: 26px;
+      display: none;
+    }
+  }
+
+  .description {
+    font-weight: 500;
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 36px;
+  }
+
+  .wrapButton {
+    display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+
+    @include media-breakpoint-down(md) {
+      align-items: unset;
+      flex-direction: column;
+    }
+
+    .wrapInput {
+      margin-right: 12px;
+
+      @include media-breakpoint-down(md) {
+        align-items: unset;
+        flex-direction: column;
+        margin-bottom: 18px;
+      }
+    }
+
+    .button {
+      .btnCalculate {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .wrapItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    div {
+      color: $lightest-grey;
+      line-height: 180%;
+    }
+
+    span {
+      line-height: 26px;
+      text-align: right;
+      color: #2f3642;
+    }
+  }
+}
+
+.customButtonSize {
+  @extend .fs22;
+  height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    height: 55px !important;
+  }
+}
+
+.customTextSize {
+  font-size: px-to-rem(22) !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18) !important;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16) !important;
+  }
+}
+
+.textBlue {
+  color: $primary !important;
+}
+
+.customHr {
+  border: 1px solid rgba(110, 119, 133, 0.1);
+  margin: 40px 0;
+}
+
+.customUl {
+  padding-left: 15px;
+  li {
+    font-size: px-to-rem(16);
+    line-height: 180%;
+    color: $lightest-grey;
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(14);
+    }
+  }
+}
+
+.customInputNumber::-webkit-outer-spin-button,
+.customInputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.customInputNumber[type='number'] {
+  -moz-appearance: textfield;
+}

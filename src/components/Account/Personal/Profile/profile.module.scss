@@ -1,0 +1,188 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.subTitle {
+  font-size: $h3_font_size;
+  font-weight: bold;
+  padding: 24px 0;
+}
+.accountInfo {
+  margin: 32px 0 15px 0;
+  .headerForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btnSave {
+    margin-top: 24px;
+  }
+}
+.editForm {
+  font-size: $p_font_size;
+  padding: 0;
+  cursor: pointer;
+}
+.editForm:hover {
+  color: $primary;
+}
+.wrapperInput {
+  margin-bottom: 16px;
+  .label {
+    font-weight: 500;
+    font-size: $p_font_size;
+    padding-top: 16px;
+  }
+}
+.groupBtnFooter {
+  display: flex;
+  .btnDeactivate {
+    margin-right: 16px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 32px;
+      margin-right: 0;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+}
+.footerModelDeactivate {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 20px;
+  .btnDelete {
+    margin-right: 16px;
+  }
+  .btnDeactivate {
+    margin-right: 16px;
+  }
+
+  .btnSend {
+    margin-right: 16px;
+  }
+
+  .btnCancel {
+    border: solid 1px $grey;
+  }
+}
+.contentModalDeactivate {
+  color: $grey;
+  font-size: $p_font_size;
+}
+.contentModalAlert {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .description {
+    font-size: $h2_font_size;
+    font-weight: 500;
+    color: $black;
+    margin: 20px 0px;
+  }
+}
+.changePasswordText {
+  padding: 0;
+  color: $primary !important;
+  font-size: $p_font_size;
+  margin-top: 8px;
+  cursor: pointer;
+  background: $white !important;
+  &:hover {
+    background: $white !important;
+  }
+}
+.disabledChangePass {
+  color: $grey !important;
+}
+
+.headerTitle {
+  font-size: $h3_font_size;
+  margin-bottom: 40px;
+
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 25px;
+  }
+}
+.profileContainer {
+  padding: 22px !important;
+  @include media-breakpoint-up(sm) {
+    padding: 32px !important;
+  }
+  border-radius: 0;
+}
+.activeEdit {
+  color: $primary !important;
+  &:disabled {
+    cursor: not-allowed;
+    color: rgba($grey, 0.4) !important;
+  }
+}
+.lineSeparate {
+  background: $grey;
+  opacity: 0.1;
+  border-bottom: solid 1.5px $grey;
+  margin: 0;
+}
+
+.formReason {
+  margin-top: 32px;
+}
+.titleReasonModal {
+  justify-content: center;
+}
+
+.resizeModal {
+  width: 867px;
+}
+
+.wrapOptions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  background: white !important;
+  padding: 0 !important;
+  h4 {
+    @include media-breakpoint-up(md) {
+      margin: 0 0 0 12px;
+    }
+    margin: 0 0 0 9px;
+    font-size: $p_font_size;
+    font-weight: 500;
+    text-align: left;
+  }
+}
+
+.labelOptions {
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+  font-weight: 500;
+  font-size: $p_font_size;
+}
+
+.labelOptionsMobile {
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+  font-weight: 500;
+  font-size: $p_font_size;
+}

@@ -1,0 +1,366 @@
+@import 'src/assets/css/variable';
+
+.header {
+  font-weight: 700;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 52px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(22);
+    margin-bottom: 26px;
+  }
+
+  &.headerIframe {
+    margin-bottom: 32px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 26px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(27);
+    }
+  }
+}
+
+.wrapIrame {
+  display: flex;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(lg) {
+    justify-content: unset;
+    flex-direction: column;
+  }
+
+  .iframeLeft {
+    width: 75%;
+    padding-right: 15px;
+    height: 409px;
+    border-radius: 6px;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      margin-bottom: 15px;
+      padding-right: unset;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 320px;
+    }
+    @include media-breakpoint-down(xs) {
+      height: 212px;
+    }
+
+    iframe {
+      width: 100%;
+      border-radius: 6px;
+      height: 100%;
+      border: none;
+    }
+  }
+
+  .iframeRight {
+    width: 25%;
+    max-height: 100%;
+    overflow-y: auto;
+
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      width: 100%;
+      overflow-y: hidden;
+      max-height: unset;
+      overflow-x: auto;
+      max-width: 100%;
+    }
+
+    .item {
+      margin-bottom: 10px;
+      height: 100%;
+      width: 100%;
+
+      @include media-breakpoint-down(lg) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 33%;
+        min-width: 30%;
+        margin: 0 5px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 49%;
+      }
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+    }
+
+    .itemActive {
+      height: 130px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .itemInActive {
+      height: 130px;
+      border-radius: 6px;
+      opacity: 0.2;
+      cursor: pointer;
+
+      .wrapContent {
+        position: relative;
+        display: flex;
+        align-items: center;
+        top: 5rem;
+        justify-content: center;
+        left: 2rem;
+        width: 70%;
+
+        @include media-breakpoint-down(lg) {
+          top: 2rem;
+        }
+
+        span {
+          font-weight: 500;
+          font-size: px-to-rem(16);
+          line-height: 21px;
+          color: white;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.wrapCard {
+  border-radius: 10px;
+  padding: 58px 61px;
+  margin-bottom: 34px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 26px;
+    padding: 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 26px;
+    padding: 28px 22px;
+  }
+
+  &:last-child {
+    margin-bottom: unset;
+  }
+
+  &.removeWrapCard {
+    border-radius: unset;
+    padding: unset;
+    background: none;
+  }
+}
+
+.wrapDocument {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  &:last-child {
+    margin-bottom: unset;
+  }
+
+  .documentTitle {
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 120%;
+    color: $light-black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+    }
+  }
+
+  .documentAction {
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 29px;
+    color: $primary;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+    }
+
+    .icEyeBlue {
+      margin-right: 12.75px;
+      width: 29.25px;
+      height: 21.14px;
+
+      @include media-breakpoint-down(lg) {
+        width: 25.35px;
+        height: 18.32px;
+        margin-right: 12.75px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 21.45px;
+        height: 15.5px;
+        margin-right: 20.55px;
+      }
+    }
+
+    .viewAction {
+      margin-right: 43.73px;
+      display: block;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(18) !important;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(16) !important;
+        display: none;
+      }
+    }
+
+    .icDownloadBlue {
+      margin-right: 14.73px;
+      width: 24.25px;
+      height: 24.25px;
+
+      @include media-breakpoint-down(lg) {
+        width: 21.27px;
+        height: 21.27px;
+      }
+    }
+
+    .downloadAction {
+      display: block;
+      cursor: pointer;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(18) !important;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(16) !important;
+        display: none;
+      }
+    }
+  }
+}
+
+.wrapModal {
+  max-width: 345px;
+  position: absolute;
+  font-size: px_to_rem(18);
+  z-index: 999999;
+  padding: 30px;
+  border-radius: 10px;
+  top: 14%;
+  font-weight: 500 !important;
+  background-color: $white;
+
+  .arrowLeft {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+  }
+
+  @media (max-width: 1199px) and (min-width: 760px) {
+    max-width: 345px;
+    font-size: px_to_rem(16);
+  }
+
+  @media (max-width: 760px) {
+    // display: none;
+    top: 6%;
+    max-width: 90%;
+  }
+
+  .buttonBack {
+    border: none;
+    background-color: unset;
+    color: $medium-grey;
+    cursor: pointer;
+  }
+
+  .buttonNext {
+    border: none;
+    background-color: unset;
+    color: $primary;
+    cursor: pointer;
+  }
+
+  .wrapHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .title {
+    font-weight: 700;
+    line-height: 120%;
+  }
+  .content {
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+      padding: 100px 20px;
+      position: relative;
+      min-height: 100vh;
+      border: none;
+    }
+    @include media-breakpoint-up(md) {
+      max-height: 88vh;
+      overflow-y: auto;
+    }
+    .body {
+      @media (max-width: 1199px) and (min-width: 768px) {
+        margin-top: 24px;
+      }
+
+      .btn {
+        margin-top: 46px;
+        @include media-breakpoint-down(md) {
+          float: right;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .modalCloseBtn {
+    padding: 0;
+  }
+}
+
+.linkPartnerTutorial {
+  font-weight: 500;
+  font-size: px-to-rem(22);
+  line-height: 120%;
+  margin-bottom: 40px;
+
+  .clickTour {
+    color: $primary;
+    cursor: pointer;
+  }
+}

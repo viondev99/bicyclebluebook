@@ -1,0 +1,56 @@
+@import 'src/assets/css/variable';
+
+.saleCalculatorSlicerWrapper {
+  overflow: visible;
+
+  :global(.rc-slider-rail) {
+    background: rgba($primary, 0.25);
+    height: 6px;
+  }
+
+  :global(.rc-slider-track) {
+    background: $primary;
+    height: 6px;
+    outline: none !important;
+  }
+
+  :global(.rc-slider-handle) {
+    background: $primary;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: -7px 0;
+    box-shadow: none !important;
+
+    &:global(.rc-slider-handle-1) {
+      display: none !important;
+    }
+  }
+
+  .value {
+    font-size: px-to-rem(14);
+    margin-top: 17px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $grey;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.wrapTooltip {
+  position: absolute;
+  top: -40px;
+  right: auto;
+  transform: translateX(-50%);
+  position: absolute;
+  padding: 5px 12px;
+  color: $white;
+  border-radius: 5px;
+  background: $primary;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 21px;
+  text-align: center;
+}

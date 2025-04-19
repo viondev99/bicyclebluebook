@@ -1,0 +1,192 @@
+@import 'src/assets/css/variable';
+
+.card {
+  padding: 58px;
+  @include media-breakpoint-down(lg) {
+    padding: 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 33px 22px;
+  }
+}
+
+.price {
+  font-family: 'Rubik', sans-serif;
+  font-size: $p_font_size;
+  line-height: px-to-rem(26);
+  color: $primary;
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: $p_font_size;
+  font-weight: 500;
+  color: $black;
+  @include media-breakpoint-up(md) {
+    width: 200px;
+  }
+  margin-bottom: 0;
+}
+
+.value {
+  font-size: $p_font_size;
+  font-weight: 500;
+  color: $grey !important;
+  padding: 5px 0;
+}
+.subTitle {
+  font-size: px-to-rem(18);
+  font-weight: 500;
+  color: $black;
+  width: 180px;
+  @include media-breakpoint-down(md) {
+    width: 130px;
+  }
+}
+.subValue {
+  font-size: px-to-rem(18);
+  font-weight: 500;
+  color: $grey;
+}
+
+.statusProgress {
+  color: $warning;
+  margin-bottom: 26px;
+}
+.statusShipping {
+  color: $primary;
+  margin-bottom: 26px;
+}
+.statusExpired {
+  color: $danger;
+  margin-bottom: 26px;
+}
+.divider {
+  margin: 44px 0px;
+}
+.btnPrint {
+  margin-top: 36px;
+}
+.wrapInfoBike {
+  // margin-bottom: 30px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+  .imgReturn {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    @include media-breakpoint-down(md) {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}
+
+.wrapItemReturn {
+  @include media-breakpoint-down(md) {
+    margin-right: 22px;
+  }
+}
+
+.titleBicycle {
+  width: 100%;
+  a {
+    color: $black;
+  }
+}
+.lineInfo {
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+}
+
+.deliverModal {
+  width: 696px;
+  .contentDeliverModal {
+    padding: 40px;
+  }
+}
+.deliverWrap {
+  margin-top: 20px;
+  text-align: right;
+}
+.customLinkDeliver {
+  text-align: right;
+  font-size: $p_font_size;
+}
+.customBtn {
+  padding: 0 !important;
+  a {
+    padding: 0 30px;
+    width: 100%;
+    height: 100%;
+    line-height: 3;
+    color: $white;
+  }
+}
+.wrapRefundBuyer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.divider {
+  margin: 40px -58px;
+
+  @include media-breakpoint-down(lg) {
+    margin: 40px -40px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 40px -22px;
+  }
+}
+.inputFile {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: hidden;
+}
+
+.uploadLabel {
+  height: 30px;
+  width: 134px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: $p_font_size;
+  color: $primary;
+  margin-top: 5px;
+}
+.lineError {
+  font-size: px-to-rem(16);
+  color: $danger;
+  margin-top: 5px;
+  position: relative;
+  bottom: 25px;
+}
+.contentModel {
+  width: 100%;
+  text-align: center;
+}
+.note {
+  font-size: $p_font_size;
+  color: $grey;
+}
+.breakWhenMobile {
+  margin-right: 0px;
+  @media (max-width: 454px) {
+    margin-top: 22px;
+  }
+}
+
+.menuActions {
+  display: flex;
+  background-color: $white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}

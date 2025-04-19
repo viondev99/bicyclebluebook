@@ -1,0 +1,71 @@
+@import 'src/assets/css/variable';
+
+.chips {
+  margin: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  @include media-breakpoint-down(sm) {
+    display: block;
+    line-height: 2;
+  }
+  .titleChip {
+    font-weight: 500;
+    font-size: px-to-rem(16);
+    color: $black;
+  }
+  .contentChip {
+    margin: 0px 20px;
+    font-weight: 500;
+    font-size: px-to-rem(16);
+    color: $grey;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.buyer {
+  color: $black;
+  margin-bottom: 12px;
+  a {
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: px-to-rem(16);
+    color: $grey;
+  }
+}
+
+.contentModal {
+  margin: 0px 0px 50px 0px;
+  padding: 62px !important;
+  @include media-breakpoint-down(sm) {
+    padding: 15px !important;
+  }
+}
+
+.modal {
+  width: 1013px !important;
+  @include media-breakpoint-up(md) {
+    width: 564px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 658px;
+  }
+}
+.titleInfo {
+  font-weight: 500;
+  font-size: $p_font_size;
+  margin-bottom: 24px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 8px;
+  }
+}
+.contentInfo {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $grey;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px;
+  }
+}

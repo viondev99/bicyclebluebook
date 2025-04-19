@@ -1,0 +1,65 @@
+diff --git a/node_modules/reactstrap/es/Modal.js b/node_modules/reactstrap/es/Modal.js
+index 74da7f7..cb37150 100644
+--- a/node_modules/reactstrap/es/Modal.js
++++ b/node_modules/reactstrap/es/Modal.js
+@@ -92,6 +92,7 @@ var Modal = /*#__PURE__*/function (_React$Component) {
+     _this.handleTab = _this.handleTab.bind(_assertThisInitialized(_this));
+     _this.onOpened = _this.onOpened.bind(_assertThisInitialized(_this));
+     _this.onClosed = _this.onClosed.bind(_assertThisInitialized(_this));
++    _this.close = _this.close.bind(_assertThisInitialized(_this));
+     _this.manageFocusAfterClose = _this.manageFocusAfterClose.bind(_assertThisInitialized(_this));
+     _this.clearBackdropAnimationTimeout = _this.clearBackdropAnimationTimeout.bind(_assertThisInitialized(_this));
+     _this.state = {
+@@ -180,8 +181,6 @@ var Modal = /*#__PURE__*/function (_React$Component) {
+       this.destroy();
+     }
+ 
+-    this.close();
+-
+     if (this._isMounted) {
+       this.setState({
+         isOpen: false
+@@ -419,6 +418,7 @@ var Modal = /*#__PURE__*/function (_React$Component) {
+         in: isOpen,
+         onEntered: this.onOpened,
+         onExited: this.onClosed,
++        onExit: this.close,
+         cssModule: cssModule,
+         className: mapToCssModules(classNames('modal', modalClassName, this.state.showStaticBackdropAnimation && 'modal-static'), cssModule),
+         innerRef: innerRef
+diff --git a/node_modules/reactstrap/es/utils.js b/node_modules/reactstrap/es/utils.js
+index 2e53fe5..9038f08 100644
+--- a/node_modules/reactstrap/es/utils.js
++++ b/node_modules/reactstrap/es/utils.js
+@@ -15,6 +15,10 @@ export function getScrollbarWidth() {
+ }
+ export function setScrollbarWidth(padding) {
+   document.body.style.paddingRight = padding > 0 ? padding + "px" : null;
++  const fixedHeader = document.getElementById('fixed-header');
++  if (fixedHeader) {
++    fixedHeader.style.paddingRight = padding > 0 ? padding + "px" : null;
++  }
+ }
+ export function isBodyOverflowing() {
+   return document.body.clientWidth < window.innerWidth;
+diff --git a/node_modules/reactstrap/src/Modal.js b/node_modules/reactstrap/src/Modal.js
+index f8383a9..79f2d63 100644
+--- a/node_modules/reactstrap/src/Modal.js
++++ b/node_modules/reactstrap/src/Modal.js
+@@ -179,7 +179,7 @@ class Modal extends React.Component {
+     if (unmountOnClose) {
+       this.destroy();
+     }
+-    this.close();
++    // this.close();
+ 
+     if (this._isMounted) {
+       this.setState({ isOpen: false });
+@@ -437,6 +437,7 @@ class Modal extends React.Component {
+               in={isOpen}
+               onEntered={this.onOpened}
+               onExited={this.onClosed}
++              onExiting={this.close}
+               cssModule={cssModule}
+               className={mapToCssModules(classNames('modal', modalClassName, this.state.showStaticBackdropAnimation && 'modal-static'), cssModule)}
+               innerRef={innerRef}

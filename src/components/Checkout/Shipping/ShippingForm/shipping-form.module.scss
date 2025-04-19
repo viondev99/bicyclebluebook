@@ -1,0 +1,83 @@
+@import 'src/assets/css/variable';
+
+.shippingCard {
+  padding: 50px;
+  margin-bottom: 30px;
+
+  hr {
+    margin: 0 -50px;
+    border-width: 1px;
+  }
+}
+
+.infoForm {
+  padding-bottom: 50px;
+}
+
+.formGroup {
+  margin-top: 10px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.labelGroup {
+  display: flex;
+
+  .label {
+    line-height: 55px;
+    flex-basis: 250px;
+    flex-shrink: 1;
+    font-weight: 500;
+    font-size: $p_font_size;
+  }
+
+  .labelApartment {
+    flex-basis: 250px;
+    flex-shrink: 1;
+    font-weight: 500;
+    font-size: $p_font_size;
+  }
+
+  .control {
+    flex: 1;
+  }
+  @include media-breakpoint-down(sm) {
+    display: unset;
+  }
+}
+
+.createAccountForm {
+  padding-top: 50px;
+}
+
+.subscriptionCheckboxLabel {
+  font-size: px-to-rem(15);
+  color: $grey;
+  line-height: px-to-rem(20);
+  font-weight: 500;
+}
+
+.titleImg {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 120%;
+  color: $light-black;
+  cursor: pointer;
+  margin-top: 10px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 16px;
+  }
+}
+
+.labelImg {
+  margin-left: 14px;
+}

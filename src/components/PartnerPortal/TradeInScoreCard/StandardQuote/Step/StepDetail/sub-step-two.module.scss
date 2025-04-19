@@ -1,0 +1,142 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.headerStep {
+  font-weight: 700;
+  @extend .fs46;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 50px;
+}
+
+.wrapSubStepTwo {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 64px 91px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 47px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px;
+  }
+
+  .customRow {
+    margin-bottom: 53px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 35px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
+    }
+
+    .customCol {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 23px;
+      }
+
+      .wrapTitle {
+        margin-bottom: 28px;
+        font-weight: 700;
+        @extend .fs30;
+        line-height: 120%;
+        color: $light-black;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .description {
+        font-size: px-to-rem(16);
+        line-height: 180%;
+        color: $lightest-grey;
+        margin-top: 32px;
+      }
+    }
+  }
+}
+
+.textBottomLeft {
+  @extend .fs22;
+  line-height: 180%;
+  color: $light-black;
+  display: flex;
+  padding-bottom: 18px;
+
+  span {
+    cursor: pointer;
+    color: $primary;
+    margin-left: 5px;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.bottomDescription {
+  @extend .fs22;
+  line-height: 180%;
+  color: $lightest-grey;
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: unset;
+  }
+}
+
+.my18 {
+  margin-top: 18px;
+  margin-bottom: 24px;
+}

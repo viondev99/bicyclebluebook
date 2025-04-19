@@ -1,0 +1,14 @@
+@import 'src/assets/css/variable';
+
+.iconButton {
+  @include media-breakpoint-down(lg) {
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+  }
+}

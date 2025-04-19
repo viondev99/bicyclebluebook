@@ -1,0 +1,7 @@
+@import 'src/assets/css/variable';
+
+.paragraph {
+  color: $grey;
+  font-size: $p_font_size;
+  line-height: px-to-rem(40);
+}

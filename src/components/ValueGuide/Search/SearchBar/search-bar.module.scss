@@ -1,0 +1,30 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.searchGroup {
+  margin-top: 26px;
+  display: flex;
+  @include media-breakpoint-down(lg) {
+    padding: 0 10px;
+  }
+}
+
+.searchInput {
+  width: 500px;
+  @include media-breakpoint-down(lg) {
+    width: 500px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.searchMobile {
+  @include reset-button;
+}
+
+.searchButton {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+@import 'src/assets/css/variable';
+
+.label {
+  @include media-breakpoint-down(md) {
+    margin-top: 25px;
+  }
+}
+
+.label {
+  margin-bottom: 28px;
+}
+
+.title {
+  margin-bottom: 28px;
+}
+
+.year {
+  @include media-breakpoint-up(lg) {
+    max-width: 218px;
+  }
+}
+
+.yearSelector {
+  @include media-breakpoint-up(md) {
+    width: 175px;
+  }
+}
+
+//.modelSelector, .brandSelector {
+//  @include media-breakpoint-up(md) {
+//    width: 347px;
+//  }
+//}

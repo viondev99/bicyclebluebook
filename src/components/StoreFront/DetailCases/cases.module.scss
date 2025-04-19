@@ -1,0 +1,330 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.detailCasesContainer {
+  .detailCases {
+    padding: 58px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 48px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 28px 22px;
+    }
+
+    .detailCasesHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+
+      @include media-breakpoint-down(sm) {
+        justify-content: unset;
+        flex-direction: column;
+        align-items: unset;
+        margin-bottom: 22px;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: px-to-rem(30);
+        line-height: 120%;
+        color: $light-black;
+
+        @include media-breakpoint-down(lg) {
+          font-size: px-to-rem(24);
+        }
+
+        @include media-breakpoint-down(sm) {
+          font-size: px-to-rem(22);
+          order: 2;
+        }
+      }
+
+      .headerRight {
+        display: flex;
+        align-items: center;
+        &:hover,
+        &:focus {
+          background: $input-bg;
+          cursor: pointer;
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 29px;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 14.25px;
+          padding: 5px;
+          cursor: pointer;
+
+          @include media-breakpoint-down(sm) {
+            margin-right: 12px;
+            padding: 0;
+            width: 16px;
+            height: 20px;
+          }
+        }
+
+        div {
+          font-weight: 500;
+          font-size: px-to-rem(22);
+          line-height: 29px;
+          display: flex;
+          align-items: center;
+          color: $light-black;
+
+          @include media-breakpoint-down(lg) {
+            font-size: px-to-rem(18);
+            line-height: 23px;
+          }
+
+          @include media-breakpoint-down(sm) {
+            font-size: px-to-rem(16);
+            line-height: 21px;
+            padding: 0;
+          }
+        }
+      }
+    }
+    .avatarDetailCasesDefaultContainer {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      &:first-child {
+        border-top: 1px solid #eee;
+      }
+
+      .avatarDetailCasesDefault {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        img {
+          width: 80px;
+          height: 80px;
+          margin-right: 20px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.formCaseDetail {
+  margin-bottom: 18px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px;
+    margin-bottom: 16px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
+
+  .casesCardHeader {
+    display: flex;
+    justify-content: space-between;
+
+    .casesCardHeaderLeft {
+      width: 100%;
+
+      .casesCardHeaderLeftItem {
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 26px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 26px;
+          }
+        }
+
+        .cardTitle {
+          font-weight: 500;
+          font-size: px-to-rem(22);
+          line-height: 120%;
+          color: $light-black;
+
+          @include media-breakpoint-down(lg) {
+            font-size: px-to-rem(18);
+          }
+
+          @include media-breakpoint-down(sm) {
+            font-size: px-to-rem(16);
+            margin-bottom: 10px;
+          }
+        }
+
+        .cardDescription {
+          font-size: px-to-rem(22);
+          line-height: 120%;
+          color: $lightest-grey;
+          font-weight: 500;
+
+          &.cardLink {
+            cursor: pointer;
+            color: $primary;
+
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+            }
+          }
+
+          @include media-breakpoint-down(lg) {
+            font-size: px-to-rem(14);
+            line-height: px-to-rem(18);
+          }
+
+          @include media-breakpoint-down(sm) {
+            font-size: px-to-rem(16);
+            line-height: 120%;
+          }
+        }
+      }
+    }
+
+    .casesCardHeaderRight {
+      &:hover,
+      &:focus {
+        background: $input-bg;
+        cursor: pointer;
+      }
+      img {
+        padding: 5px;
+        cursor: pointer;
+
+        @include media-breakpoint-down(sm) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .contentCard {
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    color: $light-black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(16);
+    }
+  }
+
+  .footerCard {
+    display: flex;
+    justify-content: flex-end;
+
+    .btnSave {
+      &:nth-child(2) {
+        margin-left: 18px;
+      }
+    }
+  }
+}
+
+.btnRespondsCtn {
+  display: flex;
+  justify-content: flex-end;
+
+  .btnResponds {
+    max-width: 138.02px;
+  }
+}
+
+.notFound {
+  padding: 32px;
+  @include media-breakpoint-down(sm) {
+    padding: 32px 18px;
+  }
+  .titleNotFound {
+    color: $black;
+    font-weight: bold;
+    padding-bottom: 32px;
+    font-size: $h3_font_size;
+  }
+  .btnShowMkp {
+    font-weight: 500;
+    padding: 0;
+    width: 273px;
+    a {
+      color: white;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 3;
+    }
+  }
+}
+
+.nameDetailCases {
+  .text {
+    color: $primary;
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 120%;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+      margin-bottom: 3px;
+    }
+  }
+  .des {
+    font-size: px-to-rem(22);
+    line-height: 120%;
+    color: $lightest-grey;
+    font-weight: 500;
+    margin-bottom: 12px;
+
+    &.cardLink {
+      cursor: pointer;
+      color: $primary;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(14);
+      line-height: px-to-rem(18);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+      line-height: 120%;
+      margin-bottom: 10px;
+    }
+  }
+
+  img {
+    width: 250px;
+    height: 166px;
+    object-fit: cover;
+
+    @include media-breakpoint-down(sm) {
+      width: 102px;
+      height: 68px;
+    }
+  }
+}

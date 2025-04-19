@@ -1,0 +1,147 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.container {
+  margin-top: 79px;
+  @include media-breakpoint-down(md) {
+    margin-top: 58px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 10px;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 918px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 1591px;
+  }
+}
+
+.wrapper {
+  padding-top: 100px;
+}
+
+.left {
+  @include media-breakpoint-up(lg) {
+    padding: 0 3px 0 15px;
+  }
+}
+
+.leftLayout {
+  width: 250px;
+  @include media-breakpoint-down(xs) {
+    width: auto;
+    flex: 1;
+  }
+}
+
+.titleFilterModal {
+  font-size: $p_font_size;
+  color: $black;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.filterWrapper {
+  margin-top: 25px;
+  color: $grey;
+  @include media-breakpoint-down(md) {
+    justify-content: space-between;
+  }
+  .itemFound {
+    font-size: px-to-rem(17);
+    line-height: 180%;
+    color: $grey;
+    font-weight: bold;
+  }
+
+  .sortButton {
+    font-size: px-to-rem(17);
+    font-weight: bold;
+  }
+}
+
+.viewButtonGroup {
+  margin: 0 -13px;
+
+  .viewTypeIcon {
+    width: 22px;
+    height: 22px;
+
+    &.activeGrid > path {
+      stroke: $primary;
+    }
+
+    &.activeList > path {
+      fill: $primary;
+    }
+  }
+}
+
+.filterButtonMobile {
+  @include reset-button;
+  display: flex;
+  color: $primary;
+  font-size: px-to-rem(18);
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  img {
+    margin-right: 10px;
+    width: 16px;
+  }
+}
+
+.clearAllButton {
+  @include reset-button;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: px-to-rem(17);
+  color: $black;
+
+  &:hover {
+    color: $black !important;
+  }
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.customSeoH1 {
+  letter-spacing: 0.5px;
+  font-size: px-to-rem(24);
+  color: $light-black;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 30px;
+  line-height: 180%;
+  max-height: 0.1px;
+  opacity: 0;
+
+  &:last-child {
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(18);
+  }
+}
+
+.viewSales {
+  // font-family: 'DM Sans';
+  // font-style: normal;
+  font-weight: 700;
+  font-size: px_to_rem(17);
+  line-height: 180%;
+  color: $primary;
+  margin-right: 10px;
+  cursor: pointer;
+}

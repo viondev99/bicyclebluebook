@@ -1,0 +1,14 @@
+@import 'src/assets/css/variable';
+
+.wrapper {
+  padding-top: 100px;
+}
+
+.container {
+  @include media-breakpoint-up(lg) {
+    max-width: 918px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 1591px;
+  }
+}

@@ -1,0 +1,40 @@
+@import 'src/assets/css/variable';
+
+.link {
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(21);
+  margin-left: 18px;
+  color: $black;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .label {
+    font-weight: 500;
+    font-size: $p_font_size;
+    color: $grey;
+    margin-right: 62px;
+    @include media-breakpoint-down(sm) {
+      display: block;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+  .button {
+    margin-right: 18px !important;
+    width: 56px;
+    height: 56px !important;
+    border: 0.848485px solid #ebeff5;
+    border-radius: 8.48485px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

@@ -1,0 +1,366 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.offerItem {
+  padding: 0px !important;
+  margin-bottom: 16px;
+  @include media-breakpoint-down(sm) {
+    padding: 28px 20px;
+  }
+  .resetMargin {
+    margin: 0 !important;
+    .bikeImg {
+      border-radius: 10px 0px 0px 10px;
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      padding: 0;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.contentOffer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 30px 0px;
+}
+
+.titleOffer {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $black;
+  a {
+    color: $black;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.status {
+  margin: 15px 0px;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  color: $grey;
+  .dateCreate {
+    margin-right: 28px;
+  }
+}
+.chip {
+  margin-top: 5px;
+  white-space: nowrap;
+  font-size: px-to-rem(16);
+  margin-right: 22px;
+  .titleChip {
+    font-weight: 500;
+    color: $black;
+  }
+  .contentChip {
+    color: $grey;
+    a {
+      font-size: px-to-rem(16);
+      color: $grey;
+      &hover {
+        color: $primary;
+      }
+    }
+  }
+}
+.groupPrice {
+  font-size: $p_font_size;
+  margin-top: 15px;
+  .iconArrow {
+    margin: 0 22px;
+  }
+  .fromPrice {
+    color: $grey;
+    display: inline;
+    strong {
+      font-size: px-to-rem(16);
+    }
+  }
+  .toPrice {
+    color: $black;
+    display: inline;
+    margin-top: 10px;
+    margin-right: 22px;
+    strong {
+      font-size: px-to-rem(16);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 15px 0px;
+  }
+}
+
+.truthPrice {
+  font-size: px-to-rem(16);
+}
+
+.defaultStatus {
+  font-weight: 500;
+  font-size: px-to-rem(16);
+}
+.reject {
+  color: $red;
+}
+.accepted {
+  color: $green;
+}
+.await {
+  color: $warning;
+}
+.decline {
+  color: $danger;
+}
+.customMenu {
+  ul {
+    width: 200px !important;
+  }
+}
+.groupActionOffer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: -90px;
+  }
+}
+
+.showWhenMobile {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+.hideWhenMobile {
+  display: block;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.retract {
+  color: $danger !important;
+}
+.resizeBtn {
+  width: 100%;
+  font-weight: 400;
+  font-size: px-to-rem(18) !important;
+  justify-content: flex-start !important;
+  color: $black !important;
+  height: auto !important;
+  text-align: left;
+}
+
+.dateUpdated {
+  font-size: $p_font_size;
+  font-weight: 500;
+  color: $black;
+  margin: 32px 0px;
+}
+.customContentMenu {
+  position: absolute;
+  top: 50px;
+  right: -123px;
+  z-index: 9;
+  ul {
+    width: 225px;
+    top: 0;
+    right: -113px;
+    li {
+      padding: 10px 0px;
+    }
+  }
+}
+.offerAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px !important;
+  height: 121px;
+  flex-direction: row !important;
+  margin-bottom: 32px;
+}
+.wrapAction {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+  position: relative;
+  .icOfferAction {
+    cursor: pointer;
+  }
+}
+
+.wrapSearch {
+  margin-top: 32px;
+  .inputSearch {
+    width: 100%;
+    margin-right: 16px;
+  }
+}
+
+.resizeLink {
+  font-size: px-to-rem(16);
+  color: $grey;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.breakLine {
+  margin-right: 22px;
+  @include media-breakpoint-down(xs) {
+    display: block;
+    margin-top: 13px;
+  }
+}
+
+.groupStatusOffer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .statusOffer {
+    margin-right: 16px;
+    font-weight: 500;
+    font-size: $p_font_size;
+  }
+}
+
+.dateRange {
+  position: relative;
+}
+
+.dateRangePicker {
+  position: absolute;
+  top: 0;
+  right: 252px;
+  z-index: 5;
+  width: 318px;
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 34px 94px rgba(110, 119, 133, 0.25);
+  border-radius: 6px;
+  @include media-breakpoint-down(md) {
+    width: 500px;
+    right: 155px;
+  }
+  @media (max-width: 769px) {
+    right: -10px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 300px;
+    top: calc(100% - 10px);
+    right: -10px !important;
+  }
+  @include media-breakpoint-down(xs) {
+    z-index: 100;
+  }
+  .rdr-PredefinedRanges {
+    display: none !important;
+  }
+
+  span.rdr-Day.is-selected.is-passive {
+    background: #fff !important;
+    color: rgb(42, 88, 117) !important;
+  }
+
+  .btn {
+    font-size: px-to-rem(17);
+    font-weight: 500;
+  }
+
+  .applyDate {
+    color: $primary;
+  }
+}
+
+.customLink {
+  font-size: px-to-rem(18);
+  font-weight: 400;
+  color: $black;
+  display: block;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    color: $primary;
+  }
+}
+.card {
+  box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+  padding: 20px;
+  text-align: center;
+  max-width: 100%;
+  color: $black;
+  font-size: px-to-rem(16);
+}
+
+._imgSoldAsIs {
+  position: absolute;
+  background-image: url(../../../../assets/img/marketplace/img_sold_as_is.png);
+  font-weight: bold;
+  font-size: px-to-rem(18);
+  line-height: 23px;
+  text-align: right;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-down(lg) {
+    width: 119px;
+    height: 34px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgSoldAsIsCardView {
+  @extend ._imgSoldAsIs;
+  top: 5.5%;
+  right: 0%;
+  width: 125px;
+  height: 30px;
+  z-index: 3;
+
+  @include media-breakpoint-down(lg) {
+    width: 105px;
+    height: 29px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 95px;
+    height: 25px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+.cancelBtn {
+  color: $red !important;
+}
+
+.marketplaceType {
+  margin-top: 15px;
+}
+
+.imgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upperRight {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

@@ -1,0 +1,34 @@
+@import 'src/assets/css/variable';
+
+.messageContainer {
+  @include media-breakpoint-down(sm) {
+    margin: 0px -20px !important;
+  }
+}
+
+.chatContainer {
+  padding: 0px !important;
+  @include media-breakpoint-down(sm) {
+    border-radius: 0px !important;
+  }
+}
+
+.emptyConversation {
+  padding: 40px !important;
+  @include media-breakpoint-down(sm) {
+    margin: 20px;
+    padding: 25px 20px !important;
+  }
+
+  .titleEmpty {
+    font-size: px-to-rem(24);
+    color: $black;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+
+  .descriptionEmpty {
+    font-size: px-to-rem(18);
+    color: $grey;
+  }
+}

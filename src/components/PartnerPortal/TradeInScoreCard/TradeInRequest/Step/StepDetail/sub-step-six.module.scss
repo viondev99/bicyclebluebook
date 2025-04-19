@@ -1,0 +1,149 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.fs18 {
+  font-size: px-to-rem(18);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.headerStep {
+  font-weight: 700;
+  @extend .fs46;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 50px;
+  .buttonInfo {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    margin-left: 5px;
+
+    .iconInfo {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.wrapSubStepFive {
+  background: white;
+  border-radius: 10px;
+  padding: 60px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 46px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+    background: transparent;
+  }
+
+  .customRow {
+    margin-bottom: 38px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+    }
+    @include media-breakpoint-down(sm) {
+      background: white;
+      border-radius: 10px;
+      margin: 0 0 16px 0;
+      padding: 26px 22px;
+
+      &:last-child {
+        margin: 0 0 16px 0;
+      }
+    }
+
+    .customCol {
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
+
+      .wrapRadio {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .radioTitle {
+          margin-bottom: 7px;
+          font-weight: 500;
+          @extend .fs18;
+          line-height: 120%;
+          color: $light-black;
+        }
+      }
+
+      .wrapTitle {
+        @extend .fs18;
+        text-align: right;
+        line-height: 120%;
+        color: $light-black;
+
+        @include media-breakpoint-down(sm) {
+          margin-top: 6px;
+        }
+      }
+
+      .description {
+        @extend .fs18;
+        line-height: 180%;
+        color: $lightest-grey;
+
+        @include media-breakpoint-down(sm) {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}

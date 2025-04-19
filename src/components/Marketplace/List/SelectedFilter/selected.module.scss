@@ -1,0 +1,48 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+$spacer: 6px;
+
+.wrapper {
+  padding: 10px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $grey;
+  border: 1px solid $lighter-grey;
+  border-radius: 6px;
+  margin: $spacer;
+}
+
+.removeButton {
+  @include reset-button;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .closeIcon {
+    width: 15px;
+    height: 15px;
+    fill: $grey;
+  }
+}
+
+.filterList {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+  margin: 10px (-$spacer) 20px;
+}
+
+.buttonRemoveZone {
+  margin: 10px 0 20px 10px;
+  flex-shrink: 1;
+  .buttonRemove {
+    @include reset-button;
+    line-height: 50px;
+    height: 50px;
+    font-size: px-to-rem(17);
+    color: $black;
+    font-weight: 500;
+  }
+}

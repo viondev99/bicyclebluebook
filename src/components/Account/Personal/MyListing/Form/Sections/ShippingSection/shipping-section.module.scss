@@ -1,0 +1,60 @@
+@import 'src/assets/css/variable';
+
+.title {
+  font-weight: bold;
+  font-size: $h3_font_size;
+}
+
+.label {
+  margin-bottom: 28px;
+}
+
+.calculateShipping {
+  color: $primary !important;
+}
+
+.description {
+  color: $grey;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.method {
+  width: 546px;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+.labelCheckbox {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $black;
+}
+
+.lineError {
+  margin-top: 10px;
+  color: $danger;
+}
+
+.checkboxCustom {
+  max-width: 180px;
+}
+.suffix {
+  margin: auto;
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $grey;
+}
+
+.descriptionRadio {
+  margin-top: 22px;
+  color: #6e7785;
+  font-size: 1.125rem;
+  line-height: 180%;
+}
+
+.labelCheckbox {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $black;
+}

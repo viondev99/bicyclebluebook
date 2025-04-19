@@ -1,0 +1,162 @@
+@import 'src/assets/css/variable';
+
+.card {
+  padding: 58px;
+  @include media-breakpoint-down(lg) {
+    padding: 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 33px 22px;
+  }
+}
+
+.price {
+  font-family: 'Rubik', sans-serif;
+  font-size: px-to-rem(18);
+  color: $primary;
+}
+
+.divider {
+  margin: 40px -58px;
+
+  @include media-breakpoint-down(lg) {
+    margin: 40px -40px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 40px -22px;
+  }
+}
+
+.paragraph {
+  color: $grey;
+  margin: 20px 0;
+}
+
+.reason {
+  font-size: $p_font_size;
+  color: $black;
+}
+.container {
+  padding: 58px !important;
+  margin-bottom: 18px;
+}
+.title {
+  font-size: px-to-rem(36);
+  font-weight: bold;
+  color: $black;
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(24);
+  }
+}
+.boughtBy {
+  font-size: px-to-rem(18);
+  color: $grey;
+  font-weight: 500;
+  a {
+    color: $primary;
+  }
+}
+.titleBike {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $black;
+}
+.wrapChip {
+  padding: 49px 0 25px 0;
+  // @include media-breakpoint-down(md) {
+  //   padding: 10px 0 10px 0;
+  // }
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    padding: 10px 0 10px 0;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-top: 0;
+  }
+}
+.chip {
+  margin-right: 36px;
+  .titleChip {
+    font-size: $p_font_size;
+    font-weight: 500;
+    color: $grey;
+  }
+  .contentChip {
+    color: $black;
+    font-size: $p_font_size;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 14px;
+  }
+}
+.subTitle {
+  font-weight: 500;
+  font-size: $p_font_size;
+  width: 160px;
+}
+.content {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $grey;
+}
+.orderTotal {
+  color: $primary !important;
+}
+
+.refund {
+  display: flex !important;
+  justify-content: space-between !important;
+  img {
+    width: 25%;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: -10px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: block !important;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.contentBike {
+  position: absolute;
+  top: 65px;
+  @include media-breakpoint-down(md) {
+    top: 38px;
+  }
+  @include media-breakpoint-down(xs) {
+    top: 220px;
+  }
+}
+
+.contentBikeDesktop {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.contentBikeMobile {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    margin-top: 40px;
+  }
+}
+
+.refundInfo {
+  display: flex;
+}
+
+.menuActions {
+  display: flex;
+  justify-content: unsafe;
+  background-color: $white;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+}

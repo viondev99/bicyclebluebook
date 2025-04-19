@@ -1,0 +1,102 @@
+@import 'src/assets/css/variable';
+
+.priceSection {
+  .title {
+    font-weight: bold;
+    font-size: $h3_font_size;
+    margin-bottom: 28px;
+  }
+
+  .label {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    margin-left: 20px;
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  .input {
+    margin-left: 40px;
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
+  }
+
+  .checkBox {
+    width: 310px;
+  }
+
+  .calculatedPrice {
+    margin-left: 60px;
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+      &:not(:first-of-type) {
+        margin-left: 40px;
+      }
+    }
+
+    .price {
+      color: $primary;
+      font-family: 'Rubik', sans-serif;
+      font-size: px-to-rem(18);
+    }
+  }
+
+  .switchContainer {
+    margin-top: 80px;
+    display: flex;
+    @include media-breakpoint-down(lg) {
+      flex-direction: row-reverse;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+    }
+
+    h4 {
+      margin-left: 30px;
+      @include media-breakpoint-down(lg) {
+        margin-left: 0;
+        margin-right: 30px;
+      }
+    }
+
+    .label {
+      line-height: 1.5;
+    }
+  }
+
+  .priceSelectContainer {
+    margin-top: 60px;
+
+    .lineError {
+      margin-top: 10px;
+      color: $danger;
+      padding-left: 50px;
+      @include media-breakpoint-down(md) {
+        padding-left: 0;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      margin-top: 0px;
+    }
+  }
+
+  .email,
+  .duration {
+    width: 50%;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  .formEmailPaypal {
+    margin-top: 66px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 26px;
+    }
+  }
+}

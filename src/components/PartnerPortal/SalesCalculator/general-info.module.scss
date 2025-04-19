@@ -1,0 +1,216 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(46);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(30);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(22);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.customCard {
+  background: $white;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 26px;
+
+  &.customCardTour {
+    z-index: 999999;
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 22px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 28px 22px;
+    margin-bottom: 17px;
+  }
+
+  .headerText {
+    @extend .fs30;
+    font-weight: 700;
+    line-height: 120%;
+    color: $light-black;
+
+    &.wrapGeneralHeader {
+      margin-bottom: 30px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 21px;
+      }
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  .description {
+    @extend .fs22;
+    line-height: 180%;
+    color: $lightest-grey;
+
+    &.wrapDescription {
+      margin-bottom: 60px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 51px;
+      }
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 37px;
+      }
+    }
+  }
+
+  .wrapForm {
+    margin-bottom: 42px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 44px;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 42px;
+    }
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    .title {
+      @extend .fs22;
+      font-weight: 500;
+      line-height: 120%;
+      color: $light-black;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 18px;
+      }
+    }
+
+    .wrapInputCenter {
+      display: flex;
+      align-items: center;
+      margin-left: 29px;
+      margin-top: unset;
+
+      @include media-breakpoint-down(xs) {
+        margin-left: -10px;
+        margin-top: 18px;
+      }
+
+      .title {
+        margin-left: 22px;
+
+        @include media-breakpoint-down(xs) {
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+}
+
+.mb50 {
+  margin-bottom: 60px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 59px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 59px;
+  }
+}
+
+.mb16 {
+  margin-bottom: 16px;
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+  min-width: 106px;
+  max-width: 106px;
+}
+
+.textPrimary {
+  @extend .fs22;
+  font-weight: 500;
+  line-height: 120%;
+  color: $primary;
+}
+
+.mobileScoreCardConvension {
+  margin-bottom: 41px;
+}
+
+.customInputNumber::-webkit-outer-spin-button,
+.customInputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.customInputNumber[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.customRow {
+  margin: 0 10px;
+
+  .customCol {
+    padding: 0;
+  }
+}
+
+.wrapFilterRangeMarginTop {
+  margin-top: 20px;
+}
+
+.customHr {
+  border: 1px solid $lighter-grey;
+  margin: 15px 0 64px 0;
+}
+
+.wrapResult {
+  .title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    @extend .fs30;
+    line-height: 120%;
+    color: $light-black;
+  }
+  .resultTotal {
+    @extend .fs46;
+    font-weight: 700;
+    line-height: 120%;
+    color: $primary;
+  }
+}

@@ -1,0 +1,12 @@
+@import 'src/assets/css/variable';
+
+.registerSuccess {
+  margin-top: 200px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 50px;
+  }
+}
+
+.title {
+  margin-bottom: 34px;
+}

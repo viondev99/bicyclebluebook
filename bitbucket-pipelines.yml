@@ -1,0 +1,113 @@
+image: public.ecr.aws/v0d1y2i1/ci-node:v12-gitops
+pipelines:
+  branches:
+    dev:
+      - step:
+          name: Dev
+          size: 2x
+          caches:
+            - nodecaching
+            - docker
+            - nextcache
+          script:
+            # ENV build in
+            - ORGANIZATION=bicyclebluebook
+            - APPLICATION=bbb-web-v3
+            - ENV=dev
+            - BRANCH=dev
+            - VERSION=$ENV-$(git rev-parse --short HEAD)
+            - IMAGE_FIX=$DOCKER_REGISTRY_HOST/$APPLICATION:$ENV
+            - IMAGE_BACKUP=$DOCKER_REGISTRY_HOST/$APPLICATION:$VERSION
+
+            # install & build
+            - yarn submodule-update # chỉ sử dụng với project có submodule
+            - yarn
+            - yarn build:$ENV
+
+            # build docker application
+            - docker build -t $IMAGE_FIX -f .docker/$ENV.dockerfile .
+            - docker tag $IMAGE_FIX $IMAGE_BACKUP
+
+            # ecr auth
+            - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $DOCKER_REGISTRY_HOST
+
+            # sync container to docker-registry
+            - docker push $IMAGE_FIX
+            - docker push $IMAGE_BACKUP
+          services:
+            - docker
+    staging:
+      - step:
+          name: Staging
+          size: 2x
+          caches:
+            - nodecaching
+            - docker
+            - nextcache
+          script:
+            # ENV build in
+            - ORGANIZATION=bicyclebluebook
+            - APPLICATION=bbb-web-v3
+            - ENV=staging
+            - BRANCH=staging
+            - VERSION=$ENV-$(git rev-parse --short HEAD)
+            - IMAGE_FIX=$DOCKER_REGISTRY_HOST/$APPLICATION:$ENV
+            - IMAGE_BACKUP=$DOCKER_REGISTRY_HOST/$APPLICATION:$VERSION
+
+            # install & build
+            - yarn submodule-update # chỉ sử dụng với project có submodule
+            - yarn
+            - yarn build:$ENV
+
+            # build docker application
+            - docker build -t $IMAGE_FIX -f .docker/$ENV.dockerfile .
+            - docker tag $IMAGE_FIX $IMAGE_BACKUP
+
+            # ecr auth
+            - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $DOCKER_REGISTRY_HOST
+
+            # sync container to docker-registry
+            - docker push $IMAGE_FIX
+            - docker push $IMAGE_BACKUP
+          services:
+            - docker
+    production:
+      - step:
+          name: Production
+          size: 2x
+          caches:
+            - nodecaching
+            - docker
+            - nextcache
+          script:
+            # ENV build in
+            - ORGANIZATION=bicyclebluebook
+            - APPLICATION=bbb-web-v3
+            - ENV=production
+            - BRANCH=production
+            - VERSION=$ENV-$(git rev-parse --short HEAD)
+            - IMAGE_FIX=$DOCKER_REGISTRY_HOST/$APPLICATION:$ENV
+            - IMAGE_BACKUP=$DOCKER_REGISTRY_HOST/$APPLICATION:$VERSION
+
+            # install & build
+            - yarn submodule-update # chỉ sử dụng với project có submodule
+            - yarn
+            - yarn build:$ENV
+
+            # build docker application
+            - docker build -t $IMAGE_FIX -f .docker/$ENV.dockerfile .
+            - docker tag $IMAGE_FIX $IMAGE_BACKUP
+
+            # ecr auth
+            - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $DOCKER_REGISTRY_HOST
+
+            # sync container to docker-registry
+            - docker push $IMAGE_FIX
+            - docker push $IMAGE_BACKUP
+          services:
+            - docker
+
+definitions:
+  caches:
+    nodecaching: ./node_modules
+    nextcache: .next/cache

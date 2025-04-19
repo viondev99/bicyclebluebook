@@ -1,0 +1,44 @@
+@import 'src/assets/css/variable';
+
+.tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0px -25px;
+  overflow-x: auto;
+  @include media-breakpoint-down(lg) {
+    margin: 0px -10px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .activeBar {
+    position: absolute;
+    max-width: 100%;
+    height: 3px;
+    background-color: $primary;
+    border-radius: 10px;
+    bottom: 0px;
+  }
+
+  .tabBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    font-weight: 700;
+    color: $black;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    @include media-breakpoint-down(lg) {
+      padding: 10px 15px;
+    }
+  }
+
+  .active {
+    color: $primary;
+  }
+}

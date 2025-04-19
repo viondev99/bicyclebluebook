@@ -1,0 +1,66 @@
+@import 'src/assets/css/variable';
+
+.wrapHistory {
+  margin-bottom: 101px;
+  padding: 0px !important;
+}
+
+.title {
+  font-weight: bold;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  padding: 40px 0px 0px 40px;
+  @include media-breakpoint-down(xs) {
+    padding: 28px 0px 0px 22px;
+  }
+}
+
+.historyItem {
+  padding: 32px 40px;
+  &:not(:last-child) {
+    border-bottom: 1.5px solid $lighter-grey;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 28px 22px !important;
+  }
+  &:first-child {
+    @include media-breakpoint-down(xs) {
+      padding: 28px 22px 26px 22px;
+    }
+  }
+
+  .lineInfo {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: $p_font_size;
+    line-height: 120%;
+    color: $black;
+    .label {
+      margin-right: 10px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  .chip {
+    width: 220px;
+    .content {
+      color: $grey;
+    }
+  }
+}
+.historyItem:last-child {
+  border: none !important;
+  padding: 32px 40px 40px 40px;
+  @include media-breakpoint-down(xs) {
+    padding: 26px 22px 28px 22px;
+  }
+}
+.view {
+  color: $primary;
+  text-align: right;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 120%;
+}

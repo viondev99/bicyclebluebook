@@ -1,0 +1,31 @@
+@import 'src/assets/css/variable';
+
+.name {
+  font-size: px-to-rem(16);
+  line-height: 180%;
+  margin-top: 10px;
+}
+
+.description {
+  font-size: $p_font_size;
+  color: $grey;
+}
+
+.wrapper {
+  margin-bottom: 32px;
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+  display: flex;
+  flex-direction: column;
+}
+.modalError {
+  max-width: 836px;
+  .btnReload {
+    margin-top: 36px;
+  }
+}
+.iconReload {
+  width: 23px;
+  margin-left: 16px;
+}

@@ -1,0 +1,13 @@
+@import '../../../../assets/css/variable';
+@import '../../../../assets/css/utilities';
+@import '../BBBDirectBadge/badge.module';
+
+.bodyAssemble {
+  margin-top: -30px;
+}
+
+.headerAssemble {
+  position: absolute;
+  right: 60px;
+  z-index: 9999;
+}

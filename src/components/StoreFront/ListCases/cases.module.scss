@@ -1,0 +1,361 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.casesContainer {
+  .header {
+    margin-bottom: 18px;
+    border-radius: 10px;
+    padding: 33px 48px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 15.5px 48px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 15.5px 22px;
+    }
+
+    .headerRows {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+
+      .headerSearchLeft {
+        width: 230px;
+
+        @include media-breakpoint-down(sm) {
+          width: calc(100vw - 15rem);
+        }
+      }
+
+      .headerSearchRight {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .imgContainer {
+          padding: 5px;
+          border-radius: 4px;
+          cursor: pointer;
+          width: 25.55px;
+          height: 25.55px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include media-breakpoint-down(lg) {
+            width: 21.27px;
+            height: 21.27px;
+          }
+
+          &:hover,
+          &:active {
+            background: $input-bg;
+          }
+          &:first-child {
+            margin-right: 28.45px;
+          }
+
+          img {
+            width: 24.55px;
+            height: 24.55px;
+          }
+        }
+      }
+    }
+  }
+
+  .casesItem {
+    padding: 40px 48px;
+    margin-bottom: 18px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 28px 22px;
+      margin-bottom: 16px;
+    }
+
+    .borderCasesCardHeader {
+      border-bottom: 2px solid #f3f3f5;
+    }
+
+    .borderMarginCases {
+      margin-bottom: 31px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 22px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 25px;
+      }
+
+      .badge {
+        position: absolute;
+        box-shadow: 12px 0px 0px #fff;
+
+        @include media-breakpoint-down(sm) {
+          box-shadow: 9px 0px 0px #fff;
+        }
+      }
+    }
+
+    .casesCardHeader {
+      padding-bottom: 31px;
+      display: flex;
+      justify-content: space-between;
+
+      @include media-breakpoint-down(lg) {
+        padding-bottom: 29px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 25px;
+      }
+
+      .casesCardHeaderLeft {
+        display: flex;
+
+        @include media-breakpoint-down(sm) {
+          display: unset;
+        }
+
+        .casesCardHeaderLeftItem {
+          margin-right: 36px;
+
+          @include media-breakpoint-down(sm) {
+            margin-right: 16px;
+            display: flex;
+            margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          .cardTitle {
+            font-weight: 500;
+            font-size: px-to-rem(22);
+            line-height: 120%;
+            color: $light-black;
+
+            @include media-breakpoint-down(lg) {
+              font-size: px-to-rem(18);
+            }
+
+            @include media-breakpoint-down(sm) {
+              font-size: px-to-rem(16);
+              min-width: 80px;
+              max-width: 80px;
+            }
+          }
+
+          .cardDescription {
+            font-weight: 500;
+            font-size: px-to-rem(16);
+            line-height: 21px;
+            color: $lightest-grey;
+
+            &.cardLink {
+              cursor: pointer;
+              color: $primary;
+
+              &:hover,
+              &:focus {
+                text-decoration: underline;
+              }
+            }
+
+            @include media-breakpoint-down(lg) {
+              font-size: px-to-rem(14);
+              line-height: 18px;
+            }
+
+            @include media-breakpoint-down(sm) {
+              font-size: px-to-rem(16);
+              line-height: 120%;
+            }
+          }
+        }
+      }
+
+      .casesCardHeaderRight {
+        img {
+          padding: 5px;
+          cursor: pointer;
+          &:hover,
+          &:active {
+            background: $input-bg;
+          }
+        }
+
+        .btnActionCard {
+          padding: 28px 34px;
+          box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+          border-radius: 6px;
+          position: absolute;
+          right: 6rem;
+          top: 3rem;
+          z-index: 2;
+
+          @include media-breakpoint-down(sm) {
+            right: 4rem;
+          }
+
+          .redText {
+            font-size: px-to-rem(18);
+            line-height: 180%;
+            color: $red;
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+          .normalText {
+            font-size: px-to-rem(18);
+            line-height: 180%;
+            color: $light-black;
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .contentCard {
+      font-size: px-to-rem(22);
+      line-height: 180%;
+      color: $light-black;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(18);
+      }
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(16);
+      }
+    }
+  }
+}
+
+.notFound {
+  padding: 32px;
+  @include media-breakpoint-down(sm) {
+    padding: 32px 18px;
+  }
+  .titleNotFound {
+    color: $black;
+    font-weight: bold;
+    padding-bottom: 32px;
+    font-size: $h3_font_size;
+  }
+  .btnShowMkp {
+    font-weight: 500;
+    padding: 0;
+    width: 273px;
+    a {
+      color: white;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 3;
+    }
+  }
+}
+
+.dateRange {
+  position: relative;
+}
+
+.dateRangePicker {
+  position: absolute;
+  top: calc(100% + 70px);
+  right: 300px;
+  z-index: 5;
+  width: 318px;
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 34px 94px rgba(110, 119, 133, 0.25);
+  border-radius: 6px;
+  @include media-breakpoint-down(md) {
+    width: 500px;
+    right: 155px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 300px;
+    top: calc(100% - 10px);
+    right: -10px;
+  }
+  @include media-breakpoint-down(xs) {
+    z-index: 100;
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 35px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    @include media-breakpoint-down(lg) {
+      left: 170px;
+    }
+    @include media-breakpoint-down(md) {
+      left: auto;
+      right: 45px;
+    }
+    @include media-breakpoint-down(sm) {
+      left: auto;
+      right: 10px;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: calc(100% + 1px);
+    left: 35px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid rgb(220, 220, 220);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    @include media-breakpoint-down(lg) {
+      left: 170px;
+    }
+
+    @include media-breakpoint-down(md) {
+      left: auto;
+      right: 45px;
+    }
+    @include media-breakpoint-down(sm) {
+      left: auto;
+      right: 10px;
+    }
+  }
+
+  .rdr-PredefinedRanges {
+    display: none !important;
+  }
+
+  span.rdr-Day.is-selected.is-passive {
+    background: #fff !important;
+    color: rgb(42, 88, 117) !important;
+  }
+
+  .btn {
+    font-size: px-to-rem(17);
+    font-weight: 500;
+  }
+
+  .applyDate {
+    color: $primary;
+  }
+}

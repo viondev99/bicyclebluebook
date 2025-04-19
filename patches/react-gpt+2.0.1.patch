@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-gpt/dist/react-gpt.js b/node_modules/react-gpt/dist/react-gpt.js
+index a627975..47c4bca 100644
+--- a/node_modules/react-gpt/dist/react-gpt.js
++++ b/node_modules/react-gpt/dist/react-gpt.js
+@@ -573,7 +573,7 @@ return /******/ (function(modules) { // webpackBootstrap
+ 	            Bling._adManager.load(Bling._config.seedFileUrl).then(this.onScriptLoaded.bind(this)).catch(this.onScriptError.bind(this));
+ 	        }
+ 	    }, {
+-	        key: "componentWillReceiveProps",
++	        key: "UNSAFE_componentWillReceiveProps",
+ 	        value: function componentWillReceiveProps(nextProps) {
+ 	            var propsEqual = Bling._config.propsEqual;
+ 	            var sizeMapping = this.props.sizeMapping;

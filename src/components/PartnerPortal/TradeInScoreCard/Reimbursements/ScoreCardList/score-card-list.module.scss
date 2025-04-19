@@ -1,0 +1,18 @@
+@import 'src/assets/css/variable';
+
+.notFoundText {
+  margin-top: 16px;
+  background: white;
+  font-size: px-to-rem(22);
+  line-height: 180%;
+  color: $lightest-grey;
+  font-style: italic;
+  text-align: center;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}

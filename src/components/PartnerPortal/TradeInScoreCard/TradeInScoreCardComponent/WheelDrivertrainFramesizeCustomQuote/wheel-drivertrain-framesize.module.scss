@@ -1,0 +1,143 @@
+@import 'src/assets/css/variable';
+
+.fs30 {
+  font-size: px-to-rem(30);
+  margin-bottom: 36px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+    margin-bottom: 40px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+    margin-bottom: 24px;
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.headerStep {
+  font-weight: 700;
+  @extend .fs30;
+  line-height: 120%;
+  color: $light-black;
+}
+
+.wrapSubStepThree {
+  background: white;
+  border-radius: 10px;
+  padding: 60px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 46px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+    background: transparent;
+  }
+
+  .customRow {
+    margin-bottom: 34px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+    }
+    @include media-breakpoint-down(xs) {
+      margin: 0;
+      margin-bottom: 28px;
+    }
+
+    .customCol {
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
+
+      .wrapTitle {
+        font-weight: 700;
+        font-size: px-to-rem(22);
+        line-height: 120%;
+        color: $light-black;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+
+        span {
+          margin-right: 12px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-top: unset;
+          margin-bottom: 12px;
+        }
+      }
+
+      .wrapCheckbox {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .customCheckbox {
+          margin-left: 40px;
+
+          &:first-child {
+            margin-left: unset;
+          }
+        }
+      }
+
+      .wrapCheckboxMobile {
+        .itemCheckboxMobile {
+          background: white;
+          border-radius: 10px;
+          margin-bottom: 12px;
+          width: 100%;
+          height: 66px;
+          display: flex;
+          align-items: center;
+          padding-left: 22px;
+          font-weight: 500;
+          font-size: px-to-rem(18);
+          line-height: 120%;
+
+          &.active {
+            border: 2px solid $primary;
+          }
+
+          &:last-child {
+            margin-bottom: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}

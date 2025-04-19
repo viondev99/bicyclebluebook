@@ -1,0 +1,142 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.form {
+  .label {
+    font-size: $p_font_size;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 0px;
+  }
+  .forgotPasswordText {
+    width: 100%;
+    margin-top: 15px;
+    justify-content: flex-end;
+    a {
+      font-size: 1.125rem;
+      color: $grey;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .rememberCheckBox {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+  .rememberText {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 21px;
+    color: $grey;
+  }
+}
+
+.wrapModel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 402px;
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 1199px) and (min-width: 768px) {
+    margin-top: 315px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 290px;
+  }
+
+  .wrapHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 36px;
+    @media (max-width: 1199px) and (min-width: 768px) {
+      margin-top: 19px;
+    }
+
+    @keyframes loader {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+    .loader div {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border: 10px solid $primary;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: loader 1s linear infinite;
+      top: 45px;
+      left: 45px;
+    }
+    .animationLoading {
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .loader {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateZ(0) scale(0.4);
+      backface-visibility: hidden;
+      transform-origin: 0 0; /* see note above */
+    }
+  }
+
+  .content {
+    width: 402px;
+    height: 255px;
+
+    @media (max-width: 1199px) {
+      width: 315px;
+      height: 206px;
+      border-radius: 16px;
+      min-height: 206px !important;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .wrapBody {
+    margin-top: -13px;
+    font-weight: 700;
+    @extend .fs46;
+    line-height: 120%;
+    /* or 55px */
+    text-align: center;
+
+    @media (max-width: 767px) {
+      margin-top: -11px;
+    }
+  }
+}
+
+.loginFullScreen {
+  flex: 1;
+  background: $white;
+  margin: 20px 0px;
+}

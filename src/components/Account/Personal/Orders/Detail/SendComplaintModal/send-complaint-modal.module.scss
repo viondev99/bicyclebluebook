@@ -1,0 +1,16 @@
+@import 'src/assets/css/variable';
+
+.sendComplaintModal {
+  width: 850px;
+  @include media-breakpoint-down(lg) {
+    align-items: flex-start;
+    min-width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0px;
+  }
+}
+
+.button {
+  margin-top: 15px;
+}

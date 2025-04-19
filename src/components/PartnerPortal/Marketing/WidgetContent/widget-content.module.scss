@@ -1,0 +1,193 @@
+@import 'src/assets/css/variable';
+
+.container {
+  padding: 0 61px 61px 61px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 40px 40px 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 22px 22px 22px;
+  }
+
+  .description {
+    font-size: px-to-rem(18);
+    line-height: 180%;
+    color: $lightest-grey;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(16);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(14);
+    }
+  }
+
+  .wrapStep {
+    font-weight: 500;
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 31px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 26px;
+    }
+
+    span {
+      color: $lightest-grey;
+      margin-right: 20px;
+    }
+  }
+
+  .customButton {
+    height: 65px !important;
+    font-weight: 500;
+    line-height: 29px;
+
+    @include media-breakpoint-down(lg) {
+      height: 55px !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 51px !important;
+    }
+  }
+
+  .wrapHeader {
+    margin-bottom: 28px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    color: $light-black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(24);
+      margin-bottom: 26px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(22);
+    }
+  }
+
+  .wrapItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    .title {
+      font-weight: 500;
+      line-height: 120%;
+      color: $light-black;
+    }
+
+    .wrapAction {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      line-height: 29px;
+      color: $primary;
+      cursor: pointer;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      .icDownloadBlue {
+        width: 24.55px;
+        height: 24.55px;
+        margin-right: 14.73px;
+
+        @include media-breakpoint-down(lg) {
+          width: 21.27px;
+          height: 21.27px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      span {
+        display: block;
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .customHr {
+    border: 1px solid rgba(110, 119, 133, 0.1);
+    margin: 69px 0 67px 0;
+
+    @include media-breakpoint-down(lg) {
+      margin: 46px 0;
+    }
+    @include media-breakpoint-down(sm) {
+      margin: 36px 0;
+    }
+  }
+}
+
+.spaceBottom34 {
+  margin-bottom: 34px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 26px;
+  }
+}
+
+.spaceBottom48 {
+  margin-bottom: 48px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 27px;
+  }
+}
+
+.size22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.spaceTop52 {
+  margin-top: 42px;
+}
+
+.customButtonLink {
+  background: $primary;
+  border-radius: 6px;
+  color: $white;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  font-weight: 500 !important;
+
+  &:hover,
+  &:focus {
+    background: lighten($primary, 10%);
+    color: $white;
+  }
+  a {
+    color: $white;
+    font-weight: 500 !important;
+  }
+}

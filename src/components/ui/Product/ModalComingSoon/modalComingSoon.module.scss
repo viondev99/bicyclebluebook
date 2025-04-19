@@ -1,0 +1,51 @@
+@import 'src/assets/css/variable';
+
+.modalContent {
+  padding: 50px;
+
+  @include media-breakpoint-down(xs) {
+    padding: 25px;
+  }
+}
+
+.containerModal {
+  max-width: 937px;
+}
+
+.headerModal {
+  padding: 0;
+  :global(.modal-title) {
+    font-size: $p_font_size;
+  }
+}
+
+.bodyModal {
+  margin-top: 10px;
+}
+
+.btnYes {
+  margin: 30px 20px 0 0;
+}
+
+.btnNo {
+  border: solid 1.5px $lighter-grey !important;
+  background: none !important;
+  color: $grey !important;
+  margin-top: 30px;
+}
+
+.content {
+  font-weight: 400;
+  font-size: px_to_rem(22);
+  line-height: 180%;
+  display: flex;
+  justify-content: center;
+}
+.groupBtn {
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    display: block !important;
+  }
+}

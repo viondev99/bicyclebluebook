@@ -1,0 +1,177 @@
+@import 'src/assets/css/variable';
+
+.cover {
+  @include media-breakpoint-between(sm, lg) {
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 100px;
+    padding-bottom: 510+120px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 0px;
+    background-size: calc(100% - 30px);
+  }
+
+  .sectionContainer {
+    padding-top: 240px;
+    z-index: 100;
+    position: static;
+    .title {
+      font-weight: bold;
+    }
+    p {
+      color: $primary;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+      padding-bottom: 0;
+      h2 {
+        font-size: $h3_font_size;
+      }
+      p {
+        font-size: $p_font_size;
+      }
+    }
+  }
+  .container {
+    @include media-breakpoint-down(sm) {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+  .sectionCover {
+    margin-bottom: 175px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0px;
+    }
+  }
+
+  .heroCover {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+}
+
+.section {
+  position: relative;
+  height: 646px;
+  @include media-breakpoint-down(md) {
+    padding: 45px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 100%;
+  }
+  .description {
+    color: $grey;
+  }
+
+  .sectionRectangle {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    width: 860px;
+    height: 100%;
+    color: $grey;
+    padding: 95px;
+    background-image: url('../../assets/img/about/bg_rectangle.png');
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      background: none;
+      position: static;
+      padding: 0px;
+      margin-bottom: 50px;
+    }
+    .firstLine {
+      margin-bottom: 45px;
+    }
+  }
+
+  .sectionMask {
+    z-index: 1;
+    position: absolute;
+    width: 443px;
+    height: 100%;
+    top: 43px;
+    right: 0px;
+    background-image: url('../../assets/img/about/bg_mask.png');
+    background-position: right 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media-breakpoint-down(sm) {
+      background-image: url('../../assets/img/about/bg_mask_mb.png');
+      height: 395px;
+      width: 100%;
+      position: static;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+  }
+}
+
+.sectionTab {
+  ul {
+    padding-left: 15px;
+
+    color: $grey;
+  }
+  color: $grey;
+  button {
+    margin-top: 30px;
+  }
+  p {
+    line-height: 2rem;
+  }
+  .tabPane {
+    padding-top: 50px;
+  }
+}
+
+.helper {
+  margin-bottom: 115px;
+
+  .nav {
+    border-bottom: none;
+    margin-top: 10px;
+
+    button {
+      margin-top: 30px;
+    }
+
+    .navItem {
+      margin-left: 26px;
+
+      &:nth-of-type(1) {
+        margin-left: 0px;
+      }
+    }
+
+    .navLink {
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: px-to-rem(16);
+      line-height: px-to-rem(19);
+      opacity: 0.2;
+      font-weight: 500;
+      color: $black;
+      cursor: pointer;
+    }
+
+    .active {
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+      border-bottom: px-to-rem(3) solid $primary;
+    }
+
+    .firstItem {
+      margin-left: 0px;
+    }
+  }
+}

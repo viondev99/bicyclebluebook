@@ -1,0 +1,29 @@
+@import 'src/assets/css/variable';
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.toggleButton {
+  margin-top: 52px;
+  span {
+    color: $black;
+  }
+  img {
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.tabs {
+  @include media-breakpoint-down(lg) {
+    margin: 0;
+  }
+
+  .tabBar {
+    color: $grey;
+  }
+  .active {
+    color: $black;
+  }
+}

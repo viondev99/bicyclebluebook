@@ -1,0 +1,748 @@
+@import '../../../assets/css/variable';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+.headerWrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 66px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: height 0.3s ease-in-out;
+}
+
+.headerContainer {
+  flex: 1;
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  transition: height 0.3s ease-in-out;
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 22px;
+  }
+
+  .hamburgerButton {
+    width: 50px;
+    height: 50px;
+  }
+
+  .collapseCloseButton {
+    display: flex !important;
+    padding: 0;
+    justify-content: flex-start;
+
+    &:hover,
+    &:focus {
+      background: none;
+    }
+  }
+
+  .logo {
+    align-self: center;
+    width: 183.34px;
+    height: 34px;
+    @include media-breakpoint-between(sm, lg) {
+      margin-left: 15px;
+    }
+    @include media-breakpoint-down(md) {
+      height: 26px;
+    }
+  }
+
+  .rightMenu {
+    display: flex;
+  }
+
+  .buttonGroup {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-up(xl) {
+      margin: 0 0 0 -12px;
+    }
+    button img {
+      opacity: 0.8;
+    }
+    @include media-breakpoint-down(sm) {
+      button {
+        width: 30px;
+      }
+    }
+  }
+
+  .menuTop {
+    position: relative;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+
+    li {
+      &.menuTopItem {
+        padding: 10px 10px;
+        margin: 0 6px;
+        display: flex;
+        align-items: center;
+
+        .linkSellTrade {
+          font-size: px-to-rem(37);
+          color: $black;
+          line-height: 21px;
+          font-weight: bold;
+          opacity: 0.8;
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
+          cursor: pointer;
+        }
+
+        a {
+          font-size: px-to-rem(16);
+          line-height: 21px;
+          font-weight: 500;
+          color: $black;
+          opacity: 0.8;
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
+          cursor: pointer;
+        }
+
+        span {
+          font-size: px-to-rem(16);
+          line-height: 21px;
+          font-weight: 500;
+          color: $black;
+          opacity: 0.8;
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
+          cursor: pointer;
+        }
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      margin: 20px 0;
+    }
+  }
+
+  .subMenuBuyContainer {
+    margin-bottom: 28px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+
+    .subMenuBuy {
+      display: flex;
+      justify-content: space-between;
+      font-size: px_to_rem(22);
+      font-weight: 500;
+      color: $light-black;
+      box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+      margin-bottom: 20px;
+
+      @include media-breakpoint-down(lg) {
+        box-shadow: unset;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 10px;
+      }
+
+      .rotateIcon {
+        transform: rotate(180deg);
+      }
+      .btnIcon {
+        border: none;
+        cursor: pointer;
+        background: none;
+      }
+    }
+
+    .subMenuSales {
+      display: flex;
+      align-items: center;
+      font-size: px_to_rem(22);
+      font-weight: 500;
+      color: $warning !important;
+      box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+      margin-bottom: 20px;
+      cursor: pointer;
+
+      @include media-breakpoint-down(lg) {
+        box-shadow: unset;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .subMenuBuyComingSoon {
+    margin-bottom: 28px;
+    margin-left: -10px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+    .subMenuSales {
+      display: flex;
+      align-items: center;
+      font-size: px_to_rem(22);
+      font-weight: 500;
+      color: $warning !important;
+      box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+      margin-bottom: 20px;
+      cursor: pointer;
+
+      @include media-breakpoint-down(lg) {
+        box-shadow: unset;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .subMenuSellTradeContainer {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+
+    .subMenuBuy {
+      display: flex;
+      justify-content: space-between;
+      font-size: px_to_rem(22);
+      font-weight: 500;
+      color: $light-black;
+      box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+
+      @include media-breakpoint-down(lg) {
+        box-shadow: unset;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 10px;
+      }
+
+      .rotateIcon {
+        transform: rotate(180deg);
+      }
+      .btnIcon {
+        border: none;
+        cursor: pointer;
+        background: none;
+      }
+    }
+  }
+
+  .subMenuSellTradeContainer {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+
+    .subMenuBuy {
+      display: flex;
+      justify-content: space-between;
+      font-size: px_to_rem(22);
+      font-weight: 500;
+      color: $light-black;
+      box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+
+      @include media-breakpoint-down(lg) {
+        box-shadow: unset;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 10px;
+      }
+
+      .rotateIcon {
+        transform: rotate(180deg);
+      }
+      .btnIcon {
+        border: none;
+        cursor: pointer;
+        background: none;
+      }
+    }
+  }
+
+  .subItem {
+    .nameItem {
+      font-size: px_to_rem(20);
+      font-weight: 400;
+      color: $lightest-grey;
+    }
+    .horverItem {
+      color: $primary !important;
+    }
+    a {
+      &:hover {
+        color: $primary !important;
+      }
+      cursor: pointer;
+    }
+  }
+
+  .collapseNav {
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      margin-right: 25px;
+    }
+    @include media-breakpoint-down(lg) {
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $white;
+      width: 447px;
+      z-index: 999999;
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 50px 74px;
+
+      .menuTop {
+        display: block;
+        li {
+          margin: 0;
+          padding: 10px 0;
+          background: $white;
+
+          &.menuTopItem {
+            @include media-breakpoint-down(lg) {
+              padding: 10px 0 36px 0;
+            }
+            @include media-breakpoint-down(sm) {
+              padding: 10px 0 14px 0;
+            }
+          }
+
+          &.mbBikeFinder {
+            padding-bottom: 53px;
+          }
+
+          a {
+            font-size: px-to-rem(37);
+            font-weight: bold;
+            color: $black;
+          }
+
+          span {
+            font-size: px-to-rem(37);
+            font-weight: bold;
+            color: $black;
+
+            @include media-breakpoint-down(sm) {
+              font-size: px-to-rem(34);
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $white;
+      width: 100vw;
+      z-index: 999999;
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 28px;
+
+      .menuTop {
+        display: block;
+        li {
+          margin: 0;
+          padding: 10px 0;
+          background: #fff;
+
+          a {
+            font-size: px-to-rem(34);
+          }
+        }
+      }
+    }
+  }
+}
+
+.cart {
+  position: relative;
+  .cartBadge {
+    position: absolute;
+    top: 7.5px;
+    right: 2.5px;
+    background: $primary;
+    min-width: 15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    color: $white;
+    font-size: px-to-rem(10);
+    line-height: 15px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    font-weight: 500;
+    font-family: Work Sans, sans-serif;
+    user-select: none;
+  }
+}
+
+.separateSubMenu {
+  @include media-breakpoint-down(lg) {
+    margin-top: 69px !important;
+  }
+}
+.subMenu {
+  @include media-breakpoint-down(lg) {
+    a {
+      font-weight: 500 !important;
+      font-size: $p_font_size !important;
+      color: $grey !important;
+
+      &.sigOutLink {
+        color: $danger !important;
+        text-align: right;
+      }
+    }
+  }
+
+  span {
+    font-weight: 500 !important;
+    font-size: $p_font_size !important;
+    color: $grey !important;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+
+    &.sigOutLink {
+      color: $danger !important;
+      text-align: right;
+    }
+  }
+}
+.cartContainer {
+  @include media-breakpoint-down(lg) {
+    display: flex !important;
+  }
+  justify-content: space-between;
+  align-items: center;
+
+  .cartItem {
+    color: $light-grey;
+    font-size: px-to-rem(18) !important;
+  }
+}
+.customBtn {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $grey !important;
+  padding: 0;
+  margin: 0;
+  height: 100% !important;
+  display: inline-block !important;
+  text-align: left;
+}
+.wrapBtn.wrapBtn {
+  @include media-breakpoint-down(lg) {
+    display: flex !important;
+  }
+  justify-content: space-between;
+  align-items: center;
+}
+.customLineMenu {
+  position: relative;
+  color: $light-black;
+
+  &.pd0 {
+    padding: 0 !important;
+  }
+
+  &.activeMenu {
+    background: $light-grey !important;
+  }
+
+  .mobileLinkColor {
+    color: $light-black;
+  }
+
+  .iconMenu {
+    width: 24.55px;
+    margin-right: 24.73px;
+  }
+  .btnSubMenu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: $p_font_size !important;
+    font-weight: 500 !important;
+    color: $light-black !important;
+    justify-content: flex-start;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px 0;
+    margin: 0;
+  }
+  a {
+    font-size: $p_font_size !important;
+    font-weight: 500 !important;
+    color: $light-black !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $light-black;
+  }
+  .spanText {
+    font-size: $p_font_size !important;
+    font-weight: 500 !important;
+    color: $light-black !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $light-black;
+  }
+  .badgeMessage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    color: $white;
+    font-size: px-to-rem(14);
+    font-weight: 500;
+    position: absolute;
+    top: 33%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+}
+.wrapSubMenu {
+  transition: all 1s ease-in-out;
+  padding-left: 23px;
+  li {
+    padding-left: 8px;
+    list-style: none;
+
+    &.customLineMenu,
+    &.activeMenu {
+      margin: 0 23px 0 0 !important;
+    }
+  }
+}
+.hideSubMenu {
+  display: none;
+}
+.buttonSocialGroup {
+  display: none;
+  @include media-breakpoint-down(lg) {
+    position: relative;
+    bottom: 0px;
+    background: white;
+    width: 100%;
+    left: 10px;
+    display: block;
+  }
+}
+
+.dropdownList {
+  max-height: 421px;
+  overflow: auto;
+  padding-top: 20px;
+  .rowMenu {
+    width: 100%;
+
+    min-width: 250px;
+    margin-bottom: 26px;
+  }
+  .title {
+    font-weight: bold;
+    font-size: px-to-rem(17);
+  }
+
+  &.dropdownListBuy {
+    min-width: 421px;
+    margin: 0 -15px;
+
+    :global(.menu) {
+      padding: 20px 11px !important;
+    }
+
+    .rowMenu {
+      margin: 0;
+      width: 100%;
+      min-width: unset;
+    }
+  }
+
+  &.dropdownListSellTrade {
+    min-width: 174px;
+    margin: 0 130px;
+
+    .rowMenu {
+      margin: 0;
+      width: 100%;
+      min-width: unset;
+    }
+  }
+}
+.dropdownList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.collapseHeader {
+  display: none;
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45.34px;
+
+    a {
+      cursor: pointer;
+      img {
+        width: 195px;
+        height: 12.33px !important;
+      }
+    }
+  }
+}
+
+.sigOutLink {
+  cursor: pointer;
+  width: 100px;
+  font-size: px-to-rem(18) !important;
+  color: $danger !important;
+  font-weight: 500;
+  text-align: right;
+}
+
+.popoverBackdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background: $light-black;
+}
+
+.subItemBuy {
+  .nameItem {
+    font-size: px_to_rem(20);
+    font-weight: 400;
+    color: $lightest-grey;
+  }
+  .nameItemSale {
+    display: flex;
+    align-items: center;
+    font-size: px_to_rem(20);
+    font-weight: 400;
+    color: $warning;
+  }
+  .horverItem {
+    color: $primary !important;
+  }
+
+  a {
+    &:hover {
+      color: $primary !important;
+    }
+
+    cursor: pointer;
+    li {
+      padding: 8px 0 !important;
+    }
+  }
+}
+
+.subMenuTopPadding {
+  padding-bottom: 100px !important;
+  // margin-bottom: 100px !important;
+}
+
+.dropdownIcon {
+  width: 15px;
+  height: 15px;
+}
+
+.rightHideContent {
+  width: 183.33px;
+}
+
+.spaceSubMenuBuyIntroduce {
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 28px !important;
+  }
+}
+
+.link {
+  font-size: px-to-rem(16);
+  line-height: 21px;
+  font-weight: 500;
+  color: $black;
+  opacity: 0.8;
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+  cursor: pointer;
+}
+
+.icPriceTag {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+
+  @media (max-width: 1199px) and (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.notLogin {
+  display: none;
+}
+
+.hr {
+  border: 1px solid $lighter-grey;
+  width: 95%;
+  margin-left: 3%;
+  margin-top: 10px;
+}
+
+.subMenuComingSoon {
+  margin-top: 22px;
+  color: $warning !important;
+  a {
+    color: $warning !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 10px;
+  }
+}

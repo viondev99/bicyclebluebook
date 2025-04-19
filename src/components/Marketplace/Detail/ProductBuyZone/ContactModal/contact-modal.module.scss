@@ -1,0 +1,48 @@
+@import 'src/assets/css/variable';
+
+.modalContent {
+  padding: 65px;
+  @include media-breakpoint-down(md) {
+    padding: 20px;
+    min-height: 100vh;
+  }
+}
+
+.containerModal {
+  max-width: 900px;
+}
+
+.headerModal {
+  padding: 0;
+  :global(.modal-title) {
+    font-size: $h2_font_size;
+  }
+}
+
+.bodyModal {
+  margin-top: 20px;
+}
+.inputContentWrapper {
+  @include media-breakpoint-down(md) {
+    flex: 1;
+  }
+}
+
+.avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 25px;
+}
+
+.name {
+  font-size: $p_font_size;
+  font-weight: 500;
+  line-height: 120%;
+  color: $black;
+}
+
+.input {
+  margin-top: 30px;
+}

@@ -1,0 +1,74 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.description {
+  display: none;
+  font-size: $p_font_size;
+  font-weight: bold;
+  padding: 24px 0 36px;
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+.subTitle {
+  font-size: $p_font_size;
+  font-weight: bold;
+  padding: 24px 0 48px;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+.notificationSetting {
+  padding: 16px 32px 16px 32px;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 0px;
+  }
+
+  .headerForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btnSave {
+    margin-top: 24px;
+  }
+}
+.editForm {
+  font-size: $p_font_size;
+  padding: 0;
+  cursor: pointer;
+}
+.editForm:hover {
+  color: $primary;
+}
+.activeEdit {
+  color: $primary !important;
+}
+.wrapperInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+
+  .label {
+    font-weight: 500;
+    font-size: $p_font_size;
+    color: $grey;
+    margin-right: 15px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: -42px;
+    margin-right: -42px;
+    padding: 0px 42px 16px;
+    border-bottom: solid 1px rgba(grey, 0.1);
+
+    &:last-of-type {
+      padding-bottom: 10px;
+      border-bottom: 0px;
+    }
+  }
+}

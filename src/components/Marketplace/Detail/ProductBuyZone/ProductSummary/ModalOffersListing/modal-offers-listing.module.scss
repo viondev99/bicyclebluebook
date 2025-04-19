@@ -1,0 +1,93 @@
+@import 'src/assets/css/variable';
+
+.modal {
+  max-width: 1091px;
+  @include media-breakpoint-down(lg) {
+    max-width: 909px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    min-height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: $white;
+  }
+  .wrapHeader {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+  .title {
+    @include media-breakpoint-down(md) {
+      font-size: px-to-rem(34);
+      line-height: px-to-rem(41);
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 22px;
+    }
+    .offerNumber {
+      font-size: px-to-rem(30);
+      color: $grey;
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(24);
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(22);
+      }
+    }
+  }
+  .content {
+    padding: 75px;
+    @include media-breakpoint-down(lg) {
+      padding: 65px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 36px 30px;
+      height: 100%;
+      position: relative;
+      min-height: 100vh;
+      border: none;
+    }
+    @include media-breakpoint-up(md) {
+      height: 88vh;
+      overflow: auto;
+    }
+  }
+
+  .modalCloseBtn {
+    padding: 0;
+  }
+}
+
+.btnClose {
+  position: absolute;
+  top: 86px;
+  right: 76px;
+}
+.tableOffer {
+  width: 100%;
+  thead {
+    th {
+      font-weight: 500;
+      font-size: px-to-rem(18);
+      line-height: 120%;
+      padding: 12.5px 10px 12.5px 0px;
+    }
+  }
+  tbody {
+    td {
+      padding: 12.5px 10px 12.5px 0px;
+      color: $grey;
+      font-size: px-to-rem(18);
+    }
+  }
+}
+.customLink {
+  color: $grey !important;
+  font-size: px-to-rem(18) !important;
+}
+.hideWhenMobile {
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+}

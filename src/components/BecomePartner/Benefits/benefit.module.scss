@@ -1,0 +1,92 @@
+@import 'src/assets/css/variable';
+.wrapBenefit {
+  margin-bottom: 65px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 10px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0px;
+  }
+}
+.customCard {
+  margin-bottom: 95px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 52px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
+    display: flex;
+  }
+  .iconCard {
+    width: 68.1px;
+    height: 55.9px;
+    margin-bottom: 22px;
+    @include media-breakpoint-down(lg) {
+      width: 53.37px;
+      height: 43.81px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 51.17px;
+      height: 42px;
+      margin-right: 17px;
+    }
+  }
+  .title {
+    margin-bottom: 22px;
+    font-weight: bold;
+    font-size: px-to-rem(30);
+    line-height: 120%;
+    color: $black;
+    max-width: 342px;
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(22);
+    }
+  }
+  .content {
+    font-size: px-to-rem(22);
+    max-width: 342px;
+    line-height: 180%;
+    color: $grey;
+  }
+}
+
+.wrapVideo {
+  margin-top: 70px;
+  overflow: hidden;
+  max-width: 590px;
+  height: 380px;
+  border-radius: 10px;
+  @include media-breakpoint-down(lg) {
+    height: 287.53px;
+  }
+  @include media-breakpoint-down(lg) {
+    margin: 20px 0px;
+  }
+  .videoIntro {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.description {
+  font-size: px-to-rem(22);
+  line-height: 180%;
+  color: $grey;
+  margin-bottom: 165px;
+  max-width: 868px;
+  .separate {
+    margin-top: 32px;
+  }
+  @include media-breakpoint-down(lg) {
+    max-width: 679px;
+    margin-bottom: 100px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 92px;
+  }
+}
+
+.wrapTitleFirst {
+  margin-bottom: 50px !important;
+  margin-top: 100px !important;
+}

@@ -1,0 +1,77 @@
+@import 'src/assets/css/variable';
+
+.fs30 {
+  font-size: px-to-rem(30);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.customCard {
+  background: $white;
+  border-radius: 16px;
+  padding: 40px;
+
+  @include media-breakpoint-down(xs) {
+    padding: 28px 22px;
+  }
+
+  .headerText {
+    @extend .fs30;
+    font-weight: 700;
+    line-height: 120%;
+    color: $light-black;
+
+    &.wrapGeneralHeader {
+      margin-bottom: 17.33px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 40px;
+      }
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 17px;
+      }
+    }
+  }
+
+  .description {
+    font-weight: 500;
+    font-size: px-to-rem(18);
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 30px;
+
+    span {
+      margin-left: 5.73px;
+      color: $primary;
+    }
+  }
+}
+
+.wrapTooltip {
+  background: $white;
+  box-shadow: 0px 4.48399px 10.4626px rgba(28, 63, 79, 0.25);
+  border-radius: 4px;
+  color: $primary;
+  padding: 8px 10px;
+  font-weight: 500;
+  font-size: px-to-rem(18);
+  line-height: 120%;
+  text-align: center;
+  color: #4cb3e4;
+}

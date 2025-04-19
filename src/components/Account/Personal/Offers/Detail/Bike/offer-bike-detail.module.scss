@@ -1,0 +1,86 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.headerOfferDetail {
+  display: flex;
+  justify-content: space-between;
+  color: $black;
+  font-size: $p_font_size;
+}
+.bikeCard {
+  margin-bottom: 16px;
+  padding: 32px;
+}
+
+.titleDetail {
+  font-weight: bold;
+}
+
+.backToOffer {
+  color: $black;
+  cursor: pointer;
+  &:hover {
+    color: $primary;
+  }
+}
+.titleOfferDetail {
+  a {
+    font-weight: bold;
+    font-size: $h3_font_size;
+    color: $black;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.wrapChip {
+  margin-bottom: 29px;
+  .currentPrice {
+    color: $primary;
+    font-size: px-to-rem(26);
+    margin-right: 32px;
+  }
+  .quantity {
+    font-size: $p_font_size;
+    color: $grey;
+  }
+}
+
+.cardItem {
+  .title {
+    font-size: $p_font_size;
+    color: $grey;
+    @include media-breakpoint-down(sm) {
+      margin-right: 23px;
+    }
+  }
+  .content {
+    font-size: $p_font_size;
+    color: $black;
+    a {
+      color: $black;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    position: static;
+  }
+}
+.wrapMenu {
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.resetMargin {
+  position: relative;
+}
+.textExpired {
+  width: 100%;
+  text-align: right;
+}

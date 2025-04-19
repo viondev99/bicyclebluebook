@@ -1,0 +1,326 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs30 {
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(30);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs18 {
+  font-size: px-to-rem(18);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.buyerActionRows {
+  margin: 30px -10px 0;
+}
+
+.summaryWrapper {
+  padding: 50px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 35px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px;
+  }
+
+  .controlGroup {
+    @include media-breakpoint-down(xs) {
+      display: flex;
+      align-items: center;
+      & > * {
+        margin: 0;
+        flex: 1 1 50%;
+        min-width: 50%;
+      }
+    }
+  }
+
+  .controlLabel {
+    font-weight: 500;
+  }
+
+  .formatCol {
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  .quantitySub {
+    font-size: px-to-rem(15);
+    line-height: px-to-rem(20);
+    font-weight: 500;
+    margin-left: 20px;
+    @include media-breakpoint-down(xs) {
+      display: block;
+      margin-left: 0;
+    }
+    .availableText {
+      color: $grey;
+    }
+
+    .soldText {
+      color: $primary;
+    }
+  }
+
+  .quantityInput {
+    max-width: 190px;
+  }
+
+  .price {
+    font-family: Rubik, sans-serif;
+    color: $primary;
+    font-size: $h2_font_size;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .bikePriceDiscounted {
+    color: $warning;
+    font-size: px-to-rem(19);
+    line-height: 180%;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: line-through;
+  }
+
+  .buyButton {
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
+      height: 50px;
+    }
+  }
+  .buyButtonDisable {
+    opacity: 0.5;
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
+      height: 50px;
+    }
+  }
+
+  .msrp {
+    font-family: Rubik, sans-serif;
+    font-size: px-to-rem(19);
+    font-weight: 500;
+    color: $grey;
+    line-height: 180%;
+  }
+
+  .msrpTitle {
+    color: rgba($grey, 0.4);
+    font-size: px-to-rem(14);
+    font-weight: 500;
+    vertical-align: top;
+    line-height: 180%;
+    margin-left: 5px;
+  }
+
+  .buttonGroup {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    @include media-breakpoint-up(xl) {
+      justify-content: space-between;
+    }
+    @include media-breakpoint-down(lg) {
+      button:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .iconButton {
+      @include media-breakpoint-down(lg) {
+        margin: 0 10px;
+        width: 30px;
+        height: 30px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-right: 10px;
+        width: 22px;
+        height: 18px;
+      }
+    }
+  }
+
+  .offerCount {
+    display: block !important;
+    font-size: px-to-rem(18);
+    color: $primary;
+    line-height: 180%;
+    text-align: left;
+    height: auto;
+    max-width: 150px;
+  }
+
+  .shipTitle {
+    color: $primary;
+    font-size: px-to-rem(20);
+    margin: 0;
+  }
+
+  .buyerName {
+    color: $grey;
+    font-size: px-to-rem(18);
+    margin: 0;
+  }
+}
+
+.saveLinkSuccess {
+  position: fixed;
+  width: 259px;
+  height: 62px;
+  background: $white;
+  box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: px-to-rem(15);
+  color: $black;
+  font-weight: 500;
+  animation: animationSavePopup 0.3s ease;
+  border-radius: 6.8px;
+  top: 50%;
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .iconTick {
+    width: 22px;
+    margin-right: 14px;
+  }
+}
+
+.detailsOffer {
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 575px) {
+    justify-content: flex-start;
+    margin: 25px 0 !important;
+  }
+}
+
+.modal {
+  width: 1091px;
+  margin-top: 220px;
+
+  @media (max-width: 1199px) and (min-width: 991px) {
+    width: 909px;
+    margin-top: 320px;
+  }
+  @media (max-width: 990px) and (min-width: 768px) {
+    width: 720px;
+    margin-top: 380px;
+  }
+  @media (max-width: 767px) {
+    margin: 0;
+  }
+}
+
+.title {
+  @extend .fs46;
+  .totalOffers {
+    color: $lightest-grey;
+    @extend .fs30;
+  }
+}
+
+.wrapBody {
+  @extend .fs18;
+  font-weight: 500;
+  line-height: 120%;
+
+  .itemOffers {
+    margin: 25px 0 !important;
+    color: $lightest-grey;
+  }
+}
+
+.wrapItem {
+  @extend .fs18;
+  font-weight: 500;
+  line-height: 120%;
+  .itemOffers {
+    color: $lightest-grey;
+    padding: 25px 0 0 !important;
+
+    @media (max-width: 767px) {
+      padding: 18px 0 0 !important;
+    }
+  }
+}
+
+.offers {
+  color: $primary;
+  font-size: px-to-rem(22);
+  cursor: pointer;
+}
+
+.tableClassName {
+  width: 100%;
+}
+
+.statusBadge {
+  font-family: 'Rubik', sans-serif;
+  color: $red;
+  @extend .fs46;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.shippingTo {
+  margin: 38px 0 18px 0;
+  font-size: px-to-rem(22);
+  font-weight: 500;
+  line-height: 120%;
+
+  .shippingName {
+    color: $primary;
+  }
+}
+
+.detailShipping {
+  color: $lightest-grey;
+  font-size: px-to-rem(18);
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.rowPrice {
+  margin-top: 50px;
+}
+
+.rowPriceSold {
+  margin-top: 17px;
+}
+
+.offerNoFrame {
+  justify-content: flex-start !important;
+}

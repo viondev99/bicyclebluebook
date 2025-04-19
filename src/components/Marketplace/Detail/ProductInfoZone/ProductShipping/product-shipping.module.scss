@@ -1,0 +1,57 @@
+@import 'src/assets/css/variable';
+
+.wrapHeader {
+  font-size: px-to-rem(24);
+  font-weight: bold;
+  text-align: center;
+  padding: 24px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $grey-bg;
+}
+
+.shippingInfo {
+  padding: 0px 15px;
+  margin: auto;
+  max-width: 750px;
+
+  .wrapItem {
+    display: flex;
+    margin-bottom: 30px;
+
+    .title {
+      width: 180px;
+      min-width: 180px;
+      margin: 0px;
+      font-size: $p_font_size;
+      font-weight: 500;
+      color: $black;
+    }
+
+    .description {
+      font-size: $p_font_size;
+      color: $grey;
+    }
+  }
+}
+
+.wrapUL {
+  list-style: none;
+  padding: 0;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.beStrong {
+  width: 180px;
+  min-width: 180px;
+  margin: 0px;
+  font-size: $p_font_size;
+  font-weight: 500;
+  color: $black;
+}

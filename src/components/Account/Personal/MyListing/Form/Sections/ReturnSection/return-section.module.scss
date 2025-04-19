@@ -1,0 +1,16 @@
+@import 'src/assets/css/variable';
+
+.label {
+  margin-bottom: 28px;
+}
+
+.title {
+  margin-bottom: 28px;
+}
+
+.select {
+  width: 220px;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}

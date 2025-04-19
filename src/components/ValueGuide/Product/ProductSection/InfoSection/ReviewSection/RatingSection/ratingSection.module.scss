@@ -1,0 +1,38 @@
+@import 'src/assets/css/variable';
+
+.rating {
+  margin-top: 17px;
+  img {
+    width: 22px;
+  }
+}
+.star {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+
+  .label {
+    font-size: px-to-rem(18);
+    color: $grey;
+    width: 70px;
+  }
+
+  .progress {
+    flex-grow: 1;
+    height: 8px;
+  }
+  .progressBar {
+    background-color: $primary !important;
+  }
+}
+
+.btn {
+  margin-top: 40px;
+}
+
+.writeReview {
+  margin-top: 30px;
+  .text {
+    color: $primary;
+  }
+}

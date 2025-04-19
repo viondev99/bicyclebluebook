@@ -1,0 +1,55 @@
+@import 'src/assets/css/variable';
+
+.container {
+  overflow: hidden;
+  @include media-breakpoint-down(sm) {
+    padding: 0px 28px;
+  }
+}
+
+.containHeader {
+  overflow: hidden;
+  margin-top: 88px;
+  @include media-breakpoint-down(lg) {
+    min-height: auto !important;
+  }
+}
+
+.title {
+  max-width: 505px;
+  text-align: left;
+  font-weight: bold;
+  font-size: px-to-rem(60);
+  line-height: 120%;
+  color: $black;
+  margin-bottom: 250px;
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(48);
+    margin-bottom: 160px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(34);
+    margin-bottom: 47px;
+  }
+}
+
+.titleListSiteMap {
+  font-weight: 800;
+  font-size: px-to-rem(26);
+}
+
+.content {
+  padding: 45px 0 45px 0;
+  @include media-breakpoint-down(lg) {
+    padding: 10px 0 0 0;
+  }
+  width: 100%;
+
+  .subArray {
+    color: $primary;
+    cursor: pointer;
+    a:hover {
+      color: $black;
+    }
+  }
+}

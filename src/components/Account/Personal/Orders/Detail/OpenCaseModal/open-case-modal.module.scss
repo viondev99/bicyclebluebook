@@ -1,0 +1,129 @@
+@import 'src/assets/css/variable';
+
+.openCaseModal {
+  width: 850px;
+  @include media-breakpoint-between(md, xl) {
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    .btnOpenCase {
+      border: 1.5px solid $lighter-grey;
+      padding: 16px 26px;
+      align-items: center;
+      font-size: px-to-rem(18);
+      margin-left: 31px;
+      margin-top: 26px;
+    }
+  }
+  @include media-breakpoint-only(xs) {
+    align-items: flex-start;
+    width: fit-content;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0px;
+    .btnOpenCase {
+      border: 1.5px solid $lighter-grey;
+      padding: 16px 26px;
+      align-items: center;
+      font-size: px-to-rem(18);
+      margin-left: 31px;
+      margin-top: 26px;
+    }
+  }
+}
+.popupOpenCase {
+  width: 850px;
+  @include media-breakpoint-between(md, xl) {
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    .btnOpenCase {
+      border: 1.5px solid $lighter-grey;
+      padding: 16px 26px;
+      align-items: center;
+      font-size: px-to-rem(18);
+      margin-left: 31px;
+      margin-top: 26px;
+    }
+  }
+  @include media-breakpoint-only(xs) {
+    align-items: flex-start;
+    width: fit-content;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0px;
+    .btnOpenCase {
+      border: 1.5px solid $lighter-grey;
+      padding: 16px 26px;
+      align-items: center;
+      font-size: px-to-rem(18);
+      margin-left: 31px;
+      margin-top: 26px;
+    }
+  }
+}
+.title {
+  margin-left: 31px;
+  font-size: px-to-rem(37);
+}
+.nameTitle {
+  font-weight: 700;
+  margin-left: 31px;
+  font-size: px-to-rem(24);
+  margin-bottom: 11px;
+  line-height: 29px;
+  color: $light-black;
+}
+.description {
+  margin-left: 31px;
+  margin-right: 31px;
+}
+.textTitle {
+  font-size: px-to-rem(18);
+  margin-left: 31px;
+  margin-right: 108px;
+}
+.groupSelect {
+  display: grid;
+  margin-left: 31px;
+  .itemSelect {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .radio {
+    height: 20px;
+    width: 20px;
+    margin-right: 16px;
+    border: 1px solid $lightest-grey !important;
+  }
+}
+.rowBtn {
+  display: flex;
+  justify-content: space-between;
+  .btnCancel {
+    border: 1.5px solid $lighter-grey;
+    padding: 16px 26px;
+    align-items: center;
+    font-size: px-to-rem(18);
+    margin-top: 26px;
+    margin-left: 31px;
+  }
+}
+.btnOpenCase {
+  border: 1.5px solid $lighter-grey;
+  padding: 16px 26px;
+  align-items: center;
+  font-size: px-to-rem(18);
+  margin-top: 26px;
+}
+.button {
+  margin-top: 26px;
+  margin-left: 31px;
+  margin-right: 31px;
+  font-size: px-to-rem(18);
+}

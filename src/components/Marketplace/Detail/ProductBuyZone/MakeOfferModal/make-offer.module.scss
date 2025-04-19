@@ -1,0 +1,61 @@
+@import 'src/assets/css/variable';
+
+.modalContent {
+  padding: 65px;
+}
+
+.containerModal {
+  max-width: 500px;
+}
+
+.headerModal {
+  padding: 0;
+  :global(.modal-title) {
+    font-size: $h2_font_size;
+  }
+}
+
+.bodyModal {
+  margin-top: 10px;
+}
+
+.price {
+  font-size: $p_font_size;
+  line-height: 180%;
+  color: $grey;
+  .value {
+    color: $primary;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  .label {
+    font-weight: 500;
+    font-size: $p_font_size;
+    color: $black;
+    flex-shrink: 1;
+    white-space: nowrap;
+    margin-right: 20px;
+  }
+  .input {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type='number'] {
+      -moz-appearance: textfield;
+    }
+  }
+  .prefix {
+    color: $grey;
+    margin-left: 10px;
+    margin-right: 0px;
+    line-height: 55px;
+  }
+}

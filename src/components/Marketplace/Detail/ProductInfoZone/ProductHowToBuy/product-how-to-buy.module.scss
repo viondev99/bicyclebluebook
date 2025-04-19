@@ -1,0 +1,41 @@
+@import 'src/assets/css/variable';
+
+.howToBuy {
+  @include media-breakpoint-down(lg) {
+    padding: 0px 10px;
+  }
+
+  .h2title {
+    font-size: px-to-rem(28);
+    font-weight: 700;
+    color: $black;
+    line-height: 120%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: $p_font_size;
+    font-weight: 500;
+    color: $black;
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: $p_font_size;
+    color: $grey;
+    line-height: 180%;
+  }
+
+  .mt30 {
+    margin-top: 30px;
+  }
+
+  ul {
+    li {
+      @extend .description;
+      padding-left: 18px;
+    }
+  }
+}

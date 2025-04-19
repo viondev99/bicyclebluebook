@@ -1,0 +1,121 @@
+@import 'src/assets/css/variable';
+
+.headerCard {
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(sm) {
+    padding: 10px 20px;
+  }
+
+  button {
+    width: 55px;
+    height: 55px;
+  }
+
+  .selectContainer {
+    min-width: 200px;
+    @include media-breakpoint-down(sm) {
+      min-width: 120px;
+    }
+  }
+}
+
+.headerMobile {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+}
+
+.dateRange {
+  position: relative;
+}
+
+.dateRangePicker {
+  position: absolute;
+  top: calc(100% + 100px);
+  right: 300px;
+  z-index: 5;
+  width: 318px;
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 34px 94px rgba(110, 119, 133, 0.25);
+  border-radius: 6px;
+  @include media-breakpoint-down(md) {
+    width: 500px;
+    right: 155px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 300px;
+    top: calc(100% - 10px);
+    right: -10px;
+  }
+  @include media-breakpoint-down(xs) {
+    z-index: 100;
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 35px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    @include media-breakpoint-down(lg) {
+      left: 170px;
+    }
+    @include media-breakpoint-down(md) {
+      left: auto;
+      right: 45px;
+    }
+    @include media-breakpoint-down(sm) {
+      left: auto;
+      right: 10px;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: calc(100% + 1px);
+    left: 35px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid rgb(220, 220, 220);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    @include media-breakpoint-down(lg) {
+      left: 170px;
+    }
+
+    @include media-breakpoint-down(md) {
+      left: auto;
+      right: 45px;
+    }
+    @include media-breakpoint-down(sm) {
+      left: auto;
+      right: 10px;
+    }
+  }
+
+  .rdr-PredefinedRanges {
+    display: none !important;
+  }
+
+  span.rdr-Day.is-selected.is-passive {
+    background: #fff !important;
+    color: rgb(42, 88, 117) !important;
+  }
+
+  .btn {
+    font-size: px-to-rem(17);
+    font-weight: 500;
+  }
+
+  .applyDate {
+    color: $primary;
+  }
+}

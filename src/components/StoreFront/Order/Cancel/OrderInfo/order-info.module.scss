@@ -1,0 +1,117 @@
+@import 'src/assets/css/variable';
+
+.containOrderInfo {
+  padding: 58px !important;
+  margin-bottom: 18px;
+  overflow: hidden;
+  @include media-breakpoint-down(sm) {
+    padding: 0px !important;
+  }
+  .lineItem {
+    margin-bottom: 18px;
+    .wrapLineItemInfo {
+      @include media-breakpoint-down(sm) {
+        margin: 19px 22px;
+      }
+    }
+  }
+  .image {
+    max-width: 264.19px;
+    max-height: 188.7px;
+  }
+}
+.headerOrderInfo {
+  padding: 58px !important;
+  margin-bottom: 18px;
+  @include media-breakpoint-down(sm) {
+    padding: 28px 22px !important;
+  }
+  .subTitle {
+    font-weight: bold;
+    font-size: px-to-rem(30);
+  }
+}
+.buyerName {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $black;
+  margin-bottom: 44px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 36px;
+  }
+  a {
+    font-size: $p_font_size;
+    color: $black;
+    font-weight: 500;
+    color: $grey;
+  }
+  .buyer {
+    color: $grey;
+    margin-right: 22px;
+  }
+}
+.title {
+  font-weight: 500;
+  font-size: $p_font_size;
+  line-height: 120%;
+  color: $black;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.wrapChips {
+  display: flex;
+  margin-bottom: 19px;
+  .chip {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+    font-size: $p_font_size;
+    font-weight: 500;
+    .chipTitle {
+      color: $black;
+      margin-right: 22px;
+    }
+    .chipContent {
+      color: $grey;
+    }
+  }
+}
+.price {
+  font-size: $p_font_size;
+  color: $primary !important;
+  margin-bottom: 19px;
+}
+.idInfo {
+  font-size: px-to-rem(14);
+  color: $grey;
+  span {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+}
+.wrapInfo {
+  display: flex;
+  flex-wrap: wrap;
+  @include media-breakpoint-down(sm) {
+    margin: 0px;
+  }
+  .chip {
+    &:not(:last-child) {
+      margin-right: 42px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 14px;
+    }
+    .chipTitle {
+      font-size: $p_font_size;
+      color: $grey;
+      font-weight: 500;
+    }
+    .chipContent {
+      color: $black;
+      font-size: $p_font_size;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import 'src/assets/css/variable';
+.title {
+  color: $primary;
+  font-weight: 500;
+  font-style: normal;
+}
+.heading {
+  @include media-breakpoint-down(md) {
+    padding: 0 10px;
+  }
+}
+.name {
+  font-size: px-to-rem(34);
+}

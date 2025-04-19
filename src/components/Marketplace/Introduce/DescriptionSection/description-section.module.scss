@@ -1,0 +1,33 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.section {
+  padding: 120px 0 60px 0;
+  background: $light-grey;
+  @include media-breakpoint-down(md) {
+    padding: 45px 0;
+  }
+
+  .description {
+    color: $grey;
+  }
+}
+
+.text {
+  @extend .fs22;
+  font-weight: 400;
+  font-size: px-to-rem(22);
+  line-height: 180%;
+  color: $lightest-grey;
+  max-width: 975px;
+}

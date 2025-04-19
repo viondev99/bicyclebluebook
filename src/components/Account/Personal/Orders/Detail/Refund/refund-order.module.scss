@@ -1,0 +1,170 @@
+@import 'src/assets/css/variable';
+
+.header {
+  padding: 45px 49px;
+  margin-bottom: 15px;
+}
+.back {
+  margin-left: 10px;
+}
+
+.groupTotal {
+  .title {
+    font-size: $p_font_size;
+    font-weight: bold;
+  }
+}
+.productCard {
+  padding: 30px 40px;
+}
+
+.lineError {
+  color: $danger;
+  font-size: px-to-rem(14);
+  font-weight: normal;
+}
+.btnRefund {
+  margin-top: 30px;
+  text-align: right;
+}
+.calculateAmount {
+  @include media-breakpoint-down(sm) {
+    margin-top: 30px;
+  }
+}
+
+.status {
+  font-size: $p_font_size;
+  color: #72d299;
+}
+
+.text {
+  color: $grey;
+  font-size: $p_font_size;
+}
+
+.card {
+  padding: 30px 40px;
+  font-weight: 500;
+  @include media-breakpoint-down(md) {
+    padding: 28px 22px;
+  }
+}
+
+.price {
+  color: $primary;
+  font-family: 'Rubik', sans-serif;
+  font-size: $p_font_size;
+  font-weight: normal;
+}
+
+.returnText {
+  font-size: px-to-rem(18);
+  font-weight: normal;
+}
+
+.serial {
+  font-size: px-to-rem(14);
+  color: $grey;
+  font-weight: 500;
+}
+
+.productCard {
+  padding: 30px 40px;
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+
+  .detail {
+    font-weight: 500;
+    margin-left: 52px;
+
+    @include media-breakpoint-down(md) {
+      margin: 22px 7px 22px 7px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .quanity,
+  .frameSize {
+    color: $grey;
+  }
+}
+
+.bicycleName {
+  font-size: $p_font_size;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.imageContainer {
+  display: flex;
+
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    height: 100%;
+  }
+}
+
+.image {
+  height: 100%;
+  width: 260px;
+  max-width: 260px;
+  max-height: 260px;
+  border-radius: $card-border-radius;
+  @include media-breakpoint-down(lg) {
+    width: 212px;
+    max-width: 212px;
+    max-height: 212px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    max-width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.refundBtn {
+  color: $red !important;
+}
+
+.lineError {
+  color: $danger;
+  font-size: px-to-rem(14);
+  font-weight: normal;
+}
+.statusItem {
+  font-size: px-to-rem(18);
+  font-weight: bold;
+  color: $danger;
+}
+.customLink {
+  font-size: px-to-rem(18);
+  color: $primary;
+}
+.groupInput {
+  position: absolute;
+  top: 30%;
+  right: 0px;
+  min-width: 140px;
+  @media (max-width: 992px) {
+    top: 77%;
+    min-width: 100px;
+  }
+  @media (max-width: 768px) {
+    position: relative;
+    top: 0;
+    right: 0;
+    min-width: none;
+  }
+}

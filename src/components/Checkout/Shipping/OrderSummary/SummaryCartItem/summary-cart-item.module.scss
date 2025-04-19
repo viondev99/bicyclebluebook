@@ -1,0 +1,35 @@
+@import 'src/assets/css/variable';
+
+.wrapper {
+  margin-top: 20px;
+}
+
+.title {
+  margin-bottom: 0;
+  font-size: px-to-rem(18);
+  line-height: px-to-rem(23);
+  font-weight: 500;
+  color: $black;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.quantity {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: $grey;
+  font-size: px-to-rem(18);
+  line-height: px-to-rem(23);
+  font-weight: 500;
+}
+
+.price {
+  font-family: Rubik, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: px-to-rem(18);
+  line-height: px-to-rem(21);
+  color: $primary;
+}

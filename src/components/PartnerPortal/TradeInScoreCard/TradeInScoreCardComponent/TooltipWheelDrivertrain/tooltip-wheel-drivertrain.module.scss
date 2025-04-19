@@ -1,0 +1,28 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.card {
+  box-shadow: 1px -1px 5px 1px #a8a8a8;
+  padding: 10px;
+  text-align: left;
+  color: $black;
+  font-size: px-to-rem(16);
+  border-radius: 10px;
+  max-width: 240px;
+}
+
+.wrapTooltipWheelDrivertrain {
+  img {
+    cursor: pointer;
+  }
+}

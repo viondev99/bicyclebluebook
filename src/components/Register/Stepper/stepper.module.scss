@@ -1,0 +1,85 @@
+@import 'src/assets/css/variable';
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 30px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0 10px;
+  }
+}
+.main {
+  display: flex;
+  @include media-breakpoint-down(sm) {
+    justify-content: space-between;
+    margin-top: 14px;
+  }
+  .paddingCustom {
+    @include media-breakpoint-up(md) {
+      &:not(:first-child) {
+        margin-left: 61px;
+        @include media-breakpoint-up(md) {
+          margin-left: 88px;
+        }
+      }
+    }
+  }
+}
+
+.stepNumber {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #6e7785;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: block !important;
+  font-size: px-to-rem(18);
+  margin-left: 12px;
+  &.showOnMobile {
+    display: none !important;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+    &.showOnMobile {
+      display: block !important;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
+}
+.active {
+  color: $primary;
+  .stepNumber {
+    background-color: $primary;
+  }
+}
+
+.progress {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+.progressBar {
+  background-color: $primary !important;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  @include media-breakpoint-down(sm) {
+    align-items: stretch;
+    flex-direction: column;
+    flex: 1;
+  }
+}

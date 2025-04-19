@@ -1,0 +1,145 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.container {
+  .topFilter {
+    margin: 30px 15px 0px;
+    .filterButton {
+      @include reset-button;
+      display: flex;
+      color: $primary;
+      font-size: $p_font_size;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+
+      img {
+        margin-right: 10px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .listNotification {
+    .noNotification {
+      margin: 60px 0px;
+      font-size: $h3_font_size;
+      font-weight: 500;
+      color: $grey;
+    }
+
+    .notification {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin: 20px 0px;
+      position: relative;
+      background-color: transparent;
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &.unread {
+        background-color: rgba($primary, 0.1);
+      }
+
+      &:hover {
+        background-color: $white;
+      }
+
+      .badgeNotification {
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background-color: $primary;
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        z-index: 2;
+        pointer-events: none;
+
+        @include media-breakpoint-down(sm) {
+          right: 5px;
+        }
+      }
+
+      .iconContainer {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        border-radius: 6px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($primary, 0.1);
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .info {
+        flex: 1;
+        display: block;
+        margin-left: 20px;
+
+        .title {
+          display: block;
+          margin-top: 0px;
+          margin-bottom: 5px;
+          font-size: $h3_font_size;
+          font-weight: 500;
+          line-height: 36px;
+          color: $black;
+
+          .badgeUnread {
+            display: inline-block;
+            width: 15px;
+            min-width: 15px;
+            height: 15px;
+            min-height: 15px;
+            margin-left: 15px;
+            border-radius: 15px;
+            background-color: $primary;
+          }
+        }
+
+        .content {
+          display: block;
+          font-size: $p_font_size;
+          font-weight: 500;
+          color: $grey;
+          margin-bottom: 5px;
+          word-break: break-word;
+          overflow: hidden;
+        }
+
+        .dateTime {
+          font-size: $p_font_size;
+          font-weight: 500;
+          color: $grey;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    margin-top: 40px;
+  }
+}
+
+.removeButton {
+  @include reset-button;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .closeIcon {
+    width: 28px;
+    height: 28px;
+    fill: $grey;
+  }
+}

@@ -1,0 +1,83 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.bikeImageWrapper {
+  //margin-top: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .bigPictureWrapper {
+    border-radius: 8px;
+    background: rgba($grey, 0.1);
+    flex: 1;
+    position: relative;
+    cursor: zoom-in;
+
+    @include media-breakpoint-down(md) {
+      min-height: 380px;
+    }
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+
+    .statusBadge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border-radius: 10px;
+      padding: 10px 20px;
+      background: $primary;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: $p_font_size;
+      z-index: 1;
+    }
+
+    .mainPicture {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+  }
+
+  .imageSlide {
+    margin: 20px 0 0;
+    height: 100px;
+    @include media-breakpoint-down(sm) {
+      height: 120px;
+    }
+    @include media-breakpoint-down(xs) {
+      height: 300px;
+    }
+  }
+
+  .thumbImages {
+    @include reset-button;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: rgba($grey, 0.1);
+
+    img {
+      border-radius: 8px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .subImage {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .swiperContainer {
+    @include media-breakpoint-down(sm) {
+      overflow: visible;
+    }
+  }
+}

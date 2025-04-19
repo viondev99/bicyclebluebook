@@ -1,0 +1,123 @@
+@import 'src/assets/css/variable';
+@import '~react-dates/lib/css/_datepicker.css';
+
+.CalendarDay__selected {
+  background: $primary;
+  color: $white;
+}
+
+.CalendarDay__selected_span,
+.CalendarDay__hovered_span {
+  background: rgba($primary, 0.2);
+  color: $grey;
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover,
+.CalendarDay__default:hover {
+  background: $primary;
+  border: 1px double $primary;
+  color: #fff;
+  position: relative;
+  width: 39px;
+  height: 38px;
+}
+
+.CalendarDay__default {
+  border: none;
+}
+
+.CalendarDay__selected_start {
+  border-radius: 50%;
+
+  &:before {
+    content: '';
+    background: rgba($primary, 0.2);
+    width: 39px;
+    height: 38px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+}
+
+.CalendarDay__firstDayOfWeek {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.CalendarDay__selected_end {
+  border-radius: 50%;
+
+  &:before {
+    content: '';
+    background: rgba($primary, 0.2);
+    width: 39px;
+    height: 38px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+}
+
+.CalendarDay__lastDayOfWeek {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.DayPicker_weekHeader_li {
+  font-size: px-to-rem(17);
+  font-weight: 500;
+  color: $black;
+}
+
+.CalendarMonth_caption {
+  font-size: px-to-rem(17);
+  font-weight: 500;
+  color: $black;
+  padding-bottom: 50px;
+}
+
+.DayPickerNavigation_button {
+  border: 1px solid transparent;
+  color: $primary;
+
+  &:hover {
+    border-color: $primary;
+  }
+}
+
+.DayPickerNavigation_svg__horizontal {
+  fill: $primary;
+}
+
+.DayPickerNavigation__verticalDefault {
+  bottom: -45px;
+}
+
+.DayPicker {
+  @include media-breakpoint-down(xs) {
+    width: auto !important;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      & > div:first-child {
+        flex: 1;
+      }
+    }
+  }
+}

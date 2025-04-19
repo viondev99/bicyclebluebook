@@ -1,0 +1,148 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.giftCardInfoContainer {
+  padding: 20px 40px 30px;
+
+  h1 {
+    font-size: $h3_font_size;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $light-black;
+    line-height: 120%;
+    margin-bottom: 34px;
+  }
+
+  .balance {
+    @extend .fs22;
+    color: $pacific-blue;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 120%;
+  }
+  .activity {
+    @extend .fs22;
+    color: $pacific-blue;
+    font-weight: 500;
+    margin-bottom: 26px;
+    line-height: 120%;
+  }
+  .valueBalance {
+    font-size: px-to-rem(46);
+    color: $primary;
+    font-weight: 700;
+    margin-bottom: 26px;
+    line-height: 120%;
+  }
+  .item {
+    margin-bottom: 16px;
+    @extend .fs22;
+    color: $light-black;
+    font-weight: 500;
+    line-height: 120%;
+    .valueRedeemed {
+      display: flex;
+      justify-content: flex-end;
+      color: $primary !important;
+    }
+    .valueAvailed {
+      display: flex;
+      justify-content: flex-end;
+      color: $warning !important;
+    }
+  }
+
+  .type {
+    font-size: px-to-rem(14);
+    color: $grey;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .rowBtn {
+    display: flex;
+    justify-content: flex-end;
+    .button {
+      color: $primary;
+      font-weight: 500;
+      line-height: 120%;
+      img {
+        width: 25px;
+        height: 25px;
+        min-width: 25px;
+        min-height: 25px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.icDisableConnectStripe {
+  cursor: pointer;
+  position: relative;
+  left: 11.3rem;
+  top: 5px;
+}
+
+.textInfo {
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 120%;
+  color: $lightest-grey;
+}
+
+.wrapListGiftCard {
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba($lightest-grey, 0.2);
+  margin-bottom: 50px;
+
+  &:last-child {
+    padding-bottom: unset;
+    border-bottom: unset;
+    margin-bottom: unset;
+  }
+}
+
+.customPagination {
+  margin-top: 60px !important;
+}
+
+.notFoundText {
+  font-size: px-to-rem(22);
+  line-height: 180%;
+  color: $lightest-grey;
+  font-style: italic;
+  text-align: center;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.giftCardCode {
+  @extend .fs22, .textInfo;
+  margin-bottom: 24px;
+}
+
+.textLink {
+  color: $primary;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

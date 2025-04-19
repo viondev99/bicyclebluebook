@@ -1,0 +1,628 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.gridView {
+  padding: 14px 16px 25px 16px !important;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+    transition: transform 0.5s;
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 12px 12px 20px 12px !important;
+  }
+  .bikeImage {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    border-radius: $border-radius;
+    object-fit: cover;
+    background-color: $light-grey;
+  }
+
+  .bikeContent {
+    padding: 0 10px;
+
+    .bikeName {
+      margin-top: 25px;
+      margin-bottom: 8px;
+      color: $black;
+      height: px-to-rem(29);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: px-to-rem(18);
+      line-height: px-to-rem(29);
+      font-weight: bold;
+      @include media-breakpoint-down(lg) {
+        margin-top: 22px;
+        margin-bottom: 3px;
+      }
+    }
+
+    .bikeType {
+      color: $grey;
+      min-height: 19px;
+      font-size: px-to-rem(17);
+      line-height: $p_font_size;
+      opacity: 0.8;
+      margin-bottom: 34px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .priceContent {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      min-height: 26px;
+
+      .bikePrice {
+        position: relative;
+        font-family: 'Rubik', sans-serif;
+        color: $primary;
+        font-size: px-to-rem(22);
+        line-height: 48px;
+        font-weight: 500;
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .bikePriceDiscounted {
+          position: absolute;
+          top: 10px;
+          color: $warning;
+          font-size: px-to-rem(16) !important;
+          line-height: 16px;
+          font-weight: 500;
+          flex: 1;
+          min-width: 0;
+          margin: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-decoration: line-through;
+
+          @include media-breakpoint-down(lg) {
+            left: unset !important;
+            top: 35px;
+          }
+          @include media-breakpoint-down(sm) {
+            left: unset !important;
+            top: 33px;
+            font-size: px-to-rem(14) !important;
+          }
+        }
+      }
+
+      .bbbBadge {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 0 0 15px;
+        margin: 0 -5px;
+
+        img {
+          margin: 0 5px;
+          width: 31px;
+          height: 20px;
+        }
+      }
+    }
+
+    .buttonGroup {
+      border-top: 1px solid rgba($grey, 0.1);
+      padding-top: 5px;
+      margin-top: 5px;
+      margin-bottom: -5px;
+    }
+    .buttonActions {
+      font-size: px-to-rem(17);
+    }
+  }
+}
+.listView {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+    transition: transform 0.5s;
+  }
+
+  .bikeImage {
+    width: 137px;
+    margin-right: 10px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .bikeContent {
+    display: flex;
+    flex: 1;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .bikeInformation {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+    .bikePrice {
+      margin: 0 20px;
+      color: $primary;
+      font-size: $p_font_size;
+      line-height: px-to-rem(26);
+      font-weight: 500;
+      align-self: center;
+    }
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      .bikePrice {
+        margin: 15px 0 0;
+        align-self: stretch;
+      }
+    }
+  }
+
+  .bikeMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-right: 10px;
+    min-width: 0;
+  }
+
+  .bikeName {
+    color: $black;
+    height: px-to-rem(29);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: $p_font_size;
+    line-height: px-to-rem(29);
+    font-weight: bold;
+  }
+
+  .bikeType {
+    color: $grey;
+    font-size: px-to-rem(17);
+    line-height: $p_font_size;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .buttonGroup {
+    margin: 0 20px;
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonActions {
+    font-size: px-to-rem(17);
+  }
+  .bikeBadge {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    img {
+      margin: 0 5px;
+    }
+  }
+}
+
+._imgSoldAsIs {
+  position: absolute;
+  background-image: url(../../../assets/img/marketplace/ic_sold_as_is.svg);
+  font-weight: bold;
+  font-size: px-to-rem(14);
+  line-height: 23px;
+  text-align: right;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+
+  @include media-breakpoint-down(lg) {
+    width: 119px;
+    height: 34px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgBBBDirectBadgeView {
+  @extend ._imgSoldAsIs;
+  top: 5.5%;
+  right: 1.8rem;
+  width: 104px;
+  height: 32px;
+
+  @include media-breakpoint-down(lg) {
+    width: 105px;
+    height: 29px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 95px;
+    height: 25px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgSoldAsIsCardView {
+  @extend ._imgSoldAsIs;
+  top: 5.5%;
+  right: 0%;
+  width: 125px;
+  height: 30px;
+
+  @include media-breakpoint-down(lg) {
+    width: 105px;
+    height: 29px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 95px;
+    height: 25px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgBestDealDes {
+  position: absolute;
+  background-image: url(../../../assets/img/marketplace/ic_sold_as_is.svg);
+  font-weight: bold;
+  font-size: px-to-rem(14);
+  line-height: 23px;
+  text-align: left;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transform: rotate(180deg);
+
+  @include media-breakpoint-down(lg) {
+    width: 119px;
+    height: 34px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgBestDeal {
+  position: absolute;
+  background-image: url(../../../assets/img/marketplace/img_sold_as_is.png);
+  font-weight: bold;
+  font-size: px-to-rem(14);
+  line-height: 23px;
+  text-align: left;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transform: rotate(180deg);
+
+  @include media-breakpoint-down(lg) {
+    width: 119px;
+    height: 34px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgBBBDes {
+  position: absolute;
+  background-image: url(../../../assets/img/marketplace/ic_sold_as_is.svg);
+  font-weight: bold;
+  font-size: px-to-rem(14);
+  line-height: 23px;
+  text-align: left;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transform: rotate(180deg);
+
+  @include media-breakpoint-down(lg) {
+    width: 119px;
+    height: 34px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgBestDealCardViewDes {
+  @extend ._imgBestDealDes;
+  top: 5.5%;
+  right: 10rem;
+  width: 104px;
+  height: 32px;
+
+  @include media-breakpoint-down(lg) {
+    width: 104px;
+    height: 32px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 104px;
+    height: 32px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgBestDealCardOnlyViewDes {
+  @extend ._imgBestDealDes;
+  top: 5.5%;
+  right: 1.8rem;
+  width: 104px;
+  height: 32px;
+
+  @include media-breakpoint-down(lg) {
+    width: 104px;
+    height: 32px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 104px;
+    height: 32px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgBBBDirectBadge {
+  @extend ._imgBBBDes;
+  top: 5.5%;
+  right: 1.8rem;
+  width: 104px;
+  height: 32px;
+
+  @include media-breakpoint-down(lg) {
+    width: 104px;
+    height: 32px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 104px;
+    height: 32px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgSoldAsIsAndOnsaleDes {
+  @extend ._imgBestDealDes;
+  top: 5.5%;
+  right: 1.8rem;
+  width: 104px;
+  height: 32px;
+
+  @include media-breakpoint-down(lg) {
+    width: 104px;
+    height: 32px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 104px;
+    height: 32px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+.badgeComingSoon {
+  width: 116px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $warning;
+  border-radius: 90px;
+  position: absolute;
+  z-index: 3;
+  color: $white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: px-to-rem(14);
+  line-height: 23px;
+  right: 1.8rem;
+  top: 5.5%;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  &.badgeComingSoonListView {
+    right: 0;
+    top: 35%;
+  }
+}
+
+._imgBestDealCardView {
+  @extend ._imgBestDeal;
+  top: 5.5%;
+  right: 0%;
+  width: 125px;
+  height: 30px;
+
+  @include media-breakpoint-down(lg) {
+    width: 105px;
+    height: 29px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 95px;
+    height: 25px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+._imgSoldAsIsAndOnsale {
+  @extend ._imgBestDeal;
+  top: 16.5%;
+  right: 0%;
+  width: 125px;
+  height: 30px;
+
+  @include media-breakpoint-down(lg) {
+    width: 105px;
+    height: 29px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 95px;
+    height: 25px;
+    font-size: px-to-rem(16);
+    line-height: 21px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.backDropSoAsIs {
+  background: $white;
+  position: absolute;
+  display: block;
+  box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px;
+  top: -120px;
+  padding: 20px;
+  z-index: 100;
+  width: 180px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+
+  @include media-breakpoint-down(sm) {
+    top: -90px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgb(255, 255, 255);
+    clear: both;
+  }
+}
+
+.backDropSoAsIsLeft {
+  @extend .backDropSoAsIs;
+  right: 60px;
+
+  @include media-breakpoint-down(sm) {
+    right: 40px;
+  }
+
+  &::after {
+    left: 80%;
+  }
+}
+
+.backDropSoAsIsRight {
+  @extend .backDropSoAsIs;
+  right: -115px;
+
+  &::after {
+    left: 10%;
+  }
+}
+
+.backDropSoAsIsRightTypeList {
+  @extend .backDropSoAsIs;
+  top: -135px;
+
+  &::after {
+    left: 63%;
+  }
+}
+
+._imgSoldAsIsListView {
+  @extend ._imgBestDealDes;
+  transform: rotate(0deg);
+  // left: 8.5rem;
+  right: 0;
+  top: 5%;
+  width: 104px;
+  height: 32px;
+}
+
+._imgSoldAsIsCardViewRow {
+  @extend ._imgBestDealDes;
+  transform: rotate(0deg) !important;
+  // left: 16.5rem;
+  right: 0;
+  top: 35%;
+  width: 104px;
+  height: 32px;
+}
+
+.bikeListPriceDiscounted {
+  margin-left: 20px !important;
+  color: $warning;
+  font-size: px-to-rem(16);
+  line-height: 16px;
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: line-through;
+
+  @include media-breakpoint-down(lg) {
+    left: unset;
+    top: 35px;
+  }
+}
+
+.wrapBikePrice {
+  display: flex;
+  align-items: center;
+}

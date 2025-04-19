@@ -1,0 +1,15 @@
+@import 'src/assets/css/variable';
+
+.tabs {
+  @include media-breakpoint-down(lg) {
+    margin: 0px;
+  }
+
+  .tabBar {
+    font-size: $h3_font_size;
+    @include media-breakpoint-down(lg) {
+      font-size: $p_font_size;
+      height: 45px;
+    }
+  }
+}

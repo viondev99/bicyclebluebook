@@ -1,0 +1,134 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs36 {
+  font-size: px-to-rem(36);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(28);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(26);
+  }
+}
+
+.fs28 {
+  font-size: px-to-rem(28);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.container {
+  align-items: center;
+  padding: 84px 50px;
+  @include media-breakpoint-down(lg) {
+    padding: 84px 10px;
+  }
+}
+
+.customSeoH1 {
+  letter-spacing: 0.5px;
+  font-size: px-to-rem(24);
+  color: $light-black;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 30px;
+  line-height: 180%;
+  max-height: 0.1px;
+  opacity: 0;
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(18);
+  }
+}
+
+.customArrowDropdown {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  @media (max-width: 767px) {
+    justify-content: center;
+    margin-top: 80px;
+  }
+  .arrowDropdown {
+    margin-top: 80px;
+    opacity: 0.6;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      margin-top: 0;
+    }
+  }
+  .rotage {
+    transform: rotate(180deg);
+    margin-top: 90px;
+    opacity: 0.6;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      margin-top: 0;
+    }
+  }
+}
+
+.wrapSEOPage {
+  margin-top: 100px;
+  @media (max-width: 767px) {
+    margin-top: 90px;
+  }
+}
+.SEOContainer {
+  margin: -40px 0 90px 0;
+  @include media-breakpoint-up(xl) {
+    padding-right: 400px;
+  }
+  @media (max-width: 767px) {
+    margin-top: -20px;
+  }
+
+  .h1ClassName {
+    @extend .fs46;
+    line-height: 120%;
+  }
+  .h2ClassName {
+    @extend .fs36;
+    line-height: 120%;
+  }
+  .h3ClassName {
+    @extend .fs28;
+    line-height: 120%;
+  }
+  div {
+    @extend .fs22;
+    line-height: 180%;
+    color: $lightest-grey;
+  }
+}

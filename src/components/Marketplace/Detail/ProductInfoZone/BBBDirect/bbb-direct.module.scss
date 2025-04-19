@@ -1,0 +1,21 @@
+@import 'src/assets/css/variable';
+
+.contain {
+  @include media-breakpoint-down(lg) {
+    padding: 0px 10px;
+  }
+
+  .title {
+    font-size: $p_font_size;
+    font-weight: 500;
+    color: $black;
+    line-height: 120%;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    font-size: $p_font_size;
+    color: $grey;
+    line-height: 180%;
+  }
+}

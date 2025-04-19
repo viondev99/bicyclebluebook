@@ -1,0 +1,194 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.groupBtnModal {
+  .btnNo {
+    margin-right: 10px;
+  }
+}
+.inputCounter {
+  margin: 10px 0px;
+}
+
+.resizeModal {
+  padding: 32px;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.messageForm {
+  margin: 16px 0;
+}
+
+.groupBtnRetract {
+  width: 100%;
+  .retract {
+    margin-right: 10px;
+  }
+}
+
+.contentModal {
+  color: $grey;
+  text-align: left;
+  font-size: px-to-rem(22) !important;
+  .avatar {
+    width: 75px;
+    object-fit: cover;
+    margin-right: 26px;
+  }
+  .label {
+    margin: 10px 0;
+    color: $black;
+    font-size: px-to-rem(18);
+  }
+}
+
+.inputChangeOffer {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  .title {
+    color: $black;
+    font-size: $p_font_size;
+    margin-right: 46px;
+  }
+}
+.footerModalCounter {
+  margin-top: 22px;
+  width: 100%;
+}
+.groupFooter {
+  width: 100%;
+  .btnCancel {
+    margin-right: 32px;
+  }
+}
+.selectReason {
+  margin: 36px 0px;
+}
+
+.calculateMargin {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+  color: $primary;
+  white-space: nowrap;
+  margin: 10px 0px;
+  padding: 0;
+}
+
+.customInputNumber::-webkit-outer-spin-button,
+.customInputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.customInputNumber[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.buyerOffer {
+  color: $black;
+}
+
+.titleOffer {
+  margin-right: 100px;
+  @media (max-width: 1024px) and (min-width: 768px) {
+    margin-right: 70px;
+  }
+}
+
+.titleOfferPersonal {
+  margin-right: 128px;
+  @media (max-width: 1024px) and (min-width: 768px) {
+    margin-right: 100px;
+  }
+  @media (max-width: 767px) {
+    margin-right: 80px;
+  }
+}
+
+.titleOfferBBB {
+  margin-right: 80px;
+  @media (max-width: 1024px) and (min-width: 768px) {
+    margin-right: 55px;
+  }
+  @media (max-width: 767px) {
+    margin-right: 80px;
+  }
+}
+
+.wrapFooter {
+  @include media-breakpoint-up(md) {
+    position: relative;
+    display: flex;
+
+    .wrapBtnCounter {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+.modal {
+  max-width: 729px;
+  @media (max-width: 1024px) and (min-width: 768px) {
+    max-width: 618px;
+  }
+}
+
+.customMargin {
+  margin-left: 115px;
+  @media (max-width: 1024px) and (min-width: 768px) {
+    margin-left: 90px;
+  }
+  @media (max-width: 767px) {
+    margin-left: 21px;
+  }
+}
+
+.btnYes {
+  align-items: center;
+}
+
+.modalContainer {
+  @include media-breakpoint-up(md) {
+    width: 564px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 674px;
+  }
+}
+.actions {
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+}
+
+.btnCancel {
+  @include media-breakpoint-down(sm) {
+    max-width: 165px;
+  }
+}
+
+.btnClear {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+    max-width: 110px;
+    margin-top: 20px;
+  }
+  @include media-breakpoint-between(md, lg) {
+    display: block;
+    margin-left: 20px;
+  }
+}

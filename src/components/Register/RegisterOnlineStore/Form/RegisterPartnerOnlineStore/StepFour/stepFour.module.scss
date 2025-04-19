@@ -1,0 +1,120 @@
+@import 'src/assets/css/variable';
+
+.formItem {
+  &:nth-of-type(1) {
+    margin-top: 36px;
+  }
+
+  margin-top: 18px;
+}
+
+.company_img {
+  width: 101px;
+  height: 101px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $input-bg;
+  overflow: hidden;
+  p {
+    font-size: px-to-rem(15);
+    color: #6e7785;
+    opacity: 0.4;
+    line-height: px-to-rem(20);
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.inputFile {
+  color: transparent;
+  width: 100px;
+}
+
+.inputFile::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.inputFile::before {
+  content: 'Choose file';
+  color: $primary;
+  display: inline-block;
+  padding: 5px 8px;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-top: 55px;
+}
+
+.checkboxText {
+  color: $grey;
+  font-weight: 500;
+  line-height: px-to-rem(20);
+  font-size: px-to-rem(15);
+  a {
+    color: $primary;
+    font-size: px-to-rem(15);
+  }
+}
+
+.btn {
+  padding: 16px 26px;
+  margin-top: 33px;
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.label_col {
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 12px;
+  }
+}
+.input_col {
+  align-items: right;
+  @include media-breakpoint-up(lg) {
+    padding-left: 15px;
+  }
+}
+.input {
+  max-width: 485px;
+  width: 100%;
+}
+
+.btn {
+  float: left;
+  margin-top: 48px;
+  @include media-breakpoint-down(sm) {
+    float: right;
+  }
+}
+
+.divider {
+  margin-top: 50px;
+  margin-left: -53px;
+  margin-right: -53px;
+  @include media-breakpoint-down(sm) {
+    display: none;
+    margin-top: 0;
+  }
+}
+
+.checkBox {
+  display: flex;
+  margin-top: 48px;
+  @include media-breakpoint-down(sm) {
+    margin-top: 36px;
+  }
+
+  input {
+    margin-top: 10px;
+  }
+}

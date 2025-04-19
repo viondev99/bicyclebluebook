@@ -1,0 +1,58 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.listProductRow {
+  margin: 0 -9px;
+
+  :global([class*='col-']) {
+    padding: 0 9px 18px;
+  }
+}
+
+.wishlistButton {
+  font-size: $p_font_size;
+}
+
+.noProduct {
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 20px;
+  .title {
+    max-width: 550px;
+    color: $black;
+    margin: 0 auto;
+  }
+
+  .paragraph {
+    margin-top: 30px;
+    color: $grey;
+  }
+}
+
+// .xxlProduct {
+//   @media screen and (min-width: 1400px) {
+//     flex: 0 0 25%;
+//     max-width: 25%;
+//   }
+// }
+
+.customSeoH1 {
+  letter-spacing: 0.5px;
+  font-size: px-to-rem(24);
+  color: $light-black;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 30px;
+  line-height: 180%;
+  max-height: 0.1px;
+  opacity: 0;
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(18);
+  }
+}

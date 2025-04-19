@@ -1,0 +1,154 @@
+@import 'src/assets/css/variable';
+
+.paymentCard.paymentCard {
+  display: block;
+  padding: 0;
+  @include media-breakpoint-down(sm) {
+    background: transparent;
+  }
+  .paymentMethodGroup {
+    padding: 50px;
+    @include media-breakpoint-down(md) {
+      padding: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 15px;
+      background: $white;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+  }
+  .paymentMethodGroupNoLogin {
+    padding: 50px 0;
+    @include media-breakpoint-down(md) {
+      padding: 30px 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 15px 0;
+      background: $white;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+  }
+  hr {
+    border-width: 1px !important;
+    @include media-breakpoint-down(sm) {
+      border: none !important;
+    }
+  }
+  .or {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+    font-weight: 500;
+    font-size: px-to-rem(16);
+    line-height: 120%;
+    color: $black;
+  }
+}
+.paymentRadio {
+  :global(.label) {
+    font-weight: 500;
+    font-size: px-to-rem(18);
+    color: $black;
+    line-height: 120%;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.imageGroup {
+  display: flex;
+  margin: 0 -10px;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  img {
+    margin: 0 10px;
+    width: 45px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.labelGroup {
+  display: flex;
+  // flex-wrap: wrap;
+  .label {
+    line-height: 55px;
+    flex-basis: 200px;
+    flex-shrink: 1;
+    font-weight: 500;
+    font-size: $p_font_size;
+  }
+
+  .labelApartment {
+    flex-basis: 200px;
+    flex-shrink: 1;
+    font-weight: 500;
+    font-size: $p_font_size;
+  }
+
+  .inputWrapper {
+    flex-grow: 1;
+    flex-basis: 350px;
+  }
+  .control {
+    flex: 1;
+    font-size: px-to-rem(18) !important;
+  }
+  @include media-breakpoint-down(sm) {
+    display: unset;
+  }
+}
+
+.customHrr {
+  margin: 20px -50px 50px -50px;
+}
+
+.customButtonPaymentByGoogleApplePay {
+  background-color: black !important;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  max-height: 40px !important;
+  min-height: 40px !important;
+}
+
+.stateSelect {
+  :global(.select__control) {
+    :global(.select__value-container) {
+      :global(.select__single-value) {
+        font-size: px-to-rem(18) !important;
+      }
+    }
+  }
+}
+
+.titleImg {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 120%;
+  color: $light-black;
+  cursor: pointer;
+  margin-bottom: 16px;
+  margin-top: 10px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 16px;
+  }
+}
+
+.labelImg {
+  margin-left: 14px;
+}

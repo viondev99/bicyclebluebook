@@ -1,0 +1,303 @@
+@import 'src/assets/css/variable';
+
+.cover {
+  background-color: $light-grey;
+  position: relative;
+  background-image: url('../../assets/img/sell/bg_sellbg.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  @include media-breakpoint-between(sm, lg) {
+    background-position: right 60px top 157px;
+    background-size: auto;
+    background-image: url('../../assets/img/sell/bg_sell_md.png');
+    h1 {
+      font-size: px-to-rem(48);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 100px;
+    background-position: center bottom 0;
+    padding-bottom: 510+120px;
+    background-size: 510px;
+    background-image: url('../../assets/img/sell/bg_sell_md.png');
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 115%;
+    background-size: calc(100% - 30px);
+  }
+
+  .sectionContainer {
+    padding-top: 240px;
+    padding-bottom: 215px;
+    z-index: 100;
+    position: static;
+    @include media-breakpoint-down(lg) {
+      padding-top: 240px;
+      padding-bottom: 45px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 55px;
+      padding-bottom: 45px;
+      h1 {
+        margin-bottom: 30px;
+      }
+    }
+    .learn_more_text {
+      letter-spacing: 0.24em;
+      cursor: pointer;
+      margin: 30px 0px 0px 10px;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .heroCover {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+
+  .siteTitle {
+    max-width: 563px;
+    text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.section {
+  scroll-behavior: smooth;
+  padding: 95px 0;
+  background: $light-grey;
+  :global(.swiper-pagination-bullet-active) {
+    background: $primary;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+  :global(.swiper-pagination) {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 10px 45px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    :global(.swiper-container) {
+      margin-right: -15px;
+      margin-left: -15px;
+      padding: 0 15px;
+    }
+    padding: 0 15px;
+    margin-top: 50px;
+  }
+  :global(.swiper-container) {
+    padding-bottom: 40px;
+  }
+}
+
+.valueGuide {
+  .valueGuideImage {
+    width: 100%;
+    margin-top: -10px;
+  }
+
+  .images {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    font-size: px-to-rem(14);
+    text-transform: uppercase;
+    color: $primary;
+    letter-spacing: 0.24em;
+  }
+
+  .title {
+    margin-top: 8px;
+    font-size: $h2_font_size;
+    line-height: 120%;
+    font-weight: bold;
+  }
+
+  .content {
+    margin-top: 26px;
+    font-size: $p_font_size;
+    line-height: 180%;
+    color: $grey;
+  }
+
+  .button {
+    margin-top: 26px;
+  }
+}
+.recommend {
+  .recommendCard {
+    padding: 40px;
+    @include media-breakpoint-down(sm) {
+      padding: 35px;
+    }
+  }
+  color: $grey;
+}
+.benefitContent {
+  overflow: hidden;
+  background-image: url('../../assets/img/home/bg_benefit.svg');
+  background-position: bottom right;
+  background-position: 100% 80%;
+  background-repeat: no-repeat;
+  background-size: 92% 80%;
+  @include media-breakpoint-between(sm, lg) {
+    background-size: calc(100% + 200px) calc(100% - 100px);
+    background-position: 75px bottom;
+    padding: 0px 0px 20px 0px;
+  }
+  @include media-breakpoint-down(sm) {
+    background-size: calc(100% + 200px) calc(100% - 80px);
+    background-position: 20px bottom;
+    padding-bottom: 20px;
+    margin-top: 0px;
+  }
+  .titleBox {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    img {
+      width: 37px;
+      margin-right: 25px;
+    }
+    h4 {
+      font-size: px-to-rem(22);
+      margin: 0px;
+    }
+  }
+  .btnNext {
+    position: absolute;
+    right: -120px;
+    top: 35%;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .btnPre {
+    position: absolute;
+    left: -120px;
+    transform: scale(-1, 1);
+    top: 35%;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
+
+.benefit {
+  .benefitCard {
+    padding: 62px 54px;
+    height: 100%;
+    @include media-breakpoint-down(sm) {
+      padding: 44px 34px;
+      padding: 18px;
+      width: 100%;
+    }
+  }
+
+  .benefits {
+    position: relative;
+    margin-top: 60px;
+    height: 100%;
+    padding: 0 100px;
+    @include media-breakpoint-down(lg) {
+      //margin-right: 0px !important;
+      padding: 0px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: auto;
+      padding: 0px;
+    }
+  }
+
+  .contentTitle {
+    font-size: $h3_font_size;
+    color: $black;
+    margin-top: 28px;
+    span {
+      color: $grey;
+    }
+    @include media-breakpoint-down(sm) {
+      margin: 0px 0px 0px 10px;
+
+      font-size: $p_font_size;
+    }
+  }
+
+  .content {
+    font-size: $p_font_size;
+    color: $grey;
+    line-height: 180%;
+    margin-top: 28px;
+    margin-bottom: 0;
+  }
+
+  .benefitDescription {
+    max-width: 611px;
+    font-size: $p_font_size;
+    text-align: center;
+    margin: 56px auto 0;
+    color: $grey;
+  }
+}
+
+.miniTitle {
+  font-size: px-to-rem(14);
+  text-transform: uppercase;
+  color: $primary;
+  letter-spacing: 0.24em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dragRecommend {
+  color: $medium-grey;
+  font-size: $p_font_size;
+  line-height: 180%;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  img {
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+  }
+}
+.label {
+  color: $primary;
+}
+
+.swiperWrapper {
+  position: relative;
+
+  .swiperSlideHint {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, #f3f3f5 0%, rgba(243, 243, 245, 0) 100%);
+    width: 185px;
+    z-index: 9;
+    pointer-events: none;
+  }
+}

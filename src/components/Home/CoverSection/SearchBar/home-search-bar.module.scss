@@ -1,0 +1,191 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.searchGroup {
+  margin-top: 26px;
+  display: flex;
+
+  @include media-breakpoint-down(md) {
+    width: 93%;
+    height: 63px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 26px;
+  }
+}
+
+.searchSelect {
+  width: 176px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 1px solid $light-grey;
+  min-width: 176px;
+
+  :global(.select__control) {
+    border-radius: 66.0488px 0 0 66.0488px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    :global(.select__value-container) {
+      margin-left: 10px !important;
+    }
+
+    @include media-breakpoint-down(md) {
+      box-shadow: 0px 32px 42px rgba(110, 119, 133, 0.2);
+    }
+  }
+  :global(.select__menu) {
+    margin: 0 !important;
+
+    @include media-breakpoint-down(sm) {
+      top: 0;
+    }
+  }
+}
+
+.searchInput.searchInput {
+  width: 350px;
+  min-height: 63px !important;
+  border-radius: 0 66.0488px 66.0488px 0 !important;
+
+  @include media-breakpoint-down(lg) {
+    width: 300px;
+  }
+
+  @include media-breakpoint-down(md) {
+    box-shadow: 0px 32px 42px rgba(110, 119, 133, 0.2);
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    border-radius: 56px !important;
+    max-height: 55px !important;
+    min-height: 55px !important;
+    box-shadow: 0px 32px 42px rgba(110, 119, 133, 0.2);
+  }
+
+  @include media-breakpoint-down(xs) {
+    max-height: 51px !important;
+    min-height: 51px !important;
+    box-shadow: 0px 32px 42px rgba(110, 119, 133, 0.2);
+  }
+
+  :global(.renderSuffix) {
+    background: $primary;
+    padding: 16.5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include media-breakpoint-down(sm) {
+      padding: 10.5px;
+      background: $primary;
+    }
+
+    &:hover,
+    &:focus {
+      background: ligter;
+    }
+  }
+}
+
+.suffixButton {
+  @include reset-button;
+}
+
+.mobileDropdownGroup {
+  display: flex;
+  align-items: center;
+  .searchTitle {
+    color: $grey;
+    font-size: px-to-rem(16);
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+  .searchDropdown {
+    background: transparent;
+    border: none;
+    min-width: 180px;
+
+    @include media-breakpoint-down(sm) {
+      min-width: 140px;
+    }
+
+    :global(.select__control) {
+      border-radius: 66.0488px 0 0 66.0488px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+
+      :global(.select__value-container) {
+        // margin-left: 10px !important;
+      }
+    }
+    :global(.select__menu) {
+      margin: 0 !important;
+    }
+  }
+}
+
+.searchButton {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  padding: 0 25px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchIcon path {
+  fill: $white;
+}
+
+.autoCompleteWrapper {
+  position: absolute;
+  width: 350px;
+  top: 80px;
+  left: 185px;
+  right: 0;
+  background-color: $white;
+  box-shadow: $box-shadow;
+  border-radius: 10px;
+  z-index: 600;
+  padding: 10px 0px;
+
+  @include media-breakpoint-down(lg) {
+    width: 300px;
+  }
+  @include media-breakpoint-down(sm) {
+    top: 145px;
+    left: 0px;
+    width: 100%;
+  }
+
+  .notMatched {
+    color: $grey;
+    font-size: px-to-rem(18);
+    padding: 10px 25px;
+  }
+
+  .listContainer {
+    max-height: 300px;
+    overflow-y: auto;
+
+    .autocompleteItem {
+      cursor: pointer;
+      background-color: $white;
+      color: $black;
+      font-size: px-to-rem(18);
+      padding: 10px 25px;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}

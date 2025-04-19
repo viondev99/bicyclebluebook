@@ -1,0 +1,12 @@
+@import 'src/assets/css/variable';
+
+.container {
+  padding: 180px 0px 110px 0px;
+  @include media-breakpoint-down(sm) {
+    padding: 111px 28px;
+  }
+}
+.nextStep {
+  margin: 48px 0px;
+  text-align: center;
+}

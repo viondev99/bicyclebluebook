@@ -1,0 +1,291 @@
+@import 'src/assets/css/variable';
+
+.fs60 {
+  font-size: px-to-rem(60);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(48);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs24 {
+  font-size: px-to-rem(24);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.customCard {
+  border-radius: 10px;
+  padding: 60px;
+  background: white;
+
+  @include media-breakpoint-down(lg) {
+    padding: 46px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 22px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 22px;
+  }
+
+  .title {
+    font-size: px-to-rem(24);
+    margin-bottom: 32px;
+    font-weight: 700;
+    line-height: 120%;
+    color: $light-black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(22);
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+.textPrimary {
+  color: $primary;
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 29px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.wrapAction {
+  display: flex;
+  align-items: center;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $primary;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 28px;
+  }
+
+  &.mobileMb0 {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    margin-right: 18.73px;
+    min-width: 24.55px;
+    max-width: 24.55px;
+    min-height: 24.55px;
+    max-height: 24.55px;
+    cursor: pointer;
+  }
+}
+
+.customHr {
+  border: 1px solid rgba(110, 119, 133, 0.1);
+  margin: 65px 0;
+
+  @include media-breakpoint-down(lg) {
+    margin: 44px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 32px 0;
+  }
+}
+
+.formTitle {
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 21px;
+}
+
+.formDescription {
+  @extend .fs22;
+  line-height: 180%;
+  color: $lightest-grey;
+  margin-bottom: 28px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 22px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 16px;
+  }
+
+  &.mb0 {
+    margin-bottom: 0;
+  }
+}
+
+.viewMap {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+
+  &.error {
+    border: 1px solid $red;
+  }
+}
+
+.errorMessage {
+  color: $red;
+  margin-bottom: 0;
+  font-size: px-to-rem(16);
+  margin-top: 4px;
+}
+
+.wraFormDateTime {
+  position: relative;
+  z-index: 1;
+
+  .formDateTime {
+    width: 377px;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+    border-radius: 6px;
+    top: 30px;
+    padding: 43px;
+    border: none !important;
+
+    @media (max-height: 799px) {
+      top: -24vh;
+    }
+    @media (max-width: 940px) {
+      right: -1vh;
+    }
+
+    div {
+      div {
+        border: none !important;
+      }
+    }
+
+    .wrapCalendar {
+    }
+
+    .wrapSelect {
+      display: flex;
+      align-items: center;
+
+      .wrapTime {
+        div {
+          font-weight: 500;
+          font-size: px-to-rem(17);
+          line-height: 120%;
+          color: $light-black;
+
+          span {
+            color: $lightest-grey;
+          }
+        }
+      }
+    }
+
+    .wrapFormBottom {
+      margin-top: 22px;
+      display: flex;
+      justify-content: flex-end;
+
+      .actionCancel {
+        margin-right: 27px;
+        font-weight: 500;
+        font-size: px-to-rem(17);
+        line-height: 180%;
+        color: $lightest-grey;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+
+      .actionConfirm {
+        font-weight: 500;
+        font-size: px-to-rem(17);
+        line-height: 180%;
+        color: $primary;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.customHrFormDate {
+  border: 1px solid rgba(110, 119, 133, 0.1);
+  margin: 22px 0;
+}
+
+.width100 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.formSize {
+  width: 100%;
+}

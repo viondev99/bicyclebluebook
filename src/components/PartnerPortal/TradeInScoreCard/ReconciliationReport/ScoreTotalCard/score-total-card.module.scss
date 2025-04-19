@@ -1,0 +1,40 @@
+@import 'src/assets/css/variable';
+
+.card {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: $white;
+  border-radius: $card-border-radius;
+  padding: 22px 0 23px 46px;
+  margin-top: 18px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 25px 20px;
+    flex-direction: unset;
+  }
+
+  .rowDescription {
+    @include media-breakpoint-down(sm) {
+      margin-left: -100px;
+    }
+  }
+}
+
+.description {
+  font-size: px-to-rem(16);
+  line-height: 180%;
+  color: $primary;
+}
+
+.exportBtn {
+  margin: auto 0;
+  text-align: right;
+  padding: 0px;
+  @include media-breakpoint-down(sm) {
+    text-align: left;
+    padding-left: 16px;
+  }
+}

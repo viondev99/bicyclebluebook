@@ -1,0 +1,144 @@
+@import 'src/assets/css/variable';
+
+.title {
+  font-weight: bold;
+  font-size: $h1_font_size;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.intro {
+  font-size: $p_font_size;
+  line-height: 180%;
+  color: $grey;
+  text-align: center;
+  margin-bottom: 46px;
+}
+.containInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 130px;
+  .inputZipCode {
+    max-width: 249px;
+    background-color: $white !important;
+    margin-right: 16px;
+  }
+}
+.wrapSection {
+  border-radius: 10px;
+  padding: 60px;
+  opacity: 0.5;
+  pointer-events: none;
+  @include media-breakpoint-down(sm) {
+    padding: 23px 22px;
+  }
+  .subTitle {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: $h3_font_size;
+    margin-bottom: 28px;
+    img {
+      margin-right: 22px;
+    }
+  }
+}
+.isActive {
+  opacity: 1 !important;
+  pointer-events: initial !important;
+}
+.wrapSelects {
+  display: flex;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+  .select {
+    flex: 2;
+    padding-right: 31px;
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      padding: 0px;
+      margin-bottom: 12px;
+    }
+  }
+  .selectYear {
+    flex: 1;
+  }
+}
+.condition {
+  width: 100% !important;
+  border: 1px solid $lighter-grey;
+  padding: 30px 40px !important;
+  display: block;
+  height: auto !important;
+  text-align: left;
+  margin-bottom: 18px !important;
+  border: 1px solid $lighter-grey;
+  border-radius: 6px;
+  &:hover {
+    cursor: pointer;
+  }
+  .name {
+    color: $black;
+    font-weight: 500;
+    font-size: $p_font_size;
+  }
+  .content {
+    font-size: $p_font_size;
+    color: $grey;
+  }
+}
+
+.isChecked {
+  border: 2px solid $primary !important;
+}
+
+.description {
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $grey;
+}
+.price {
+  font-weight: bold;
+  font-size: $h2_font_size;
+  color: $primary;
+  margin: 10px 0px 28px 0px;
+}
+
+.resetBg {
+  background-color: transparent;
+  padding: 0px !important;
+}
+.wrapStep5 {
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .input {
+    margin-right: 35px;
+    width: 100%;
+    @include media-breakpoint-down(sm) {
+      margin: 0px 0px 12px 0px;
+    }
+  }
+  .titleStep5 {
+    font-weight: 500;
+    font-size: $p_font_size;
+    margin-right: 34px;
+    @include media-breakpoint-down(sm) {
+      margin: 0px 0px 12px 0px;
+    }
+  }
+  .findLocation {
+    min-width: 200px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 12px;
+    }
+  }
+}
+.completeSection6 {
+  max-width: 820px;
+  margin: 0 auto;
+}

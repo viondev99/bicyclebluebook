@@ -1,0 +1,421 @@
+@import 'src/assets/css/variable';
+
+.cardHorizontal {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px !important;
+  @include media-breakpoint-down(sm) {
+    padding: 20px 10px 20px 5px !important;
+    border-radius: 0px !important;
+  }
+
+  .selectContainer {
+    width: 160px;
+    @include media-breakpoint-down(sm) {
+      width: 120px;
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    align-items: center;
+
+    .searchButton {
+      margin-left: 20px;
+      @include media-breakpoint-down(sm) {
+        width: 45px;
+        height: 45px;
+        border-radius: 45px;
+        margin-left: 10px;
+      }
+
+      .searchIcon {
+        @include media-breakpoint-down(sm) {
+          width: 18px;
+        }
+      }
+    }
+  }
+}
+
+.paginationContainer {
+  display: flex;
+  align-items: center;
+
+  .pagination {
+    font-size: $p_font_size;
+    color: $grey;
+    margin-right: 20px;
+    white-space: nowrap;
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+      margin-right: 5px;
+    }
+  }
+
+  .paginationButton {
+    @include media-breakpoint-down(sm) {
+      width: 30px;
+      height: 45px;
+      border-radius: 45px;
+      padding: 0px;
+    }
+
+    .paginationIcon {
+      @include media-breakpoint-down(sm) {
+        width: 18px;
+      }
+    }
+  }
+}
+
+.cardSearch {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
+  @include media-breakpoint-down(sm) {
+    padding: 0px !important;
+    border-radius: 0px !important;
+  }
+
+  .formSearch {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    @include media-breakpoint-down(sm) {
+      margin: 0px -5px;
+    }
+  }
+
+  .inputSearch {
+    flex: 1;
+    margin-right: 10px;
+    @include media-breakpoint-down(sm) {
+      background-color: $white !important;
+      margin-right: 0px;
+    }
+  }
+
+  .inputSuffix {
+    font-size: 16px;
+    padding: 0px 20px;
+  }
+}
+
+.actionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  @include media-breakpoint-down(sm) {
+    padding: 20px;
+  }
+
+  .contentContainer {
+    display: flex;
+    align-items: center;
+
+    .selectContainer {
+      width: 160px;
+    }
+  }
+
+  .buttonDelete {
+    color: $red !important;
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
+
+    &:disabled {
+      color: $medium-grey !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
+.conversationContainer {
+  display: flex;
+  border-top: 1px solid rgba($grey, 0.1);
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .checkboxContainer {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    @include media-breakpoint-down(sm) {
+      top: 30px;
+      left: 20px;
+    }
+  }
+
+  .icFlag {
+    text-align: right;
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+
+    @include media-breakpoint-down(sm) {
+      bottom: 15px;
+    }
+    .icons {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      .icon {
+        width: 18px;
+        height: 18px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .conversationContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto !important;
+    padding: 20px 30px 20px 90px !important;
+    margin: 0px !important;
+    border-radius: 0px !important;
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      padding: 20px 20px 20px 60px !important;
+    }
+
+    .avatar,
+    .defaultAvatar {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      border-radius: 10px;
+      @include media-breakpoint-down(sm) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    .defaultAvatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: px-to-rem(32);
+      background: $primary;
+      color: $white;
+      @include media-breakpoint-down(sm) {
+        font-size: px-to-rem(28);
+      }
+    }
+
+    .infoConversation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      height: 50px;
+      margin-left: 20px;
+      overflow: hidden;
+      @include media-breakpoint-down(sm) {
+        height: 65px;
+        margin-left: 10px;
+      }
+
+      .usernameContainer {
+        display: flex;
+        align-items: center;
+
+        .username {
+          display: block;
+          font-size: px-to-rem(20);
+          font-weight: bold;
+          text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: $black;
+          @include media-breakpoint-down(sm) {
+            font-size: 14px;
+          }
+        }
+
+        .badgeMessage {
+          display: inline-block;
+          width: 12px;
+          min-width: 12px;
+          height: 12px;
+          min-height: 12px;
+          margin-left: 10px;
+          border-radius: 12px;
+          background-color: $primary;
+          @include media-breakpoint-down(sm) {
+            width: 8px;
+            min-width: 8px;
+            height: 8px;
+            min-height: 8px;
+            border-radius: 8px;
+          }
+        }
+      }
+
+      .product {
+        display: inline-block;
+        font-size: px-to-rem(18);
+        font-weight: 500;
+        color: $medium-grey;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include media-breakpoint-down(md) {
+          max-width: 200px;
+        }
+        @include media-breakpoint-down(sm) {
+          max-width: 120px;
+          font-size: 12px;
+        }
+      }
+
+      .icons {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        .icon {
+          width: 18px;
+          height: 18px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .infoMaxWidth {
+      max-width: 100px;
+      @include media-breakpoint-down(sm) {
+        max-width: 80px;
+      }
+    }
+  }
+}
+
+.deleteConversationModal {
+  width: 500px;
+  .description {
+    font-size: $p_font_size;
+    color: $grey;
+    margin-bottom: 40px;
+  }
+}
+
+.emptyMessage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px 20px;
+  font-size: $p_font_size;
+  font-weight: bold;
+  color: $grey;
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+    padding: 10px 20px 20px;
+  }
+}
+
+.moreActions {
+  width: 5px;
+  height: 23px;
+  @include media-breakpoint-down(sm) {
+    width: 3px;
+    height: 20px;
+  }
+}
+
+.date {
+  width: 100%;
+  line-height: 26px;
+  font-size: px-to-rem(18);
+  font-weight: 500;
+  text-align: right;
+  color: $black;
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+  }
+}
+.icAction {
+  width: 16px;
+  height: 18px;
+  margin-right: 15px;
+}
+
+.actionsContainer {
+  width: 0px;
+  position: relative;
+
+  .actionsContent {
+    box-shadow: 0px 34px 94px rgba($grey, 0.25);
+    background-color: $white;
+    border-radius: 6px;
+    position: absolute;
+    top: -10px;
+    left: -180px;
+    overflow: hidden;
+    z-index: 1;
+
+    .buttonAction {
+      width: 238px;
+      margin: 0px;
+      padding: 20px 30px;
+      border-radius: 0px;
+      justify-content: flex-start;
+      font-size: px-to-rem(18);
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}
+
+.resizeModal {
+  width: 696px;
+}
+
+.modalReportUserText {
+  font-size: $p_font_size;
+  color: $light-black;
+}
+
+.modalReportUserErrorText {
+  text-align: left;
+  color: $danger;
+  font-size: px-to-rem(13);
+  margin-bottom: 4px;
+}
+
+.footerModelDeactivate {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 20px;
+  .btnSubmit {
+    background: $primary;
+    margin-right: 16px;
+  }
+
+  .btnCancel {
+    background: $white;
+    color: $grey;
+    border-radius: 6px;
+    border: solid 1px $grey;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,18 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.reactivateModal {
+  width: 760px;
+
+  .description {
+    font-size: $p_font_size;
+    color: $grey;
+    line-height: 180%;
+  }
+
+  .buttonGroup {
+    button {
+      margin-right: 20px;
+    }
+  }
+}

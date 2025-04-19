@@ -1,0 +1,49 @@
+@import 'src/assets/css/variable';
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 50px;
+    height: auto;
+  }
+  .title {
+    max-width: 90%;
+    margin-top: 28px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 0;
+    }
+  }
+
+  .content {
+    display: block;
+    @include media-breakpoint-down(md) {
+      display: flex;
+    }
+  }
+  .description {
+    color: $grey;
+    @include media-breakpoint-down(md) {
+      margin-top: 0;
+      margin-left: 100px;
+    }
+  }
+  .button {
+    margin-top: 28px;
+    width: 187px;
+    @include media-breakpoint-down(md) {
+      margin-top: 0;
+      margin-left: 100px;
+    }
+  }
+
+  .icon {
+    min-width: 100px;
+    @include media-breakpoint-down(lg) {
+      height: 80px;
+    }
+  }
+}

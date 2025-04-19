@@ -1,0 +1,205 @@
+@import 'src/assets/css/variable';
+
+.dealerNearYouWrap {
+  padding-top: 131px;
+}
+
+.titleDealer {
+  margin-bottom: 73px;
+  font-size: $h2_font_size;
+  font-weight: bold;
+}
+
+.searchDealer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: $p_font_size;
+  padding: 40px !important;
+
+  .titleSearch {
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  .select {
+    width: 227px;
+    height: 65px;
+    @include media-breakpoint-down(lg) {
+      width: 150px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+  .groupSearch {
+    display: flex;
+    align-items: center;
+
+    .inputSearch {
+      width: 227px;
+      height: 65px;
+      @include media-breakpoint-down(lg) {
+        width: 170px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+
+    .btnSearch {
+      margin-left: 22px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 15px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px !important;
+  }
+}
+
+.listDealerContain {
+  padding: 40px !important;
+  max-height: 351px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.wrapInfo {
+  display: unset !important;
+  justify-content: unset !important;
+  width: 100%;
+}
+
+.dealerInfoItem {
+  display: block;
+  height: auto !important;
+  width: auto;
+  text-align: left;
+  margin-bottom: 37px !important;
+  width: 100%;
+
+  &:hover {
+    background: $light-grey;
+  }
+
+  .nameDealer {
+    font-size: px-to-rem(22);
+    font-weight: 500;
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+  }
+
+  .wrapInfoDealer {
+    display: flex;
+    justify-content: space-between;
+    font-size: px-to-rem(16);
+    font-weight: 500;
+
+    .distance {
+      max-width: 160px;
+      font-weight: 500;
+      font-size: px_to_rem(18);
+      line-height: 150%;
+      color: $medium-grey;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px_to_rem(16);
+      }
+    }
+
+    .btnTrade {
+      color: $primary;
+      font-size: px-to-rem(18);
+      font-weight: 500;
+    }
+  }
+}
+
+.wrapSearch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.becomePartnerWrap {
+  padding: 70px 0px 165px 0;
+}
+
+.linkJoin {
+  font-size: px-to-rem(14);
+  color: $primary;
+  padding-top: 67px;
+}
+
+.titleBecomePartner {
+  font-size: $h2_font_size;
+  @include media-breakpoint-down(md) {
+    font-size: px-to-rem(37);
+  }
+}
+
+.contentIntro {
+  font-size: $p_font_size;
+  color: $grey;
+  padding: 22px 0px;
+  @include media-breakpoint-down(md) {
+    font-size: px-to-rem(18);
+  }
+}
+
+.imgPartner {
+  width: 100%;
+}
+
+.noPartner {
+  text-align: center;
+  font-size: px-to-rem(18);
+  font-weight: bold;
+}
+
+.errorLine {
+  font-size: px-to-rem(14);
+  color: $danger;
+  position: relative;
+  top: 2px;
+  height: 0px;
+  left: 5px;
+}
+
+.mapMobile {
+  padding-bottom: 16px;
+}
+
+.imgPartnerMobile {
+  padding-bottom: 16px;
+}
+
+.customBtn {
+  color: $primary !important;
+}
+
+.customLink {
+  padding: 0;
+
+  a {
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    line-height: 3;
+    color: $white;
+  }
+}

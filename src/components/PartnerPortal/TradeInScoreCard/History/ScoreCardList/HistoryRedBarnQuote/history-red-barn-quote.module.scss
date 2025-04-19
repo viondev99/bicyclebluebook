@@ -1,0 +1,159 @@
+@import 'src/assets/css/variable';
+
+.timeHeader {
+  margin: 25px 0 25px;
+}
+
+.card.card {
+  padding: 40px 45px;
+  margin-top: 1rem;
+
+  @include media-breakpoint-down(sm) {
+    padding: 25px 20px;
+  }
+}
+
+.cardRow {
+  display: flex;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  .cardLeft {
+    flex: 1;
+    max-width: unset;
+
+    @include media-breakpoint-down(md) {
+      max-width: 60%;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: unset;
+    }
+  }
+
+  .cardRight {
+    flex: 0;
+    display: flex;
+    flex-shrink: 1;
+    text-align: right;
+    justify-content: unset;
+    min-width: unset;
+
+    @include media-breakpoint-down(md) {
+      justify-content: flex-end;
+      min-width: 40%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 10px;
+      text-align: left;
+      justify-content: unset;
+      min-width: unset;
+
+      .priceContainer {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.title {
+  color: $black;
+  font-weight: 500;
+  font-size: px-to-rem(22);
+  line-height: 120%;
+
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    justify-content: space-between;
+    max-width: unset;
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+  }
+}
+
+.location {
+  margin: 8px 0 0;
+  color: $grey;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(21);
+}
+
+.infoParagraph {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 130%;
+
+  .infoWrapper:not(:first-child) {
+    margin-left: 25px;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0px;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  .infoLabel {
+    color: $black;
+  }
+
+  .infoValue {
+    margin-left: 10px;
+    color: $grey;
+  }
+}
+
+.price {
+  margin: 0;
+  font-family: Rubik, sans-serif;
+  font-size: $p_font_size;
+  line-height: 120%;
+  color: $black;
+}
+
+.status {
+  margin: 9px 0 0;
+  white-space: nowrap;
+  color: $warning;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: px-to-rem(21);
+
+  &.complete {
+    color: $green;
+  }
+
+  &.expire {
+    color: $danger;
+  }
+}
+
+.menuButton {
+  width: 100%;
+  white-space: nowrap;
+  justify-content: flex-start;
+  color: $black;
+  align-items: center;
+}
+
+.dropdown {
+  box-shadow: $box-shadow;
+
+  .actionItem {
+    text-align: left;
+  }
+}

@@ -1,0 +1,17 @@
+@import 'src/assets/css/variable';
+
+.container {
+  padding: 0 40px 40px 40px;
+  @include media-breakpoint-down(dm) {
+    padding: 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 22px 0;
+  }
+}
+
+.item {
+  &:not(:first-of-type) {
+    margin-top: 40px;
+  }
+}

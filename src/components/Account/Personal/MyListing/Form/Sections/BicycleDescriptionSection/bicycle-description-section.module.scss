@@ -1,0 +1,54 @@
+@import '../../../../../../../assets/css/variable';
+@import '../form.module';
+
+.bicycleDescriptionSection {
+  .condtionTitle {
+    margin-top: 82px;
+  }
+
+  .condition {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 32px;
+
+    .wrapContentRadio {
+      cursor: pointer;
+
+      .labelRadio {
+        font-size: $p_font_size;
+        font-weight: 500;
+        color: $black;
+        width: 100px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .percentage {
+      text-align: left;
+      width: 225px;
+      font-size: $p_font_size;
+      margin-left: auto;
+      @include media-breakpoint-down(sm) {
+        width: 231px;
+      }
+    }
+  }
+
+  .message {
+    font-size: $p_font_size;
+    line-height: px-to-rem(40);
+    width: 100%;
+    color: $grey;
+    flex-grow: 0;
+    padding: 0;
+    margin: 0;
+
+    p {
+      padding: 0;
+      margin: 0 !important;
+    }
+  }
+}
+.lineError {
+  color: $danger;
+}

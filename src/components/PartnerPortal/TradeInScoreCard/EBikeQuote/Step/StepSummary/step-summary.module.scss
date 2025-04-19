@@ -1,0 +1,399 @@
+@import 'src/assets/css/variable';
+
+.fs60 {
+  font-size: px-to-rem(60);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(48);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.wrapStepTwo {
+  .wrapTradeInValue {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+    }
+
+    .header {
+      @extend .fs46;
+      font-weight: 700;
+      line-height: 120%;
+      color: $light-black;
+      margin-bottom: 29px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 26px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .tradeInValue {
+      @extend .fs60;
+      line-height: 120%;
+      text-align: center;
+      color: $light-black;
+    }
+  }
+
+  .wrapForm {
+    background: white;
+    border-radius: 10px;
+    padding: 60px;
+    margin-bottom: 26px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 46px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 22px;
+    }
+  }
+
+  .wrapBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .wrapRight {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 46px;
+        font-weight: 500;
+        @extend .fs22;
+        line-height: 29px;
+        color: $lightest-grey;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: space-between;
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+    margin-bottom: 31px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(22);
+    margin-bottom: 22px;
+  }
+}
+
+.wrapBicycleInfo {
+  display: flex;
+
+  @include media-breakpoint-down(sm) {
+    display: unset;
+  }
+
+  .wrapBicycleInfoItem {
+    margin-right: 86px;
+
+    @include media-breakpoint-down(sm) {
+      margin-right: unset;
+      width: 100%;
+      display: flex;
+    }
+
+    &:last-child {
+      margin-right: unset;
+    }
+
+    .mobileItemTitle {
+      @include media-breakpoint-down(sm) {
+        min-width: 49%;
+        max-width: 49%;
+        padding-right: 10px;
+
+        &:las {
+          margin-bottom: unset;
+        }
+      }
+    }
+
+    .mobileItemValue {
+      @include media-breakpoint-down(sm) {
+        min-width: 49%;
+        max-width: 49%;
+        margin-bottom: 9px;
+      }
+    }
+  }
+}
+
+.textGrey {
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 120%;
+  color: $lightest-grey;
+}
+
+.textBlack {
+  font-weight: 500;
+  @extend .fs22;
+  line-height: 120%;
+  color: $light-black;
+}
+
+.mb9 {
+  margin-bottom: 9px;
+}
+
+.customHr {
+  border: 1px solid rgba(110, 119, 133, 0.1);
+  margin: 31px 0 65px 0;
+
+  @include media-breakpoint-down(lg) {
+    margin: 41px 0 56px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 16px 0 32px 0;
+  }
+}
+
+.formItem {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 18px;
+  }
+
+  .formTitle {
+    @extend .textBlack;
+    margin-bottom: 31px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 14px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.customButtonSize {
+  @extend .fs22;
+  color: $light-black;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  &:disabled {
+    color: $light-black !important;
+  }
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}
+
+.colorDatepicker {
+  color: $lightest-grey !important;
+
+  &:disabled {
+    color: $lightest-grey !important;
+    -webkit-text-fill-color: $lightest-grey !important;
+    -webkit-opacity: 1;
+    opacity: 1; /* required on iOS */
+  }
+}
+
+.customCol {
+  margin-bottom: 34px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 22px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: unset;
+  }
+}
+
+.note {
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 21px;
+  color: $lightest-grey;
+  margin-bottom: 50.5px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 34.5px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 29px;
+  }
+}
+
+.btnPrintReport {
+  @extend .customButtonSize;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 16px;
+      min-width: 23px;
+      max-width: 23px;
+      min-height: 23px;
+      max-height: 23px;
+
+      @include media-breakpoint-down(lg) {
+        min-width: 18px;
+        max-width: 18px;
+        min-height: 18px;
+        max-height: 18px;
+      }
+      @include media-breakpoint-down(sm) {
+        min-width: 18px;
+        max-width: 18px;
+        min-height: 18px;
+        max-height: 18px;
+      }
+    }
+  }
+}
+
+.btnMobile {
+  @include media-breakpoint-down(sm) {
+    padding: 20px !important;
+
+    div {
+      img {
+        margin: unset;
+      }
+    }
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.imgButtonVerifyPaypal {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-left: 10px;
+    min-width: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    max-height: 24px;
+    object-fit: cover;
+  }
+}
+
+.buttonEdit {
+  font-weight: 500;
+  height: auto !important;
+  color: $primary !important;
+}
+
+.wrapButtonfixed {
+  position: fixed;
+  width: 100%;
+  padding-right: 58px;
+  background: white;
+  bottom: 0;
+  height: 113px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include media-breakpoint-down(lg) {
+    height: 103px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 95px;
+    padding-right: 28px;
+  }
+}
+
+.wrapButtonSupportFixed {
+  padding-top: 56.5px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 56.5px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 47.5px;
+  }
+}
+
+.btnBack {
+  margin-right: 20px;
+}

@@ -1,0 +1,83 @@
+@import 'src/assets/css/variable';
+
+.heading {
+  font-size: px-to-rem(16);
+  font-weight: 500;
+  @include media-breakpoint-down(sm) {
+    width: 50%;
+  }
+}
+
+.value {
+  color: $grey;
+  font-size: 1rem;
+  @include media-breakpoint-down(sm) {
+    width: 50%;
+    text-align: right;
+  }
+}
+
+.customerLink {
+  color: $grey;
+  font-size: px-to-rem(16);
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.status {
+  color: #72d299;
+  font-size: px-to-rem(16);
+  text-transform: capitalize;
+}
+
+.card {
+  padding: 23px 45px;
+  @include media-breakpoint-down(md) {
+    padding: 28px;
+  }
+  @include media-breakpoint-down(md) {
+    flex-direction: row;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 20%;
+    @include media-breakpoint-down(lg) {
+      width: 25%;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+.customMenu {
+  ul {
+    width: 200px !important;
+  }
+}
+
+.resizeBtn {
+  width: 100%;
+  justify-content: flex-start !important;
+  color: $black !important;
+  font-size: px-to-rem(18);
+}
+
+.mobileMenu {
+  width: 26px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}

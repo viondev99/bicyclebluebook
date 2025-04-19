@@ -1,0 +1,127 @@
+@import 'src/assets/css/variable';
+
+.summaryWrapper {
+  padding: 50px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 35px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px;
+  }
+
+  .controlGroup {
+    @include media-breakpoint-down(xs) {
+      display: flex;
+      align-items: center;
+      & > * {
+        margin: 0;
+        flex: 1 1 50%;
+        min-width: 50%;
+      }
+    }
+  }
+
+  .controlLabel {
+    font-weight: 500;
+  }
+
+  .quantitySub {
+    font-size: px-to-rem(15);
+    line-height: px-to-rem(20);
+    font-weight: 500;
+    margin-left: 20px;
+    @include media-breakpoint-down(xs) {
+      display: block;
+      margin-left: 0;
+    }
+    .availableText {
+      color: $grey;
+    }
+
+    .soldText {
+      color: $primary;
+    }
+  }
+
+  .quantityInput {
+    max-width: 190px;
+  }
+
+  .price {
+    font-family: Rubik, sans-serif;
+    color: $primary;
+    font-size: $h2_font_size;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .buyButton {
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
+      height: 50px;
+    }
+  }
+
+  .msrp {
+    font-family: Rubik, sans-serif;
+    font-size: px-to-rem(19);
+    font-weight: 500;
+    color: $grey;
+    line-height: 180%;
+  }
+
+  .msrpTitle {
+    color: rgba($grey, 0.4);
+    font-size: px-to-rem(14);
+    font-weight: 500;
+    vertical-align: top;
+    line-height: 180%;
+    margin-left: 5px;
+  }
+
+  .buttonGroup {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    @include media-breakpoint-up(xl) {
+      justify-content: space-between;
+    }
+    @include media-breakpoint-down(lg) {
+      button:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .iconButton {
+      @include media-breakpoint-down(lg) {
+        margin: 0 10px;
+        width: 30px;
+        height: 30px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-right: 10px;
+        width: 22px;
+        height: 18px;
+      }
+    }
+  }
+
+  .offerCount {
+    font-size: px-to-rem(18);
+    color: $primary;
+    line-height: 180%;
+  }
+
+  .shipTitle {
+    color: $primary;
+    font-size: $p_font_size;
+    margin: 0;
+  }
+
+  .buyerName {
+    color: $grey;
+    font-size: px-to-rem(18);
+    margin: 0;
+  }
+}

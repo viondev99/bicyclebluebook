@@ -1,0 +1,23 @@
+@import 'src/assets/css/variable';
+
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $grey;
+  z-index: 100;
+  opacity: 0.7;
+  .content {
+    text-align: center;
+    margin-top: 49vh;
+    font-size: $h1_font_size;
+    font-weight: bold;
+    color: $black !important;
+  }
+}
+.processBar {
+  width: 30vw;
+  margin: 10px auto;
+}

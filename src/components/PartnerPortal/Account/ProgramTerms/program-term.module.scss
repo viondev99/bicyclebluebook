@@ -1,0 +1,82 @@
+@import 'src/assets/css/variable';
+
+.wrapContainer {
+  padding: 58px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px;
+  }
+  @media (max-width: 767px) {
+    padding: 28px 22px;
+  }
+
+  .header {
+    font-weight: 700;
+    font-size: px-to-rem(30);
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 6px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(24);
+      margin-bottom: 8px;
+    }
+    @media (max-width: 767px) {
+      font-size: px-to-rem(22);
+      margin-bottom: 10px;
+    }
+  }
+
+  .headerDescription {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    color: $lightest-grey;
+    margin-bottom: 38px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(24);
+      margin-bottom: 26px;
+    }
+    @media (max-width: 767px) {
+      font-size: px-to-rem(22);
+    }
+  }
+
+  .wrapBody {
+    margin-bottom: 38px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 26px;
+    }
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+    .title {
+      font-size: px-to-rem(22);
+      line-height: 180%;
+      color: $light-black;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(18);
+      }
+      @media (max-width: 767px) {
+        font-size: px-to-rem(16);
+      }
+    }
+
+    .description {
+      font-size: px-to-rem(22);
+      line-height: 180%;
+      color: $lightest-grey;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(18);
+      }
+      @media (max-width: 767px) {
+        font-size: px-to-rem(16);
+      }
+    }
+  }
+}

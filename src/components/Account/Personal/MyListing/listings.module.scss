@@ -1,0 +1,322 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.listingsContainer {
+  padding-left: 32px;
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+}
+
+.listingItem {
+  flex-direction: row !important;
+  margin: 0 0 15px 0 !important;
+  padding: 0 !important;
+
+  .imageItemListing {
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 0;
+    @include media-breakpoint-down(xs) {
+      border-radius: 10px 10px 0px 0px;
+      height: 227.63px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+.contentItemListing {
+  font-weight: 500;
+  line-height: 120%;
+  padding: 15px 0px 15px 30px;
+  display: flex;
+  flex-direction: column;
+  .nameListing,
+  .noLink {
+    font-size: $p_font_size;
+    color: $black;
+    line-height: 120%;
+    font-weight: 500;
+    margin-bottom: 15px;
+    &:hover {
+      color: $primary;
+    }
+  }
+  .noLink {
+    &:hover {
+      color: $black;
+    }
+  }
+  .nameYMB {
+    line-height: 21px;
+    font-size: px-to-rem(16);
+    color: $grey;
+    margin-bottom: 15px;
+  }
+  .priceItem {
+    font-family: 'Rubik', sans-serif;
+    font-size: $p_font_size;
+    color: $primary;
+  }
+  @include media-breakpoint-down(xs) {
+    width: 70%;
+  }
+}
+.isActive {
+  color: $green;
+}
+.actionItemListing {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px 30px 30px 0;
+  align-items: flex-end;
+  @include media-breakpoint-down(xs) {
+    width: 30%;
+    padding: 15px 30px 15px 0px;
+  }
+}
+.draft {
+  color: $warning;
+}
+.expired {
+  color: $danger;
+}
+.hideMenu {
+  display: none;
+}
+
+.menuAction {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  box-shadow: 0px 34px 94px rgba(110, 119, 133, 0.25);
+  border-radius: 6px;
+  top: -47px;
+  right: 43px;
+  padding: 28px 34px;
+  font-size: px-to-rem(18);
+  color: $black;
+  z-index: 10;
+}
+.txtRemove {
+  font-size: px-to-rem(18);
+  color: $danger !important;
+}
+.btnOpenMenu {
+  width: 30px;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+.notFoundListing {
+  padding: 32px !important;
+  .titleNotFound {
+    font-weight: bold;
+    padding-bottom: 32px;
+    font-size: $h3_font_size;
+  }
+  .btnCreate {
+    font-weight: 500;
+    width: 273px;
+    a {
+      color: $white;
+    }
+  }
+}
+
+.footerModelDeactivate {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 20px;
+  .btnDelete {
+    background: $danger;
+    margin-right: 16px;
+  }
+
+  .btnCancel {
+    background: $white;
+    color: $grey;
+    border-radius: 6px;
+    border: solid 1px $grey;
+  }
+}
+.contentModal {
+  color: $grey;
+  font-size: $p_font_size;
+}
+.resetBtn {
+  @include reset-button;
+  background: transparent !important;
+  max-height: 30px;
+  justify-content: left;
+}
+.defaultStatus {
+  text-align: right;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  @include media-breakpoint-down(xs) {
+    padding-right: 0px;
+  }
+}
+
+.resizeModal {
+  width: 696px;
+}
+.time {
+  white-space: nowrap;
+}
+.idListing {
+  padding-left: 26px;
+  white-space: nowrap;
+}
+.idOrder {
+  line-height: 30px;
+  white-space: nowrap;
+  a {
+    color: $grey;
+    font-size: px-to-rem(16);
+    font-weight: 500;
+    margin-left: 5px;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.customer {
+  white-space: nowrap;
+}
+.btnMenu {
+  cursor: pointer;
+  color: $black !important;
+  text-align: left;
+  font-weight: 500;
+  display: flex;
+  font-size: px-to-rem(18);
+  margin-bottom: 10px !important;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start !important;
+}
+
+.customMenu {
+  position: absolute;
+  top: 50;
+  right: 22;
+  z-index: 9;
+  ul {
+    width: 200px !important;
+    li {
+      display: flex;
+      align-items: center;
+      min-height: 45px;
+      &:hover {
+        background: $light-grey;
+      }
+      a {
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+.resizeBtn {
+  width: 100%;
+  font-size: px-to-rem(18) !important;
+  justify-content: flex-start !important;
+  font-weight: 500;
+  color: $black !important;
+  a {
+    font-weight: 500;
+    font-size: px-to-rem(18);
+    color: $black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.customLink {
+  font-size: px-to-rem(18);
+  font-weight: 500;
+  color: $black;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.isBuyerRequestCancel {
+  color: $warning;
+  font-size: px-to-rem(18);
+  margin-top: 10px;
+}
+.imgListing {
+  cursor: pointer;
+}
+
+.notFoundText {
+  font-size: px-to-rem(22);
+  line-height: 180%;
+  color: $lightest-grey;
+  font-style: italic;
+  text-align: center;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.cardSearchBar {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: right;
+  margin-bottom: 32px;
+  padding: 28px !important;
+  .inputSearch {
+    margin-right: 16px;
+    width: 100%;
+  }
+  .wrapInput {
+    width: 100%;
+    display: flex;
+    margin-right: 16px;
+    align-items: center;
+  }
+}
+
+.btnSortOffer {
+  margin-right: 46px !important;
+  @media (max-width: 991px) and (min-width: 768px) {
+    margin-right: 25px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-right: 20px !important;
+  }
+}
+
+.icSortOffer {
+  width: 22px;
+  height: 22px;
+}
+
+.viewListing {
+  padding-left: 26px;
+}

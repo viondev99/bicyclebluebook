@@ -1,0 +1,44 @@
+@import 'src/assets/css/variable';
+
+.description {
+  margin-top: 22px;
+  color: $grey;
+  font-size: px-to-rem(18);
+  line-height: 180%;
+}
+
+.suffix {
+  margin: auto;
+  font-weight: 500;
+  font-size: $p_font_size;
+  color: $grey;
+}
+
+.title {
+  margin-top: 36px;
+  margin-bottom: 26px;
+}
+
+.destination {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+
+  .input {
+    width: 210px;
+    margin-left: 36px;
+  }
+}
+
+.footer {
+  margin-top: 52px;
+}
+
+.divider {
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
+
+.price {
+  color: $primary;
+}

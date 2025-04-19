@@ -1,0 +1,8 @@
+@import 'src/assets/css/variable';
+
+.icon {
+  width: 26px;
+  @include media-breakpoint-down(lg) {
+    width: 20px;
+  }
+}

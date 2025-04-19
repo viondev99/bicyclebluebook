@@ -1,0 +1,148 @@
+@import 'src/assets/css/variable';
+
+.wrapSearch {
+  padding-bottom: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 26px;
+  }
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 28px;
+  }
+
+  .wrapLeft {
+    display: flex;
+    align-items: center;
+
+    .sortTitle {
+      font-weight: 500;
+      font-size: px-to-rem(22);
+      line-height: 120%;
+      color: $lightest-grey;
+      margin-right: 22px;
+
+      @include media-breakpoint-down(lg) {
+        font-size: px-to-rem(18);
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: px-to-rem(16);
+      }
+    }
+  }
+
+  .wrapRight {
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 29px;
+    color: $primary;
+    cursor: pointer;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: px-to-rem(16);
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.customSelect {
+  width: 170px;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    width: 140px;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: 40px !important;
+    width: 135px;
+  }
+}
+
+.cardItem {
+  margin-bottom: 18px;
+  padding: 0;
+
+  .wrapItem {
+    padding: 12px 12px 12px 24px;
+    margin: 0;
+    display: flex;
+
+    @include media-breakpoint-down(lg) {
+      padding: 27.5px 28px 27.5px 30px;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 27.5px 27.5px 27.5px 30px;
+    }
+
+    .wrapInfo {
+      width: 95%;
+      margin: 0;
+
+      .item {
+        display: flex;
+        font-weight: 500;
+        font-size: px-to-rem(16);
+        line-height: 160%;
+
+        @include media-breakpoint-down(xs) {
+          margin-bottom: 11px;
+
+          &:last-child {
+            margin-bottom: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dropDownContent {
+  ul {
+    top: 10px !important;
+    right: 30px !important;
+  }
+}
+
+.itemAction {
+  font-size: px-to-rem(18);
+  line-height: 180%;
+  color: $light-black;
+
+  &.removeAction {
+    color: $danger;
+  }
+}
+
+.noDataFound {
+  text-align: center;
+  padding: 11.5px 11.5px 11.5px 23px;
+  margin: 0;
+  font-weight: 500;
+  font-size: px-to-rem(22);
+  line-height: 29px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+}
+
+.textPrimary {
+  color: $light-black;
+}
+
+.textGrey {
+  color: $lightest-grey;
+}
+
+.mb9 {
+  margin-bottom: 9px;
+}

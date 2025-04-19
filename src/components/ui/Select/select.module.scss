@@ -1,0 +1,13 @@
+@import 'src/assets/css/variable';
+
+.customBaseSelect {
+  opacity: 1;
+
+  :global(.select__control) {
+    :global(.select__indicators) {
+      :global(.select__indicator) {
+        color: $lightest-grey;
+      }
+    }
+  }
+}

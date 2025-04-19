@@ -1,0 +1,136 @@
+@import 'src/assets/css/variable';
+
+.wrapper {
+  @include media-breakpoint-down(lg) {
+    padding: 0 10px;
+  }
+}
+.item {
+  text-align: center;
+  padding: 35px 30px;
+  margin-bottom: 37px;
+  cursor: pointer;
+  @include media-breakpoint-down(md) {
+    padding: 43px 42px;
+    margin-bottom: 31px;
+  }
+  @include media-breakpoint-between(md, lg) {
+    padding: 38px 42px;
+    margin-bottom: 28px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 38px 42px;
+    margin-bottom: 0;
+  }
+
+  .name {
+    color: $black;
+    font-size: px-to-rem(19);
+    line-height: $p_font_size;
+    font-weight: 500;
+    margin-top: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 57.75px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 20px;
+      min-height: 37.13px;
+    }
+    @include media-breakpoint-down(sm) {
+      min-height: 33px;
+    }
+  }
+}
+
+.image {
+  object-fit: contain;
+  opacity: 1;
+  width: 100%;
+  height: 124px;
+}
+
+.pagination {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.description {
+  .title {
+    font-size: $h3_font_size;
+    line-height: px-to-rem(36);
+  }
+  .text {
+    margin-top: 34px;
+    font-size: $p_font_size;
+    line-height: px-to-rem(40);
+    color: $grey;
+    @include media-breakpoint-down(lg) {
+      margin-top: 26px;
+    }
+  }
+}
+
+.heading {
+  p {
+    color: $grey;
+  }
+}
+
+.swiperWrapper {
+  margin-bottom: 20px;
+}
+
+.itemYear {
+  padding: 15px;
+  border: 1px solid $lightest-grey;
+  font-weight: 500;
+  font-size: px-to-rem(17);
+  line-height: 22px;
+  text-align: center;
+  color: $grey;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 55px;
+
+  &.active {
+    color: white;
+    background: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+.dragText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    color: #c8cacd;
+    font-size: px-to-rem(22);
+    line-height: 180%;
+    margin-left: 10px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: px-to-rem(16);
+      margin-left: 5px;
+    }
+  }
+}
+
+.wrapDrag {
+  display: flex;
+  align-items: center;
+}
+
+.cardPartnerPortalTradeInProduct {
+  &.active {
+    border: 2px solid $primary;
+  }
+}

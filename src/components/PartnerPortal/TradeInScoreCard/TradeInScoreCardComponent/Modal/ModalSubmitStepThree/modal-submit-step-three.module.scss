@@ -1,0 +1,231 @@
+@import 'src/assets/css/variable';
+
+.customModalSize {
+  width: 752px;
+  @include media-breakpoint-down(lg) {
+    width: 641px;
+  }
+}
+
+.paddingContentClassName {
+  padding: 61px !important;
+
+  @include media-breakpoint-down(lg) {
+    padding: 42px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 28px !important;
+  }
+}
+
+.titleClassName {
+  font-weight: 700;
+  font-size: px-to-rem(46);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 0 !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.customModalBody {
+  padding-top: 22px !important;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 12px !important;
+  }
+}
+
+.icArrowLeftClassName {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    margin-bottom: 28px;
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.titleForm {
+  margin-bottom: 26px;
+  @extend .fs22;
+  font-weight: 500;
+  line-height: 180%;
+  color: $light-black;
+}
+
+.wrapItem {
+  margin-bottom: 22px;
+}
+
+.wrapBottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    font-size: px-to-rem(22);
+    cursor: pointer;
+    margin-right: 34px;
+    font-weight: 500;
+    font-size: px-to-rem(18);
+    line-height: 21px;
+    color: $lightest-grey;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+  }
+
+  .customButtonSize {
+    @extend .fs22;
+    font-weight: 500;
+    min-height: 65px !important;
+    max-height: 65px !important;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      min-height: 55px !important;
+      max-height: 55px !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      min-height: 52px !important;
+      max-height: 52px !important;
+    }
+  }
+}
+
+.customTextSize {
+  @extend .fs22;
+}
+
+.customInputNumber::-webkit-outer-spin-button,
+.customInputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.customInputNumber[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.wrapCheckbox {
+  display: flex;
+  margin-bottom: 10px;
+
+  span {
+    margin-left: 10px;
+    @extend .fs22;
+    line-height: 120%;
+    color: $lightest-grey;
+    cursor: pointer;
+  }
+}
+
+.wrapListConditions {
+  font-size: px-to-rem(22);
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+}
+
+.checkBoxText {
+  color: $light-black !important;
+  font-size: 22px !important;
+  @include media-breakpoint-down(lg) {
+    font-size: 18px !important;
+  }
+}
+
+.wrapDescription {
+  margin-bottom: 45px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 36px;
+  }
+
+  .item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 5px;
+
+    @include media-breakpoint-down(lg) {
+      align-items: baseline;
+    }
+
+    @include media-breakpoint-down(sm) {
+      align-items: baseline;
+    }
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    img {
+      min-width: 18.86px;
+      max-width: 18.86px;
+      min-height: 13.59px;
+      max-height: 13.59px;
+      margin-right: 20.41px;
+      padding-bottom: 2px;
+
+      @include media-breakpoint-down(lg) {
+        min-width: 17.86px;
+        max-width: 17.86px;
+        min-height: 12.59px;
+        max-height: 12.59px;
+        margin-right: 20.41px;
+        padding-bottom: 2px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        min-width: 13.86px;
+        max-width: 13.86px;
+        min-height: 9.59px;
+        max-height: 9.59px;
+        margin-right: 12.41px;
+        padding-bottom: 2px;
+      }
+    }
+    span {
+      @extend .fs22;
+      line-height: 180%;
+      color: $lightest-grey;
+    }
+  }
+}
+
+.checkMarkClassName {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 26px !important;
+  height: 26px !important;
+  @include media-breakpoint-down(lg) {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+
+.wrapFormItem {
+  margin-bottom: 46px;
+}

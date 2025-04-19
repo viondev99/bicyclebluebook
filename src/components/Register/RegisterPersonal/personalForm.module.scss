@@ -1,0 +1,76 @@
+@import 'src/assets/css/variable';
+
+.personal_form {
+  &_card {
+    padding: 52px 54px;
+  }
+  .leftSection {
+    padding: 0;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+    .card {
+      h4 {
+        font-size: $p_font_size;
+        font-weight: 500;
+        line-height: px-to-rem(26);
+        @include media-breakpoint-up(xs) {
+          font-size: px-to-rem(18px);
+        }
+      }
+      padding: 40px;
+      height: 236px;
+      @include media-breakpoint-up(xl) {
+        padding: 52px 58px;
+        height: 236px;
+      }
+    }
+  }
+  .rightSection {
+    .card {
+      padding: 20px;
+      @include media-breakpoint-up(md) {
+        padding: 52px;
+      }
+    }
+  }
+}
+
+.body {
+  margin-top: 75px;
+  @include media-breakpoint-down(md) {
+    margin-top: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+.mobileForm {
+  .card {
+    button {
+      background-color: $white;
+      width: 100%;
+      margin-top: 18px;
+    }
+    margin-left: 10px;
+  }
+  .socialBtn {
+    display: flex;
+    align-items: center;
+
+    .socialLinkMobile {
+      display: flex;
+      width: 100%;
+      margin-left: 16px;
+      img {
+        margin-left: auto;
+      }
+    }
+
+    border: 1px solid rgba(#6e7785, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;
+    margin-top: 10px;
+  }
+}

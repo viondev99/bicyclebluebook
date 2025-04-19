@@ -1,0 +1,11 @@
+@import 'src/assets/css/variable';
+
+.container {
+  padding: 240px 0px 160px 0px;
+  @include media-breakpoint-down(xl) {
+    padding: 108px 58px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 108px 58px;
+  }
+}

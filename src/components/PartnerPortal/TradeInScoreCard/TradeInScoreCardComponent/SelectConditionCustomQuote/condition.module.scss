@@ -1,0 +1,206 @@
+@import 'src/assets/css/variable';
+
+.fs30 {
+  font-size: px-to-rem(30);
+  margin-bottom: 36px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+    margin-bottom: 40px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(22);
+    margin-bottom: 24px;
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.fs18 {
+  font-size: px-to-rem(18);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.headerStepCondition {
+  font-weight: 700;
+  @extend .fs30;
+  line-height: 120%;
+  color: $light-black;
+  display: flex;
+  align-items: center;
+}
+
+.iconInfo {
+  width: 14px;
+  height: 14px;
+  fill: white;
+  background-color: white;
+
+  @include media-breakpoint-down(sm) {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.wrapSubStepFour {
+  padding-bottom: 30px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+    background: transparent;
+  }
+
+  .customRow {
+    margin-bottom: 38px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+    }
+    @include media-breakpoint-down(sm) {
+      background: white;
+      border-radius: 10px;
+      margin: 0 0 16px 0;
+      padding: 26px 22px;
+
+      &:last-child {
+        margin: 0 0 16px 0;
+      }
+    }
+
+    .customCol {
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
+
+      .wrapRadio {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .radioTitle {
+          margin-bottom: 7px;
+          font-weight: 500;
+          @extend .fs18;
+          line-height: 120%;
+          color: $light-black;
+        }
+      }
+
+      .wrapTitle {
+        @extend .fs18;
+        text-align: right;
+        line-height: 120%;
+        color: $light-black;
+
+        @include media-breakpoint-down(sm) {
+          margin-top: 6px;
+        }
+      }
+
+      .description {
+        @extend .fs18;
+        line-height: 180%;
+        color: $lightest-grey;
+
+        @include media-breakpoint-down(sm) {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+
+.isLargeScreen {
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.isSmallScreen {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.customHr {
+  border: 1px solid rgba(110, 119, 133, 0.1);
+  margin: 46px 0;
+
+  @include media-breakpoint-down(lg) {
+    margin: 39px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 25px 0;
+  }
+}
+
+.formTitle {
+  margin-bottom: 7px;
+  font-weight: 500;
+  @extend .fs18;
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 14px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 6px;
+  }
+}
+
+.customFs {
+  @extend .fs22;
+  border-radius: 6px;
+
+  @include media-breakpoint-down(sm) {
+    background: #ffffff;
+  }
+}
+
+.wrapBottom {
+  padding-bottom: 28px;
+}
+
+.wrapSelectCondition {
+  background: $white;
+  border-radius: 10px;
+  padding: 60px;
+  margin-bottom: 28px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 46px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+    background: transparent;
+  }
+}
+
+.wrapbtnImgInfo {
+  margin-bottom: 8px;
+  margin-left: 8px;
+  width: 10px;
+}

@@ -1,0 +1,12 @@
+@import '../../../../../../../assets/css/variable';
+@import '../form.module';
+
+.responsiveInput {
+  height: 65px !important;
+  // @include media-breakpoint-up(md) {
+  //   height: 55px !important;
+  // }
+  @include media-breakpoint-down(sm) {
+    height: 40px !important;
+  }
+}

@@ -1,0 +1,165 @@
+@import 'src/assets/css/variable';
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.customModalSize {
+  width: 625px;
+
+  &.tour {
+    opacity: 0.5;
+  }
+  @include media-breakpoint-down(lg) {
+    width: 522px;
+  }
+}
+
+.paddingContentClassName {
+  padding: 61px !important;
+
+  @include media-breakpoint-down(lg) {
+    padding: 42px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 28px !important;
+  }
+}
+
+.titleClassName {
+  font-weight: 700;
+  font-size: px-to-rem(46);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 0 !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.customModalBody {
+  padding-top: 22px !important;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 12px !important;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: px-to-rem(30);
+  line-height: 120%;
+  color: $light-black;
+  margin-bottom: 37px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(24);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(22);
+  }
+}
+
+.wrapItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: unset;
+  }
+
+  .wrapImage {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    margin-left: 22px;
+    font-weight: 500;
+    font-size: px-to-rem(22);
+    line-height: 120%;
+    color: $primary;
+    cursor: pointer;
+
+    @include media-breakpoint-down(lg) {
+      font-size: px-to-rem(18);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: px-to-rem(16);
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+      color: $primary;
+    }
+  }
+}
+
+.icArrowLeftClassName {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    margin-bottom: 28px;
+  }
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+
+  &.btnCreate {
+    margin-right: 20px;
+  }
+}
+
+.wrapButton {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: unset;
+  align-items: unset;
+  justify-content: unset;
+
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .btnCreate {
+      margin-bottom: 20px;
+    }
+  }
+}
+.description {
+  color: $lightest-grey;
+  @extend .fs22;
+  line-height: 180%;
+}

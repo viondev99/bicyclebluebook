@@ -1,0 +1,65 @@
+@import '../../../assets/css/variable';
+
+.inputFile {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: hidden;
+}
+
+.labelAvatar {
+  cursor: pointer;
+  font-size: px-to-rem(15);
+  color: $primary;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 27px;
+  display: flex;
+  align-items: center;
+
+  span {
+    min-width: 150px;
+  }
+}
+
+.iconDrag {
+  width: 25px;
+  display: block;
+  margin: auto;
+}
+
+.formUpAvatar {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.avatarForm {
+  display: flex;
+  .avatarProfile {
+    width: 101px;
+    height: 101px;
+    border-radius: 50%;
+    border: dotted 1px $grey;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      width: 75px;
+      height: 75px;
+    }
+    @media (max-width: 767px) {
+      font-size: px-to-rem(16);
+    }
+
+    .textDrag {
+      padding-top: 10px;
+    }
+  }
+}

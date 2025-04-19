@@ -1,0 +1,103 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.section {
+  padding: 60px 0;
+  background: $light-grey;
+  @include media-breakpoint-down(md) {
+    padding: 45px 0;
+  }
+
+  .description {
+    color: $grey;
+  }
+}
+
+.wrapWantToGrabGreatDeal {
+  label {
+    font-weight: 700;
+    @extend .fs46;
+    margin-bottom: 32px;
+    line-height: 120%;
+    color: $light-black;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 22px;
+    }
+  }
+
+  .description {
+    @extend .fs22;
+    line-height: 180%;
+    color: $lightest-grey;
+    margin-bottom: 38px;
+    max-width: 825px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+.customButtonSize {
+  @extend .fs22;
+  font-weight: 500;
+  min-height: 65px !important;
+  max-height: 65px !important;
+
+  @include media-breakpoint-down(lg) {
+    min-height: 55px !important;
+    max-height: 55px !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+}
+
+.wrapComingSoon {
+  label {
+    font-weight: 700;
+    @extend .fs46;
+    margin-bottom: 32px;
+    line-height: 120%;
+    color: $light-black;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 22px;
+    }
+  }
+
+  .description {
+    @extend .fs22;
+    line-height: 180%;
+    color: $lightest-grey;
+    margin-bottom: 38px;
+    max-width: 825px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 26px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 38px;
+  }
+}

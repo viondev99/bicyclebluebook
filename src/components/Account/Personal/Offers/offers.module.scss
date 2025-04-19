@@ -1,0 +1,178 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.offerItem {
+  padding: 32px !important;
+  margin-bottom: 16px;
+  @include media-breakpoint-down(sm) {
+    padding: 28px 20px;
+  }
+  .resetMargin {
+    margin: 0 !important;
+    .bikeImg {
+      border-radius: 10px 0px 0px 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 0;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.contentOffer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.titleOffer {
+  font-weight: 500;
+  font-size: $p_font_size;
+  cursor: pointer;
+  a {
+    color: $black;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.status {
+  margin: 15px 0px;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  color: $grey;
+  .dateCreate {
+    margin-right: 28px;
+  }
+}
+.chip {
+  font-size: px-to-rem(16);
+  margin-right: 22px;
+  .titleChip {
+    font-weight: 500;
+    color: $black;
+  }
+  .contentChip {
+    a {
+      color: $grey;
+      font-size: px-to-rem(16);
+      &:hover {
+        color: $primary;
+      }
+    }
+    color: $grey;
+  }
+}
+.groupPrice {
+  font-size: $p_font_size;
+  margin-top: 15px;
+  .iconArrow {
+    margin: 0 22px;
+  }
+  .fromPrice {
+    color: $grey;
+    strong {
+      font-size: px-to-rem(16);
+    }
+  }
+  .toPrice {
+    color: $black;
+    strong {
+      font-size: px-to-rem(16);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 15px 0px;
+  }
+}
+
+.defaultStatus {
+  font-weight: 500;
+  font-size: px-to-rem(16) !important;
+}
+.reject {
+  color: $red;
+}
+.accepted {
+  color: $green;
+}
+.await {
+  color: $warning;
+}
+.decline {
+  color: $danger;
+}
+.customMenu {
+  ul {
+    width: 200px !important;
+  }
+}
+.groupActionOffer {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.showWhenMobile {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+.hideWhenMobile {
+  display: block;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.retract {
+  font-size: px-to-rem(18) !important;
+  color: $danger !important;
+  font-weight: 500;
+}
+.resizeBtn {
+  width: 100%;
+  font-size: px-to-rem(18) !important;
+  justify-content: flex-start !important;
+  font-weight: 500;
+  color: $black !important;
+  a {
+    font-weight: 500;
+    font-size: px-to-rem(18);
+    color: $black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.resizeLink {
+  font-size: px-to-rem(16);
+  color: $grey;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.breakLine {
+  @include media-breakpoint-down(xs) {
+    display: block;
+    margin-top: 13px;
+  }
+}
+.sellerCounter {
+  width: 200px;
+  @include media-breakpoint-down(xs) {
+    width: 60px;
+    text-align: right;
+  }
+}

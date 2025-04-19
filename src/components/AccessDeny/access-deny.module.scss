@@ -1,0 +1,92 @@
+@import 'src/assets/css/variable';
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.fs18 {
+  font-size: px-to-rem(18);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.cover {
+  @include media-breakpoint-between(sm, lg) {
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 0px;
+    background-size: calc(100% - 30px);
+  }
+
+  .sectionContainer {
+    padding-top: 140px;
+    z-index: 100;
+    position: static;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+    }
+
+    .title {
+      font-weight: bold;
+      background-color: $medium-grey;
+      border-radius: 10px;
+      display: inline-block;
+      padding: 1px 5px 1px 5px;
+      margin-top: 20px;
+      @extend .fs18;
+    }
+    h2 {
+      @extend .fs46;
+    }
+    p {
+      @extend .fs22;
+    }
+  }
+  .container {
+    @include media-breakpoint-down(sm) {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+}
+
+.section {
+  position: relative;
+  height: 646px;
+  margin-top: 10px;
+
+  .description {
+    color: $grey;
+  }
+}

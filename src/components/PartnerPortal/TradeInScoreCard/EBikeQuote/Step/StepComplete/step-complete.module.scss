@@ -1,0 +1,153 @@
+@import 'src/assets/css/variable';
+
+.fs60 {
+  font-size: px-to-rem(60);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(48);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs46 {
+  font-size: px-to-rem(46);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(37);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(34);
+  }
+}
+
+.fs22 {
+  font-size: px-to-rem(22);
+
+  @include media-breakpoint-down(lg) {
+    font-size: px-to-rem(18);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.wrapStepComplete {
+  .header {
+    @extend .fs46;
+    font-weight: 700;
+    line-height: 120%;
+    color: $light-black;
+    margin-bottom: 49px;
+
+    img {
+      margin-right: 25px;
+      min-width: 40px;
+      max-width: 40px;
+      min-height: 40px;
+      max-height: 40px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 26px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .customCard {
+    border-radius: 10px;
+    padding: 60px;
+    background: white;
+
+    @include media-breakpoint-down(lg) {
+      padding: 46px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+
+    .title {
+      @extend .mb34;
+      font-weight: 700;
+      font-size: px-to-rem(30);
+      line-height: 120%;
+      color: $light-black;
+
+      span {
+        color: $primary;
+      }
+    }
+
+    .text {
+      @extend .fs22;
+      line-height: 180%;
+      color: $light-black;
+    }
+  }
+
+  .cardRight {
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: white;
+  }
+}
+
+.mb34 {
+  margin-bottom: 34px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.customOl {
+  padding-left: 15px;
+  padding-right: 15px;
+  @extend .mb34;
+
+  li {
+    margin-bottom: 10px;
+    @extend .fs22;
+    line-height: 180%;
+    color: $light-black;
+    padding-left: 20px;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+  }
+}
+
+.customLink {
+  color: $primary !important;
+  @extend .fs22;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.wrapMobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @extend .fs22;
+  color: $light-black;
+  font-weight: 500;
+  cursor: pointer;
+
+  img {
+    transform: rotate(270deg);
+
+    &.isShowData {
+      transform: unset;
+    }
+  }
+}

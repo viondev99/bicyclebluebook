@@ -1,0 +1,46 @@
+@import 'src/assets/css/variable';
+
+.paymentInfoContainer {
+  padding: 20px 40px 30px;
+
+  h1 {
+    font-size: $h3_font_size;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .info {
+    font-size: $p_font_size;
+    color: $black;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .type {
+    font-size: px-to-rem(14);
+    color: $grey;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .button {
+    color: $primary;
+    font-weight: 500;
+
+    img {
+      width: 25px;
+      height: 25px;
+      min-width: 25px;
+      min-height: 25px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.icDisableConnectStripe {
+  cursor: pointer;
+  position: relative;
+  left: 11.3rem;
+  top: 5px;
+}

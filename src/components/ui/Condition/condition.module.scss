@@ -1,0 +1,28 @@
+@import 'src/assets/css/variable';
+@import 'src/assets/css/utilities';
+
+.conditionModal {
+  width: 1090px;
+
+  .description {
+    font-size: $p_font_size;
+    color: $grey;
+    line-height: 180%;
+  }
+}
+
+.customTabs {
+  opacity: 1;
+
+  :global(.tabBar) {
+    span {
+      color: rgba($light-black, 0.2);
+    }
+
+    &:global(.active) {
+      span {
+        color: $light-black;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import 'src/assets/css/variable';
+
+.wrapper {
+  margin-top: 72px;
+  padding: 60px 60px 40px 60px;
+  max-height: calc(100vh - 30.3rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 62px;
+    max-height: calc(100vh - 38.2rem);
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-height: unset;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba($grey, 0.15);
+    border-radius: 2px;
+  }
+}
+
+.family {
+  margin-bottom: 20px;
+
+  .name {
+    cursor: pointer;
+    &.active {
+      color: $primary;
+    }
+  }
+}
+
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    width: 15%;
+    font-size: $p_font_size;
+    font-weight: bold;
+
+    text-align: center;
+    line-height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+      content: '';
+      float: left;
+      padding-top: 100%;
+    }
+  }
+  .active {
+    color: $white;
+    border-radius: 50%;
+    background: $primary;
+  }
+}
+
+.mobileCard {
+  margin-top: 75px;
+  padding: 26px 22px 0 22px;
+  .family {
+    display: flex;
+    margin-bottom: 26px;
+
+    span {
+      font-weight: bold;
+    }
+
+    img {
+      margin-left: auto;
+    }
+  }
+}
+
+.notFound {
+  text-align: center;
+  margin-top: 75px;
+}
